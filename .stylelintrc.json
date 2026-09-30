@@ -1,0 +1,55 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-vue"
+  ],
+  "rules": {
+    "color-no-hex": [true, {
+      "severity": "warning",
+      "message": "禁用 hex 色值,使用 var(--color-xxx)。详见 src/assets/styles/README.md"
+    }],
+    "color-named": ["never", {
+      "severity": "warning",
+      "ignore": ["inside-function"],
+      "message": "禁用 named color(如 white/black),使用 var(--color-xxx)"
+    }],
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "no-empty-source": null,
+    "block-no-empty": null
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.scss"],
+      "customSyntax": "postcss-scss",
+      "rules": {
+        "at-rule-no-unknown": [true, {
+          "ignoreAtRules": ["use", "forward", "mixin", "include", "extend", "function", "if", "else", "each", "for", "while", "return", "at-root", "debug", "warn", "error"]
+        }],
+        "selector-pseudo-element-no-unknown": [true, {
+          "ignorePseudoElements": ["v-deep"]
+        }]
+      }
+    },
+    {
+      "files": [
+        "src/assets/styles/_tokens.scss",
+        "src/assets/styles/variables.scss",
+        "src/assets/styles/_design-spec.scss",
+        "src/assets/styles/_theme-vars.scss",
+        "src/assets/styles/dark-theme.scss",
+        "src/assets/styles/_bootstrap-theme.scss",
+        "src/assets/styles/bootstrap-theme.scss"
+      ],
+      "rules": {
+        "color-no-hex": null,
+        "color-named": null
+      }
+    }
+  ],
+  "ignoreFiles": [
+    "node_modules/**",
+    "dist/**",
+    "src/assets/styles/element-overrides.scss"
+  ]
+}

@@ -1,0 +1,26 @@
+﻿# 构建产物与依赖
+node_modules
+dist
+dist-demo
+playwright-report/
+test-results/
+demo-data-audit.json
+
+# 本地环境文件
+.env.local
+.env.prod
+.deploy.local
+
+# 本地调试与生成产物
+tmp/
+.devserver.port
+软著申请材料文件夹/
+.dev-server.*.log
+.frontend-dev.*.log
+
+# macOS
+.DS_Store
+
+# Python 缓存(软著材料生成脚本产物)
+__pycache__/
+*.pyc

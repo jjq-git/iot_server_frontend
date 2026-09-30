@@ -1,0 +1,4 @@
+src/services/webUi/contracts/*.json text eol=lf
+tests/fixtures/web-ui-v1/*.json text eol=lf
+tests/fixtures/web-ui-v1/invalid/*.json text eol=lf
+tests/fixtures/demo/** text eol=lf

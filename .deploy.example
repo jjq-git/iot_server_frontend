@@ -1,0 +1,27 @@
+# Copy this file to .deploy.local and fill in the target-specific values.
+# .deploy.local is ignored by Git. Authentication uses an SSH agent or key;
+# passwords must never be stored here or in deployment scripts.
+
+IOT_DEPLOY_TEST_HOST=frontend-test.example.com
+IOT_DEPLOY_TEST_USER=deploy
+IOT_DEPLOY_TEST_DIR=/var/www/iot
+IOT_DEPLOY_TEST_API_BASE=auto
+IOT_DEPLOY_TEST_UPLOAD_BASE=auto
+IOT_DEPLOY_TEST_PORT=22
+IOT_DEPLOY_TEST_IDENTITY_FILE=
+
+IOT_DEPLOY_PROD_HOST=frontend.example.com
+IOT_DEPLOY_PROD_USER=deploy
+IOT_DEPLOY_PROD_DIR=/var/www/iot
+IOT_DEPLOY_PROD_API_BASE=auto
+IOT_DEPLOY_PROD_UPLOAD_BASE=auto
+IOT_DEPLOY_PROD_PORT=22
+IOT_DEPLOY_PROD_IDENTITY_FILE=
+
+# Demo uses a dedicated static-only host and atomic releases/current layout.
+IOT_DEPLOY_DEMO_HOST=demo.example.com
+IOT_DEPLOY_DEMO_USER=deploy
+IOT_DEPLOY_DEMO_DIR=/var/www/podsc-demo
+IOT_DEPLOY_DEMO_PUBLIC_URL=https://demo.example.com
+IOT_DEPLOY_DEMO_PORT=22
+IOT_DEPLOY_DEMO_IDENTITY_FILE=
