@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "approvedEmailDomains": [
+    "demo.podsc.com",
+    "example.com"
+  ],
+  "approvedAbsoluteHosts": [
+    "demo.podsc.com"
+  ],
+  "approvedPhonePrefixes": [
+    "+1555000"
+  ],
+  "approvedAssetPrefixes": [
+    "/demo-assets/",
+    "data:image/"
+  ],
+  "requiredUuidPrefix": "demo-",
+  "requiredSerialPrefix": "DEMO-"
+}

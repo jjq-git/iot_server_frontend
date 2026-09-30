@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!--
+      基础 HTML 模板：
+      - 设置视口
+      - 引入字体
+      - 引入 Vue 应用容器 #app
+    -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>pods.dengtec.com</title>
+
+    <!-- Favicon (相对路径，构建时会被 webpack 处理) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts 异步加载：preload 不阻塞渲染，onload 后切换为 stylesheet；noscript 兜底 -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600:700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600:700&display=swap"
+      />
+    </noscript>
+  </head>
+  <body>
+    <noscript>需要启用 JavaScript 才能运行。</noscript>
+    <div id="app"></div>
+  </body>
+</html>
