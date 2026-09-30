@@ -1,0 +1,11 @@
+.toolbar-summary {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-control);
+  white-space: nowrap;
+}
+
+.ota-console pre {
+  font-size: var(--font-size-caption);
+  white-space: pre-wrap;
+  word-break: break-all;
+}

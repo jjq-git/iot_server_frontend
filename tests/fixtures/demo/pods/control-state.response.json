@@ -1,0 +1,78 @@
+{
+  "is_online": true,
+  "last_seen": "2026-09-17T08:20:00.000Z",
+  "items": [
+    {
+      "target_uuid": "demo-pod-office-01-light",
+      "nid": 2,
+      "co_index": "0x3001",
+      "co_sub_index": "0x01",
+      "value": true,
+      "shadow": {
+        "state": "reported",
+        "desired_value": true,
+        "reported_value": true
+      }
+    },
+    {
+      "target_uuid": "demo-pod-office-01-light",
+      "nid": 2,
+      "co_index": "0x3001",
+      "co_sub_index": "0x02",
+      "value": 72,
+      "shadow": {
+        "state": "reported",
+        "desired_value": 72,
+        "reported_value": 72
+      }
+    },
+    {
+      "target_uuid": "demo-pod-office-01-fresh-air",
+      "nid": 3,
+      "co_index": "0x3010",
+      "co_sub_index": "0x01",
+      "value": true,
+      "shadow": {
+        "state": "reported",
+        "desired_value": true,
+        "reported_value": true
+      }
+    },
+    {
+      "target_uuid": "demo-pod-office-01-fresh-air",
+      "nid": 3,
+      "co_index": "0x3010",
+      "co_sub_index": "0x02",
+      "value": 3,
+      "shadow": {
+        "state": "reported",
+        "desired_value": 3,
+        "reported_value": 3
+      }
+    },
+    {
+      "target_uuid": "demo-pod-office-01-climate",
+      "nid": 4,
+      "co_index": "0x3020",
+      "co_sub_index": "0x01",
+      "value": 23.5,
+      "shadow": {
+        "state": "reported",
+        "desired_value": 23.5,
+        "reported_value": 23.5
+      }
+    },
+    {
+      "target_uuid": "demo-pod-office-01-climate",
+      "nid": 4,
+      "co_index": "0x3020",
+      "co_sub_index": "0x02",
+      "value": true,
+      "shadow": {
+        "state": "reported",
+        "desired_value": true,
+        "reported_value": true
+      }
+    }
+  ]
+}

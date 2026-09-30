@@ -1,0 +1,222 @@
+.pod-detail {
+  background: var(--color-bg-card);
+  border-radius: 4px;
+}
+
+::v-deep .tab-content > .tab-pane {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+::v-deep .tab-content > .tab-pane .pod-control-panel {
+  padding-top: 0;
+}
+
+::v-deep .tab-content .base-table-wrapper .table-responsive,
+::v-deep .tab-content .base-table-wrapper .b-table-sticky-header {
+  padding-inline: 0;
+}
+
+::v-deep .nav-pills .nav-link:hover {
+  background: unset;
+  color: var(--color-text-secondary);
+}
+
+::v-deep .nav-pills .nav-link.active {
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+.editable {
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 4px;
+  padding: 2px 6px;
+  width: 100%;
+}
+
+.editable:hover {
+  background-color: var(--color-bg-page);
+  color: var(--color-accent-blue);
+}
+
+.edit-input-wrapper {
+  padding: 2px 0;
+  max-width: 320px;
+}
+
+/* 位置信息输入框样式 */
+.location-fields {
+  padding: 5px 0;
+  width: 100%;
+}
+
+.location-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  min-height: 32px;
+}
+
+.location-field:last-child {
+  margin-bottom: 0;
+}
+
+.location-region-alert {
+  margin: 0 0 12px 80px;
+}
+
+.field-label {
+  width: 80px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+  line-height: 32px;
+}
+
+.pod-info-layout .detail-list {
+  gap: 8px;
+}
+
+.pod-info-layout .detail-row--block {
+  align-items: flex-start;
+}
+
+.pod-info-layout .detail-row--block .detail-row__label {
+  margin-top: 5px;
+}
+
+.pod-info-layout .value-wrapper {
+  min-height: var(--list-control-height);
+  padding: 2px 8px;
+  margin: -2px -4px;
+}
+
+.pod-info-layout .edit-input-wrapper {
+  width: 100%;
+  max-width: none;
+}
+
+.location-field .edit-input-wrapper {
+  flex: 1;
+}
+
+.pod-detail__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.sub-text {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--color-bg-page);
+  margin-bottom: 16px;
+}
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: var(--font-size-display-sm);
+  color: var(--color-on-brand);
+}
+.metric-icon.temp { background-color: var(--color-error); }
+.metric-icon.humidity { background-color: var(--color-brand-solid, var(--color-brand)); }
+.metric-icon.noise { background-color: var(--color-warning); }
+.metric-icon.air { background-color: var(--color-success); }
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-value {
+  font-size: var(--font-size-page-title);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: var(--font-size-body);
+  color: var(--color-text-muted);
+}
+
+.control-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.history-pager {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  border: 1px solid var(--color-border-divider);
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+
+.detail-label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body);
+  margin-bottom: 4px;
+  width: 100px;
+  display: inline-block;
+}
+
+.detail-value {
+  min-height: 24px;
+}
+
+.value-wrapper {
+  padding: 2px 0;
+}
+
+.heartbeat-interval-desc {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  margin-left: 4px;
+}
+
+/* WebSocket 日志模态框样式 */
+::v-deep .ws-log-content {
+  font-family: monospace;
+  font-size: var(--font-size-caption);
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--color-bg-page);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.pod-detail.is-readonly .editable,
+.pod-detail.is-readonly .editable-b {
+  cursor: default;
+}
+
+.pod-detail.is-readonly .editable:hover,
+.pod-detail.is-readonly .editable-b:hover {
+  color: inherit;
+  background: transparent;
+}

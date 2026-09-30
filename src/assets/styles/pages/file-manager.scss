@@ -1,0 +1,391 @@
+.file-manager {
+  /* ===================================
+     文件管理 - Bootstrap 5 风格主题优化
+     =================================== */
+  
+  /* ========== 统计卡片区域 ========== */
+  .file-stats {
+    padding: 20px;
+  }
+  
+  .stat-col {
+    margin-bottom: 10px;
+  }
+  
+  /* 统计卡片 - Bootstrap Card 风格 */
+  .stat-card {
+    border: 1px solid var(--color-file-card-border);
+    border-radius: 0.75rem;
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-file-card);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-file-card-hover);
+  }
+  
+  .stat-card-inner {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-radius: 0.75rem;
+    color: var(--color-text-inverse);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stat-card-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-inverse-fill-soft) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  /* 统计图标 */
+  .stat-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-display-md);
+    color: var(--color-text-inverse);
+    flex-shrink: 0;
+    background: var(--color-inverse-fill-medium);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-file-icon);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover .stat-icon {
+    transform: scale(1.05);
+  }
+  
+  .stat-content {
+    flex: 1;
+    padding-left: 1.25rem;
+    color: var(--color-text-inverse);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stat-value {
+    font-size: var(--font-size-display-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-inverse);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+    text-shadow: var(--shadow-file-title);
+    white-space: nowrap;
+  }
+  
+  .stat-label {
+    font-size: var(--font-size-body);
+    color: var(--color-inverse-text-strong);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  /* ========== 搜索表单区域 ========== */
+  
+  .files__filters .form-group {
+    margin-bottom: 15px;
+    margin-right: 0.75rem;
+  }
+  
+  .files__filters .form-control,
+  .files__filters .custom-select {
+    height: var(--list-control-height);
+    min-height: var(--list-control-height);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border-form);
+    padding-block: 0;
+    padding-left: 0.875rem;
+    font-size: var(--font-size-emphasis);
+    line-height: 1.4;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--color-bg-card);
+  }
+
+  .files__filters .base-select-control,
+  .files__filters .base-input-control {
+    height: var(--list-control-height);
+  }
+
+  .files__filters .base-select-control > .custom-select {
+    padding-right: 2.5rem;
+  }
+  
+  .files__filters .form-control:focus,
+  .files__filters .custom-select:focus {
+    border-color: var(--color-bs-primary);
+    box-shadow: 0 0 0 0.25rem var(--shadow-focus-bs);
+    outline: none;
+  }
+  
+  .files__filters .form-control:hover,
+  .files__filters .custom-select:hover {
+    border-color: var(--color-border-bs);
+  }
+  
+  /* 表头/单元格/斑马纹/hover 统一走 _admin-system.scss 的公共表格样式，
+   * 此处不再自定义（原渐变表头/渐变 hover 覆盖已移除），与其他列表页保持一致。 */
+  
+  /* ========== 表格内标签样式 ========== */
+  .table .badge {
+    border-radius: 0.375rem;
+    padding: 0.4rem 0.75rem;
+    font-size: var(--font-size-control);
+    font-weight: var(--font-weight-semibold);
+    border: none;
+    letter-spacing: 0.3px;
+  }
+  
+  .table .badge-success {
+    background: linear-gradient(135deg, var(--color-success-bg-strong) 0%, var(--color-success-bdr) 100%);
+    color: var(--color-success-text);
+    box-shadow: var(--shadow-file-state-success);
+  }
+  
+  .table .badge-primary {
+    background: linear-gradient(135deg, var(--color-info-bg) 0%, var(--color-info-bg) 100%);
+    color: var(--color-bs-primary);
+    box-shadow: var(--shadow-file-state-primary);
+  }
+  
+  .table .badge-info {
+    background: linear-gradient(135deg, var(--color-info-bg) 0%, var(--color-info-bg) 100%);
+    color: var(--color-text-strong);
+    box-shadow: var(--shadow-file-state-info);
+    line-height: 7px;
+  }
+  
+  .table .badge-warning {
+    background: linear-gradient(135deg, var(--color-warning-bg-strong) 0%, var(--color-warning-bdr) 100%);
+    color: var(--color-warning-text);
+    box-shadow: var(--shadow-file-state-warning);
+  }
+  
+  .table .badge-danger {
+    background: linear-gradient(135deg, var(--color-error-bg-strong) 0%, var(--color-error-bdr) 100%);
+    color: var(--color-error-text);
+    box-shadow: var(--shadow-file-state-error);
+  }
+  
+  /* ========== 文件项样式 ========== */
+  .file-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .file-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-display-sm);
+    margin-right: 1rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    box-shadow: var(--shadow-file-action);
+  }
+  
+  .file-item:hover .file-icon {
+    transform: scale(1.05);
+  }
+  
+  .file-icon-image {
+    background: linear-gradient(135deg, var(--color-bs-info) 0%, var(--color-info) 100%);
+    color: var(--color-text-inverse);
+  }
+  
+  .file-icon-video {
+    background: linear-gradient(135deg, var(--color-error-strong) 0%, var(--color-error-strong) 100%);
+    color: var(--color-text-inverse);
+  }
+  
+  .file-icon-audio {
+    background: linear-gradient(135deg, var(--color-warning-strong) 0%, var(--color-warning-strong) 100%);
+    color: var(--color-text-strong);
+  }
+  
+  .file-icon-document {
+    background: linear-gradient(135deg, var(--color-bs-primary) 0%, var(--color-bs-primary-hover) 100%);
+    color: var(--color-text-inverse);
+  }
+  
+  .file-icon-other {
+    background: linear-gradient(135deg, var(--color-text-secondary) 0%, var(--color-text-secondary) 100%);
+    color: var(--color-text-inverse);
+  }
+  
+  .file-info {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .file-name {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-strong);
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-emphasis);
+  }
+  
+  .file-meta {
+    font-size: var(--font-size-control);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .file-meta span {
+    margin: 0 0.25rem;
+    opacity: 0.7;
+  }
+  
+  /* 表单样式 */
+  .form-group > label {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-emphasis);
+  }
+  
+  /* 关联对话框特殊样式 */
+  .relations-dialog-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .relations-toolbar {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* 表单分段标题样式 */
+  .form-section-title {
+    font-size: var(--font-size-emphasis);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-secondary);
+    margin: 1.5rem 0 1rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, var(--color-bg-subtle) 0%, var(--color-bg-muted) 100%);
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--color-bs-primary);
+  }
+  
+  .tag-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-overlay-soft);
+    color: var(--color-text-inverse);
+    cursor: pointer;
+    font-size: var(--font-size-caption);
+    line-height: 1;
+  }
+  
+  /* 预览内容区域 */
+  .preview-content {
+    padding: 1rem;
+    background: var(--color-bg-subtle);
+    border-radius: 0.75rem;
+    text-align: center;
+  }
+  
+  /* 描述信息卡片 */
+  
+  /* ========== 响应式调整 ========== */
+  @media (width <= 768px) {
+    .stat-card-inner {
+      padding: 1.25rem;
+    }
+  
+    .stat-icon {
+      width: 56px;
+      height: 56px;
+      font-size: var(--icon-size-xl);
+    }
+  
+    .stat-value {
+      font-size: var(--font-size-display-sm);
+    }
+  
+    .stat-label {
+      font-size: var(--font-size-control);
+    }
+  
+    .files__filters {
+      padding: 1.25rem;
+    }
+  
+    .files__filters .form-group {
+      margin-bottom: 0.75rem;
+      margin-right: 0;
+    }
+  
+    .file-icon {
+      width: 40px;
+      height: 40px;
+      font-size: var(--font-size-page-title);
+    }
+  }
+  
+  /* 超小屏幕 - 手机竖屏 */
+  @media (width <= 576px) {
+    .stat-card-inner {
+      padding: 1rem;
+    }
+  
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      font-size: var(--font-size-title-md);
+    }
+  
+    .stat-value {
+      font-size: var(--font-size-page-title);
+    }
+  
+    .stat-label {
+      font-size: var(--font-size-caption);
+    }
+  }
+  
+  /* 滚动条美化 */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--color-border-bs) 0%, var(--color-text-secondary) 100%);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--color-text-secondary) 0%, var(--color-text-secondary) 100%);
+  }
+  
+}

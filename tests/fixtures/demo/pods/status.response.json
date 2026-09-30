@@ -1,0 +1,8 @@
+{
+  "status": {
+    "temperature": 23.5,
+    "humidity": 48,
+    "noise": 36,
+    "air_quality": "good"
+  }
+}

@@ -1,0 +1,145 @@
+.detail-heading,
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.detail-heading {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.detail-heading__identity {
+  min-width: 0;
+}
+
+.enrollment-hero {
+  border-left: 3px solid var(--color-brand);
+}
+
+.enrollment-hero__serial {
+  margin: 0 0 4px;
+  font-size: var(--font-size-title-md);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+.enrollment-hero__actions {
+  justify-content: flex-end;
+}
+
+.detail-section-title {
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border-divider);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(120px, 32%) 1fr;
+  gap: 0 16px;
+  margin: 8px 0 0;
+}
+
+.detail-grid dt,
+.detail-grid dd {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border-divider);
+}
+
+.detail-grid dt {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-control);
+  font-weight: var(--font-weight-semibold);
+}
+
+.detail-grid > :nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.detail-grid dd,
+.detail-uuid {
+  overflow-wrap: anywhere;
+}
+
+.hash-value {
+  overflow-wrap: anywhere;
+  font-family: monospace;
+}
+
+.risk-panel {
+  border-left: 3px solid var(--color-warning);
+}
+
+.risk-panel__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px 32px;
+  padding-top: 16px;
+}
+
+.risk-panel__help {
+  min-width: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.risk-panel__actions {
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+@media (width <= 575px) {
+  .detail-heading,
+  .enrollment-hero__actions {
+    align-items: stretch;
+  }
+
+  .enrollment-hero__actions {
+    justify-content: flex-start;
+  }
+
+  .enrollment-hero__actions > * {
+    flex: 1 1 auto;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .detail-grid dt {
+    padding-bottom: 2px;
+    border-bottom: 0;
+  }
+
+  .detail-grid dd {
+    padding-top: 2px;
+  }
+
+  .risk-panel__content {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .risk-panel__actions {
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .risk-panel__actions > * {
+    flex: 1 1 auto;
+  }
+}

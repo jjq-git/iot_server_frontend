@@ -1,0 +1,104 @@
+.company-relationships__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.company-relationships__scope {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-control);
+  line-height: var(--line-height-tight);
+}
+
+.company-relationships__scope svg {
+  flex: 0 0 auto;
+  color: var(--color-info);
+}
+
+.company-relationships__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.company-relationships ::v-deep .company-relationships__table .table {
+  min-width: 1480px;
+}
+
+.company-relationships ::v-deep .relationship-direction-cell {
+  width: 86px;
+}
+
+.company-relationships ::v-deep .relationship-company-cell {
+  width: 150px;
+}
+
+.company-relationships ::v-deep .relationship-status-cell {
+  width: 92px;
+}
+
+.company-relationships ::v-deep .relationship-response-cell {
+  width: 160px;
+}
+
+.company-relationships ::v-deep .relationship-token-cell {
+  width: 112px;
+}
+
+.company-relationships ::v-deep .relationship-capabilities-cell {
+  min-width: 650px;
+}
+
+.capability-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(112px, 1fr));
+  gap: var(--space-sm);
+  min-width: 620px;
+}
+
+.capability-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: 62px;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border-divider);
+  border-radius: var(--radius-control);
+  background: var(--color-bg-subtle);
+}
+
+.capability-label {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-control);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+}
+
+.capability-select {
+  width: 100%;
+}
+
+@media (width <= 767.98px) {
+  .company-relationships__toolbar,
+  .company-relationships__actions {
+    align-items: stretch;
+  }
+
+  .company-relationships__actions {
+    width: 100%;
+  }
+
+  .company-relationships__actions > * {
+    flex: 1 1 0;
+  }
+}

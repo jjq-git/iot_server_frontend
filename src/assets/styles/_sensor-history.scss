@@ -1,0 +1,219 @@
+.debug-sensor-history {
+  color: var(--tt-text);
+
+  .sh-card {
+    color: var(--tt-text);
+    background: var(--tt-bg-card);
+    border-color: var(--tt-border);
+  }
+
+  .filter-card .card-body {
+    padding: 22px 30px 18px !important;
+  }
+
+  .sh-muted {
+    color: var(--tt-text-sec);
+  }
+
+  .sh-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--tt-text-label);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .sh-selection-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(360px, 1.35fr) 120px;
+    align-items: start;
+    width: 100%;
+    gap: 18px;
+  }
+
+  .sh-form-cell {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .sh-form-cell--page-size {
+    width: 120px;
+  }
+
+  .sh-time-panel {
+    display: grid;
+    grid-template-columns: minmax(440px, 0.9fr) minmax(520px, 1.1fr);
+    align-items: end;
+    gap: 22px;
+    padding: 14px 16px;
+    margin-top: 16px;
+    border: 1px solid var(--color-border-divider);
+    background: var(--color-bg-subtle);
+  }
+
+  .sh-date-range {
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) 24px minmax(210px, 1fr);
+    align-items: end;
+    min-width: 0;
+  }
+
+  .sh-date-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 31px;
+    color: var(--tt-text-sec);
+  }
+
+  .sh-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 14px;
+    margin-top: 14px;
+    border-top: 1px solid var(--color-border-divider);
+  }
+
+  .sh-form-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-width: 108px;
+    white-space: nowrap;
+  }
+
+  .sh-quick-btns {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(92px, 1fr));
+    width: 100%;
+  }
+
+  .sh-quick-btns > .btn {
+    min-width: 0;
+  }
+
+  .sh-fields-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .sh-fields-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: var(--list-control-height);
+    padding: 0.375rem 0.625rem !important;
+    line-height: 1.5 !important;
+    text-align: left;
+  }
+
+  .sh-fields-dropdown .dropdown-menu {
+    min-width: 240px;
+    max-height: 320px;
+    overflow-y: auto;
+    color: var(--tt-text);
+    background: var(--tt-bg-card);
+    border-color: var(--tt-border);
+  }
+
+  .sh-fields-hint {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .sh-field-cb {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .sh-fields-actions {
+    display: flex;
+    gap: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--tt-border-light);
+  }
+
+  .sh-chart {
+    width: 100%;
+    height: 360px;
+  }
+
+  .sh-empty {
+    padding: 20px 8px;
+    color: var(--tt-text-sec);
+    font-size: var(--font-size-control);
+    text-align: center;
+  }
+
+  .sh-pager {
+    padding: 8px 4px 0;
+  }
+
+  .sh-results-card .b-table-empty-row td {
+    height: 112px;
+    padding: 24px !important;
+    vertical-align: middle;
+  }
+}
+
+@media (width <= 1399.98px) {
+  .debug-sensor-history {
+    .sh-time-panel {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}
+
+@media (width <= 991.98px) {
+  .debug-sensor-history {
+    .sh-selection-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sh-form-cell--page-size {
+      width: 120px;
+    }
+  }
+}
+
+@media (width <= 767.98px) {
+  .debug-sensor-history {
+    .filter-card .card-body {
+      padding: 18px 16px !important;
+    }
+
+    .sh-selection-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .sh-quick-btns {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sh-form-cell--page-size {
+      width: 100%;
+    }
+
+    .sh-time-panel {
+      padding: 14px;
+    }
+
+    .sh-date-range {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .sh-date-separator {
+      display: none;
+    }
+
+    .sh-form-actions .btn {
+      flex: 1 1 0;
+    }
+  }
+}

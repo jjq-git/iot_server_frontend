@@ -1,0 +1,100 @@
+/* 基础输入控件：统一清除按钮与下拉指示，不在业务页面重复声明。 */
+.base-input-control,
+.base-select-control {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.base-input-control > .form-control,
+.base-select-control > .custom-select {
+  width: 100%;
+}
+
+.base-input-control--has-value > .form-control {
+  padding-right: 42px;
+}
+
+.base-select-control > .custom-select {
+  padding-right: 34px;
+  appearance: none;
+  background-image: none !important;
+}
+
+.base-select-control--has-value > .custom-select {
+  padding-right: 74px;
+}
+
+.base-control-clear {
+  position: absolute;
+  z-index: var(--z-control);
+  top: 50%;
+  right: 0;
+  display: grid;
+  width: var(--list-control-height);
+  height: var(--list-control-height);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: var(--icon-size-md);
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  place-items: center;
+}
+
+.base-control-clear:hover,
+.base-control-clear:focus-visible {
+  background: var(--color-bg-hover);
+  color: var(--color-brand);
+  outline: 0;
+}
+
+.base-select-control__clear {
+  right: 28px;
+}
+
+.base-select-control__arrow {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin-block: auto;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  pointer-events: none;
+}
+
+.base-select-control:focus-within .base-select-control__arrow {
+  color: var(--color-brand);
+}
+
+.base-select-control > .custom-select:disabled + .base-select-control__arrow,
+.base-select-control:has(.custom-select:disabled) .base-select-control__arrow {
+  opacity: 0.45;
+}
+
+/* BaseSwitch keeps its track, thumb, and label on one shared control axis. */
+.base-switch.custom-control,
+.base-switch .custom-control-label {
+  display: inline-flex;
+  min-height: var(--control-height-sm);
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.base-switch .custom-control-label {
+  line-height: var(--line-height-body);
+  vertical-align: middle;
+}
+
+.base-switch .custom-control-label::before,
+.base-switch .custom-control-label::after {
+  top: calc(50% - 0.5rem);
+}
+
+.base-switch.custom-switch .custom-control-label::after {
+  top: calc(50% - 0.5rem + 2px);
+}

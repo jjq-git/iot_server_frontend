@@ -1,0 +1,66 @@
+.device-language-manager {
+  color: var(--tt-text);
+}
+
+.dlm-card {
+  background: var(--tt-bg-card);
+  border-color: var(--tt-border);
+  color: var(--tt-text);
+}
+
+.dlm-muted {
+  color: var(--tt-text-sec);
+}
+
+.dlm-label {
+  display: block;
+  font-size: var(--font-size-caption);
+  color: var(--tt-text-label);
+  margin-bottom: 4px;
+}
+
+.dlm-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.dlm-form-cell {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 220px;
+  min-width: 180px;
+
+  &--btn {
+    flex: 0 0 auto;
+    min-width: 110px;
+  }
+
+  &--device {
+    flex: 0 0 140px;
+    min-width: 120px;
+  }
+}
+
+.dlm-send-action {
+  width: 100%;
+}
+
+.dlm-secondary-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dlm-last-result {
+  font-size: var(--font-size-control);
+}
+
+.dlm-code {
+  background: var(--tt-bg-code);
+  color: var(--tt-text-code);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: var(--font-size-caption);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}

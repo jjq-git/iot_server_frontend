@@ -1,0 +1,185 @@
+// 实时串口流 — 终端式风格。浅色用浅灰底，深色用近黑底（参考 VSCode）
+.serial-logs-inline {
+  border-top: 1px dashed var(--color-border);
+  padding-top: 12px;
+
+  .serial-tool-group {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .serial-tool-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--list-control-height);
+    min-width: var(--list-control-height);
+    padding: 0;
+  }
+
+  .serial-logs-pane {
+    max-height: 360px;
+    overflow-y: auto;
+    background: var(--color-bg-subtle);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: var(--font-size-meta);
+    line-height: 1.55;
+
+    &.paused {
+      opacity: 0.55;
+    }
+
+    .serial-line {
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+      white-space: pre-wrap;
+      word-break: break-all;
+      padding: 1px 0;
+
+      // 用 srl- 前缀避免和项目其他页面（如 OD 诊断）的 .tag 全局红色 badge 冲突
+      .srl-ts {
+        color: var(--color-text-muted);
+        flex-shrink: 0;
+        font-weight: var(--font-weight-medium);
+        background: transparent;
+      }
+
+      .srl-lvl {
+        flex-shrink: 0;
+        min-width: 22px;
+        text-align: center;
+        font-size: var(--font-size-caption);
+      }
+
+      .srl-tag {
+        color: var(--color-info);
+        flex-shrink: 0;
+        font-weight: var(--font-weight-semibold);
+        background: transparent !important;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        font-size: inherit;
+      }
+
+      .srl-msg {
+        flex: 1;
+        color: var(--color-text-primary);
+      }
+    }
+  }
+}
+
+// 深色主题：终端深底浅字（不用 BS 变量，因为终端风格固定）
+[data-theme="dark"] .serial-logs-inline .serial-logs-pane {
+  background: var(--color-bg-code);
+  color: var(--color-text-code);
+  border-color: var(--color-border);
+
+  .serial-line {
+    .srl-ts { color: var(--color-text-muted); }
+    .srl-tag { color: var(--color-accent) !important; }
+    .srl-msg { color: var(--color-text-code); }
+  }
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  flex-wrap: wrap;
+
+  &__search {
+    width: 240px;
+  }
+
+  &__filter {
+    width: 130px;
+  }
+
+  &__auto {
+    margin-left: 8px;
+    font-size: var(--font-size-body);
+  }
+
+  &__stats {
+    margin-left: auto;
+    font-size: var(--font-size-control);
+    color: var(--color-text-muted);
+  }
+}
+
+.device-table {
+  // 主表（表头/行/斑马纹/hover）统一走 _admin-system.scss 的公共表格样式，
+  // 此处不再自定义，以与 Pods 等页面保持一致。仅保留单元格垂直居中。
+  ::v-deep td,
+  ::v-deep th {
+    vertical-align: middle;
+  }
+}
+
+.expand-btn {
+  padding: 0;
+  color: var(--color-text-muted);
+
+  &:hover {
+    color: var(--color-brand);
+  }
+}
+
+.row-details {
+  padding: 8px 12px;
+  background: var(--color-bg-subtle);
+  color: var(--color-text);
+}
+
+// 嵌套节点表强制吃主题变量（BootstrapVue 没自切）
+::v-deep .row-details .nested-table {
+  background: transparent;
+  color: var(--color-text);
+
+  thead th {
+    background: var(--color-bg-thead);
+    color: var(--color-text);
+    border-color: var(--color-border);
+  }
+
+  tbody {
+    tr { background: transparent; }
+    tr:hover td { background: var(--color-bg-hover); }
+    tr:nth-of-type(odd) td { background: var(--color-bg-subtle); }
+
+    td {
+      color: var(--color-text);
+      border-color: var(--color-border-light);
+      .mono { color: var(--color-text); }
+    }
+  }
+}
+
+.nested-table {
+  margin-bottom: 0;
+}
+
+.mono {
+  font-family: SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--font-size-caption);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+
+  &__page-size {
+    width: 110px;
+  }
+}

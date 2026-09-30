@@ -1,0 +1,13 @@
+{
+  "company": {
+    "company_name": "PODSC Demo",
+    "short_name": "PODSC Demo",
+    "domain": "https://demo.podsc.com",
+    "slogan": "Explore PODSC safely"
+  },
+  "branding": {
+    "company_name": "PODSC Demo",
+    "logo_url": null
+  },
+  "templates": []
+}

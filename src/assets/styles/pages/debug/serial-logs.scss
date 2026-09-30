@@ -1,0 +1,22 @@
+.debug-filter-host {
+  flex: 0 1 280px;
+  max-width: 360px;
+}
+
+.debug-filter-nid,
+.debug-filter-limit {
+  flex: 0 0 110px;
+}
+
+.debug-serial-logs .filter-actions {
+  margin-left: 0 !important;
+}
+
+.debug-serial-logs__file {
+  display: inline-block;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}

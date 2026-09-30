@@ -1,0 +1,344 @@
+// 资料库页面共享布局：沿用后台统一的筛选卡、数据卡和操作图标规范。
+
+.resource-page,
+.resource-admin-page {
+  min-width: 0;
+}
+
+.resource-page .interaction-list-card-shell,
+.resource-admin-page .interaction-list-card-shell {
+  overflow: hidden;
+}
+
+.resource-workspace-card,
+.resource-table-card {
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.resource-workspace-card > .card-body,
+.resource-table-card > .card-body {
+  padding: 0 !important;
+}
+
+.resource-workspace {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: 520px;
+  border-top: 1px solid var(--color-border-divider);
+  background: var(--color-bg-card);
+}
+
+.resource-nav {
+  min-width: 0;
+  border-right: 1px solid var(--color-border-divider);
+  background: var(--color-bg-card);
+}
+
+.resource-panel-heading,
+.resource-detail-heading {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border-divider);
+  color: var(--color-text-primary);
+}
+
+.resource-panel-heading svg,
+.resource-detail-heading svg {
+  color: var(--color-brand);
+}
+
+.resource-panel-heading strong,
+.resource-detail-heading strong {
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resource-panel-heading__count {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+}
+
+.resource-nav-list {
+  max-height: calc(100vh - 330px);
+  overflow-y: auto;
+}
+
+.resource-nav-item {
+  display: block;
+  width: 100%;
+  min-height: 64px;
+  padding: 13px 18px;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-divider);
+  border-left: 3px solid transparent;
+  color: var(--color-text-primary);
+  background: transparent;
+  text-align: left;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.resource-nav-item:hover {
+  background: var(--color-bg-hover);
+}
+
+.resource-nav-item.is-active {
+  border-left-color: var(--color-brand);
+  background: var(--color-bg-subtle);
+}
+
+.resource-nav-item__title {
+  display: block;
+  overflow: hidden;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-strong);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resource-nav-item__description {
+  display: block;
+  margin-top: 4px;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resource-detail {
+  min-width: 0;
+  background: var(--color-bg-card);
+}
+
+.resource-detail-heading {
+  justify-content: space-between;
+  padding-inline: 24px;
+}
+
+.resource-detail-heading__copy {
+  min-width: 0;
+}
+
+.resource-detail-heading__copy small {
+  display: block;
+  margin-top: 2px;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resource-detail-content {
+  min-height: 460px;
+  padding: 28px 32px;
+}
+
+.resource-empty-state,
+.resource-loading-state {
+  display: flex;
+  min-height: 320px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.resource-empty-state svg {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-display-lg);
+}
+
+.resource-empty-state--compact,
+.resource-loading-state--compact {
+  min-height: 150px;
+  padding: 24px 16px;
+  font-size: var(--font-size-control);
+}
+
+.resource-preview-surface {
+  max-width: 100%;
+  padding: 18px;
+  overflow: auto;
+  background: var(--color-bg-subtle);
+  text-align: center;
+}
+
+.resource-preview-surface iframe {
+  display: block;
+  max-width: none;
+  margin: 0 auto;
+  border: 1px solid var(--color-border-strong) !important;
+  border-radius: 0 !important;
+  background: var(--color-bg-code);
+  box-shadow: var(--shadow-card);
+}
+
+.resource-preview-hint {
+  margin: 12px 0 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  text-align: center;
+}
+
+.resource-markdown {
+  max-width: 980px;
+  margin: 0 auto;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+  line-height: 1.75;
+}
+
+.resource-markdown img {
+  max-width: 100%;
+  height: auto;
+  margin: 12px 0;
+  border: 1px solid var(--color-border-divider);
+}
+
+.resource-markdown table {
+  width: 100%;
+  margin: 16px 0;
+  border-collapse: collapse;
+}
+
+.resource-markdown td,
+.resource-markdown th {
+  padding: 8px 10px;
+  border: 1px solid var(--color-border-divider);
+}
+
+.resource-markdown th {
+  background: var(--color-bg-subtle);
+}
+
+.resource-markdown h1,
+.resource-markdown h2,
+.resource-markdown h3 {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.resource-markdown h1 {
+  font-size: var(--font-size-display-sm);
+}
+
+.resource-markdown h2 {
+  margin-top: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-divider);
+  font-size: var(--font-size-page-title);
+}
+
+.resource-markdown blockquote {
+  margin: 16px 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--color-brand);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-subtle);
+}
+
+.resource-markdown code {
+  padding: 2px 5px;
+  background: var(--color-bg-subtle);
+}
+
+.resource-markdown pre {
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid var(--color-border-divider);
+  background: var(--color-bg-subtle);
+}
+
+.resource-table-card .action-cell {
+  min-width: 96px;
+}
+
+.resource-assignment-list {
+  max-height: 320px;
+  padding: 4px 2px;
+  overflow-y: auto;
+}
+
+// 资料库上传控件沿用统一表单尺寸，并让“选择文件”操作具有明确的平台按钮样式。
+.resource-file-input .custom-file-label {
+  height: var(--list-control-height);
+  padding-right: 112px;
+  overflow: hidden;
+  border-color: var(--color-border);
+  border-radius: 0;
+  background: var(--color-bg-card);
+  color: var(--color-text-secondary);
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resource-file-input .custom-file-label::after {
+  display: flex;
+  min-width: 104px;
+  height: calc(var(--list-control-height) - 2px);
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--color-brand);
+  border-radius: 0;
+  background: var(--color-brand);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-semibold);
+}
+
+.resource-file-input:hover .custom-file-label::after,
+.resource-file-input:focus-within .custom-file-label::after {
+  background: var(--color-brand-dark);
+}
+
+.resource-markdown-editor {
+  min-height: 260px;
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: var(--font-size-control);
+  line-height: 1.6;
+  resize: vertical;
+}
+
+@media (width <= 992px) {
+  .resource-workspace {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+
+  .resource-detail-content {
+    padding: 22px;
+  }
+}
+
+@media (width <= 768px) {
+  .resource-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-nav {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-divider);
+  }
+
+  .resource-nav-list {
+    max-height: 240px;
+  }
+
+  .resource-detail-content {
+    min-height: 380px;
+    padding: 18px 16px;
+  }
+}

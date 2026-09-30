@@ -1,0 +1,11 @@
+{
+  "uuid": "demo-command-fixture",
+  "command_id": "demo-command-fixture",
+  "pod_uuid": "demo-pod-office-01",
+  "command": "restart",
+  "payload": {
+    "command": "restart"
+  },
+  "status": "success",
+  "sent_at": "2026-09-17T00:00:00.000Z"
+}

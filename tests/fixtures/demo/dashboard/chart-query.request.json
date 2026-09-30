@@ -1,0 +1,15 @@
+{
+  "queries": [
+    {
+      "request_id": "device_online_rate",
+      "source_key": "device_status",
+      "metric_key": "online_rate",
+      "aggregation": "avg",
+      "interval": "1day",
+      "start_time": "2026-09-10T00:00:00.000Z",
+      "end_time": "2026-09-17T00:00:00.000Z",
+      "timezone": "Asia/Shanghai",
+      "resource_uuids": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.mqtt-notconfigured {
+  border: 1px dashed var(--tt-border);
+  background: var(--tt-bg-thead);
+  color: var(--tt-text-sec);
+}
+
+.mqtt-topics__metrics {
+  margin-top: 20px;
+}

@@ -1,0 +1,536 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1540" height="1715" viewBox="0 0 1232 1372" role="img" aria-labelledby="title desc">
+  <title id="title">IoT 后台规划图标总览</title>
+  <desc id="desc">后台应用 UI 图标审核稿，覆盖规划菜单、子菜单和顶部常用操作，并标出项目专用图标。</desc>
+  <!--
+    ICON RULES v1
+    1. 运行时图标统一使用 24 x 24 viewBox、fill="none"、stroke="currentColor"、round linecap/linejoin。
+    2. 细线参考 Material Symbols Weight 100，对应 24px 网格 stroke-width="1"；普通、未选中状态使用细线。
+    3. 粗线参考 Material Symbols Weight 300，对应 24px 网格 stroke-width="1.5"；选中、强调状态使用粗线。
+    4. 现有 Bootstrap 填充图标不能仅靠 CSS 调整粗细，逐个审核时需要重绘为统一线性图标。
+    5. 资源新增使用预合成的 person-add / product-model-add / controller-host-add；其他入口使用通用 plus。
+    6. 组合图标先裁掉基础图标右下角；裁切区在 24px 网格中从 (10.5,10.5) 开始，修饰符从 (12,12) 开始，四周保留 1.5px 安全间距。
+    7. 预合成新增图标使用占基础图标约 1/2 x 1/2 的方形 + 底板；modifier-list 在相同区域显示三条中性灰粗横线，不显示底板边框。
+    8. 通知分为两种状态：无未读只显示 bell；有未读复用 bell，并在右上角组合小型实心红色 modifier-dot。
+    9. 图标本身不承载业务状态色；颜色、尺寸、粗细和状态由 AppIcon 与 CSS 变量控制。
+    10. 上方图标清单只展示基础图标；组合状态必须复用同一 symbol 和样式类，只额外裁切并添加 modifier，不得更换描边参数。
+  -->
+  <defs>
+    <mask id="cut-lower-right" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <rect width="1" height="1" fill="#fff" />
+      <rect x=".4375" y=".4375" width=".5625" height=".5625" fill="#000" />
+    </mask>
+    <mask id="cut-upper-right-dot" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <rect width="1" height="1" fill="#fff" />
+      <circle cx=".85" cy=".15" r=".2" fill="#000" />
+    </mask>
+    <mask id="cut-controller-back" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <rect width="1" height="1" fill="#fff" />
+      <rect x="0" y=".42" width=".58" height=".58" fill="#000" />
+    </mask>
+    <style>
+      .page { fill: #f6f6f5; }
+      .card { fill: #fff; stroke: #e2e4e5; stroke-width: 1; }
+      .icon-bg { fill: #f5f6f6; }
+      .icon { fill: #5f686b; }
+      .icon-outline { fill: none; stroke: #5f686b; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+      .pod-icon { fill: none; stroke: #5f686b; stroke-width: .9; stroke-linecap: round; stroke-linejoin: round; }
+      .model-icon { fill: none; stroke: #5f686b; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .controller-icon { fill: none; stroke: #5f686b; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .host-icon { fill: none; stroke: #5f686b; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .node-icon { fill: none; stroke: #5f686b; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .mqtt-icon { fill: none; stroke: #5f686b; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .system-icon { color: #5f686b; fill: none; stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .console-icon { color: #5f686b; fill: none; stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .interface-icon { color: #5f686b; fill: none; stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .customer-icon { color: #5f686b; }
+      .person-add-icon { color: #5f686b; fill: currentColor; --icon-modifier-mask: #f5f6f6; }
+      .label { fill: #202124; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 15px; font-weight: 600; }
+      .code { fill: #7b8285; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
+      .title { fill: #202124; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 26px; font-weight: 700; }
+      .note { fill: #667174; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 13px; }
+      .rule-panel { fill: #fff; stroke: #dfe3e3; stroke-width: 1; }
+      .rule-title { fill: #202124; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 700; }
+      .rule-text { fill: #536063; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 13px; }
+      .rule-code { fill: #067a7a; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; }
+      .weight-100 { fill: none; stroke: #5f686b; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+      .weight-300 { fill: none; stroke: #067a7a; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .badge-bg { fill: #fff; stroke: #067a7a; stroke-width: 1; }
+      .badge-plus { fill: none; stroke: #067a7a; stroke-width: 1.5; stroke-linecap: round; }
+      .badge-mask { fill: var(--icon-modifier-mask, #f5f6f6); }
+      .badge-list { fill: none; stroke: #5f686b; stroke-width: 1.5; stroke-linecap: round; }
+      .notification-dot { fill: #d93025; stroke: var(--icon-modifier-mask, #f5f6f6); stroke-width: 1.5; }
+    </style>
+    <symbol id="icon-speedometer2" viewBox="0 0 16 16"><path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4M3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.39.39 0 0 0-.029-.518z"/>
+  <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A8 8 0 0 1 0 10m8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3"/></symbol>
+    <symbol id="icon-people" viewBox="0 0 16 16"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></symbol>
+    <symbol id="icon-building" viewBox="0 0 16 16"><path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+  <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/></symbol>
+    <symbol id="icon-person" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/></symbol>
+    <symbol id="icon-person-add" viewBox="0 0 24 24">
+      <use href="#icon-person" x="1" y="1" width="20" height="20" mask="url(#cut-lower-right)" />
+      <rect x="12" y="12" width="11.5" height="11.5" fill="var(--icon-modifier-mask, #fff)" stroke="currentColor" stroke-width="1" />
+      <path d="M15 17.75h5.5M17.75 15v5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    </symbol>
+    <symbol id="icon-customer-company-users" viewBox="0 0 16 16">
+      <use href="#icon-building" x="0" y="1" width="10" height="14" fill="currentColor"/>
+      <circle cx="12.25" cy="7.25" r="2.15" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M8.75 14.5c.18-2.45 1.35-3.75 3.5-3.75s3.32 1.3 3.5 3.75" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-product-model" viewBox="0 0 24 24">
+      <path d="M9 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9l-6-8z" />
+      <circle cx="8.5" cy="12" r="1.25" />
+      <path d="M12 12h5" />
+    </symbol>
+    <symbol id="icon-product-model-add" viewBox="0 0 24 24">
+      <use href="#icon-product-model" mask="url(#cut-lower-right)" />
+      <rect x="12" y="12" width="11.5" height="11.5" fill="var(--icon-modifier-mask, #fff)" stroke="currentColor" stroke-width="1" />
+      <path d="M15 17.75h5.5M17.75 15v5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+    </symbol>
+    <symbol id="icon-controller-host" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="1.5" />
+      <rect x="4" y="4" width="16" height="16" rx=".5" />
+    </symbol>
+    <symbol id="icon-web-interface" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx=".5" />
+      <path d="M4 8h16M8 8v12M11 11h6M11 14h6M11 17h4" />
+    </symbol>
+    <symbol id="icon-lvgl-interface" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx=".5" />
+      <path d="M7 9h1M12 9h5M7 14h5M16 14h1" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="10" cy="9" r="2" fill="currentColor" stroke="none" />
+      <circle cx="14" cy="14" r="2" fill="currentColor" stroke="none" />
+      <rect x="7" y="17" width="4" height="1.5" rx=".5" />
+      <rect x="13" y="17" width="4" height="1.5" rx=".5" />
+    </symbol>
+    <symbol id="icon-controller-node" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="15" rx=".75" />
+      <path d="M4 7V5.75h4V7M4.75 5.75V2h2.5v3.75M4.75 3.25h2.5M4.75 4.5h2.5" />
+      <path d="M10 7V5.75h4V7M10.75 5.75V2h2.5v3.75M10.75 3.25h2.5M10.75 4.5h2.5" />
+      <path d="M16 7V5.75h4V7M16.75 5.75V2h2.5v3.75M16.75 3.25h2.5M16.75 4.5h2.5" />
+    </symbol>
+    <symbol id="icon-controller-system" viewBox="0 0 24 24">
+      <use href="#icon-controller-node" x="8" y="1" width="15" height="15" mask="url(#cut-controller-back)" />
+      <use href="#icon-controller-host" x="1" y="8" width="15" height="15" />
+    </symbol>
+    <symbol id="icon-mqtt-broker" viewBox="0 0 24 24">
+      <rect x="8" y="5" width="8" height="14" rx="1.5" />
+      <path d="M10.5 9h3M10.5 15h3" />
+      <path d="M8 9H3m0 0 2-2M3 9l2 2" />
+      <path d="M16 15h5m0 0-2-2M21 15l-2 2" />
+    </symbol>
+    <symbol id="icon-key" viewBox="0 0 16 16"><path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5"/>
+  <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <rect x="5" y="10" width="14" height="11" rx="1.5" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" />
+    </symbol>
+    <symbol id="icon-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="icon-pencil" viewBox="0 0 24 24">
+      <path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17zM14.5 7.5l4 4M4 20h16" />
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" />
+    </symbol>
+    <symbol id="icon-credit-card" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" />
+      <path d="M3 10h18M7 15h4" />
+    </symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24">
+      <path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5" />
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <path d="M5 5l14 14M19 5 5 19" />
+    </symbol>
+    <symbol id="icon-envelope" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" />
+      <path d="M3 7l9 6 9-6" />
+    </symbol>
+    <symbol id="icon-eye-slash" viewBox="0 0 24 24">
+      <path d="M3 3l18 18M2 12s3.5-7 10-7c2 0 3.8.7 5.3 1.6M22 12s-3.5 7-10 7c-2 0-3.8-.7-5.3-1.6" />
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11v6" />
+      <circle cx="12" cy="7.5" r=".75" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+      <path d="M15 5l-7 7 7 7" />
+    </symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7" />
+    </symbol>
+    <symbol id="icon-sort" viewBox="0 0 24 24">
+      <path d="M8 10l4-4 4 4M8 14l4 4 4-4" />
+    </symbol>
+    <symbol id="icon-controller-host-add" viewBox="0 0 24 24">
+      <use href="#icon-controller-host" mask="url(#cut-lower-right)" />
+      <rect x="12" y="12" width="11.5" height="11.5" />
+      <path d="M15 17.75h5.5M17.75 15v5.5" />
+    </symbol>
+    <symbol id="icon-box-arrow-right" viewBox="0 0 24 24">
+      <path d="M10 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5M13 8l4 4-4 4M8 12h9" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <path d="M5 13l4 4L19 7" />
+    </symbol>
+    <symbol id="icon-save" viewBox="0 0 24 24">
+      <path d="M4 3h13l3 3v15H4zM7 3v6h9V3M8 21v-7h8v7" />
+    </symbol>
+    <symbol id="icon-upload" viewBox="0 0 24 24">
+      <path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5" />
+    </symbol>
+    <symbol id="icon-json-validate" viewBox="0 0 24 24">
+      <path d="M5 3h9l5 5v4M14 3v5h5M5 3v18h8" />
+      <path d="M14 17l2.5 2.5L21 15" />
+    </symbol>
+    <symbol id="icon-shield-check" viewBox="0 0 24 24">
+      <path d="M12 3l7 3v5c0 4.6-2.7 8-7 10-4.3-2-7-5.4-7-10V6zM8.5 12l2.25 2.25L15.5 9.5" />
+    </symbol>
+    <symbol id="icon-status-active" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8 12.5l2.5 2.5L16 9" />
+    </symbol>
+    <symbol id="icon-status-frozen" viewBox="0 0 24 24">
+      <path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9" />
+      <path d="M12 6.5l2-2M12 6.5l-2-2M12 17.5l2 2M12 17.5l-2 2" />
+      <path d="M6.5 8.7l-2.7.2M6.5 8.7l-.6-2.7M17.5 15.3l2.7-.2M17.5 15.3l.6 2.7" />
+      <path d="M6.5 15.3l-.6 2.7M6.5 15.3l-2.7-.2M17.5 8.7l.6-2.7M17.5 8.7l2.7.2" />
+    </symbol>
+    <symbol id="icon-house-door" viewBox="0 0 16 16"><path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/></symbol>
+    <symbol id="icon-soundproof-pod" viewBox="0 0 16 16">
+      <rect x="1.5" y="1.5" width="13" height="13" rx="1"/>
+      <path d="M3.25 14.5v-9h4v9M9.25 5.25c.75-.65 1.5-.65 2.25 0M9.25 7.75c.75-.65 1.5-.65 2.25 0"/>
+    </symbol>
+    <symbol id="icon-box-seam" viewBox="0 0 16 16"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/></symbol>
+    <symbol id="icon-link-45deg" viewBox="0 0 16 16"><path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 16 16"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/></symbol>
+    <symbol id="icon-gear" viewBox="0 0 16 16"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+  <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></symbol>
+    <symbol id="icon-system-platform" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="1.5" />
+      <path d="M4 12h16M10 8h7M10 16h7" />
+      <circle cx="7" cy="8" r="1" fill="currentColor" stroke="none" />
+      <circle cx="7" cy="16" r="1" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="icon-check2-square" viewBox="0 0 16 16"><path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+  <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/></symbol>
+    <symbol id="icon-controller-console" viewBox="0 0 24 24">
+      <rect x="4" y="3.5" width="16" height="17" rx="1.5" />
+      <path d="M4 8.5h16M10 6h7M8 11v6M12 11v6M16 11v6" />
+      <circle cx="7" cy="6" r="1" fill="currentColor" stroke="none" />
+      <rect x="6.5" y="12" width="3" height="2" rx=".5" fill="currentColor" stroke="none" />
+      <rect x="10.5" y="14.5" width="3" height="2" rx=".5" fill="currentColor" stroke="none" />
+      <rect x="14.5" y="11" width="3" height="2" rx=".5" fill="currentColor" stroke="none" />
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></symbol>
+    <symbol id="icon-arrow-clockwise" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 16 16"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 16 16"><path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/></symbol>
+    <symbol id="icon-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/></symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M3 5h18M3 12h18M3 19h18" />
+    </symbol>
+  </defs>
+  <rect class="page" width="1232" height="1372" />
+  <text class="title" x="32" y="42">IoT 后台规划图标总览</text>
+  <text class="note" x="32" y="70">所有图标统一收录到项目图标库；允许参考现成图标，但名称、网格和视觉规范均由项目统一管理。</text>
+  <text class="note" x="32" y="92">实现时统一迁移到 AppIcon；默认态使用中性灰，选中态切换为 #067A7A 并增强描边重量。</text>
+  <g transform="translate(32,112)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-speedometer2" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">数据</text>
+    <text class="code" x="84" y="59">speedometer2</text>
+  </g>
+  <g transform="translate(332,112)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-customer-company-users" x="29" y="29" width="26" height="26" class="customer-icon" />
+    <text class="label" x="84" y="37">客户</text>
+    <text class="code" x="84" y="59">customer-company-users</text>
+  </g>
+  <g transform="translate(632,112)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-building" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">公司</text>
+    <text class="code" x="84" y="59">building</text>
+  </g>
+  <g transform="translate(932,112)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-people" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">用户</text>
+    <text class="code" x="84" y="59">people</text>
+  </g>
+  <g transform="translate(32,220)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-controller-system" x="29" y="29" width="26" height="26" class="controller-icon" />
+    <text class="label" x="84" y="37">控制器</text>
+    <text class="code" x="84" y="59">controller-system</text>
+  </g>
+  <g transform="translate(332,220)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-product-model" x="29" y="29" width="26" height="26" class="model-icon" />
+    <text class="label" x="84" y="37">型号</text>
+    <text class="code" x="84" y="59">product-model</text>
+  </g>
+  <g transform="translate(632,220)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-controller-host" x="29" y="29" width="26" height="26" class="host-icon" />
+    <text class="label" x="84" y="37">主机</text>
+    <text class="code" x="84" y="59">controller-host</text>
+  </g>
+  <g transform="translate(932,220)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-controller-node" x="29" y="29" width="26" height="26" class="node-icon" />
+    <text class="label" x="84" y="37">节点</text>
+    <text class="code" x="84" y="59">controller-node</text>
+  </g>
+  <g transform="translate(32,328)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-key" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">设备凭证 / API Key</text>
+    <text class="code" x="84" y="59">key</text>
+  </g>
+  <g transform="translate(332,328)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-soundproof-pod" x="29" y="29" width="26" height="26" class="pod-icon" />
+    <text class="label" x="84" y="37">静音仓</text>
+    <text class="code" x="84" y="59">soundproof-pod</text>
+  </g>
+  <g transform="translate(632,328)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-link-45deg" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">装配与绑定</text>
+    <text class="code" x="84" y="59">link-45deg</text>
+  </g>
+  <g transform="translate(932,328)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-sort" x="29" y="29" width="26" height="26" class="icon-outline" />
+    <text class="label" x="84" y="37">排序</text>
+    <text class="code" x="84" y="59">sort</text>
+  </g>
+  <g transform="translate(32,436)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-clock" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">预约</text>
+    <text class="code" x="84" y="59">clock</text>
+  </g>
+  <g transform="translate(332,436)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-gear" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">设置 / 预约配置</text>
+    <text class="code" x="84" y="59">gear</text>
+  </g>
+  <g transform="translate(632,436)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-system-platform" x="29" y="29" width="26" height="26" class="system-icon" />
+    <text class="label" x="84" y="37">系统</text>
+    <text class="code" x="84" y="59">system-platform</text>
+  </g>
+  <g transform="translate(932,436)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-check2-square" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">审核与发布</text>
+    <text class="code" x="84" y="59">check2-square</text>
+  </g>
+  <g transform="translate(32,544)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-controller-console" x="29" y="29" width="26" height="26" class="console-icon" />
+    <text class="label" x="84" y="37">控制器控制台</text>
+    <text class="code" x="84" y="59">controller-console</text>
+  </g>
+  <g transform="translate(332,544)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-mqtt-broker" x="29" y="29" width="26" height="26" class="mqtt-icon" />
+    <text class="label" x="84" y="37">MQTT</text>
+    <text class="code" x="84" y="59">mqtt-broker</text>
+  </g>
+  <g transform="translate(632,544)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-web-interface" x="29" y="29" width="26" height="26" class="interface-icon" />
+    <text class="label" x="84" y="37">网页界面</text>
+    <text class="code" x="84" y="59">web-interface</text>
+  </g>
+  <g transform="translate(932,544)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-lvgl-interface" x="29" y="29" width="26" height="26" class="interface-icon" />
+    <text class="label" x="84" y="37">LCD 操控界面</text>
+    <text class="code" x="84" y="59">lvgl-interface</text>
+  </g>
+  <g transform="translate(32,652)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-search" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">搜索</text>
+    <text class="code" x="84" y="59">search</text>
+  </g>
+  <g transform="translate(332,652)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-arrow-clockwise" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">刷新</text>
+    <text class="code" x="84" y="59">arrow-clockwise</text>
+  </g>
+  <g transform="translate(632,652)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-sun" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">浅色模式</text>
+    <text class="code" x="84" y="59">sun</text>
+  </g>
+  <g transform="translate(932,652)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-moon" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">深色模式</text>
+    <text class="code" x="84" y="59">moon</text>
+  </g>
+  <g transform="translate(32,760)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-bell" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">通知</text>
+    <text class="code" x="84" y="59">bell</text>
+  </g>
+  <g transform="translate(332,760)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-person-circle" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">用户入口</text>
+    <text class="code" x="84" y="59">person-circle</text>
+  </g>
+  <g transform="translate(632,760)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-chevron-down" x="29" y="29" width="26" height="26" class="icon" />
+    <text class="label" x="84" y="37">展开</text>
+    <text class="code" x="84" y="59">chevron-down</text>
+  </g>
+  <g transform="translate(932,760)">
+    <rect class="card" width="268" height="84" />
+    <rect class="icon-bg" x="16" y="16" width="52" height="52" />
+    <use href="#icon-menu" x="29" y="29" width="26" height="26" class="icon-outline" />
+    <text class="label" x="84" y="37">菜单</text>
+    <text class="code" x="84" y="59">menu</text>
+  </g>
+
+  <!-- 可视规则：用于逐个审核现有图标 -->
+  <rect class="rule-panel" x="32" y="880" width="1168" height="452" />
+  <text class="rule-title" x="56" y="916">图标审核规则</text>
+  <text class="rule-text" x="56" y="946">统一网格：24 × 24；线帽与连接：round；颜色：currentColor；基础图标不写死业务状态颜色。</text>
+  <text class="rule-text" x="56" y="974">现有 Bootstrap 填充图标需逐个审核并重绘，不能只用 CSS 修改粗细。</text>
+
+  <!-- Weight 对照 -->
+  <rect class="icon-bg" x="56" y="1000" width="56" height="56" />
+  <rect class="weight-100" x="70" y="1014" width="28" height="28" />
+  <path class="weight-100" d="M76 1042 V1023 H84 V1042 M88 1022 Q91 1019.5 94 1022 M88 1028 Q91 1025.5 94 1028" />
+  <text class="label" x="126" y="1024">细线 · 默认态</text>
+  <text class="rule-code" x="126" y="1046">Material Weight 100 → stroke-width: 1</text>
+
+  <rect class="icon-bg" x="56" y="1072" width="56" height="56" />
+  <rect class="weight-300" x="70" y="1086" width="28" height="28" />
+  <path class="weight-300" d="M76 1114 V1095 H84 V1114 M88 1094 Q91 1091.5 94 1094 M88 1100 Q91 1097.5 94 1100" />
+  <text class="label" x="126" y="1096">粗线 · 选中/强调态</text>
+  <text class="rule-code" x="126" y="1118">Material Weight 300 → stroke-width: 1.5</text>
+
+  <!-- 右上角通知状态示例 -->
+  <text class="label" x="56" y="1182">右上角通知状态规则</text>
+  <text class="rule-text" x="56" y="1206">无未读只显示 bell；有未读叠加红色 modifier-dot。</text>
+  <g transform="translate(56,1220)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-bell" x="18" y="18" width="36" height="36" class="icon" />
+    <text class="rule-text" x="0" y="94">无未读</text>
+  </g>
+  <g transform="translate(214,1220)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-bell" x="18" y="18" width="36" height="36" class="icon" mask="url(#cut-upper-right-dot)" />
+    <circle class="notification-dot" cx="50" cy="22" r="5.5" />
+    <text class="rule-text" x="0" y="94">有未读</text>
+  </g>
+
+  <!-- 右下角 + 组合示例 -->
+  <text class="label" x="594" y="1010">右下角 [+] 组合规则</text>
+  <text class="rule-text" x="594" y="1034">裁切区比方形 [+] 向左上各多留 1.5px 安全间距。</text>
+
+  <g transform="translate(594,1052)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-controller-host" x="18" y="18" width="36" height="36" class="host-icon" mask="url(#cut-lower-right)" />
+    <rect class="badge-bg" x="36" y="36" width="18" height="18" />
+    <path class="badge-plus" d="M40 45 H50 M45 40 V50" />
+    <text class="rule-text" x="0" y="94">新增主机</text>
+  </g>
+  <g transform="translate(752,1052)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-controller-node" x="18" y="18" width="36" height="36" class="node-icon" mask="url(#cut-lower-right)" />
+    <rect class="badge-bg" x="36" y="36" width="18" height="18" />
+    <path class="badge-plus" d="M40 45 H50 M45 40 V50" />
+    <text class="rule-text" x="0" y="94">新增节点</text>
+  </g>
+  <g transform="translate(910,1052)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-soundproof-pod" x="18" y="18" width="36" height="36" class="pod-icon" mask="url(#cut-lower-right)" />
+    <rect class="badge-bg" x="36" y="36" width="18" height="18" />
+    <path class="badge-plus" d="M40 45 H50 M45 40 V50" />
+    <text class="rule-text" x="0" y="94">新增静音仓</text>
+  </g>
+  <g transform="translate(1068,1052)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-person-add" x="18" y="18" width="36" height="36" class="person-add-icon" />
+    <text class="rule-text" x="0" y="94">新增用户</text>
+  </g>
+
+  <!-- 右下角列表组合示例：裁掉基础图标右下象限，在空位显示中性灰粗线 -->
+  <text class="label" x="594" y="1182">右下角列表组合规则</text>
+  <text class="rule-text" x="594" y="1206">裁切区比列表符号向左上各多留 1.5px 安全间距。</text>
+  <g transform="translate(594,1220)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-controller-host" x="18" y="18" width="36" height="36" class="host-icon" mask="url(#cut-lower-right)" />
+    <rect class="badge-mask" x="36" y="36" width="18" height="18" />
+    <path class="badge-list" d="M38 39 H52 M38 45 H52 M38 51 H52" />
+    <text class="rule-text" x="0" y="94">主机列表</text>
+  </g>
+  <g transform="translate(752,1220)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-controller-node" x="18" y="18" width="36" height="36" class="node-icon" mask="url(#cut-lower-right)" />
+    <rect class="badge-mask" x="36" y="36" width="18" height="18" />
+    <path class="badge-list" d="M38 39 H52 M38 45 H52 M38 51 H52" />
+    <text class="rule-text" x="0" y="94">节点列表</text>
+  </g>
+  <g transform="translate(910,1220)">
+    <rect class="icon-bg" width="72" height="72" />
+    <use href="#icon-soundproof-pod" x="18" y="18" width="36" height="36" class="pod-icon" mask="url(#cut-lower-right)" />
+    <rect class="badge-mask" x="36" y="36" width="18" height="18" />
+    <path class="badge-list" d="M38 39 H52 M38 45 H52 M38 51 H52" />
+    <text class="rule-text" x="0" y="94">静音仓列表</text>
+  </g>
+</svg>

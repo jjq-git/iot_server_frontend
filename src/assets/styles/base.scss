@@ -1,0 +1,325 @@
+// 全局基础样式
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  background: var(--color-bg-page);
+  color: var(--color-text);
+}
+
+/* ── 后台排版基准 ─────────────────────────────────────────────
+ * Bootstrap 默认字号偏大(body 1rem / h1 2.5rem / .btn 1rem)，这里统一压紧成
+ * 管理后台该有的紧凑尺寸。原先这段由 src/utils/font-size.js 在运行时注入 px，
+ * 会把字号钉死、导致字号切换只对部分元素生效；现改为写在样式里，
+ * 经 postcss-pxtorem 转成 rem 后随 <html> font-size 等比缩放。
+ * 位置在 base 层，后续 components/pages 等模块可正常覆盖。
+ * ──────────────────────────────────────────────────────────── */
+.b-table,
+.b-table > thead > tr > th,
+.b-table > tbody > tr > td {
+  font-size: var(--font-size-control);
+}
+
+.b-table.b-table-small,
+.b-table-small > thead > tr > th,
+.b-table-small > tbody > tr > td {
+  font-size: var(--font-size-caption);
+}
+
+.btn,
+.btn-sm,
+.form-control,
+.form-control-sm,
+.b-form-input,
+.custom-select {
+  font-size: var(--font-size-control);
+}
+
+.badge {
+  font-size: var(--font-size-badge);
+}
+
+.nav,
+.breadcrumb,
+.nav-link,
+.dropdown-menu {
+  font-size: var(--font-size-navigation);
+}
+
+/* 串口日志面板用等宽字体，单独给一档 */
+.serial-logs-pane,
+.serial-logs-pane .serial-line {
+  font-size: var(--font-size-code);
+}
+
+h1 { font-size: var(--font-size-title-lg); }
+h2 { font-size: var(--font-size-title-md); }
+h3 { font-size: var(--font-size-title-sm); }
+h4 { font-size: var(--font-size-subtitle); }
+h5 { font-size: var(--font-size-body); }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-text {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.action-icon {
+  color: var(--color-brand);
+  font-size: var(--font-size-modal-title) !important;
+}
+
+/* 图标 + 文字组合按钮（业务表格操作列等）— 内联 + flex-wrap 自然换行 */
+.action-icon--text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-xs);
+  font-size: 0; /* 抹掉模板里图标和 span 之间的空白字符 */
+  padding: 2px 5px;
+  margin: 0 4px 2px 0;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  flex: 0 0 auto;
+  line-height: 1;
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  transition:
+    background-color var(--motion-duration-base) var(--motion-ease-standard),
+    color var(--motion-duration-base) var(--motion-ease-standard);
+}
+
+/* 表格操作列 td 类：保持 table-cell（不要 display:flex 破坏列对齐），用文本流 + inline-flex 按钮自然换行。
+   全站统一「居右」对齐（表头 + 单元格），列宽按内容自适应，按钮紧贴右侧。 */
+.b-table td.actions-cell,
+.table td.actions-cell,
+.b-table th.actions-cell,
+.table th.actions-cell {
+  width: 1%; /* 收缩到内容宽度：配合 nowrap 让操作列按一行按钮的自然宽度自适应，不再吃满剩余空间 */
+  white-space: nowrap;
+}
+
+.b-table td.actions-cell,
+.table td.actions-cell {
+  text-align: right !important;
+  vertical-align: middle;
+  padding: 6px 8px;
+  line-height: 1.6;
+  font-size: 0; /* 抹掉 inline-flex 之间的空白文本节点 */
+}
+
+/* td 内部的按钮组之间间距通过 .action-icon--text 自身 margin 控制（不再依赖 td flex gap） */
+
+/* 展开列：固定窄宽，单按钮居中 */
+.b-table td.expand-cell,
+.table td.expand-cell {
+  width: 52px;
+  min-width: 52px;
+  text-align: center;
+  padding: 6px 4px;
+  white-space: nowrap;
+}
+
+/* 表头：与单元格一致，"操作"列标题统一居右 */
+.b-table th.actions-cell,
+.table th.actions-cell {
+  text-align: right;
+}
+
+/* td 内的按钮组用 flex 自动换行 */
+.b-table td.actions-cell .action-icon--text,
+.table td.actions-cell .action-icon--text {
+  vertical-align: middle;
+}
+
+/* 推荐做法：在 td 里包一个 .action-cell，flex 自动换行（1 ~ N 个/行），统一居右 */
+.action-cell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-xs) var(--space-sm);
+  min-width: 0;
+  text-align: right;
+}
+
+/* 单行变体：短操作列（如 编辑/删除）强制不换行，配合足够列宽保证一行 */
+.action-cell--nowrap {
+  flex-wrap: nowrap;
+}
+
+.action-cell .action-icon--text {
+  margin: 0;
+  flex: 0 0 auto; /* 不 stretch，按内容宽度 */
+}
+
+.action-icon--text > .app-icon,
+.action-icon--text > svg {
+  font-size: var(--icon-size-sm);
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.action-icon--text > span {
+  font-size: var(--font-size-control);
+  line-height: var(--line-height-tight);
+  vertical-align: middle;
+}
+
+.action-icon--text:hover {
+  color: var(--color-brand);
+  background-color: var(--color-brand-soft);
+}
+
+.action-icon--text.text-danger,
+.action-icon--text.text-danger:hover {
+  color: var(--color-error);
+}
+
+.action-icon--text:focus-visible,
+.editable-trigger:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.editable-trigger__icon {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+  margin-inline-start: var(--space-xs);
+  flex: none;
+  color: var(--color-text-muted);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-2px);
+  transition:
+    color var(--motion-duration-base) var(--motion-ease-standard),
+    opacity var(--motion-duration-base) var(--motion-ease-standard),
+    transform var(--motion-duration-base) var(--motion-ease-standard),
+    visibility 0s linear var(--motion-duration-base);
+  vertical-align: -0.125em;
+}
+
+.editable-trigger:hover > .editable-trigger__icon,
+.editable-trigger:focus-visible > .editable-trigger__icon,
+.detail-row:hover .editable-trigger > .editable-trigger__icon,
+.detail-row:focus-within .editable-trigger > .editable-trigger__icon {
+  color: var(--color-brand);
+  opacity: 0.9;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.editable-trigger {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editable-trigger__icon {
+    transition: none;
+  }
+}
+
+.action-icon--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.table-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-image {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  cursor: zoom-in;
+}
+
+/* 对话框尺寸适配 */
+.attr-dialog-width .modal-dialog {
+  width: 90% !important;
+  max-width: 1200px !important;
+}
+
+.attr-form-dialog-width .modal-dialog {
+  width: 90% !important;
+  max-width: 1000px !important;
+}
+
+/* 弹框头部背景色 */
+.dialog-with-header-bg .modal-header {
+  background: linear-gradient(135deg, var(--color-brand-solid) 0%, var(--color-brand-solid-hover) 100%);
+  padding: 15px 20px;
+  border-radius: var(--radius-overlay) var(--radius-overlay) 0 0;
+}
+
+.dialog-with-header-bg .modal-title {
+  color: var(--color-on-brand);
+  font-size: var(--font-size-title-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.dialog-with-header-bg .close {
+  color: var(--color-on-brand);
+  opacity: 1;
+}
+
+.dialog-with-header-bg .close:hover {
+  color: var(--color-on-brand);
+  opacity: 0.8;
+}
+
+.companies__filters .custom-select,
+.companies__filters .form-control,
+.users__filters .custom-select,
+.users__filters .form-control,
+.hn-models__filters .custom-select,
+.hn-models__filters .form-control,
+.hosts__filters .custom-select,
+.hosts__filters .form-control,
+.nodes__filters .custom-select,
+.nodes__filters .form-control,
+.pod-models__filters .custom-select,
+.pod-models__filters .form-control,
+.pods__filters .custom-select,
+.pods__filters .form-control,
+.products__filters .custom-select,
+.products__filters .form-control {
+  width: 150px;
+}
+
+/* 分页容器右对齐 */
+.pager-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination {
+  margin-bottom: 0 !important;
+}

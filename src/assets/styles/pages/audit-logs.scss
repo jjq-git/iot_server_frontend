@@ -1,0 +1,178 @@
+.audit-logs {
+  font-family: var(--font-family-brand) !important;
+}
+
+.page-head {
+  margin-bottom: 20px;
+}
+
+.page-head h2 {
+  margin: 0 0 5px;
+  font-size: var(--font-size-display-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.page-desc {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-body);
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.filter-left {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-control {
+  width: 180px;
+}
+
+.filter-control--date {
+  flex: 0 1 360px !important;
+  width: 360px;
+  min-width: 320px;
+  max-width: 380px !important;
+}
+
+.date-range-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.date-range-separator {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-control);
+}
+
+.date-range-input {
+  width: 100%;
+  min-width: 0;
+}
+
+.audit-export-button {
+  flex: 0 0 auto;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.audit-filters-form {
+  margin-bottom: 0;
+}
+
+.audit-table-container {
+  margin-bottom: 20px;
+}
+
+.audit-pager {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.operator-name {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.operator-email {
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  word-break: break-all;
+}
+
+.log-details {
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border-divider);
+  border-radius: 4px;
+  padding: 10px;
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-caption);
+  line-height: 1.4;
+  max-height: 300px;
+  overflow: auto;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.audit-detail {
+  padding-top: 0.25rem;
+}
+
+.detail-value {
+  word-break: break-all;
+}
+
+.detail-stack {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.detail-loading {
+  padding: 1rem 0;
+}
+
+.audit-diff {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.audit-diff__side {
+  min-width: 0;
+}
+
+.audit-diff__side h4 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* 列显示按钮对齐走公共 .column-visibility-header，此处不再覆盖。 */
+
+@media (width <= 768px) {
+  .audit-diff {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-left,
+  .filter-control,
+  .filter-control--date,
+  .filter-actions {
+    width: 100%;
+  }
+
+  .filter-actions {
+    margin-left: 0;
+  }
+}

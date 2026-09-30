@@ -1,0 +1,9 @@
+/* 页面特定样式已移至 pages.scss */
+.node-detail.is-readonly .editable-b {
+  cursor: default;
+}
+
+.node-detail.is-readonly .editable-b:hover {
+  color: inherit;
+  background: transparent;
+}

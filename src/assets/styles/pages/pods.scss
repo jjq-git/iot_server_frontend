@@ -1,0 +1,30 @@
+.pods {
+  width: 100%;
+  overflow: visible;
+}
+
+.pods__pager {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* 表格公共视觉由 _admin-system.scss 统一维护，本页只保留 Pods 列语义微调。 */
+
+/* 序列号列（第 2 列，第 1 列为展开箭头）作为每行视觉锚点 */
+::v-deep .pods__serial-cell {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-strong);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+/* 列显示按钮对齐走公共 .column-visibility-header，此处不再覆盖。 */
+
+.pods__assign-alert {
+  margin-left: 18px;
+}
+
+.assign-alert-list {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}

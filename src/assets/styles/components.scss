@@ -1,0 +1,384 @@
+// 组件/页面通用模块样式
+// Dashboard (AdminLTE 风格)
+.dashboard--adminlte h1 {
+  font-size: var(--font-size-title-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-xs);
+}
+
+.dashboard__page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.page-breadcrumb {
+  font-size: var(--font-size-control);
+  color: var(--color-brand);
+}
+
+.page-breadcrumb__item.active {
+  color: var(--color-brand);
+}
+
+.page-breadcrumb__sep {
+  margin: 0 6px;
+}
+
+.dashboard__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.dashboard__grid--top {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-bottom: var(--space-lg);
+}
+
+.dashboard__grid--bottom {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel__summary {
+  padding: var(--space-sm) 0 var(--space-xs);
+}
+
+.summary-number {
+  font-size: var(--font-size-title-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.summary-meta {
+  font-size: var(--font-size-caption);
+  color: var(--color-brand);
+}
+
+.summary-trend {
+  font-size: var(--font-size-caption);
+  margin-top: 6px;
+}
+
+.summary-trend span {
+  color: var(--color-brand);
+  margin-left: 6px;
+}
+
+.summary-trend.up {
+  color: var(--color-accent);
+}
+
+.summary-trend.down {
+  color: var(--color-error);
+}
+
+// 伪图表占位
+.fake-chart {
+  height: 220px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-subtle);
+  position: relative;
+  margin-top: 10px;
+}
+
+.fake-chart--line::after {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(180deg, var(--color-brand-soft), var(--color-brand-bg));
+}
+
+.fake-chart--bar::after {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: var(--radius-sm);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-brand-soft) 0,
+    var(--color-brand-soft) 18px,
+    var(--color-bg-muted) 18px,
+    var(--color-bg-muted) 34px
+  );
+  opacity: 0.6;
+}
+
+.panel__legend {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: flex-end;
+  font-size: var(--font-size-caption);
+  color: var(--color-brand);
+  margin-top: 10px;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-xs);
+  display: inline-block;
+}
+
+.legend-dot.primary {
+  background: var(--color-brand);
+}
+
+.legend-dot.muted {
+  background: var(--color-text-muted);
+}
+
+.panel--table .panel__body {
+  padding: 0;
+}
+
+.table {
+  // display: grid;
+}
+
+.table__head,
+.table__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 0.6fr;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  align-items: center;
+}
+
+.table__head {
+  font-size: var(--font-size-caption);
+  color: var(--color-brand);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-thead);
+}
+
+.table__row {
+  font-size: var(--font-size-control);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table__row:last-child {
+  border-bottom: none;
+}
+
+.table__row .up {
+  color: var(--color-accent);
+}
+
+.table__row .down {
+  color: var(--color-error);
+}
+
+.table__more {
+  text-align: right;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: var(--font-size-badge);
+  background: var(--color-error);
+  color: var(--color-on-brand);
+  border-radius: var(--radius-status);
+}
+
+.panel--overview .panel__body {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-md);
+}
+
+.overview-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.overview-icon {
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+  border-radius: var(--radius-circle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-subtle);
+  font-size: var(--icon-size-md);
+}
+
+.overview-icon.success {
+  color: var(--color-accent);
+}
+
+.overview-icon.warning {
+  color: var(--color-warning);
+}
+
+.overview-icon.danger {
+  color: var(--color-error);
+}
+
+.overview-text {
+  flex: 1;
+  text-align: right;
+}
+
+.overview-label {
+  font-size: var(--font-size-caption);
+  color: var(--color-brand);
+}
+
+.overview-value {
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-semibold);
+}
+
+.overview-value.up {
+  color: var(--color-accent);
+}
+
+.overview-value.down {
+  color: var(--color-error);
+}
+
+// 数据模型文档占位页
+.data-model-doc h2 {
+  margin: 0 0 6px;
+  font-size: var(--font-size-page-title);
+}
+
+.page-desc {
+  margin: 0;
+  color: var(--color-brand);
+  font-size: var(--font-size-control);
+}
+
+.doc-hint {
+  margin-top: var(--space-md);
+  padding: var(--space-md) 14px;
+  background: var(--color-bg-subtle);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-control);
+  font-size: var(--font-size-control);
+  color: var(--color-text);
+}
+
+.doc-hint__row + .doc-hint__row {
+  margin-top: 6px;
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+
+  h2 {
+    margin: 0 0 10px;
+  }
+}
+
+// 登录页
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-sidebar-bg-secondary) 0%, var(--color-brand-dark) 40%, var(--color-bg-page) 100%);
+}
+
+.login__card {
+  width: 360px;
+  padding: var(--space-2xl);
+  background: var(--color-bg-card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.login__brand {
+  font-size: var(--font-size-title-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 6px;
+}
+
+.login__subtitle {
+  color: var(--color-brand);
+  margin-bottom: 20px;
+}
+
+.login__submit {
+  width: 100%;
+}
+
+.login__hint {
+  margin-top: var(--space-md);
+  color: var(--color-brand);
+  font-size: var(--font-size-caption);
+  text-align: center;
+}
+
+// 404
+.not-found {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+// 全局表格头部背景色
+.table th {
+  background-color: var(--color-bg-thead) !important;
+}
+
+// 斑马纹表格的行背景色
+.table.table-striped tbody tr:nth-of-type(odd) td {
+  background-color: var(--color-bg-subtle);
+}
+
+// BaseTable 默认样式
+// 设置 tbody 最小高度，使表格在数据少时也能保持一定高度
+.base-table .table {
+  margin-bottom: 0;
+}
+
+// BaseTable sticky-header 支持
+// BootstrapVue 的 sticky-header 需要表格容器有固定高度
+.base-table .b-table-sticky-header {
+  position: relative;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+// 确保 sticky-header 表格的容器有明确高度
+.base-table-sticky-container {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+// 如需全局设置 tbody 最小高度，取消下面的注释
+// .base-table :deep(tbody) {
+//   min-height: 200px;
+// }

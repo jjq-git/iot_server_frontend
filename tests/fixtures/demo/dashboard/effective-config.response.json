@@ -1,0 +1,52 @@
+{
+  "config_version": 1,
+  "timezone": "Asia/Shanghai",
+  "source": "demo-seed",
+  "modules": [
+    {
+      "id": "stats_preview",
+      "enabled": true,
+      "position": 1
+    },
+    {
+      "id": "device_online_rate",
+      "enabled": true,
+      "position": 2
+    },
+    {
+      "id": "device_status_distribution",
+      "enabled": true,
+      "position": 3
+    },
+    {
+      "id": "pod_usage_distribution",
+      "enabled": true,
+      "position": 4
+    },
+    {
+      "id": "pod_usage_trend",
+      "enabled": true,
+      "position": 5
+    },
+    {
+      "id": "file_usage_stats",
+      "enabled": true,
+      "position": 6
+    },
+    {
+      "id": "alert_stats",
+      "enabled": true,
+      "position": 7
+    },
+    {
+      "id": "alert_trend",
+      "enabled": true,
+      "position": 8
+    },
+    {
+      "id": "detailed_stats",
+      "enabled": true,
+      "position": 9
+    }
+  ]
+}

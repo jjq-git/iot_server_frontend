@@ -1,0 +1,134 @@
+.location-detail__card {
+  margin-bottom: 16px;
+}
+
+.location-detail .detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+}
+
+.location-detail .detail-item {
+  min-width: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-divider);
+}
+
+.location-detail .detail-item--wide,
+.location-detail .detail-item:last-child {
+  grid-column: 1 / -1;
+}
+
+.location-detail .detail-label {
+  margin-bottom: 4px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+}
+
+.location-detail .detail-value {
+  min-width: 0;
+  color: var(--color-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.location-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-primary);
+}
+
+.section-title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border-divider);
+}
+
+.gps-coordinates,
+.pods-stats {
+  margin-bottom: 24px;
+}
+
+.gps-info,
+.pods-info {
+  padding: 12px;
+  background-color: var(--color-bg-page);
+  border-radius: 4px;
+  border-left: 4px solid var(--color-brand);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.gps-info div,
+.pods-info div {
+  margin-bottom: 6px;
+}
+
+.gps-action {
+  margin-top: 8px;
+}
+
+.no-gps,
+.no-pods {
+  padding: 12px;
+  background-color: var(--color-bg-page);
+  border-radius: 4px;
+  border-left: 4px solid var(--color-warning);
+  font-size: var(--font-size-body);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.pods-list {
+  margin-top: 10px;
+}
+
+.pod-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-divider);
+  border-radius: 4px;
+}
+
+.pod-item:hover {
+  background-color: var(--color-bg-page);
+}
+
+.pod-more {
+  margin-top: 8px;
+  font-size: var(--font-size-caption);
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+.remark-card {
+  margin-top: 16px;
+}
+
+.remark-content {
+  padding: 16px;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  background-color: var(--color-bg-page);
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+
+@media (width <= 768px) {
+  .location-detail .detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  .location-detail .detail-item--wide,
+  .location-detail .detail-item:last-child {
+    grid-column: auto;
+  }
+}

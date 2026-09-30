@@ -1,0 +1,107 @@
+.mqtt-overview {
+  &__toolbar {
+    display: flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+
+  &__toolbar-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__row {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__row--summary {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  &__row--rates {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__nodes {
+    margin-bottom: 12px;
+  }
+
+  &__refresh-status {
+    display: block;
+    text-align: right;
+  }
+
+  &__notconfigured {
+    border: 1px dashed var(--tt-border);
+    background: var(--tt-bg-thead);
+    color: var(--tt-text-sec);
+  }
+}
+
+.mqtt-stat {
+  height: 100%;
+
+  &__body {
+    padding: 14px 16px;
+  }
+
+  &__label {
+    font-size: var(--font-size-caption);
+    color: var(--tt-text-sec);
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-size: var(--font-size-title-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--tt-text);
+    line-height: 1.2;
+
+    &--rate {
+      color: var(--tt-accent);
+    }
+  }
+
+  &__bar {
+    margin-top: 8px;
+    height: 4px;
+    background: var(--tt-bg-thead);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    transition: width 0.4s ease;
+    &--in { background: var(--tt-success); }
+    &--out { background: var(--tt-accent); }
+  }
+}
+
+@media (width <= 1199px) {
+  .mqtt-overview__row--summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 767px) {
+  .mqtt-overview {
+    &__toolbar,
+    &__toolbar-actions {
+      width: 100%;
+    }
+
+    &__toolbar-actions {
+      justify-content: space-between;
+    }
+
+    &__row--summary,
+    &__row--rates {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

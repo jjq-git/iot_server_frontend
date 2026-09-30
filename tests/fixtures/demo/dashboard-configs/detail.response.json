@@ -1,0 +1,128 @@
+{
+  "id": 100,
+  "company_id": 100,
+  "company_name": "演示制造商",
+  "config_json": {
+    "branding": {
+      "company_name": "演示制造商",
+      "short_name": "演示制造商",
+      "slogan": "智能静音空间演示"
+    },
+    "panels": [
+      {
+        "id": "stats_preview",
+        "title": "Overview",
+        "chart": "stat",
+        "source": "dashboard.summary",
+        "grid": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2
+        }
+      },
+      {
+        "id": "device_online_rate",
+        "title": "Online rate",
+        "chart": "line",
+        "source": "device_status.online_rate",
+        "grid": {
+          "x": 0,
+          "y": 2,
+          "w": 8,
+          "h": 4
+        }
+      },
+      {
+        "id": "device_status_distribution",
+        "title": "Device status",
+        "chart": "pie",
+        "source": "device_status.status_distribution",
+        "grid": {
+          "x": 8,
+          "y": 2,
+          "w": 4,
+          "h": 4
+        }
+      },
+      {
+        "id": "pod_usage_distribution",
+        "title": "Usage duration",
+        "chart": "pie",
+        "source": "pod_usage.duration_distribution",
+        "grid": {
+          "x": 0,
+          "y": 6,
+          "w": 6,
+          "h": 4
+        }
+      },
+      {
+        "id": "pod_usage_trend",
+        "title": "Usage trend",
+        "chart": "bar",
+        "source": "pod_usage.usage_count",
+        "grid": {
+          "x": 6,
+          "y": 6,
+          "w": 6,
+          "h": 4
+        }
+      },
+      {
+        "id": "file_usage_stats",
+        "title": "File activity",
+        "chart": "bar",
+        "source": "file_activity.usage_count",
+        "grid": {
+          "x": 0,
+          "y": 10,
+          "w": 6,
+          "h": 4
+        }
+      },
+      {
+        "id": "alert_stats",
+        "title": "Alert types",
+        "chart": "pie",
+        "source": "alerts.type_distribution",
+        "grid": {
+          "x": 6,
+          "y": 10,
+          "w": 6,
+          "h": 4
+        }
+      },
+      {
+        "id": "alert_trend",
+        "title": "Alert trend",
+        "chart": "line",
+        "source": "alerts.alert_count",
+        "grid": {
+          "x": 0,
+          "y": 14,
+          "w": 12,
+          "h": 4
+        }
+      },
+      {
+        "id": "detailed_stats",
+        "title": "Daily details",
+        "chart": "table",
+        "source": "dashboard_summary.daily_detail",
+        "grid": {
+          "x": 0,
+          "y": 18,
+          "w": 12,
+          "h": 5
+        }
+      }
+    ]
+  },
+  "html_content": null,
+  "css_content": null,
+  "js_content": null,
+  "is_active": true,
+  "created_at": "2026-09-01T00:00:00.000Z",
+  "updated_at": "2026-09-01T00:00:00.000Z"
+}

@@ -1,0 +1,387 @@
+.meeting-settings__workspace {
+  overflow: hidden;
+}
+
+.meeting-settings__workspace ::v-deep > .card-body {
+  padding: 0;
+}
+
+.meeting-settings__workspace ::v-deep .meeting-settings__nav {
+  gap: 8px;
+  padding: 12px 24px 0;
+  border-bottom: 1px solid var(--color-border-divider);
+  background: var(--color-bg-card);
+}
+
+.meeting-settings__workspace ::v-deep .meeting-settings__nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.meeting-settings__workspace ::v-deep .meeting-settings__nav .nav-link:hover {
+  border-bottom-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+.meeting-settings__workspace ::v-deep .meeting-settings__nav .nav-link.active {
+  border-bottom-color: var(--color-brand);
+  background: transparent;
+  color: var(--color-brand);
+}
+
+.meeting-settings__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  border: 1px solid currentcolor;
+  border-radius: 50%;
+  font-size: var(--font-size-badge);
+}
+
+.meeting-settings__tab-action {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 0 3px 16px;
+}
+
+.settings-panel {
+  /* padding: 24px; */
+}
+
+.room-identity {
+  min-width: 0;
+}
+
+.room-identity__detail {
+  max-width: 320px;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-caption);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.settings-notice {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-height: 48px;
+  margin-bottom: 18px;
+}
+
+.settings-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  color: var(--color-text-muted);
+}
+
+.settings-empty-state strong {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-emphasis);
+}
+
+.action-icon--text:disabled {
+  opacity: 0.45;
+}
+
+.booking-settings-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+}
+
+.booking-settings-actions ::v-deep .btn-sm {
+  min-height: var(--control-height-sm);
+  white-space: nowrap;
+}
+
+.booking-policy-form {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.booking-policy-form > .form-group,
+.booking-policy-section .form-group,
+.booking-policy-phase-card .form-group {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.booking-policy-section {
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-divider);
+  border-radius: var(--radius-surface);
+  background: var(--color-bg-card);
+}
+
+.booking-policy-section__title {
+  width: auto;
+  margin: 0;
+  padding: 0 var(--space-sm);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+}
+
+.booking-policy-cleaning-window {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.85fr) minmax(128px, 0.9fr) minmax(180px, 1.25fr) var(--list-control-height);
+  align-items: end;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.booking-policy-cleaning-window__remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-policy-form__heading {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+}
+
+.booking-policy-phase-list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.booking-policy-phase-card {
+  display: grid;
+  grid-template-columns: minmax(86px, 0.45fr) minmax(0, 1fr) minmax(0, 0.72fr) max-content;
+  align-items: end;
+  gap: var(--space-sm) var(--space-md);
+  min-width: 0;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border-divider);
+  border-radius: var(--radius-surface);
+  background: var(--color-bg-subtle);
+}
+
+.booking-policy-phase-card__title {
+  grid-column: 1;
+  align-self: center;
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body);
+}
+
+.booking-policy-phase-card__action-grid {
+  display: grid;
+  grid-column: 2 / 4;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.booking-policy-phase-card__action-grid--timed {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.booking-policy-phase-card__notify-toggle {
+  grid-column: 4;
+  place-self: center end;
+  margin: 0;
+}
+
+.booking-policy-phase-card__notify-grid {
+  display: grid;
+  grid-column: 2 / -1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.booking-policy-form ::v-deep .custom-control {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 0;
+}
+
+.booking-policy-form ::v-deep .custom-control-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 0;
+  line-height: var(--line-height-body);
+}
+
+.booking-policy-form ::v-deep .custom-control-label::before,
+.booking-policy-form ::v-deep .custom-control-label::after {
+  top: 50%;
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+.connection-status-message {
+  display: block;
+  max-width: 240px;
+  margin-top: 5px;
+  overflow: hidden;
+  color: var(--color-error);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.provider-section {
+  margin-top: 28px;
+  padding: 22px 24px 24px;
+  border-top: 1px solid var(--color-border-divider);
+  background: var(--color-bg-subtle);
+}
+
+.provider-section__heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+}
+
+.provider-section__heading h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-bold);
+}
+
+.provider-section__icon {
+  color: var(--color-brand);
+}
+
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.provider-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--color-border-divider);
+  border-left: 3px solid var(--color-brand);
+  background: var(--color-bg-card);
+}
+
+.provider-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.provider-card__capabilities {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (width <= 767px) {
+  .booking-settings-table--empty ::v-deep .table {
+    min-width: 100%;
+  }
+
+  .meeting-settings__workspace ::v-deep .meeting-settings__nav {
+    gap: 0;
+    padding-inline: 12px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .meeting-settings__workspace ::v-deep .meeting-settings__nav .nav-link {
+    padding-inline: 12px;
+    white-space: nowrap;
+  }
+
+  .settings-panel {
+    padding: 16px;
+  }
+
+  .provider-section {
+    margin: 24px -16px -16px;
+    padding: 18px 16px 20px;
+  }
+
+  .meeting-settings__tab-action {
+    padding-left: 12px;
+  }
+
+  .provider-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-policy-cleaning-window,
+  .booking-policy-phase-card__notify-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-policy-phase-card {
+    grid-template-columns: minmax(84px, 0.35fr) minmax(0, 1fr);
+  }
+
+  .booking-policy-phase-card__title {
+    grid-column: 1;
+  }
+
+  .booking-policy-phase-card__action-grid,
+  .booking-policy-phase-card__notify-toggle {
+    grid-column: 2;
+  }
+
+  .booking-policy-phase-card__notify-toggle {
+    justify-self: start;
+  }
+
+  .booking-policy-phase-card__notify-grid {
+    grid-column: 1 / -1;
+  }
+
+  .booking-policy-cleaning-window__remove {
+    justify-content: flex-start;
+  }
+}
+
+@media (width <= 575px) {
+  .booking-policy-section,
+  .booking-policy-phase-card {
+    padding: var(--space-md);
+  }
+
+  .booking-policy-cleaning-window,
+  .booking-policy-phase-card__action-grid,
+  .booking-policy-phase-card__notify-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .booking-policy-phase-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .booking-policy-phase-card__title,
+  .booking-policy-phase-card__action-grid,
+  .booking-policy-phase-card__notify-toggle,
+  .booking-policy-phase-card__notify-grid {
+    grid-column: 1;
+  }
+}

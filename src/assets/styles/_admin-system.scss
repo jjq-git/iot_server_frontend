@@ -1,0 +1,2233 @@
+// Consolidated admin visual system. The bridge partials preserve cascade order.
+/* stylelint-disable no-duplicate-selectors -- the two former layers retain their reviewed cascade while duplicate declarations are reduced incrementally */
+
+@mixin foundation {
+  // Modern admin visual layer. Keep this file focused on shell and BootstrapVue
+  // primitives so page-level business styles can gradually shrink.
+  
+  html {
+    background: var(--color-bg-page);
+  }
+  
+  body {
+    background: var(--color-bg-page);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+  }
+  
+  .layout__content {
+    background: var(--color-bg-page) !important;
+    padding: 22px 28px 24px !important;
+  }
+  
+  [data-theme="dark"] .layout__content {
+    background: var(--color-bg-page) !important;
+  }
+  
+  .page-card {
+    width: 100%;
+    max-width: 1680px;
+    min-height: calc(100vh - 96px);
+    margin: 0 auto;
+  }
+  
+  .sidebar {
+    background: var(--color-sidebar-bg) !important;
+    border-right: 0 !important;
+    box-shadow: var(--shadow-sidebar) !important;
+  }
+  
+  [data-theme="dark"] .sidebar {
+    border-right: 1px solid var(--color-sidebar-divider) !important;
+    box-shadow: none !important;
+  }
+  
+  .sidebar__brand {
+    min-height: 58px !important;
+    border-bottom: 1px solid var(--color-inverse-border-muted) !important;
+  }
+  
+  .sidebar__logo-img {
+    background: var(--color-inverse-surface);
+    box-shadow: none;
+  }
+  
+  .sidebar__title {
+    color: var(--color-on-brand) !important;
+    font-size: var(--font-size-subtitle) !important;
+  }
+  
+  .sidebar__toggle-btn {
+    border-color: var(--color-inverse-border) !important;
+    background: var(--color-sidebar-bg) !important;
+    color: var(--color-on-brand) !important;
+    box-shadow: var(--shadow-floating-control);
+  }
+  
+  .sidebar__toggle-btn:hover {
+    border-color: var(--color-brand) !important;
+    background: var(--color-brand-fill-subtle) !important;
+    color: var(--color-brand) !important;
+  }
+  
+  .sidebar-nav {
+    padding: 10px 12px 18px !important;
+  }
+  
+  .sidebar-item,
+  .sidebar-subitem {
+    color: var(--color-sidebar-muted) !important;
+    border-radius: 8px !important;
+    font-weight: var(--font-weight-medium) !important;
+  }
+  
+  /* 顶级菜单项：紧凑均匀的行高（参考图观感） */
+  .sidebar-item {
+    min-height: var(--list-control-height) !important;
+    padding: 8px 12px !important;
+  }
+  
+  .sidebar-item + .sidebar-item,
+  .sidebar-item + .sidebar-group,
+  .sidebar-group + .sidebar-item,
+  .sidebar-group + .sidebar-group {
+    margin-top: 2px !important;
+  }
+  
+  /* 悬停：深灰圆角胶囊块 + 文字/图标提亮到近白（参考图 hover 观感） */
+  .sidebar-item:hover,
+  .sidebar-subitem:hover {
+    color: var(--color-sidebar-active) !important;
+    background: var(--color-sidebar-hover-bg) !important;
+    transform: none !important;
+  }
+  
+  /* 选中：品牌绿文字（底色极淡，不做灰胶囊） */
+  .sidebar-item.is-active,
+  .sidebar-subitem.is-active,
+  .sidebar-group .sidebar-item--group.is-active {
+    color: var(--color-sidebar-active) !important;
+    background: var(--color-sidebar-active-bg) !important;
+    box-shadow: none !important;
+    font-weight: var(--font-weight-semibold) !important;
+  }
+  
+  .sidebar-item.is-active::before {
+    display: none !important;
+  }
+  
+  .sidebar-item__icon,
+  .sidebar-subitem__icon {
+    color: var(--color-sidebar-muted) !important;
+    opacity: 1;
+  }
+  
+  /* 悬停时图标提亮到近白 */
+  .sidebar-item:hover .sidebar-item__icon,
+  .sidebar-subitem:hover .sidebar-subitem__icon {
+    color: var(--color-sidebar-active) !important;
+  }
+  
+  /* 选中时图标跟随文字变品牌绿 */
+  .sidebar-item.is-active .sidebar-item__icon,
+  .sidebar-subitem.is-active .sidebar-subitem__icon {
+    color: var(--color-brand) !important;
+  }
+  
+  /* 子菜单：无左边框，子项紧凑 */
+  .sidebar-subnav {
+    border-left: 0 !important;
+    margin-left: 12px !important;
+  }
+  
+  .sidebar-subitem {
+    color: var(--color-sidebar-muted) !important;
+    min-height: var(--list-control-height) !important;
+    padding: 6px 12px !important;
+    font-weight: var(--font-weight-regular) !important;
+  }
+  
+  .topbar {
+    height: 58px !important;
+    background: var(--color-shell-topbar) !important;
+    border-bottom: 1px solid var(--color-border-light) !important;
+    box-shadow: none !important;
+  }
+  
+  [data-theme="dark"] .topbar {
+    background: var(--color-shell-topbar) !important;
+  }
+  
+  .topbar__right {
+    gap: 10px !important;
+  }
+  
+  .topbar__breadcrumb {
+    border-left: 0 !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  .topbar__user {
+    border: 1px solid var(--color-border-light);
+    background: var(--color-bg-card) !important;
+  }
+  
+  .card,
+  .b-card,
+  .section-b,
+  .card-style-b .section-b {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: 10px;
+  
+    /* 立体卡片阴影（Apex 风）：阴影 + 淡边框，卡片浮起来 */
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* 表格容器在卡片内部，保持无阴影，避免双层浮起 */
+  .base-table-wrapper {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  
+  .filter-card,
+  .list-toolbar {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border-light);
+    border-radius: 10px;
+  
+    /* 搜索/筛选卡同样加立体阴影 */
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* Theme variables and component overrides are intentionally kept separate. */
+  [data-theme="dark"] {
+    .card,
+    .b-card,
+    .section-b,
+    .card-style-b .section-b,
+    .filter-card,
+    .list-toolbar {
+      background-color: var(--color-bg-card) !important;
+      border-color: var(--color-border) !important;
+    }
+  
+    .base-table-wrapper {
+      background-color: var(--color-bg-card) !important;
+      border-color: var(--color-border) !important;
+    }
+  
+    .pager-right,
+    [class*="__pager"] {
+      background-color: var(--color-bg-card);
+    }
+  }
+  
+  /* 文件管理统计卡：深色模式保留黑色卡片，仅用柔和图标色表达数据语义。 */
+  [data-theme="dark"] .file-manager {
+    .stat-card {
+      background: var(--color-bg-card) !important;
+      border-color: var(--color-border) !important;
+      box-shadow: none !important;
+    }
+  
+    .stat-card:hover {
+      transform: none;
+      box-shadow: none !important;
+    }
+  
+    .stat-card-inner {
+      color: var(--color-text-primary);
+    }
+  
+    .stat-card-inner::before {
+      display: none;
+    }
+  
+    .stat-icon {
+      border: 1px solid currentcolor;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+  
+    .stat-icon.total {
+      color: var(--color-warning);
+      background: var(--color-warning-bg);
+    }
+  
+    .stat-icon.size {
+      color: var(--color-success);
+      background: var(--color-success-bg);
+    }
+  
+    .stat-icon.image {
+      color: var(--color-error);
+      background: var(--color-error-bg);
+    }
+  
+    .stat-icon.video {
+      color: var(--color-info);
+      background: var(--color-info-bg);
+    }
+  
+    .stat-value {
+      color: var(--color-text-primary);
+      text-shadow: none;
+    }
+  
+    .stat-label {
+      color: var(--color-text-muted);
+    }
+  }
+  
+  .filter-card {
+    margin-bottom: 14px !important;
+  }
+  
+  .filter-card .card-body {
+    padding: 14px 16px !important;
+  }
+  
+  .filter-card form {
+    margin: 0;
+  }
+  
+  .filter-row,
+  .products__filter-row {
+    display: flex !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  
+  .filter-left {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .filter-control,
+  .filter-left .form-group {
+    flex: 0 1 220px !important;
+    width: auto !important;
+    min-width: 180px !important;
+    max-width: 280px;
+    margin-bottom: 0 !important;
+  }
+  
+  .filter-control--date {
+    flex-basis: 260px !important;
+  }
+  
+  .filter-control .form-control,
+  .filter-control .custom-select,
+  .filter-left .form-control,
+  .filter-left .custom-select {
+    width: 100%;
+  }
+  
+  .filter-actions {
+    display: flex !important;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .filter-actions .btn {
+    min-height: var(--list-control-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  
+  .filter-actions .btn svg {
+    flex: 0 0 auto;
+  }
+  
+  /* Extends the base table surface above with clipping/layout behavior. */
+  .base-table-wrapper {
+    overflow: hidden;
+    background: var(--color-bg-card);
+    border-color: var(--color-border-light) !important;
+    border-radius: 8px;
+  }
+  
+  .base-table-wrapper + .pager-right,
+  .base-table-wrapper + [class*="__pager"] {
+    margin-top: 0 !important;
+  }
+  
+  .pager-right,
+  [class*="__pager"] {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0 !important;
+    padding: 14px 2px 0;
+    border-top: 1px solid var(--color-border-light);
+  }
+  
+  /* 卡片内的表格容器：不外扩、不加边框，与分页同在 card-body 的内边距内，
+   * 左右对齐、与卡片白底连成一体（去掉原 margin:-18px 取巧写法）。 */
+  // .card-body > .base-table-wrapper:first-child {
+  //   margin: 0;
+  //   border: 0;
+  //   border-radius: 0;
+  //   background: transparent;
+  // }
+  
+  .card {
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border-light);
+    padding: 14px 18px;
+  }
+  
+  .card-body {
+    padding: 18px;
+  }
+  
+  .list-toolbar {
+    margin-bottom: 12px;
+    box-shadow: none;
+  }
+  
+  .list-toolbar .card-body {
+    padding: 12px 14px;
+  }
+  
+  .data-card {
+    overflow: hidden;
+    box-shadow: var(--shadow-data-card);
+  }
+  
+  .data-card .card-body {
+    padding: 0;
+  }
+  
+  .card-title,
+  .page-head h1,
+  .page-head h2,
+  .dashboard__page-head h1 {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-strong);
+    letter-spacing: 0;
+  }
+  
+  .page-head {
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  
+  .page-desc,
+  .text-muted,
+  .small,
+  small {
+    color: var(--color-text-muted) !important;
+  }
+
+  .text-success {
+    color: var(--color-success-text) !important;
+  }
+
+  .text-warning {
+    color: var(--color-warning-text) !important;
+  }
+
+  .text-info {
+    color: var(--color-info-text) !important;
+  }
+
+  .text-danger {
+    color: var(--color-error-text) !important;
+  }
+  
+  .btn {
+    border-radius: 6px;
+    font-weight: var(--font-weight-medium);
+    box-shadow: none !important;
+  }
+  
+  .btn-primary,
+  .btn-primary.disabled,
+  .btn-primary:disabled {
+    background: var(--color-brand-solid, var(--color-brand));
+    border-color: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:not(:disabled, .disabled):active {
+    background: var(--color-brand-solid-hover, var(--color-brand-dark));
+    border-color: var(--color-brand-solid-hover, var(--color-brand-dark));
+  }
+  
+  .btn-outline-primary {
+    color: var(--color-brand);
+    border-color: var(--color-control-border-brand-strong);
+  }
+  
+  .btn-outline-primary:hover,
+  .btn-outline-primary:focus {
+    background: var(--color-brand-solid, var(--color-brand));
+    border-color: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+
+  .btn-link {
+    color: var(--color-brand);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .form-control,
+  .custom-select,
+  .custom-file-label {
+    min-height: var(--list-control-height);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-card);
+    border-color: var(--color-border);
+    border-radius: 6px;
+    font-size: var(--font-size-body);
+    transition: border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease;
+  }
+  
+  label,
+  .col-form-label {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-control);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .form-control:focus,
+  .custom-select:focus {
+    border-color: var(--color-control-border-focus);
+    box-shadow: var(--shadow-focus-brand);
+  }
+  
+  .form-control::placeholder {
+    color: var(--color-text-hint);
+  }
+  
+  .table {
+    margin-bottom: 0;
+    color: var(--color-text-primary);
+    background: var(--color-bg-card);
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .base-table-wrapper .table,
+  .table-responsive > .table {
+    min-width: 760px;
+  }
+  
+  .table thead th,
+  .table th {
+    position: relative;
+    background: none !important;
+
+    /* 兼容层只负责清除旧背景图；最终表头色由统一列表规则接管。 */
+    background-color: var(--color-bg-card) !important;
+    border-top: 0;
+    border-bottom: 0 !important;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-bold);
+    line-height: 30px;
+    padding: 5px 15px;
+    text-transform: none;
+    white-space: nowrap;
+  }
+  
+  [data-theme="dark"] .table thead th,
+  [data-theme="dark"] .table th {
+    background: none !important;
+    background-color: var(--color-bg-card) !important;
+    border-bottom: 0 !important;
+    color: var(--color-text-secondary);
+  }
+  
+  .table thead th:first-child {
+    padding-left: 18px;
+  }
+  
+  .table thead th:last-child {
+    padding-right: 18px;
+  }
+  
+  .table td {
+    border-top: 1px solid var(--color-border-light);
+    padding: 13px 16px;
+    vertical-align: middle;
+    font-size: var(--font-size-control);
+    line-height: 1.5;
+  }
+  
+  .table td:first-child {
+    padding-left: 18px;
+  }
+  
+  .table td:last-child {
+    padding-right: 18px;
+  }
+  
+  .table-sm th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .table-sm td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .table-bordered,
+  .table-bordered td,
+  .table-bordered th {
+    border-color: var(--color-border-light) !important;
+  }
+  
+  .table-bordered td,
+  .table-bordered th {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+  
+  .table.table-striped tbody tr:nth-of-type(odd) td {
+    // background-color: transparent;
+  }
+  
+  .table tbody tr {
+    transition: background-color 0.14s ease, box-shadow 0.14s ease;
+  }
+  
+  .table-hover tbody tr:hover td {
+    // background-color: var(--color-brand-bg) !important;
+  }
+  
+  .table-hover tbody tr:hover td:first-child {
+    // box-shadow: inset 3px 0 0 var(--color-brand);
+  }
+  
+  .table.b-table > tbody > tr.b-table-empty-row > td,
+  .table.b-table > tbody > tr.b-table-busy-slot > td {
+    padding: 54px 16px;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-body);
+    text-align: center;
+    background: var(--color-bg-card) !important;
+  }
+  
+  .table-responsive {
+    // border-radius: 8px;
+    margin-bottom: 0;
+    background:
+      linear-gradient(to right, var(--color-bg-card) 30%, var(--color-surface-transparent)),
+      linear-gradient(to left, var(--color-bg-card) 30%, var(--color-surface-transparent)) 100% 0,
+      linear-gradient(to right, var(--color-table-scroll-shadow), var(--color-table-scroll-shadow-transparent)),
+      linear-gradient(to left, var(--color-table-scroll-shadow), var(--color-table-scroll-shadow-transparent)) 100% 0;
+    background-attachment: local, local, scroll, scroll;
+    background-repeat: no-repeat;
+    background-size: 28px 100%, 28px 100%, 10px 100%, 10px 100%;
+  }
+  
+  [data-theme="dark"] .table-responsive {
+    background:
+      linear-gradient(to right, var(--color-bg-card) 30%, var(--color-surface-transparent)),
+      linear-gradient(to left, var(--color-bg-card) 30%, var(--color-surface-transparent)) 100% 0,
+      linear-gradient(to right, var(--color-table-scroll-shadow), var(--color-table-scroll-shadow-transparent)),
+      linear-gradient(to left, var(--color-table-scroll-shadow), var(--color-table-scroll-shadow-transparent)) 100% 0;
+    background-attachment: local, local, scroll, scroll;
+    background-repeat: no-repeat;
+    background-size: 28px 100%, 28px 100%, 10px 100%, 10px 100%;
+  }
+  
+  .table-responsive::-webkit-scrollbar,
+  .b-table-sticky-header::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .table-responsive::-webkit-scrollbar-thumb,
+  .b-table-sticky-header::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb-overlay);
+    border-radius: 999px;
+  }
+  
+  .table-responsive::-webkit-scrollbar-track,
+  .b-table-sticky-header::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .table-responsive > .table-bordered {
+    border: 0;
+  }
+  
+  .b-table-sticky-header {
+    margin-bottom: 0;
+    border-radius: 8px;
+  }
+  
+  .b-table-sticky-header > .table.b-table > thead > tr > th {
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 1px 0 var(--color-border);
+  }
+  
+  [data-theme="dark"] .b-table-sticky-header > .table.b-table > thead > tr > th {
+    box-shadow: 0 1px 0 var(--color-border);
+  }
+  
+  .table tbody tr:last-child td {
+    border-bottom: 0;
+  }
+  
+  /* =============================================================================
+   * Apex 风表格观感（全局）—— 由 Pods 样板抽取，作用于所有 base-table 页面。
+   * 只影响主表数据行/表头，排除行展开子表（tr.b-table-details 内含的
+   * PodControlPanel 等子表格），避免污染。变量沿用本文件的 --app-* 体系。
+   * 配套：BaseTable.vue 内置 #head() 插槽渲染 .th-sort 排序图标（三态）。
+   * ============================================================================= */
+  
+  /* 数据行：舒适行高 + 斑马纹分行（奇数行软底），去 td 顶边框更干净 */
+  .base-table-wrapper .table tbody > tr:not(.b-table-details) > td {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+  }
+  
+  .base-table-wrapper .table.table-striped tbody > tr:not(.b-table-details):nth-of-type(odd) > td {
+    background: var(--color-bg-subtle) !important;
+  }
+  
+  /* 轻 hover：极淡中性灰高亮（原 brand-faint 偏深，改浅）。放在斑马纹之后以覆盖之。 */
+  .base-table-wrapper .table.table-hover tbody > tr:not(.b-table-details):hover > td {
+    background: var(--color-bg-hover) !important;
+  }
+  
+  [data-theme="dark"] .base-table-wrapper .table.table-hover tbody > tr:not(.b-table-details):hover > td {
+    background: var(--color-bg-hover) !important;
+  }
+  
+  /* 展开行本身：去内边距/边框，交给页面自定义容器 */
+  .base-table-wrapper .table tbody > tr.b-table-details > td {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* 排序图标（Apex 风）：由 BaseTable 内置 #head() 插槽的 .th-sort 承载，
+   * 图标是独立元素、水平排在列名后，不依赖 BS 的 th 结构，不打架、不影响列宽。
+   * 注意：不要用 background-image:none 去关 BS 默认箭头——那会连表头的渐变背景
+   *       （background:linear-gradient）一起关掉，导致可排序列表头"没底色"、
+   *       与不可排序列斑驳不齐。全局表头已有 background:gradient !important，
+   *       BS 默认箭头本就被它盖掉，无需再处理。仅加个手型光标即可。 */
+  .base-table-wrapper .table thead th[aria-sort] {
+    cursor: pointer;
+  }
+  
+  .th-sort {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .th-sort__icon {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 14px;
+    flex: 0 0 auto;
+    color: var(--color-text-muted);
+  }
+  
+  .th-sort__icon::before,
+  .th-sort__icon::after {
+    position: absolute;
+    left: 3px;
+    width: 0;
+    height: 0;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    content: "";
+    opacity: 0.55;
+  }
+  
+  .th-sort__icon::before {
+    top: 1px;
+    border-bottom: 4px solid currentcolor;
+  }
+  
+  .th-sort__icon::after {
+    bottom: 1px;
+    border-top: 4px solid currentcolor;
+  }
+
+  .th-sort__icon--asc::before,
+  .th-sort__icon--desc::after {
+    color: var(--color-brand);
+    opacity: 1;
+  }
+  
+  /* 状态 pill（全局可用类）—— Apex 风软背景胶囊。
+   * 不强制替换任何页面的 base-badge；哪个页面想用就把徽标换成 .status-dot。 */
+  .status-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    padding: 3px 12px;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-medium);
+    line-height: 18px;
+    border-radius: 999px;
+    background: var(--color-bg-subtle);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+  
+  .status-dot--on {
+    background: var(--color-brand-soft);
+    color: var(--color-brand-dark);
+  }
+  
+  .action-icon--text {
+    min-height: var(--list-control-height);
+    padding: 4px 7px;
+    color: var(--color-text-secondary) !important;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .action-icon--text > span {
+    font-size: var(--font-size-caption);
+  }
+  
+  .action-icon--text:hover {
+    color: var(--color-brand) !important;
+    border-color: var(--color-control-border-brand-muted);
+    background: var(--color-brand-soft);
+    text-decoration: none;
+  }
+  
+  /* 操作列单元格：不换行，配合 base.scss 的 width:1% 让列按一行按钮的自然宽度自适应、按钮横排居右 */
+  .actions-cell {
+    white-space: nowrap !important;
+  }
+  
+  /* 窄屏操作列改为图标模式，保留 title 提示，避免复杂列表横向挤压。 */
+  @media (width <= 1440px) {
+    .actions-cell .action-icon--text > span {
+      display: none;
+    }
+  
+    .actions-cell .action-icon--text {
+      min-width: var(--list-control-height);
+      justify-content: center;
+      padding-inline: 6px;
+    }
+  }
+  
+  /* .column-visibility-header 统一在 _interaction.scss 定义（含 gap），此处不再重复，
+     避免与其同优先级、靠加载顺序决定胜负的脆弱性（CLAUDE.md 明确警告过的重复定义场景） */
+
+  .column-visibility .column-toggle-button {
+    width: var(--table-action-size);
+    min-width: var(--table-action-size);
+    height: var(--table-action-size);
+    min-height: var(--table-action-size);
+    padding: 0 !important;
+    border-radius: 6px;
+    color: var(--color-text-muted) !important;
+  }
+  
+  .column-visibility .column-toggle-button:hover {
+    background: var(--color-brand-soft) !important;
+    color: var(--color-brand) !important;
+  }
+  
+  .pagination .page-link {
+    border-color: var(--color-border);
+    color: var(--color-brand);
+    background: var(--color-bg-card);
+    min-width: 34px;
+    min-height: 34px;
+    text-align: center;
+    border-radius: 6px;
+    margin: 0 2px;
+    font-size: var(--font-size-control);
+    line-height: 1.25;
+  }
+  
+  .pagination .page-link:hover {
+    color: var(--color-brand-dark);
+    background: var(--color-brand-soft);
+    border-color: var(--color-control-border-brand);
+  }
+  
+  .pagination .page-item.active .page-link {
+    background: var(--color-brand-solid, var(--color-brand));
+    border-color: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+  
+  .pagination .page-item.disabled .page-link {
+    color: var(--color-text-disabled);
+    background: var(--color-bg-subtle);
+  }
+  
+  .badge {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 22px;
+    padding: 3px 9px !important;
+    border: 1px solid transparent !important;
+    border-radius: 999px !important;
+    font-size: var(--font-size-badge) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    line-height: 14px !important;
+    letter-spacing: 0;
+    box-shadow: none !important;
+    text-transform: none;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .badge-primary {
+    color: var(--color-brand-dark) !important;
+    background: var(--color-brand-bg) !important;
+    border-color: var(--color-border-focus) !important;
+  }
+  
+  .badge-success {
+    color: var(--color-success-text) !important;
+    background: var(--color-success-bg) !important;
+    border-color: var(--color-success-bdr) !important;
+  }
+  
+  .badge-danger {
+    color: var(--color-error-text) !important;
+    background: var(--color-error-bg) !important;
+    border-color: var(--color-error-bdr) !important;
+  }
+  
+  .badge-warning {
+    color: var(--color-warning-text) !important;
+    background: var(--color-warning-bg) !important;
+    border-color: var(--color-warning-bdr) !important;
+  }
+  
+  .badge-info {
+    color: var(--color-brand-dark) !important;
+    background: var(--color-info-bg) !important;
+    border-color: var(--color-border-focus) !important;
+  }
+  
+  .badge-secondary {
+    color: var(--color-text-secondary) !important;
+    background: var(--color-bg-muted) !important;
+    border-color: var(--color-border) !important;
+  }
+  
+  .badge-light {
+    color: var(--color-text-secondary) !important;
+    background: var(--color-bg-subtle) !important;
+    border-color: var(--color-border-light) !important;
+  }
+  
+  .badge-dark {
+    color: var(--color-text-primary) !important;
+    background: var(--color-bg-muted) !important;
+    border-color: var(--color-border-strong) !important;
+  }
+  
+  .dropdown-menu,
+  .modal-content {
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .dialog-with-header-bg .modal-header {
+    background: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border-light);
+    border-radius: 8px 8px 0 0;
+    padding: 16px 20px;
+  }
+  
+  .dialog-with-header-bg .modal-title {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-modal-title);
+    font-weight: var(--font-weight-strong);
+  }
+  
+  .dialog-with-header-bg .close {
+    color: var(--color-text-muted);
+    opacity: 1;
+    text-shadow: none;
+    border-radius: 6px;
+    transition: color 0.15s, background-color 0.15s;
+  }
+  
+  .dialog-with-header-bg .close:hover,
+  .dialog-with-header-bg .close:focus {
+    color: var(--color-text-primary);
+    background-color: var(--color-border-light);
+    opacity: 1;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    border-color: var(--color-border-light);
+  }
+  
+  .alert {
+    border-radius: 8px;
+    border-width: 1px;
+  }
+  
+  .alert-danger,
+  .base-table-load-error {
+    color: var(--color-error-text);
+    background: var(--color-error-bg);
+    border-color: var(--color-error-border-soft);
+  }
+  
+  .charts.dashboard-page,
+  .dashboard-page {
+    background: transparent !important;
+  }
+  
+  .stat-card {
+    border: 1px solid var(--color-border-light) !important;
+    border-radius: 8px !important;
+    box-shadow: var(--shadow-sm) !important;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-card) !important;
+  }
+  
+  @media (width <= 768px) {
+    .layout__content {
+      padding: 14px 12px 18px !important;
+    }
+  
+    .page-head {
+      flex-direction: column;
+    }
+  
+    .filter-left,
+    .filter-actions,
+    .filter-control,
+    .filter-left .form-group {
+      width: 100% !important;
+      max-width: none;
+    }
+  
+    .filter-actions {
+      justify-content: flex-start;
+      margin-left: 0 !important;
+    }
+  
+    .card-body {
+      padding: 14px;
+    }
+  
+    .card-body > .base-table-wrapper:first-child {
+      margin: -14px -14px 0;
+    }
+  }
+
+  // 德恩基 IoT 统一视觉规范。
+  // 页面只声明业务结构；通用卡片、表单、表格、按钮、状态和弹窗样式集中在此。
+  
+  html,
+  body {
+    color: var(--color-text-primary);
+    font-family: var(--font-family-brand);
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .layout {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .layout__main {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .layout__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: var(--color-overlay);
+  }
+  
+  .card,
+  .btn,
+  .form-control,
+  .custom-select,
+  .input-group-text,
+  .alert,
+  .badge,
+  .modal-content,
+  .dropdown-menu,
+  .page-link,
+  .custom-control-label::before,
+  .custom-control-label::after {
+    border-radius: 0;
+  }
+  
+  .card {
+    border: 1px solid var(--color-border-divider);
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-header {
+    border-bottom: 1px solid var(--color-border-divider);
+    background: var(--color-bg-card);
+    color: var(--color-text-primary);
+  }
+  
+  .btn {
+    min-height: var(--list-control-height);
+    font-size: var(--font-size-navigation);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .btn-primary {
+    border-color: var(--color-brand-solid, var(--color-brand));
+    background: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:not(:disabled, .disabled):active {
+    border-color: var(--color-brand-solid-hover, var(--color-brand-dark));
+    background: var(--color-brand-solid-hover, var(--color-brand-dark));
+  }
+  
+  .btn-outline-primary {
+    border-color: var(--color-brand);
+    color: var(--color-brand-dark);
+  }
+
+  .btn-link {
+    color: var(--color-text-muted);
+  }
+  
+  .btn-link:hover,
+  .btn-link:focus {
+    color: var(--color-brand-dark);
+    text-decoration: none;
+  }
+  
+  .form-control,
+  .custom-select,
+  .input-group-text {
+    min-height: var(--list-control-height);
+    border-color: var(--color-border-input);
+    background: var(--color-bg-input);
+    color: var(--color-text-primary);
+  }
+
+  .custom-file,
+  .custom-file-input,
+  .custom-file-label,
+  .custom-file-label::after,
+  .nav-tabs .nav-link,
+  .nav-pills .nav-link {
+    min-height: var(--list-control-height);
+  }
+  
+  .form-control:focus,
+  .custom-select:focus {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 1px var(--color-brand);
+  }
+  
+  .form-control:disabled,
+  .form-control[readonly],
+  .custom-select:disabled,
+  .btn:disabled,
+  .btn.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  
+  .table-responsive {
+    min-width: 0;
+  }
+  
+  .table {
+    min-width: 1180px;
+    margin-bottom: 0;
+    color: var(--color-text-primary);
+  }
+  
+  .table thead th {
+    border-top: 0;
+    border-bottom: 1px solid var(--color-border-divider);
+    background: var(--color-bg-thead);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  
+  .table td,
+  .table th {
+    height: 52px;
+    padding: 12px 16px;
+    border-color: var(--color-border-divider);
+    vertical-align: middle;
+  }
+  
+  .table-hover tbody tr:hover {
+    background: var(--color-bg-hover);
+  }
+  
+  .badge {
+    padding: 4px 9px;
+    border: 0;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .badge-success {
+    background: var(--color-success-bg);
+    color: var(--color-success-text);
+  }
+  
+  .badge-warning {
+    background: var(--color-warning-bg);
+    color: var(--color-warning-text);
+  }
+  
+  .badge-danger {
+    background: var(--color-error-bg);
+    color: var(--color-error-text);
+  }
+  
+  .badge-info {
+    background: var(--color-info-bg);
+    color: var(--color-brand-dark);
+  }
+  
+  .badge-primary {
+    background: var(--color-brand-bg);
+    color: var(--color-brand-dark);
+  }
+  
+  .modal-backdrop {
+    background: var(--color-text-primary);
+  }
+  
+  .modal-backdrop.show {
+    opacity: 0.42;
+  }
+  
+  .modal-content {
+    border: 0;
+    border-top: 3px solid var(--color-brand);
+    box-shadow: var(--shadow-overlay);
+  }
+  
+  .modal-header,
+  .modal-footer {
+    border-color: var(--color-border-divider);
+  }
+  
+  .page-item.active .page-link {
+    border-color: var(--color-brand-solid, var(--color-brand));
+    background: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+  
+  .page-link {
+    min-width: 32px;
+    height: 32px;
+    border-color: var(--color-border-divider);
+    color: var(--color-text-secondary);
+    text-align: center;
+  }
+  
+  .ui-section-title {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.01em;
+  }
+  
+  .ui-section-kicker {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-caption);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  
+  @media (width <= 768px) {
+    .table {
+      min-width: 960px;
+    }
+  }
+  
+  [data-theme='dark'] {
+    .badge-success,
+    .badge-warning,
+    .badge-danger,
+    .badge-info,
+    .badge-primary {
+      background: var(--color-bg-muted);
+    }
+  }
+}
+
+@mixin final-overrides {
+  // IoT 后台交互稿最终视觉层。
+  // 放在所有兼容样式之后，隔离历史主题和企业品牌变量对后台壳层的覆盖。
+
+  html[data-theme] .btn.btn-outline-primary.active,
+  html[data-theme] .btn.btn-outline-primary:active,
+  html[data-theme] .show > .btn-outline-primary.dropdown-toggle {
+    border-color: var(--color-brand-solid, var(--color-brand));
+    background: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+
+  html[data-theme] .nav-pills .nav-link {
+    border-color: transparent;
+    background: transparent;
+    color: var(--color-text-secondary);
+  }
+
+  html[data-theme] .nav-pills .nav-link:hover:not(.disabled),
+  html[data-theme] .nav-pills .nav-link:focus-visible {
+    background: var(--color-brand-soft);
+    color: var(--color-brand-dark);
+  }
+
+  html[data-theme] .nav-pills .nav-link.active,
+  html[data-theme] .nav-pills .show > .nav-link {
+    border-color: var(--color-brand-solid, var(--color-brand));
+    background: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-on-brand);
+  }
+
+  html[data-theme] .nav-pills .nav-link.disabled {
+    background: transparent;
+    color: var(--color-text-disabled);
+  }
+  
+  html:not([data-theme='dark']) {
+  body,
+    .layout__content {
+      background: var(--color-bg-page) !important;
+    }
+  
+    .layout__content {
+      height: calc(100vh - var(--size-topbar-height));
+      padding: 24px 32px 32px !important;
+    }
+  
+    .page-card {
+      max-width: 1680px;
+      min-height: calc(100vh - var(--size-topbar-height) - 56px);
+      margin: 0 auto;
+    }
+  
+    .sidebar {
+      background: var(--color-bg-card) !important;
+      border-right: 1px solid var(--color-border-divider) !important;
+      box-shadow: none !important;
+    }
+  
+    .sidebar__brand {
+      min-height: var(--size-topbar-height) !important;
+      padding: 0 22px;
+      border-bottom: 1px solid var(--color-border-divider) !important;
+    }
+  
+    .sidebar__logo-mark {
+      width: 32px;
+      height: 32px;
+      box-sizing: border-box;
+      border: 1px solid var(--color-brand-border-soft);
+      background: var(--color-brand-fill-subtle) !important;
+    }
+  
+    .sidebar__logo-mark--custom {
+      border-color: transparent;
+      background: transparent !important;
+    }
+  
+    .sidebar__logo-img {
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      background: transparent !important;
+      filter: none;
+      object-fit: contain;
+    }
+  
+    .sidebar__logo-img--custom {
+      width: 28px;
+      height: 28px;
+      padding: 2px;
+      filter: none;
+    }
+  
+    .sidebar__title {
+      color: var(--color-text-primary) !important;
+      font-size: var(--font-size-subtitle) !important;
+      font-weight: var(--font-weight-extrabold);
+    }
+  
+    .sidebar__subtitle,
+    .sidebar-section-label {
+      color: var(--color-text-muted) !important;
+    }
+  
+    .sidebar__toggle-btn {
+      border-color: var(--color-border-divider) !important;
+      background: var(--color-bg-card) !important;
+      color: var(--color-brand) !important;
+      box-shadow: none;
+    }
+  
+    .sidebar__toggle-btn:hover {
+      border-color: var(--color-brand) !important;
+      background: var(--color-brand-fill-subtle) !important;
+      color: var(--color-brand) !important;
+    }
+  
+    .sidebar-nav {
+      padding: 10px 10px 20px !important;
+    }
+  
+    .sidebar-item,
+    .sidebar-subitem {
+      border: 0 !important;
+      border-left: 3px solid transparent !important;
+      border-radius: 0 !important;
+      color: var(--color-text-primary) !important;
+      font-weight: var(--font-weight-regular) !important;
+    }
+  
+    .sidebar-item {
+      min-height: 41px !important;
+      padding: 10px 14px !important;
+    }
+  
+    .sidebar-subitem {
+      min-height: var(--list-control-height) !important;
+      padding: 9px 14px 9px 30px !important;
+      color: var(--color-text-secondary) !important;
+    }
+  
+    .sidebar-item:hover,
+    .sidebar-subitem:hover {
+      color: var(--color-brand-dark) !important;
+      background: var(--color-bg-page) !important;
+    }
+  
+    .sidebar-item.is-active,
+    .sidebar-subitem.is-active,
+    .sidebar-group .sidebar-item--group.is-active {
+      border-left-color: var(--color-brand) !important;
+      color: var(--color-brand-dark) !important;
+      background: var(--color-brand-soft) !important;
+      font-weight: var(--font-weight-semibold) !important;
+    }
+  
+    .sidebar-item__icon,
+    .sidebar-subitem__icon,
+    .sidebar-item:hover .sidebar-item__icon,
+    .sidebar-subitem:hover .sidebar-subitem__icon {
+      color: currentcolor !important;
+      opacity: 0.55;
+    }
+  
+    .sidebar-item.is-active .sidebar-item__icon,
+    .sidebar-subitem.is-active .sidebar-subitem__icon {
+      color: var(--color-brand-dark) !important;
+      opacity: 0.9;
+    }
+  
+    .sidebar-subnav {
+      margin-left: 0 !important;
+    }
+  
+    .topbar {
+      height: var(--size-topbar-height) !important;
+      min-height: var(--size-topbar-height) !important;
+      padding: 0 32px;
+      background: var(--color-bg-card) !important;
+      border-bottom: 1px solid var(--color-border-divider) !important;
+    }
+  
+    .topbar__right {
+      gap: 16px !important;
+    }
+  
+    .topbar__theme .tt-btn,
+    .topbar__notification {
+      width: var(--list-control-height);
+      min-width: var(--list-control-height);
+      height: var(--list-control-height);
+      border: 1px solid var(--color-border-divider);
+      border-radius: 0;
+      background: var(--color-bg-card);
+      color: var(--color-text-secondary);
+    }
+  
+    .topbar__user {
+      border: 0;
+      background: var(--color-brand-solid, var(--color-brand)) !important;
+      color: var(--color-on-brand, var(--color-bg-card)) !important;
+    }
+  
+    .base-table-wrapper .table tbody > tr:not(.b-table-details) > td,
+    .base-table-wrapper .table.table-striped tbody > tr:not(.b-table-details):nth-of-type(odd) > td,
+    .base-table-wrapper .table.table-striped tbody > tr:not(.b-table-details):nth-of-type(even) > td {
+      border-top: 1px solid var(--color-border-divider) !important;
+      border-bottom: 0 !important;
+      background-color: var(--color-bg-card) !important;
+    }
+  
+    .base-table-wrapper .table.table-hover tbody > tr:not(.b-table-details):hover > td {
+      background-color: var(--color-bg-hover) !important;
+    }
+  
+    .base-table-wrapper .table thead th {
+      border-bottom: 1px solid var(--color-border-divider) !important;
+      background: var(--color-bg-thead) !important;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-control);
+      font-weight: var(--font-weight-semibold);
+      letter-spacing: 0;
+      line-height: 20px;
+      text-transform: none;
+    }
+  }
+  
+  /* 深色模式沿用与交互稿一致的后台框架，仅切换颜色。 */
+  html[data-theme='dark'] {
+    .layout__content {
+      height: calc(100vh - var(--size-topbar-height));
+      padding: 24px 32px 32px !important;
+    }
+  
+    .page-card {
+      max-width: 1680px;
+      min-height: calc(100vh - var(--size-topbar-height) - 56px);
+      margin: 0 auto;
+    }
+  
+    .sidebar {
+      background: var(--color-bg-card) !important;
+      border-right: 1px solid var(--color-border-divider) !important;
+    }
+  
+    .sidebar__brand {
+      min-height: var(--size-topbar-height) !important;
+      padding: 0 22px;
+      border-bottom: 1px solid var(--color-border-divider) !important;
+    }
+  
+    .sidebar__logo-mark {
+      width: 32px;
+      height: 32px;
+      box-sizing: border-box;
+      border: 1px solid var(--color-brand-border-soft);
+      background: var(--color-brand-fill-subtle) !important;
+    }
+  
+    .sidebar__logo-mark--custom {
+      border-color: transparent;
+      background: transparent !important;
+    }
+  
+    .sidebar__logo-img {
+      width: 18px;
+      height: 18px;
+      padding: 0;
+      background: transparent !important;
+      filter: none;
+      object-fit: contain;
+    }
+  
+    .sidebar__logo-img--custom {
+      width: 28px;
+      height: 28px;
+      padding: 2px;
+      filter: none;
+    }
+  
+    .sidebar__title {
+      color: var(--color-text-primary) !important;
+      font-size: var(--font-size-subtitle) !important;
+      font-weight: var(--font-weight-extrabold);
+    }
+  
+    .sidebar__subtitle,
+    .sidebar-section-label {
+      color: var(--color-text-muted) !important;
+    }
+  
+    .sidebar__toggle-btn {
+      border-color: var(--color-border-divider) !important;
+      background: var(--color-bg-card) !important;
+      color: var(--color-brand) !important;
+      box-shadow: none;
+    }
+  
+    .sidebar__toggle-btn:hover {
+      border-color: var(--color-brand) !important;
+      background: var(--color-brand-fill-subtle) !important;
+      color: var(--color-brand) !important;
+    }
+  
+    .sidebar-nav {
+      padding: 10px 10px 20px !important;
+    }
+  
+    .sidebar-item,
+    .sidebar-subitem {
+      border: 0 !important;
+      border-left: 3px solid transparent !important;
+      border-radius: 0 !important;
+      color: var(--color-text-primary) !important;
+      font-weight: var(--font-weight-regular) !important;
+    }
+  
+    .sidebar-item {
+      min-height: 41px !important;
+      padding: 10px 14px !important;
+    }
+  
+    .sidebar-subitem {
+      min-height: var(--list-control-height) !important;
+      padding: 9px 14px 9px 30px !important;
+      color: var(--color-text-secondary) !important;
+    }
+  
+    .sidebar-item:hover,
+    .sidebar-subitem:hover {
+      color: var(--color-brand-hover) !important;
+      background: var(--color-bg-hover) !important;
+    }
+  
+    .sidebar-item.is-active,
+    .sidebar-subitem.is-active,
+    .sidebar-group .sidebar-item--group.is-active {
+      border-left-color: var(--color-brand) !important;
+      color: var(--color-brand) !important;
+      background: var(--color-brand-soft) !important;
+      font-weight: var(--font-weight-semibold) !important;
+    }
+  
+    .sidebar-item__icon,
+    .sidebar-subitem__icon,
+    .sidebar-item:hover .sidebar-item__icon,
+    .sidebar-subitem:hover .sidebar-subitem__icon {
+      color: currentcolor !important;
+      opacity: 0.65;
+    }
+  
+    .sidebar-item.is-active .sidebar-item__icon,
+    .sidebar-subitem.is-active .sidebar-subitem__icon {
+      color: var(--color-brand) !important;
+      opacity: 0.9;
+    }
+  
+    .sidebar-subnav {
+      margin-left: 0 !important;
+    }
+  
+    .topbar {
+      height: var(--size-topbar-height) !important;
+      min-height: var(--size-topbar-height) !important;
+      padding: 0 32px;
+      background: var(--color-bg-card) !important;
+      border-bottom: 1px solid var(--color-border-divider) !important;
+    }
+  
+    .topbar__right {
+      gap: 16px !important;
+    }
+  
+    .topbar__theme .tt-btn,
+    .topbar__notification {
+      width: var(--list-control-height);
+      min-width: var(--list-control-height);
+      height: var(--list-control-height);
+      border: 1px solid var(--color-border-divider);
+      border-radius: 0;
+      background: var(--color-bg-card);
+      color: var(--color-text-secondary);
+    }
+  
+    .topbar__user {
+      border: 0;
+      background: var(--color-brand-solid, var(--color-brand)) !important;
+      color: var(--color-on-brand, var(--color-text-inverse)) !important;
+    }
+  }
+  
+  @media (width <= 768px) {
+    .topbar {
+      height: 72px !important;
+      min-height: 72px !important;
+      gap: 8px;
+      padding: 0 12px !important;
+    }
+  
+    .topbar__left {
+      min-width: 0;
+      gap: 10px;
+      overflow: hidden;
+    }
+  
+    .topbar__toggle {
+      display: grid;
+      flex: 0 0 var(--list-control-height);
+      width: var(--list-control-height);
+      height: var(--list-control-height);
+      padding: 0 !important;
+      overflow: hidden;
+      place-items: center;
+    }
+  
+    .topbar__toggle svg {
+      width: 16px;
+      height: 16px;
+      font-size: var(--font-size-subtitle);
+    }
+  
+    .topbar__page-icon,
+    .topbar__range,
+    .topbar__page-subtitle {
+      display: none !important;
+    }
+  
+    .topbar__page-heading {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  
+    .topbar__page-title {
+      max-width: 100%;
+      font-size: var(--font-size-modal-title);
+    }
+  
+    .topbar__right {
+      gap: 6px !important;
+    }
+  
+    .topbar__theme .tt-btn,
+    .topbar__notification,
+    .topbar__user,
+    .topbar-avatar-image,
+    .topbar__avatar-initials {
+      width: var(--list-control-height) !important;
+      min-width: var(--list-control-height);
+      height: var(--list-control-height) !important;
+    }
+  
+    html:not([data-theme='dark']) .layout__content {
+      height: calc(100vh - 72px);
+      padding: 20px 16px 24px !important;
+    }
+  
+    html[data-theme='dark'] .layout__content {
+      height: calc(100vh - 72px);
+      padding: 20px 16px 24px !important;
+    }
+  }
+  
+  // 最终视觉一致性层：集中收敛历史页面和 BootstrapVue 门户弹框的外观。
+  // 业务页面只负责结构和交互，不在页面内重复声明通用视觉规则。
+  
+  /* 基础组件 */
+  .card,
+  .card-header,
+  .card-footer,
+  .base-table-wrapper,
+  .rounded,
+  .rounded-sm,
+  .rounded-lg {
+    --component-radius: var(--radius-surface);
+  }
+
+  .btn,
+  .form-control,
+  .custom-select,
+  .input-group-text,
+  .page-link,
+  .nav-tabs .nav-link {
+    --component-radius: var(--radius-control);
+  }
+
+  .alert,
+  .dropdown-menu,
+  .popover,
+  .tooltip-inner {
+    --component-radius: var(--radius-overlay);
+  }
+
+  .badge,
+  .rounded-pill {
+    --component-radius: var(--radius-status);
+  }
+
+  .card,
+  .card-header,
+  .card-footer,
+  .base-table-wrapper,
+  .rounded,
+  .rounded-sm,
+  .rounded-lg,
+  .btn,
+  .form-control,
+  .custom-select,
+  .input-group-text,
+  .page-link,
+  .nav-tabs .nav-link,
+  .alert,
+  .dropdown-menu,
+  .popover,
+  .tooltip-inner,
+  .badge,
+  .rounded-pill {
+    border-radius: var(--component-radius) !important;
+  }
+  
+  .progress,
+  .progress-bar {
+    border-radius: var(--radius-track) !important;
+  }
+  
+  .card,
+    .filter-card,
+  .list-toolbar {
+    border-color: var(--color-border-divider);
+    background: var(--color-bg-card);
+  }
+  
+  .card-header,
+  .card-footer {
+    border-color: var(--color-border-divider);
+    background: var(--color-bg-card);
+  }
+  
+  .detail-page {
+    border-radius: var(--radius-surface) !important;
+    background: transparent !important;
+  }
+  
+  .btn:focus,
+  .btn.focus,
+  .form-control:focus,
+  .custom-select:focus {
+    box-shadow: var(--shadow-focus-compact) !important;
+  }
+  
+  /* 所有 BootstrapVue / BaseModal 弹框 */
+  .modal-dialog {
+    display: flex;
+    min-height: calc(100% - 48px);
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .modal-content {
+    overflow: hidden;
+    max-height: min(760px, calc(100vh - 48px));
+    border: 0 !important;
+    border-top: 3px solid var(--color-brand) !important;
+    border-radius: var(--radius-overlay) !important;
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-overlay) !important;
+  }
+  
+  .modal-header,
+  .dialog-with-header-bg .modal-header {
+    display: flex;
+    flex: 0 0 auto;
+    min-height: 61px;
+    align-items: center;
+    padding: 16px 20px !important;
+    border: 0;
+    border-bottom: 1px solid var(--color-border-divider) !important;
+    border-radius: var(--radius-overlay) !important;
+    background: var(--color-bg-card) !important;
+    color: var(--color-text-primary) !important;
+  }
+  
+  .modal-title,
+  .dialog-with-header-bg .modal-title {
+    margin: 0;
+    color: var(--color-text-primary) !important;
+    font-size: var(--font-size-modal-title) !important;
+    font-weight: var(--font-weight-extrabold) !important;
+    line-height: var(--line-height-heading);
+    letter-spacing: -0.01em;
+  }
+  
+  .modal-header .close,
+  .dialog-with-header-bg .close {
+    display: grid;
+    width: var(--list-control-height);
+    min-width: var(--list-control-height);
+    height: var(--list-control-height);
+    min-height: var(--list-control-height);
+    margin: -6px -8px -6px auto;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-control) !important;
+    background: transparent !important;
+    color: var(--color-text-secondary) !important;
+    font-size: var(--icon-size-xl);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-tight);
+    opacity: 1;
+    text-shadow: none;
+    transform: none !important;
+    place-items: center;
+  }
+  
+  .modal-header .close:hover,
+  .modal-header .close:focus,
+  .dialog-with-header-bg .close:hover,
+  .dialog-with-header-bg .close:focus {
+    background: var(--color-bg-hover) !important;
+    color: var(--color-text-primary) !important;
+  }
+  
+  .modal-body {
+    min-width: 0;
+    padding: 24px 30px !important;
+    overflow-y: auto;
+    background: var(--color-bg-card);
+    color: var(--color-text-primary);
+  }
+  
+  .model-el .modal-body,
+  .model-ele .modal-body {
+    padding: 24px 30px !important;
+  }
+  
+  .modal-footer {
+    flex: 0 0 auto;
+    min-height: 65px;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+    padding: 14px 20px !important;
+    border-top: 1px solid var(--color-border-divider) !important;
+    border-radius: var(--radius-overlay) !important;
+    background: var(--color-bg-card) !important;
+  }
+  
+  .modal-footer > * {
+    margin: 0 !important;
+  }
+  
+  .modal-footer .btn {
+    min-width: 72px;
+  }
+  
+  .modal .form-group {
+    margin-bottom: 18px;
+  }
+  
+  .modal .form-group > label,
+  .modal legend {
+    margin-bottom: 7px;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-navigation);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .modal .form-text,
+  .modal .form-tips,
+  .modal .invalid-feedback {
+    font-size: var(--font-size-caption);
+  }
+  
+  .modal-section-title {
+    margin: 8px 0 18px;
+    padding: 0 0 9px;
+    border-bottom: 1px solid var(--color-border-divider);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  /* 主页面表格不把 1180px 最小宽度带进弹框。 */
+  .modal .base-table-wrapper {
+    width: 100%;
+    overflow: visible;
+  }
+  
+  .modal .base-table-wrapper .table-responsive,
+  .modal .base-table-wrapper .b-table-sticky-header {
+    padding: 0;
+    overflow-x: visible;
+  }
+  
+  .modal .base-table-wrapper .table {
+    width: 100%;
+    min-width: 0;
+    table-layout: auto;
+    font-size: var(--font-size-navigation);
+  }
+  
+  .modal .base-table-wrapper .table th,
+  .modal .base-table-wrapper .table td {
+    height: 46px;
+    padding: 10px 12px;
+    overflow-wrap: anywhere;
+  }
+  
+  .modal .base-table-wrapper .actions-cell,
+  .modal .base-table-wrapper .action-cell {
+    width: 1%;
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+  
+  .modal .pager-right,
+  .modal [class*='__pager'] {
+    padding: 14px 0 0;
+  }
+  
+  /* 历史页面专属卡片统一为交互稿的直角白色区块。 */
+  .template-review .preview-card,
+  .system-monitor .health-card,
+  .system-monitor .metric-item,
+  .host-node-binding .stats-card,
+  .host-node-binding .occupied-ids,
+  .host-node-binding .current-node-info,
+  .file-manager .stat-card,
+  .file-manager .stat-card-inner,
+  .file-manager .file-icon,
+  .file-manager .form-section-title,
+  .file-manager .upload-dropzone,
+  .file-manager .selected-file-info,
+  .file-manager .preview-content {
+    border-radius: var(--radius-surface) !important;
+  }
+  
+  body .template-review .card-header,
+  .template-review .code-preview,
+  .host-detail .node-position-edit,
+  .host-detail .node-info,
+  .host-detail .mqtt-log-list,
+  .host-detail .mqtt-log-item,
+  .location-detail .pods-info,
+  .location-detail .gps-info,
+  .location-detail .no-pods,
+  .location-detail .no-gps,
+  .location-detail .pod-item,
+  .location-detail .remark-content,
+  .pod-detail .metric-card,
+  .pod-detail .metric-icon,
+  .pod-detail .detail-item,
+  .hn-models .tree-item,
+  .hn-models .new-attr-dialog-header,
+  .api-keys code,
+  .device-language-manager code,
+  .od-manager code,
+  .audit-logs .log-details,
+  .debug-device-control code,
+  .debug-device-control .ddc-warning,
+  .mqtt-clients pre,
+  .debug-mqtt-stream pre {
+    border-radius: var(--radius-surface) !important;
+  }
+  
+  .template-review .stat-card,
+  .file-manager .stat-card,
+  .host-node-binding .stats-card {
+    border: 0 !important;
+    border-left: 3px solid var(--color-brand) !important;
+    background: var(--color-bg-card) !important;
+    box-shadow: var(--shadow-card) !important;
+    transform: none !important;
+  }
+  
+  .template-review .stat-card__icon,
+  .file-manager .stat-icon,
+  .host-node-binding .stat-icon,
+  .system-monitor .health-icon {
+    border-radius: var(--radius-avatar) !important;
+    background: var(--color-bg-subtle) !important;
+    color: var(--color-brand) !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  
+  .template-review .stat-card__value,
+  .template-review .stat-card__label,
+  .file-manager .stat-value,
+  .file-manager .stat-label,
+  .host-node-binding .stat-value,
+  .host-node-binding .stat-label,
+  .host-node-binding .stat-suffix {
+    color: var(--color-text-primary) !important;
+    text-shadow: none !important;
+  }
+  
+  .file-manager .stat-card-inner::before {
+    display: none;
+  }
+  
+  /* 少量无法由基础组件表达的通用布局工具。 */
+  .ui-gap-8 {
+    gap: var(--space-sm);
+  }
+  
+  .ui-gap-12 {
+    gap: var(--space-md);
+  }
+  
+  .ui-mb-2 {
+    margin-bottom: 2px;
+  }
+  
+  .ui-mt-15 {
+    margin-top: 15px;
+  }
+  
+  .filter-width-110 {
+    width: 110px !important;
+  }
+  
+  .filter-min-120 {
+    min-width: 120px !important;
+  }
+  
+  .filter-width-140 {
+    width: 140px !important;
+  }
+  
+  .filter-width-150 {
+    width: 150px !important;
+  }
+  
+  .filter-min-160 {
+    min-width: 160px !important;
+  }
+  
+  .filter-min-180 {
+    min-width: 180px !important;
+  }
+  
+  .filter-min-200 {
+    min-width: 200px !important;
+  }
+  
+  .filter-max-200 {
+    max-width: 200px !important;
+  }
+  
+  .filter-min-220 {
+    min-width: 220px !important;
+  }
+  
+  .filter-width-220 {
+    width: 220px !important;
+  }
+  
+  .filter-min-240 {
+    min-width: 240px !important;
+  }
+  
+  .filter-max-240 {
+    max-width: 240px !important;
+  }
+  
+  .filter-min-280 {
+    min-width: 280px !important;
+  }
+  
+  .console-filter {
+    max-width: 320px;
+  }
+  
+  .modal-media-preview {
+    display: block;
+    max-width: 100%;
+    max-height: 70vh;
+    margin: 0 auto;
+  }
+  
+  .modal-video-preview {
+    width: 100%;
+    max-height: 70vh;
+  }
+  
+  .modal-log-output {
+    max-height: 240px;
+    overflow: auto;
+  }
+  
+  .pod-create-summary {
+    padding: var(--space-md);
+    background: var(--color-bg-page);
+  }
+  
+  @media (width <= 768px) {
+    .modal-dialog {
+      width: auto !important;
+      max-width: none !important;
+      min-height: calc(100% - 24px);
+      margin: 12px;
+    }
+  
+    .modal-content {
+      max-height: calc(100vh - 24px);
+    }
+  
+    .modal-body,
+    .model-el .modal-body,
+    .model-ele .modal-body {
+      padding: 20px 16px !important;
+    }
+  
+    .modal .base-table-wrapper .table-responsive,
+    .modal .base-table-wrapper .b-table-sticky-header {
+      overflow-x: auto;
+    }
+  
+    .modal .base-table-wrapper .table {
+      min-width: 680px;
+    }
+  }
+}

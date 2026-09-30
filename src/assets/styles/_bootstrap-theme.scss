@@ -1,0 +1,247 @@
+/* BootstrapVue 保守主题对接
+ *
+ * 策略:不重写 BS SCSS 变量(会触发整个 Bootstrap 重编译,
+ * 可能影响布局/间距/断点),改为在 [data-theme="dark"] 选择器下
+ * 覆盖 BS 默认 utility class / 组件样式。
+ *
+ * 浅色模式完全保持 BS 4.6 默认外观 —— 本文件不输出任何浅色规则。
+ *
+ * 所有覆盖只引用 dark-theme.scss 中定义的 CSS 变量(--color-bg /
+ * --color-bg-card / --color-text / --color-border-light 等),
+ * 因此切换主题时仅需改动 [data-theme] 属性,无需重新构建 SCSS。
+ */
+
+[data-theme="dark"] {
+  /* ---------- 全局 body ---------- */
+  body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text);
+  }
+
+  /* ---------- utility class ---------- */
+  .bg-white,
+  .bg-light {
+    background-color: var(--color-bg-card) !important;
+  }
+
+  .text-dark,
+  .text-body {
+    color: var(--color-text) !important;
+  }
+
+  .text-secondary,
+  .text-muted {
+    color: var(--color-text-muted) !important;
+  }
+
+  .border,
+  .border-top,
+  .border-bottom,
+  .border-left,
+  .border-right {
+    border-color: var(--color-border-light) !important;
+  }
+
+  /* ---------- 卡片 ---------- */
+  .card,
+  .b-card {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-border-light);
+    color: var(--color-text);
+  }
+
+  .card-header,
+  .card-footer {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-border-light);
+    color: var(--color-text);
+  }
+
+  /* ---------- 表格 ---------- */
+  .table,
+  .b-table {
+    color: var(--color-text);
+    background-color: var(--color-bg-card);
+  }
+
+  .table thead th,
+  .b-table thead th {
+    background-color: var(--color-bg-thead, var(--color-bg-hover));
+    border-color: var(--color-border-light);
+    color: var(--color-text);
+  }
+
+  /* sticky 表头滚动时不能透明,要用卡片色,加 z-index 防内容透出 */
+  .b-table-sticky-header > .table > thead > tr > th,
+  .b-table > .table.b-table-sticky-header > thead > tr > th,
+  .table-responsive > .table.b-table-sticky-header > thead > tr > th {
+    background-color: var(--color-bg-card) !important;
+    background-clip: padding-box;
+    z-index: 2;
+  }
+
+  .table tbody td,
+  .b-table tbody td {
+    border-color: var(--color-border-light);
+  }
+
+  .table-hover tbody tr:hover,
+  .b-table.table-hover tbody tr:hover {
+    background-color: var(--color-bg-hover);
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--color-bg-hover);
+  }
+
+  /* ---------- 表单控件 ---------- */
+  .form-control,
+  .custom-select,
+  .input-group-text {
+    background-color: var(--color-bg-page);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .form-control:focus {
+    background-color: var(--color-bg-page);
+    color: var(--color-text);
+    border-color: var(--color-border-focus, var(--color-brand));
+  }
+
+  .form-control::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .form-control:disabled {
+    background-color: var(--color-bg-hover);
+  }
+
+  .input-group-text {
+    background-color: var(--color-bg-hover);
+  }
+
+  /* ---------- 按钮 ---------- */
+  .btn-light,
+  .btn-outline-light {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-border);
+    color: var(--color-text);
+  }
+
+  .btn-light:hover,
+  .btn-outline-light:hover {
+    background-color: var(--color-bg-hover);
+  }
+
+  /* ---------- dropdown ---------- */
+  .dropdown-menu {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-border-light);
+    color: var(--color-text);
+    box-shadow: var(--shadow-md);
+  }
+
+  .dropdown-item {
+    color: var(--color-text);
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: var(--color-bg-hover);
+    color: var(--color-text);
+  }
+
+  .dropdown-divider {
+    border-color: var(--color-border-light);
+  }
+
+  /* ---------- modal / popover / toast / tooltip ---------- */
+  .modal-content,
+  .popover,
+  .tooltip-inner,
+  .toast {
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    border-color: var(--color-border-light);
+  }
+
+  .modal-header,
+  .modal-footer {
+    border-color: var(--color-border-light);
+  }
+
+  .modal-backdrop.show {
+    opacity: 0.7;
+  }
+
+  /* ---------- nav-tabs ---------- */
+  .nav-tabs {
+    border-color: var(--color-border-light);
+  }
+
+  .nav-tabs .nav-link {
+    color: var(--color-text-secondary);
+    border-color: transparent;
+  }
+
+  .nav-tabs .nav-link.active {
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    border-color: var(--color-border-light) var(--color-border-light) var(--color-bg-card);
+  }
+
+  /* ---------- 分页 ---------- */
+  .pagination .page-link {
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    border-color: var(--color-border-light);
+  }
+
+  .pagination .page-item.active .page-link {
+    background-color: var(--color-brand-solid, var(--color-brand));
+    border-color: var(--color-brand-solid, var(--color-brand));
+    color: var(--color-text-inverse);
+  }
+
+  /* ---------- alert ---------- */
+  .alert {
+    background-color: var(--color-bg-card);
+    border-color: var(--color-border-light);
+    color: var(--color-text);
+  }
+
+  /* ---------- breadcrumb ---------- */
+  .breadcrumb {
+    background-color: transparent;
+  }
+
+  /* ---------- hr ---------- */
+  hr {
+    border-color: var(--color-border-light);
+  }
+
+  /* ---------- code / pre ---------- */
+  pre,
+  code,
+  kbd {
+    background-color: var(--color-bg-code, var(--color-bg-hover));
+    color: var(--color-text-code, var(--color-text));
+    border-color: var(--color-border-light);
+  }
+
+  /* ---------- 滚动条(webkit) ---------- */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb, var(--color-border));
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-scrollbar-track, var(--color-bg-card));
+  }
+}
+
+/* 浅色 sticky 表头保险:BS 默认浅色 sticky 没问题,但加 z-index 防被内容透出 */
+.b-table-sticky-header > .table > thead > tr > th {
+  background-color: var(--color-bg-card);
+  z-index: 2;
+}

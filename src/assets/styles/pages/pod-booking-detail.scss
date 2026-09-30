@@ -1,0 +1,14 @@
+dt {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+dd {
+  margin-bottom: 16px;
+}
+
+.meeting-detail__timezone-hint {
+  display: block;
+  margin: -8px 0 14px;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,258 @@
+.debug-device-control {
+  color: var(--tt-text);
+}
+
+.ddc-card {
+  background: var(--tt-bg-card);
+  border-color: var(--tt-border);
+  color: var(--tt-text);
+}
+
+.ddc-muted {
+  color: var(--tt-text-sec);
+}
+
+.ddc-warning {
+  color: var(--tt-warn-text);
+  background: var(--tt-warn-bg);
+  border: 1px solid var(--tt-warn-bdr);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: var(--font-size-control);
+}
+
+.debug-device-control .filter-left {
+  flex-wrap: nowrap;
+}
+
+.ddc-label {
+  display: block;
+  font-size: var(--font-size-caption);
+  color: var(--tt-text-label);
+  margin-bottom: 4px;
+}
+
+.ddc-spec-info {
+  overflow: auto hidden;
+  font-size: var(--font-size-caption);
+  white-space: nowrap;
+}
+
+.ddc-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .ddc-group-name {
+    font-weight: var(--font-weight-semibold);
+    color: var(--tt-text);
+  }
+
+  .ddc-group-index {
+    background: var(--tt-bg-code);
+    color: var(--tt-text-code);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: var(--font-size-caption);
+  }
+}
+
+.ddc-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--tt-border-light);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.ddc-entry-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 280px;
+  min-width: 220px;
+
+  .ddc-entry-code {
+    background: var(--tt-bg-code);
+    color: var(--tt-text-code);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: var(--font-size-caption);
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  .ddc-entry-summary {
+    color: var(--tt-text-sec);
+    font-size: var(--font-size-caption);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.ddc-entry-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 320px;
+  min-width: 260px;
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.ddc-range-group {
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+.ddc-send-btn {
+  flex: 0 0 auto;
+  min-width: 60px;
+}
+
+.ddc-empty,
+.ddc-empty-block {
+  padding: 20px 8px;
+  text-align: center;
+  color: var(--tt-text-sec);
+}
+
+.ddc-maint-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  overflow: auto hidden;
+}
+
+.ddc-maint-label {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--tt-text-label);
+  font-size: var(--font-size-control);
+  white-space: nowrap;
+}
+
+.ddc-maint-select {
+  flex: 0 1 280px;
+  width: 280px;
+  min-width: 220px;
+  height: var(--list-control-height);
+  border-radius: 0;
+}
+
+.ddc-maint-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+
+}
+
+.ddc-maint-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--list-control-height);
+  padding: 0 16px;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.ddc-command-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(120px, 1fr) auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--tt-border-light);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.ddc-advanced-toggle {
+  text-align: left;
+  color: var(--tt-text);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--tt-accent);
+    text-decoration: none;
+  }
+}
+
+.ddc-advanced-body {
+  padding: 12px 16px;
+}
+
+.ddc-raw-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.ddc-raw-cell {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+  min-width: 180px;
+
+  &--wide {
+    flex: 2 1 320px;
+  }
+
+  &--btn {
+    flex: 0 0 auto;
+    min-width: 84px;
+    justify-content: flex-end;
+  }
+}
+
+@media (width <= 768px) {
+  .debug-device-control .filter-left {
+    flex-wrap: wrap;
+  }
+
+  .ddc-maint-row {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .ddc-maint-label,
+  .ddc-maint-select,
+  .ddc-maint-actions {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ddc-maint-actions {
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .ddc-command-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ddc-raw-cell {
+    min-width: 0;
+  }
+}
+
+.ddc-raw-btn {
+  width: 100%;
+  height: calc(1.5em + 0.5rem + 2px); // 与 b-form-input size="sm" 等高
+}

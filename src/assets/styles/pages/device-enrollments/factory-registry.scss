@@ -1,0 +1,219 @@
+.registry-filter-stack,
+.registry-filter-stack > form {
+  width: 100%;
+}
+
+.registry-filter-stack > form {
+  margin: 0;
+}
+
+.registry-attestation__action {
+  flex: 0 0 auto;
+  width: var(--list-control-height);
+  min-width: var(--list-control-height);
+  min-height: var(--list-control-height);
+  padding: 0;
+}
+
+.registry-attestation__result,
+.registry-attestation__error {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border-divider);
+}
+
+.registry-attestation__label {
+  margin-right: 6px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-control);
+}
+
+.registry-attestation__result {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  overflow-wrap: anywhere;
+}
+
+.registry-attestation__result p {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.registry-attestation__stages {
+  display: grid;
+  width: 100%;
+  margin: 8px 0 0;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px 16px;
+}
+
+.registry-attestation__stages > div {
+  min-width: 0;
+}
+
+.registry-attestation__stages dt,
+.registry-attestation__stages dd {
+  margin: 0;
+}
+
+.registry-attestation__stages dt {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-caption);
+}
+
+.registry-attestation__stages dd {
+  overflow-wrap: anywhere;
+}
+
+.registry-attestation__error {
+  color: var(--color-error);
+}
+
+.registry-blockers {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.registry-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.registry-notice--top {
+  align-items: flex-start;
+}
+
+.registry-notice > div {
+  min-width: 0;
+}
+
+.registry-notice__icon {
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-subtitle);
+}
+
+.registry-blockers__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.registry-search {
+  flex-basis: 280px !important;
+  max-width: 320px;
+}
+
+.registry-actions {
+  gap: 8px;
+}
+
+.registry-actions .registry-actions__icon-button {
+  width: var(--list-control-height);
+  min-width: var(--list-control-height);
+  padding: 0;
+}
+
+.registry-actions__divider {
+  width: 1px;
+  height: 24px;
+  margin: 0 2px;
+  background: var(--color-border-divider);
+}
+
+.identity-uid {
+  max-width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 18px;
+}
+
+.form-grid__wide {
+  grid-column: 1 / -1;
+}
+
+.registry-form-help {
+  margin-bottom: 24px;
+}
+
+.registry-batch-control {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.registry-batch-control__select {
+  min-width: 0;
+}
+
+.registry-batch-control__create {
+  width: var(--list-control-height);
+  min-width: var(--list-control-height);
+  padding: 0;
+}
+
+.repair-rekey-identity {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--color-border-divider);
+  background: var(--color-bg-subtle);
+}
+
+.repair-rekey-identity > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.repair-rekey-identity strong {
+  overflow-wrap: anywhere;
+}
+
+::v-deep .required-label::after {
+  color: var(--color-error);
+  content: " *";
+}
+
+@media (width <= 991px) {
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .registry-actions {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}
+
+@media (width <= 575px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registry-actions__divider {
+    display: none;
+  }
+
+  .repair-rekey-identity > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+}

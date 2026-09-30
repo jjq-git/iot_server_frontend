@@ -1,0 +1,6287 @@
+{
+  "demo": {
+    "badge": "產品示範",
+    "title": "選擇一個示範情境",
+    "description": "無需帳號。選擇業務情境後，即可使用本機合成資料體驗系統。",
+    "notice": "所有資料僅儲存在此瀏覽器中，不會連線正式後端。",
+    "start_failed": "無法啟動示範情境",
+    "toolbar_label": "示範控制",
+    "switch_scenario": "切換示範情境",
+    "reset_data": "重設示範資料",
+    "reset_confirm": "這會清除目前瀏覽器中的所有示範修改並恢復初始資料，是否繼續？",
+    "reset_failed": "無法重設示範資料",
+    "route_unavailable": "此功能未包含在目前示範中",
+    "scenarios": {
+      "manufacturer": { "title": "廠家", "description": "查看公司網路、設備流轉、型號和運行狀態。" },
+      "channel": { "title": "通路", "description": "查看下級客戶、已分配資產和客戶靜音艙。" },
+      "office": { "title": "辦公", "description": "體驗辦公位置、內部預約和靜音艙使用。" },
+      "rental": { "title": "租賃", "description": "體驗公共租賃、預約記錄和營運看板。" }
+    }
+  },
+  "company_dashboard_config": {
+    "title": "公司看板設定",
+    "description": "每家公司維護唯一一套品牌與看板面板設定。",
+    "create": "新增公司設定",
+    "create_title": "新增公司看板設定",
+    "edit_title": "編輯公司看板設定",
+    "detail_title": "公司看板設定詳情",
+    "editor_description": "設定儲存後直接生效，不再使用草稿、審核或版本發佈流程。",
+    "company_id": "公司 ID：{id}",
+    "empty": "暫無公司看板設定",
+    "no_panels": "暫無看板面板",
+    "panels_help": "從平台支援的面板中選擇，並調整顯示順序、標題與寬度。",
+    "custom_page_help": "僅在確有特殊展示需求時設定自訂頁面程式碼。",
+    "upload_logo": "上傳 Logo",
+    "replace_logo": "更換 Logo",
+    "remove_logo": "移除 Logo",
+    "logo_ready": "已連結品牌 Logo",
+    "logo_selected": "已選擇新 Logo，儲存後生效",
+    "logo_empty": "尚未上傳 Logo",
+    "logo_help": "支援 PNG、JPG、WebP 或 GIF，檔案不得超過 5 MB，建議使用透明背景。",
+    "ownership_help": "選擇設定所屬公司，並決定儲存後是否立即啟用。",
+    "select_unconfigured_company": "僅顯示尚未設定看板的公司。",
+    "all_companies_configured": "所有公司都已有看板設定，請從列表進入編輯。",
+    "active_help": "儲存後立即套用到該公司的看板。",
+    "inactive_help": "儲存設定，但繼續使用平台預設看板。",
+    "branding_help": "設定品牌名稱、字體、配色與網站識別，右側會即時預覽。",
+    "advanced_help": "選擇看板內容，並調整面板的顯示順序、標題與版面。",
+    "show_advanced": "展開進階設定",
+    "hide_advanced": "收合進階設定",
+    "panel_count": "已選 {count} 個",
+    "select_panel": "選擇要新增的面板",
+    "add_panel": "新增面板",
+    "panel_width": "{count} 欄寬",
+    "panel_order": "顯示順序 {order}",
+    "move_up": "上移",
+    "move_down": "下移",
+    "remove_panel": "移除面板",
+    "custom_page_configured": "已設定",
+    "custom_page_empty": "未設定",
+    "configure_custom_page": "設定自訂頁面",
+    "edit_custom_page": "編輯自訂頁面",
+    "custom_page_editor_title": "自訂頁面進階編輯器",
+    "apply_custom_page": "套用本次編輯",
+    "custom_page_warning": "自訂程式碼會影響頁面顯示與安全性，僅貼上已審核的 HTML、CSS 與 JavaScript。",
+    "chart_types": { "line": "折線圖", "bar": "長條圖", "pie": "圓餅圖", "gauge": "儀表板", "number": "指標卡", "table": "資料表", "unknown": "未知類型" },
+    "panel_names": {
+      "stats_preview": "關鍵指標概覽",
+      "device_online_rate": "裝置上線率趨勢",
+      "device_status_distribution": "裝置狀態分佈",
+      "pod_usage_distribution": "靜音艙使用時長",
+      "pod_usage_trend": "靜音艙使用趨勢",
+      "file_usage_stats": "檔案使用統計",
+      "alert_stats": "警報類型分佈",
+      "alert_trend": "警報趨勢",
+      "detailed_stats": "詳細統計資料",
+      "device_online_rate_gauge": "裝置上線率儀表",
+      "pod_usage_rate_gauge": "靜音艙使用率儀表",
+      "pod_environment_trend": "艙內溫濕度趨勢", "pod_noise_trend": "艙內噪音趨勢",
+      "pod_occupancy_trend": "靜音艙佔用率趨勢", "pod_power_trend": "靜音艙功耗趨勢",
+      "pod_fan_trend": "風機運行趨勢", "pod_light_trend": "照明亮度趨勢",
+      "pod_network_signal_trend": "網路訊號趨勢", "pod_desk_height_trend": "桌面高度趨勢"
+    },
+    "font_options": {
+      "default": "跟隨平台預設",
+      "system": "系統介面字體",
+      "cjk": "中日韓系統字體",
+      "noto": "Noto Sans"
+    },
+    "preview": {
+      "title": "品牌效果預覽",
+      "live": "即時",
+      "sample": "範例",
+      "company_fallback": "請選擇公司",
+      "dashboard": "營運概覽",
+      "online": "線上裝置",
+      "usage": "使用率",
+      "alerts": "今日警報"
+    },
+    "fields": {
+      "company": "公司",
+      "status": "狀態",
+      "active": "啟用此設定",
+      "panels": "面板數",
+      "custom_page": "自訂頁面",
+      "title": "標題",
+      "font_family": "字體",
+      "primary_color": "主色",
+      "secondary_color": "輔助色",
+      "accent_color": "強調色",
+      "logo": "品牌 Logo",
+      "logo_file_id": "Logo 檔案 ID",
+      "favicon": "Favicon 位址",
+      "company_website": "公司網站",
+      "copyright_text": "版權文字",
+      "panel_width": "面板寬度",
+      "panels_json": "面板 JSON",
+      "html": "HTML",
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "panel_id": "面板 ID",
+      "chart": "圖表",
+      "source": "資料來源",
+      "grid": "版面"
+    },
+    "sections": {
+      "ownership": "所屬與狀態",
+      "summary": "設定概覽",
+      "branding": "品牌設定",
+      "advanced": "進階設定",
+      "panels": "看板面板",
+      "custom_page": "自訂頁面"
+    },
+    "messages": {
+      "load_failed": "載入設定失敗：{message}",
+      "companies_failed": "載入公司清單失敗：{message}",
+      "existing_configs_failed": "載入現有設定失敗：{message}",
+      "config_already_exists": "該公司已有看板設定，請返回列表進入編輯。",
+      "invalid_color": "請輸入 #RRGGBB 格式的顏色值",
+      "invalid_url": "請輸入以 http:// 或 https:// 開頭的有效網址",
+      "invalid_form": "請先修正表單中的無效欄位",
+      "invalid_json": "面板 JSON 格式無效",
+      "invalid_config_at": "{path}：{message}",
+      "unsupported_module": "{path}：後端不支援資料來源或圖表模組「{module}」，請從可新增面板清單中選擇",
+      "unsupported_chart": "{path}：模組「{module}」不支援圖表類型「{chart}」",
+      "unsupported_field": "{path}：不支援設定欄位「{field}」",
+      "panels_array": "面板設定必須是 JSON 陣列",
+      "saved": "公司看板設定已儲存",
+      "save_failed": "儲存設定失敗：{message}",
+      "deactivate_confirm": "停用「{company}」後將立即回復平台預設看板，確定繼續嗎？",
+      "deactivated": "公司看板設定已停用",
+      "deactivate_failed": "停用公司看板設定失敗：{message}",
+      "upload_logo_failed": "上傳回應缺少檔案 ID",
+      "logo_type_invalid": "請選擇 PNG、JPG、WebP 或 GIF 圖片",
+      "logo_too_large": "Logo 檔案不得超過 5 MB",
+      "logo_uploaded": "已選擇 Logo，將在儲存設定時上傳",
+      "json_imported": "JSON 已匯入視覺化面板編輯器",
+      "preview_ready": "已載入 {count} 個面板的即時預覽資料",
+      "preview_query_failed": "以下面板無法查詢：{panels}",
+      "preview_query_unsupported": "後端不支援此資料查詢",
+      "preview_resource_out_of_scope": "所選資源不屬於目前公司",
+      "unknown_panel": "未知面板",
+      "json_too_large": "JSON 檔案不能超過 1 MB"
+    },
+    "import_json": "匯入 JSON",
+    "export_json": "匯出 JSON",
+    "preview_data": "預覽即時資料",
+    "download_example": "下載範例"
+  },
+  "api_keys": {
+    "actions": {
+      "copy_login_entry": "複製登入入口",
+      "activate": "啟用",
+      "add": "新增 Key",
+      "delete": "刪除",
+      "edit": "編輯",
+      "refresh": "重新整理",
+      "test": "測試"
+    },
+    "default_brackets": "(預設)",
+    "base_url_required": "此 Provider 必須填寫 Base URL",
+    "default_or_blank_base_url_hint": "留空走 provider 預設",
+    "empty": "暫無 API Key,請先新增",
+    "fields": {
+      "actions": "操作",
+      "base_url": "Base URL",
+      "masked_key": "Key (脫敏)",
+      "model_default": "預設模型",
+      "name": "別名",
+      "provider": "Provider",
+      "status": "狀態",
+      "test": "最近測試"
+    },
+    "filter_all": "全部 Provider",
+    "is_enabled_label": "啟用 (取消勾選則軟停用,不會被業務呼叫選中)",
+    "key_placeholder_create": "貼上明文 key,儲存後只顯示脫敏值",
+    "key_placeholder_edit": "不填則不修改金鑰",
+    "loading": "載入中...",
+    "modal": {
+      "cancel": "取消",
+      "field_api_key": "API Key",
+      "field_base_url": "Base URL",
+      "field_model": "預設模型",
+      "field_name": "別名 (name)",
+      "field_provider": "Provider",
+      "ok": "儲存",
+      "title_create": "新增 API Key",
+      "title_edit": "編輯 API Key"
+    },
+    "name_placeholder": "如 deepseek-prod",
+    "set_active_label": "建立後立即設為該 provider 的 active key",
+    "status": {
+      "active": "啟用",
+      "disabled": "停用",
+      "enabled": "啟用",
+      "inactive": "未啟用"
+    },
+    "subtitle": "AI 服務金鑰(DeepSeek/OpenAI/Mistral/Anthropic/Moonshot)。Fernet 加密儲存,響應僅返回脫敏值。",
+    "test_status": {
+      "failed": "失敗",
+      "ok": "OK",
+      "unsupported": "不支援測試",
+      "untested": "未測"
+    },
+    "title": "API Keys 管理",
+    "toast": {
+      "activate_failed": "啟用失敗",
+      "activate_success_text": "已啟用 {provider}/{name}",
+      "activate_success_title": "啟用成功",
+      "delete_confirm_cancel": "取消",
+      "delete_confirm_msg": "確定刪除 {provider}/{name} 這個 API Key 嗎?刪除後業務呼叫如果依賴這條 key 會回退到環境變數。",
+      "delete_confirm_ok": "刪除",
+      "delete_confirm_title": "確認刪除",
+      "delete_failed": "刪除失敗",
+      "key_created": "API Key 已建立",
+      "key_deleted": "API Key 已刪除",
+      "key_updated": "API Key 已更新",
+      "load_failed": "載入 API Keys 失敗",
+      "load_provider_failed": "載入 provider 列表失敗",
+      "submit_failed": "操作失敗",
+      "test_failed": "測試失敗",
+      "test_failed_title": "測試失敗",
+      "test_ok_text": "{name} 測試透過",
+      "test_ok_text_with_latency": "{name} 測試透過 ({latency}ms)",
+      "test_ok_title": "測試 OK",
+      "test_request_failed": "測試請求失敗",
+      "title_error": "錯誤",
+      "title_success": "成功"
+    }
+  },
+  "audit_logs": {
+    "action": {
+      "create": "建立",
+      "delete": "刪除",
+      "login": "登入",
+      "login_failure": "登入失敗",
+      "logout": "登出",
+      "update": "更新"
+    },
+    "column": {
+      "action": "操作型別",
+      "event_at": "操作時間",
+      "ip": "IP地址",
+      "operator": "操作者",
+      "result": "結果",
+      "target_id": "目標標識",
+      "target_type": "目標型別",
+      "uuid": "日誌ID"
+    },
+    "detail": {
+      "action_info": "操作資訊",
+      "after_data": "變更後",
+      "before_data": "變更前",
+      "change_data": "變更比較",
+      "created_at": "建立時間",
+      "details": "詳細資訊",
+      "email": "郵箱",
+      "environment": "操作環境",
+      "ip": "IP地址",
+      "log_id": "日誌ID",
+      "name": "名稱",
+      "operator": "操作者",
+      "result": "操作結果",
+      "target_id": "目標ID",
+      "title": "審計日誌詳情",
+      "user_agent": "使用者代理",
+      "user_id": "使用者ID"
+    },
+    "filter": {
+      "keyword_placeholder": "操作者名稱/ID/郵箱"
+    },
+    "result": {
+      "failure": "失敗",
+      "success": "成功"
+    },
+    "system_op": "系統操作",
+    "target": {
+      "auth": "認證",
+      "company": "公司",
+      "file": "檔案",
+      "host": "主機",
+      "node": "節點",
+      "pod": "靜音艙",
+      "user": "使用者"
+    },
+    "toast": {
+      "export_failed": "匯出失敗：{msg}",
+      "export_truncated": "已匯出 {exported} 筆記錄，共 {total} 筆；其餘記錄超出單次匯出上限",
+      "detail_load_failed": "載入稽核詳情失敗：{msg}",
+      "export_success": "審計日誌已匯出",
+      "load_failed": "載入審計日誌失敗：",
+      "try_again": "請稍後重試"
+    },
+    "unknown": "未知"
+  },
+  "auth": {
+    "login": "登入",
+    "login_failed": "使用者名稱或密碼錯誤",
+    "login_page": {
+      "account_field": "帳號：",
+      "account_label": "電子郵件",
+      "account_placeholder": "請輸入電子郵件",
+      "brand": "Office pods",
+      "brand_mark": "OP",
+      "company_slug_hint": "訪問公司自定義登入頁",
+      "company_slug_label": "公司標識：{slug}",
+      "contact_admin": "聯絡管理員",
+      "copy_failed": "複製失敗，請手動複製",
+      "copy_success": "已複製：{text}",
+      "forgot_password": "忘記密碼？",
+      "brand_statement_description": "讓每一台靜音艙接入雲端：狀態即時可見、韌體一鍵下發、告警秒級觸達——讓安靜，觸手可及。",
+      "brand_statement_subtitle": "YOUR QUIET SPACE, ALWAYS CONNECTED",
+      "brand_statement_title": "靜享一方\n隨時在線",
+      "management_description": "請使用平台分配的帳號登入，帳號問題請聯絡系統管理員。",
+      "management_title": "登入管理後台",
+      "password_field": "密碼：",
+      "password_label": "密碼",
+      "password_placeholder": "請輸入密碼",
+      "platform_brand": "IoT Platform",
+      "prototype_account_placeholder": "請輸入電子郵件",
+      "remember_login": "記住登入狀態",
+      "sign_in": "Sign in",
+      "submit": "登入",
+      "submit_failed": "登入失敗，請稍後重試",
+      "support_copyright": "© 2026 技術支援：德恩基科技",
+      "test_account_tip": "請使用右下角測試帳號登入",
+      "test_account_title": "測試帳號",
+      "test_company_a": "靜音艙廠家 A",
+      "test_company_b": "靜音艙廠家 B",
+      "test_company_c": "靜音艙廠家 C",
+      "validation_account_password_required": "請輸入電子郵件和密碼",
+      "validation_account_required": "請輸入電子郵件",
+      "validation_password_required": "請輸入密碼",
+      "welcome": "歡迎回來，請登入繼續使用控制檯"
+    },
+    "password_reset": {
+      "title": "找回密碼",
+      "account_help": "輸入登入帳號，系統將顯示該帳號已登記的安全聯絡方式。",
+      "account_label": "登入帳號",
+      "account_placeholder": "使用者名稱、電子郵件或手機號碼",
+      "account_required": "請輸入登入帳號",
+      "method_help": "選擇一種方式接收 6 位驗證碼。",
+      "method_label": "驗證方式",
+      "channel_email": "電子郵件驗證",
+      "channel_phone": "手機驗證",
+      "send_code": "傳送驗證碼",
+      "code_sent": "驗證碼已傳送至 {destination}，10 分鐘內有效。",
+      "code_label": "驗證碼",
+      "code_placeholder": "請輸入 6 位驗證碼",
+      "code_invalid": "請輸入正確的 6 位驗證碼",
+      "resend": "重新傳送",
+      "resend_countdown": "{seconds} 秒後重傳",
+      "dev_code": "開發環境驗證碼：{code}",
+      "new_password_label": "新密碼",
+      "new_password_placeholder": "請輸入新密碼",
+      "confirm_password_label": "確認新密碼",
+      "confirm_password_placeholder": "請再次輸入新密碼",
+      "password_hint": "至少 8 位，並同時包含字母和數字。",
+      "password_invalid": "新密碼必須至少 8 位並同時包含字母和數字",
+      "password_mismatch": "兩次輸入的密碼不一致",
+      "reset_password": "重設密碼",
+      "success": "密碼重設成功，請使用新密碼登入",
+      "request_failed": "請求失敗，請稍後再試",
+      "request_accepted": "如果該帳號可以重設，系統已向其電子郵件傳送一次性重設連結。",
+      "reset_failed": "驗證碼錯誤、已過期或嘗試次數過多",
+      "unavailable_title": "無法自行找回密碼",
+      "unavailable_help": "該帳號沒有可用的電子郵件或手機號碼，請聯絡公司管理員；公司管理員請聯絡平台管理員。"
+    },
+    "access_denied_back": "返回上一頁",
+    "access_denied_help": "目前帳號沒有存取此頁面所需的權限。如需使用此功能，請聯絡公司管理員或平台管理員。",
+    "access_denied_profile": "前往個人中心",
+    "access_denied_title": "無權存取",
+    "must_change_password_first": "請先修改初始密碼後再使用",
+    "no_permission": "您沒有權限存取此頁面",
+    "password": "密碼",
+    "session_expired": "登入失效，請重新登入",
+    "username": "使用者名稱"
+  },
+  "base_modal": {
+    "cancel_default": "取消",
+    "ok_default": "確定"
+  },
+  "base_pagination": {
+    "per_page": "{count}條/頁",
+    "per_page_label": "每頁顯示數量",
+    "previous_page": "上一頁",
+    "next_page": "下一頁"
+  },
+  "base_table": {
+    "empty_text": "暫無資料"
+  },
+  "breadcrumb": {
+    "groups": {
+      "config": "配置與 OTA",
+      "docs": "文件中心",
+      "files": "檔案管理",
+      "integration": "API 與整合",
+      "locations": "位置管理",
+      "monitor": "系統監控"
+    },
+    "home": "首頁",
+    "pages": {
+      "audit_export": "日誌匯出",
+      "audit_logs": "審計日誌",
+      "audit_operation_logs": "操作審計",
+      "dashboard": "資料看板",
+      "dashboard_alerts": "告警與待辦",
+      "dashboard_charts": "圖表統計",
+      "dashboard_status": "線上狀態大盤",
+      "devices_hn_models": "主機/節點型號表",
+      "devices_hosts": "主機列表",
+      "devices_nodes": "節點列表",
+      "docs_architecture": "系統架構",
+      "docs_data_model": "資料模型",
+      "docs_deployment": "部署與運維",
+      "docs_development": "開發指南",
+      "docs_project_overview": "專案總覽",
+      "docs_troubleshooting": "故障排查",
+      "files": "檔案管理",
+      "files_relations": "檔案關聯",
+      "files_stats": "檔案統計",
+      "files_upload": "檔案上傳",
+      "integration_api": "API 文件",
+      "integration_auth": "登入鑑權",
+      "integration_mqtt": "MQTT 主題",
+      "integration_websocket": "WebSocket",
+      "locations": "位置管理",
+      "monitor_health": "系統健康",
+      "monitor_metrics": "監控指標",
+      "monitor_mqtt": "MQTT 監控",
+      "org_companies": "公司",
+      "org_company_dashboard_config": "公司看板設定",
+      "org_company_dashboard_config_detail": "看板設定詳情",
+      "org_company_dashboard_config_edit": "編輯看板設定",
+      "org_company_dashboard_config_new": "新增看板設定",
+      "org_users": "公司使用者",
+      "user_profile": "個人中心",
+      "pods": "靜音艙列表"
+    }
+  },
+  "change_log_dialog": {
+    "action": {
+      "activate": "啟用",
+      "create": "建立",
+      "deactivate": "停用",
+      "update": "更新"
+    },
+    "column": {
+      "action": "操作型別",
+      "change_content": "變更內容",
+      "changed_at": "變更時間",
+      "changed_by": "操作人",
+      "changed_field": "變更欄位",
+      "reason": "變更原因"
+    },
+    "new_value": "新值：",
+    "old_value": "原值：",
+    "title": "變更日誌"
+  },
+  "charts": {
+    "alerts": {
+      "pending": "未處理",
+      "title": "系統告警統計",
+      "today": "今日告警",
+      "type_comm": "通訊異常：{n}",
+      "type_offline": "裝置離線：{n}",
+      "type_other": "其他：{n}",
+      "week": "本週告警"
+    },
+    "duration": {
+      "avg_duration": "平均時長",
+      "avg_unit": "{n}小時",
+      "max_duration": "最長使用",
+      "max_value": "8.5 小時",
+      "range_0_1": "0-1 小時：{n}次 ({pct}%)",
+      "range_1_2": "1-2 小時：{n}次 ({pct}%)",
+      "range_2_4": "2-4 小時：{n}次 ({pct}%)",
+      "range_4plus": "4+ 小時：{n}次 ({pct}%)",
+      "title": "靜音艙使用時長分佈",
+      "today_uses": "今日使用",
+      "today_value": "{n}次",
+      "total_uses": "總使用次數"
+    },
+    "files": {
+      "downloads_unit": "{n}次",
+      "new_files": "新增檔案",
+      "new_unit": "{n}個",
+      "plays_unit": "{n}次",
+      "title": "檔案使用統計",
+      "total_downloads": "總下載量",
+      "total_plays": "總播放量"
+    },
+    "online": {
+      "area": "面積圖",
+      "average": "平均：",
+      "line": "折線圖",
+      "max": "最高：",
+      "min": "最低：",
+      "online_rate": "線上率",
+      "title": "裝置線上率趨勢"
+    },
+    "stats": {
+      "alerts_pending": "待處理：{n}",
+      "alerts_today": "今日告警",
+      "file_size": "總大小：{size}GB",
+      "file_total": "檔案總數",
+      "online_devices": "線上裝置",
+      "online_rate": "線上率：{rate}%",
+      "pod_total": "靜音艙總數",
+      "usage_rate": "使用率：{rate}%"
+    },
+    "table": {
+      "alerts_count": "告警數量",
+      "avg_usage_time": "平均使用時長 (分鐘)",
+      "date": "日期",
+      "file_downloads": "檔案下載量",
+      "online_devices": "線上裝置",
+      "online_rate": "線上率",
+      "pod_usage": "靜音艙使用次數",
+      "refresh": "重新整理",
+      "title": "詳細統計資料",
+      "total_devices": "總裝置數"
+    },
+    "toast": {
+      "alerts_updated": "告警統計已更新",
+      "data_refreshed": "資料已重新整理",
+      "duration_updated": "時長分佈已更新",
+      "files_updated": "檔案統計已更新",
+      "online_updated": "線上率資料已更新"
+    }
+  },
+  "column_visibility": {
+    "title": "列顯示控制",
+    "toggle": "顯示欄"
+  },
+  "common": {
+    "actions": "操作",
+    "active": "啟用",
+    "add": "新增",
+    "all": "全部",
+    "all_status": "全部狀態",
+    "all_status_filter": "全部狀態",
+    "all_types": "全部型別",
+    "back": "返回",
+    "cancel": "取消",
+    "clear": "清空",
+    "close": "關閉",
+    "collapse": "收起",
+    "confirm": "確認",
+    "confirm_delete": "確認刪除",
+    "copy": "複製",
+    "copy_failed": "複製失敗",
+    "copy_success": "已複製",
+    "create": "新建",
+    "create_confirm": "確認建立",
+    "create_failed": "建立失敗",
+    "created_at": "建立時間",
+    "creator": "建立人",
+    "datepicker": {
+      "today": "今天",
+      "no_date_selected": "未選擇日期",
+      "help": "使用方向鍵瀏覽日期"
+    },
+    "delete": "刪除",
+    "delete_confirm": "確認刪除？",
+    "delete_failed": "刪除失敗",
+    "delete_failed_retry": "刪除失敗：",
+    "delete_success": "刪除成功",
+    "description": "描述",
+    "detail": "詳情",
+    "details": "詳情",
+    "disable": "禁用",
+    "disabled": "已禁用",
+    "download": "下載",
+    "edit": "編輯",
+    "enable": "啟用",
+    "enabled": "已啟用",
+    "error": "錯誤",
+    "expand": "展開",
+    "export": "匯出",
+    "filter": "篩選",
+    "hide": "隱藏",
+    "import": "匯入",
+    "inactive": "停用",
+    "info": "資訊",
+    "is_active": "已啟用",
+    "is_inactive": "未啟用",
+    "load_failed": "載入失敗",
+    "loading": "載入中...",
+    "loading_more": "載入中…",
+    "loading_text": "載入中...",
+    "more": "更多",
+    "name": "名稱",
+    "next": "下一步",
+    "no": "否",
+    "no_data": "暫無資料",
+    "no_permission_edit": "您沒有編輯許可權",
+    "no_records": "暫無資料",
+    "none": "無",
+    "ok": "確定",
+    "operation": "操作",
+    "operation_failed": "操作失敗",
+    "operation_success": "操作成功",
+    "optional": "可選",
+    "page_size_10": "10/頁",
+    "page_size_100": "100/頁",
+    "page_size_20": "20/頁",
+    "page_size_50": "50/頁",
+    "page_size_options": {
+      "fifty": "50/頁",
+      "hundred": "100/頁",
+      "ten": "10/頁",
+      "twenty": "20/頁"
+    },
+    "please_select_company": "請選擇公司",
+    "previous": "上一步",
+    "refresh": "重新整理",
+    "remark": "備註",
+    "remove": "移除",
+    "reset": "重置",
+    "retire": "退役",
+    "restore": "恢復",
+    "restore_without_credential": "主機已恢復，但未找到受管 MQTT 憑證，請確認裝置連線狀態。",
+    "retry": "重試",
+    "save": "儲存",
+    "save_confirm": "確認儲存",
+    "save_failed": "儲存失敗",
+    "save_modify": "儲存修改",
+    "save_success": "儲存成功",
+    "search": "搜尋",
+    "search_placeholder": "請輸入搜尋關鍵詞",
+    "select_company": "選擇公司",
+    "select_status": "選擇狀態",
+    "settings": "設定",
+    "show": "顯示",
+    "status": {
+      "active": "啟用中",
+      "configured": "已配置",
+      "connected": "已連線",
+      "disabled": "停用",
+      "disconnected": "未連線",
+      "enabled": "啟用",
+      "inactive": "已停用",
+      "maintenance": "維護中",
+      "offline": "離線",
+      "online": "線上",
+      "unconfigured": "未配置"
+    },
+    "submit": "提交",
+    "success": "成功",
+    "switch_language": "切換語言",
+    "time": {
+      "days_ago": "{n}天前",
+      "hours_ago": "{n}小時前",
+      "minutes_ago": "{n}分鐘前",
+      "seconds_ago": "{n}秒前"
+    },
+    "tip": "提示",
+    "total_count": "共 {total} 條",
+    "pagination_range": "第 {start}–{end} 筆，共 {total} 筆",
+    "total_records": "共 {total} 條記錄",
+    "type": "型別",
+    "unknown": "未知",
+    "unknown_error": "未知錯誤",
+    "unnamed": "未命名",
+    "unsaved_changes_confirm": "您有未儲存的變更，確定要離開嗎？",
+    "update_failed": "更新失敗",
+    "update_success": "更新成功",
+    "updated_at": "更新時間",
+    "updater": "更新人",
+    "upload": "上傳",
+    "view": "檢視",
+    "view_logs": "日誌",
+    "warning": "警告",
+    "yes": "是"
+  },
+  "companies": {
+    "actions": {
+      "copy_login_entry": "複製登入入口",
+      "create_company": "新增公司",
+      "create_user": "新增使用者"
+    },
+    "pagination": {
+      "summary": "顯示 {start}–{end} 筆，共 {total} 筆",
+      "total": "共 {count} 筆"
+    },
+    "stats": {
+      "account_total": "帳號總數",
+      "active_rate": "啟用率",
+      "company_total": "公司總數",
+      "inactive_accounts": "停用帳號",
+      "summary": "公司統計"
+    },
+    "company_attribute": {
+      "enterprise": "企業組織",
+      "is_agent": "代理商",
+      "is_brand": "品牌方",
+      "is_channel_partner": "渠道合作夥伴",
+      "is_distributor": "分銷商",
+      "is_enduser": "終端用戶",
+      "is_manufacturer": "生產廠家",
+      "is_pod_manufacturer": "生產廠家",
+      "is_household": "家庭組織",
+      "is_school": "學校組織"
+    },
+    "company_type": {
+      "AG": "代理商",
+      "BR": "品牌方",
+      "CP": "渠道合作夥伴",
+      "DS": "分銷商",
+      "EU": "終端用戶",
+      "MF": "生產廠家",
+      "PF": "平臺公司"
+    },
+    "create_dialog": {
+      "address_label": "公司地址",
+      "address_placeholder": "請輸入公司地址",
+      "attributes_label": "公司屬性",
+      "household_label": "組織類型",
+      "household_help": "家庭是終端用戶稱呼，不能與學校或上游業務角色同時選擇。",
+      "school_help": "學校是終端用戶稱呼，不能與家庭或上游業務角色同時選擇。",
+      "pod_usage_label": "靜音艙用途",
+      "pod_usage_help": "終端用戶必填，上游業務角色不適用。",
+      "first_admin_title": "首位管理員",
+      "first_admin_help": "公司建立後將向首位管理員傳送邀請；對方接受前公司顯示為待初始化，管理員無需代設密碼。",
+      "admin_email_label": "管理員郵箱",
+      "admin_email_placeholder": "請輸入首位管理員郵箱",
+      "admin_name_label": "管理員姓名",
+      "admin_name_placeholder": "請輸入首位管理員姓名",
+      "admin_email_required": "請輸入管理員郵箱",
+      "admin_email_invalid": "請輸入有效的管理員郵箱",
+      "admin_name_required": "請輸入管理員姓名",
+      "create_and_invite_action": "建立並邀請",
+      "create_and_invite_success": "公司已建立，管理員邀請已傳送",
+      "invite_retry_title": "重試管理員邀請",
+      "invite_retry_action": "重新傳送邀請",
+      "company_created_invite_pending": "公司「{company}」已建立，尚未完成首位管理員邀請。重試只會傳送邀請，不會重複建立公司。",
+      "company_created_invite_failed": "公司已建立，但管理員邀請傳送失敗：{detail}",
+      "company_slug_label": "登入入口標識",
+      "company_slug_placeholder": "如 dengtec-zz（3-63 位小寫字母、數字或連字元）",
+      "company_name_label": "公司全稱",
+      "company_name_placeholder": "請輸入公司全稱",
+      "contact_email_placeholder": "聯絡郵箱",
+      "contact_label": "聯絡人資訊",
+      "contact_person_placeholder": "聯絡人姓名",
+      "contact_phone_placeholder": "聯絡電話",
+      "custom_domain_label": "自定義域名",
+      "custom_domain_placeholder": "如 www.brandb.com",
+      "domain_label": "完整登入入口 URL",
+      "domain_placeholder": "如 https://pods.dengtec.com/dengtec-zz",
+      "slogan_label": "公司標語",
+      "slogan_placeholder": "顯示在公司簡稱下方",
+      "display_name_label": "顯示名稱",
+      "display_name_placeholder": "請輸入顯示名稱",
+      "parent_label": "上級公司",
+      "short_name_label": "簡稱",
+      "short_name_placeholder": "請輸入簡稱",
+      "subdomain_label": "二級域名",
+      "subdomain_placeholder": "如 manufacturerA",
+      "title": "新增公司"
+    },
+    "pod_usage": {
+      "internal": "內部使用",
+      "rental": "公共租賃",
+      "both": "兩者兼有",
+      "not_applicable": "不適用"
+    },
+    "expand": {
+      "loading_users": "載入使用者中...",
+      "no_log": "該公司暫無變更日誌",
+      "no_users": "暫無使用者"
+    },
+    "filter": {
+      "keyword_placeholder": "公司名稱",
+      "select_parent": "選擇父公司",
+      "select_status": "選擇狀態"
+    },
+    "icons": {
+      "view_logs": "日誌"
+    },
+    "locale": {
+      "en-US": "English (US)",
+      "zh-CN": "中文 (簡體)"
+    },
+    "role": {
+      "admin": "公司管理員",
+      "data_entry": "資料錄入員",
+      "maintainer": "系統維護人員",
+      "operator": "營運管理",
+      "select": "請選擇角色",
+      "viewer": "資料檢視員"
+    },
+    "table": {
+      "address": "公司地址",
+      "company_attributes": "公司屬性",
+      "company_code": "公司編碼",
+      "company_name": "公司名稱",
+      "company_type": "公司型別",
+      "contact_email": "聯絡郵箱",
+      "contact_person": "聯絡人",
+      "contact_phone": "聯絡電話",
+      "created_at": "建立時間",
+      "custom_domain": "自定義域名",
+      "display_name": "顯示名稱",
+      "domain_verified": "域名驗證",
+      "slogan": "公司標語",
+      "domain_verified_no": "未驗證",
+      "domain_verified_yes": "已驗證",
+      "is_active": "狀態",
+      "login_entry": "登入入口",
+      "login_entry_unset": "未設定",
+      "parent_company_name": "上級公司",
+      "short_name": "簡稱",
+      "subdomain": "二級域名"
+    },
+    "toast": {
+      "company_create_failed": "建立公司失敗",
+      "company_create_success": "公司建立成功",
+      "enduser_conflict": "終端用戶不能與其他屬性同時選擇，已自動取消其他選項",
+      "load_failed": "載入公司列表失敗",
+      "load_user_failed": "載入使用者列表失敗",
+      "login_entry_copied": "登入入口已複製",
+      "login_entry_copy_failed": "複製登入入口失敗",
+      "user_create_failed": "建立使用者失敗",
+      "user_create_success": "使用者建立成功"
+    },
+    "user_company": {
+      "select": "請選擇所屬公司"
+    },
+    "user_dialog": {
+      "company_label": "所屬公司",
+      "confirm_password_label": "確認密碼",
+      "confirm_password_placeholder": "請再次輸入密碼",
+      "display_name_label": "顯示名稱",
+      "display_name_placeholder": "請輸入顯示名稱",
+      "email_label": "郵箱",
+      "email_placeholder": "請輸入郵箱",
+      "locale_label": "語言偏好",
+      "password_label": "密碼",
+      "password_placeholder": "請輸入密碼",
+      "phone_label": "手機號",
+      "phone_placeholder": "請輸入手機號",
+      "role_label": "角色",
+      "timezone_label": "時區偏好",
+      "title": "新增使用者",
+      "username_label": "使用者名稱",
+      "username_placeholder": "請輸入使用者名稱"
+    },
+    "user_table": {
+      "display_name": "顯示名稱",
+      "email": "郵箱",
+      "is_active": "狀態",
+      "last_login": "最後登入",
+      "phone": "手機號",
+      "role": "角色",
+      "username": "使用者名稱"
+    },
+    "validation": {
+      "company_slug_invalid": "登入入口標識須為 3-63 位小寫字母、數字或連字元",
+      "company_name_required": "請輸入公司全稱",
+      "short_name_required": "請輸入公司簡稱",
+      "domain_invalid": "請輸入不含帳號、連接埠、查詢參數或片段的完整 HTTPS URL",
+      "company_attribute_required": "請至少選擇一種公司身份",
+      "pod_usage_required": "請選擇終端用戶的靜音艙用途",
+      "company_required": "請選擇所屬公司",
+      "confirm_password_required": "請再次輸入密碼",
+      "email_invalid": "請輸入正確的郵箱地址",
+      "email_required": "請輸入郵箱",
+      "password_min_length": "密碼長度不能小於 6 位",
+      "password_mismatch": "兩次輸入密碼不一致",
+      "password_required": "請輸入密碼",
+      "role_required": "請選擇角色",
+      "username_required": "請輸入使用者名稱"
+    }
+  },
+  "company_detail": {
+    "active_status": {
+      "active": "啟用",
+      "active_badge": "啟用中",
+      "inactive": "停用",
+      "inactive_badge": "已停用"
+    },
+    "company_type": {
+      "AG": "代理商",
+      "BR": "品牌方",
+      "CP": "渠道合作夥伴",
+      "DS": "分銷商",
+      "EU": "終端用戶",
+      "MF": "生產廠家",
+      "PF": "平臺公司"
+    },
+    "domain": {
+      "copy_entry": "複製登入入口",
+      "dns_verification": "DNS 驗證",
+      "entry_unset": "請先設定登入入口標識",
+      "failed": "失敗",
+      "pending": "待驗證",
+      "unverified": "未驗證",
+      "verified": "已驗證",
+      "verify_now": "立即驗證",
+      "verifying": "驗證中..."
+    },
+    "field": {
+      "address": "公司地址",
+      "company_attr": "公司屬性",
+      "company_code": "公司編碼",
+      "company_name": "公司全稱",
+      "company_slug": "登入入口標識",
+      "domain": "完整登入入口 URL",
+      "slogan": "公司標語",
+      "contact_email": "聯絡郵箱",
+      "contact_person": "聯絡人",
+      "contact_phone": "聯絡電話",
+      "created_at": "建立時間",
+      "custom_domain": "自定義域名",
+      "display_name": "顯示名稱",
+      "login_entry": "登入入口",
+      "parent_company": "上級公司",
+      "short_name": "簡稱",
+      "status": "狀態",
+      "subdomain": "二級域名",
+      "updated_at": "更新時間",
+      "uuid": "UUID"
+    },
+    "no_parent": "無",
+    "section": {
+      "basic_info": "基礎資訊",
+      "company_attr": "公司屬性",
+      "contact_info": "聯絡人資訊",
+      "domain_info": "域名資訊",
+      "remark": "備註",
+      "system_info": "系統資訊"
+    },
+    "toast": {
+      "enduser_exclusive": "終端用戶不能與其他屬性同時選擇，已自動取消其他選項",
+      "invalid_domain": "請輸入正確的域名格式",
+      "invalid_email": "請輸入正確的郵箱格式",
+      "invalid_phone": "請輸入正確的手機號碼格式",
+      "invalid_company_slug": "登入入口標識格式不正確",
+      "domain_verified": "域名驗證通過",
+      "domain_verify_failed": "域名驗證失敗，請檢查 DNS 設定",
+      "login_entry_copied": "登入入口已複製",
+      "login_entry_copy_failed": "複製登入入口失敗",
+      "invalid_subdomain": "二級域名只能包含字母、數字和連字元，且不能以連字元開頭或結尾",
+      "update_failed": "更新失敗",
+      "update_success": "更新成功"
+    }
+  },
+  "dashboard": {
+    "dynamic": {
+      "attention": "需關注",
+      "in_use": "{count} 使用中",
+      "normal": "正常",
+      "online_rate_label": "上線率",
+      "pending_label": "待處理",
+      "total_size_label": "總大小",
+      "usage_rate_label": "使用率",
+      "config_fallback": "公司儀表盤設定暫不可用，目前顯示平台預設版面。",
+      "empty": "目前時間範圍暫無資料",
+      "export": "匯出 PNG",
+      "start_date": "開始日期",
+      "end_date": "結束日期",
+      "subtitle": "平台運行概覽 · {range}",
+      "title": "圖表統計",
+      "unsupported_title": "設定不受支援",
+      "pod_devices": "台",
+      "pod_count": "座",
+      "pod_files": "個",
+      "pod_alerts": "筆",
+      "current_value": "目前值",
+      "series": {
+        "temperature": "溫度", "humidity": "濕度", "noise": "噪音", "occupancy": "佔用率",
+        "estimated_power": "估算功耗", "fan_request": "風機設定", "fan_actual": "風機實際輸出",
+        "fan_rpm": "風機轉速", "light_level": "照明亮度", "wifi_rssi": "Wi-Fi 訊號", "desk_height": "桌面高度"
+      }
+    },
+    "chart": {
+      "alerts": {
+        "pending": "未處理",
+        "title": "系統告警統計",
+        "type_communication": "通訊異常：{n}",
+        "type_offline": "裝置離線：{n}",
+        "type_other": "其他：{n}",
+        "week": "本週告警"
+      },
+      "alert_trend": {
+        "count": "告警數量",
+        "peak": "單日峰值",
+        "title": "告警趨勢"
+      },
+      "device_status": {
+        "inactive": "已停用",
+        "maintenance": "維護中",
+        "offline": "離線",
+        "online": "線上",
+        "title": "裝置狀態分布"
+      },
+      "file_stats": {
+        "downloads": "總下載量",
+        "items": "{n}個",
+        "new_files": "新增檔案",
+        "plays": "總播放量",
+        "times": "{n}次",
+        "title": "檔案使用統計"
+      },
+      "online_trend": {
+        "area": "面積圖",
+        "avg": "平均：",
+        "legend": "線上率",
+        "line": "折線圖",
+        "max": "最高：",
+        "min": "最低：",
+        "title": "裝置線上率趨勢"
+      },
+      "pod_duration": {
+        "avg": "平均時長",
+        "bucket_0_1": "0-1 小時：{count}次 ({pct}%)",
+        "bucket_1_2": "1-2 小時：{count}次 ({pct}%)",
+        "bucket_2_4": "2-4 小時：{count}次 ({pct}%)",
+        "bucket_4_plus": "4+ 小時：{count}次 ({pct}%)",
+        "hours": "{n}小時",
+        "longest": "最長使用",
+        "times": "{n}次",
+        "title": "靜音艙使用時長分佈",
+        "today": "今日使用",
+        "total_uses": "總使用次數"
+      },
+      "pod_usage_trend": {
+        "avg_duration": "平均時長",
+        "daily_avg": "日均使用",
+        "peak": "單日峰值",
+        "title": "靜音艙使用趨勢",
+        "total": "總使用次數",
+        "uses": "使用次數"
+      }
+    },
+    "detail_table": {
+      "column": {
+        "alerts_count": "告警數量",
+        "avg_usage_time": "平均使用時長 (分鐘)",
+        "date": "日期",
+        "file_downloads": "檔案下載量",
+        "online_devices": "線上裝置",
+        "online_rate": "線上率",
+        "pod_usage": "靜音艙使用次數",
+        "total_devices": "總裝置數"
+      },
+      "title": "詳細統計資料"
+    },
+    "stat": {
+      "alerts_today": "今日告警",
+      "file_size": "總大小：{size}GB",
+      "file_total": "檔案總數",
+      "online_devices": "線上裝置",
+      "online_rate": "線上率：{rate}%",
+      "pending": "待處理：{count}",
+      "pod_total": "靜音艙總數",
+      "pod_usage_rate": "使用率：{rate}%"
+    },
+    "toast": {
+      "alerts_updated": "告警統計已更新",
+      "duration_updated": "時長分佈已更新",
+      "file_stats_updated": "檔案統計已更新",
+      "load_failed": "儀表盤資料載入失敗",
+      "online_updated": "線上率資料已更新",
+      "refreshed": "資料已重新整理"
+    },
+    "weekday": {
+      "fri": "週五",
+      "mon": "週一",
+      "sat": "週六",
+      "sun": "週日",
+      "thu": "週四",
+      "tue": "週二",
+      "wed": "週三"
+    }
+  },
+  "debug_credentials": {
+    "actions": {
+      "copy": "複製",
+      "create": "新建憑證",
+      "delete": "刪除",
+      "dismiss_recorded": "我已記錄，關閉",
+      "reset_password": "重置密碼",
+      "restore": "恢復",
+      "revoke": "吊銷",
+      "submit_create": "建立"
+    },
+    "column": {
+      "actions": "操作",
+      "created_at": "建立時間",
+      "factory_batch": "出廠批次",
+      "host": "主機 UUID",
+      "last_seen_at": "最近上線",
+      "mqtt_username": "MQTT 使用者名稱",
+      "region": "區域",
+      "revoked": "狀態",
+      "serial": "序號",
+      "uuid": "憑證 UUID"
+    },
+    "confirm": {
+      "delete": "實體刪除 {serial}？此操作不可撤銷，建議先用吊銷。",
+      "reset": "重置 {serial} 的密碼？舊密碼立即失效，裝置會被踢下線。",
+      "reset_ok": "確認重置",
+      "restore": "恢復 {serial} 的連線權限？",
+      "revoke": "吊銷 {serial}？裝置將無法連線 MQTT。"
+    },
+    "desc_html": "管理裝置端連線 MQTT/除錯通道用的 mqtt_username + mqtt_password。<strong>新密碼僅在建立/重置時顯示一次</strong>，不會再次返回。",
+    "dialog": {
+      "click_copy_first": "請先點選複製再關閉",
+      "create_title": "新建裝置憑證",
+      "secret_title": "MQTT 密碼（一次性顯示）",
+      "secret_warning_html": "<strong>這是密碼最後一次顯示</strong>，關閉彈窗後無法再取回。請立即複製並妥善儲存。"
+    },
+    "empty": "暫無憑證",
+    "filter": {
+      "host_placeholder": "按主機 UUID 過濾",
+      "show_revoked": "顯示已吊銷"
+    },
+    "filter_section": "篩選",
+    "form": {
+      "factory_batch": "出廠批次",
+      "host_uuid": "主機 UUID（可選）",
+      "host_uuid_placeholder": "留空則自動產生",
+      "notes": "備註",
+      "password_plain": "MQTT 密碼（明文，僅本次顯示）",
+      "region": "區域",
+      "serial": "序號",
+      "username": "MQTT 使用者名稱"
+    },
+    "status": {
+      "normal": "正常",
+      "revoked": "已吊銷"
+    },
+    "title": "裝置憑證",
+    "toast": {
+      "copied": "已複製到剪貼簿",
+      "copy_failed": "複製失敗",
+      "create_failed": "建立憑證失敗",
+      "delete_failed": "刪除失敗",
+      "load_failed": "載入憑證列表失敗",
+      "reset_failed": "重置密碼失敗",
+      "restore_failed": "恢復失敗",
+      "revoke_failed": "吊銷失敗"
+    }
+  },
+  "debug_device_control": {
+    "actions": {
+      "refresh_state": "重新整理裝置狀態",
+      "refresh_spec": "重新整理規範",
+      "send": "下發"
+    },
+    "advanced": {
+      "attr_code_placeholder": "如 led_enable / P-15",
+      "desc": "當節點 OD 規範缺失或除錯新欄位時使用,直接 POST /control。",
+      "toggle": "高階 - 直接下發 raw attr_code"
+    },
+    "command_status": {
+      "section": "本次工作階段命令回執",
+      "target": "節點 #{id}"
+    },
+    "confirm": {
+      "default": "確認執行?",
+      "emergency_stop": "確認緊急停止該裝置?",
+      "nmt_reset": "確認向節點 #{id} 傳送 NMT Reset？節點會短暫離線並重新初始化。",
+      "reboot": "確認軟重啟該裝置?"
+    },
+    "desc": "基於節點 OD 規範動態生成控制元件,選擇 主機 / 節點 / 規範版本 後自動載入該型號的可寫欄位。",
+    "dir": {
+      "ro": "只讀",
+      "wo": "只寫"
+    },
+    "empty": {
+      "no_fields": "該組內無欄位",
+      "select_first": "請先選擇主機和節點 → 自動載入該節點 OD 規範後會按欄位型別動態生成控制元件"
+    },
+    "form": {
+      "host": "主機",
+      "host_placeholder": "請選擇主機",
+      "node": "節點",
+      "select_host_first": "請先選主機",
+      "select_target": "請選擇目標",
+      "spec_version": "規範版本"
+    },
+    "json_placeholder": "JSON: 例如 \"abc\" / 123 / {\"k\":\"v\"}",
+    "maint": {
+      "emergency_stop": "緊急停止",
+      "nmt_action": "NMT 動作",
+      "reboot": "軟重啟",
+      "section": "維護命令(通用,所有節點支援)",
+      "send_nmt": "傳送 NMT"
+    },
+    "nmt": {
+      "reset": "NMT Reset Node",
+      "start": "NMT Start (進入 OPERATIONAL)",
+      "stop": "NMT Stop"
+    },
+    "spec_info": "{device_id} / {version} | 共 {total} 欄位 ({rw} RW + {ro} RO)",
+    "target": {
+      "host_default": "主機自身 (device_id=1)",
+      "host_with_pc": "主機自身 ({pc})",
+      "node_prefix": "節點 #{id}"
+    },
+    "title": "裝置控制檯",
+    "toast": {
+      "ack": "裝置回執 {cmd}: {status}",
+      "invalid_attr_code": "attr_code 只能包含字母、數字、點、底線、冒號和連字號，且不能超過 64 個字元",
+      "invalid_json": "{name} 不是合法 JSON",
+      "maint_failed": "維護命令 {action} 失敗: {msg}",
+      "maint_sent": "已下發維護命令 {action}{cmd}",
+      "raw_failed": "raw {code} 下發失敗: {msg}",
+      "raw_sent": "已下發 raw {code}{cmd}",
+      "select_host_first": "請先選擇主機",
+      "send_failed_default": "下發失敗",
+      "send_failed_named": "{name} 下發失敗: {msg}",
+      "state_failed": "讀取裝置目前狀態失敗",
+      "sent": "已下發 {name}={value}{cmd}"
+    },
+    "unit": "單位 {unit}",
+    "value_source": {
+      "live": "裝置目前值",
+      "unavailable": "目前值未知"
+    },
+    "warning": {
+      "load_spec_failed": "載入 OD 規範失敗: {msg}",
+      "model_unknown": "該裝置沒有有效的 CANopen 型號編碼，已停止自動套用 NU0001。請先完善裝置型號綁定。",
+      "no_valid_spec": "後端未返回有效 OD 規範",
+      "spec_not_uploaded": "該型號 ({pc}) OD 規範未上傳,無法動態生成控制元件。請使用下方\"高階 - raw attr\"模式。"
+    }
+  },
+  "debug_devices": {
+    "actions": {
+      "collapse": "收起",
+      "device_console": "控制台",
+      "emcy_logs": "EMCY",
+      "expand": "展開",
+      "host_detail": "詳情",
+      "node_detail": "詳情",
+      "od_diagnose": "OD",
+      "serial_logs": "裝置日誌套件"
+    },
+    "errors": {
+      "load_failed": "載入失敗",
+      "load_nodes_failed": "載入節點失敗"
+    },
+    "page_options": {
+      "p10": "10/頁",
+      "p100": "100/頁",
+      "p20": "20/頁",
+      "p50": "50/頁"
+    },
+    "serial": {
+      "clear": "清空",
+      "filter_placeholder": "過濾關鍵字 (tag/msg)",
+      "open_independent": "跳轉獨立頁檢視歷史",
+      "open_independent_short": "獨立頁",
+      "pause": "暫停",
+      "paused": "已暫停",
+      "resume": "繼續",
+      "row_count": "{n} 行",
+      "title": "實時串列埠日誌",
+      "wait_mqtt": "等待 MQTT 串列埠流…裝置釋出 wf2/{'{'}uuid{'}'}/serial/+ 後會實時出現"
+    },
+    "status_options": {
+      "all": "全部狀態"
+    },
+    "table": {
+      "actions": "操作",
+      "bound": "已繫結",
+      "can_id": "CAN-ID",
+      "chip": "晶片",
+      "expand": "",
+      "fake_serial": "(CAN {id})",
+      "func": "功能/角色",
+      "func_unregistered": "未登記，請在 host-mac-types.js 中新增 MAC 對映",
+      "has_new_firmware": "有新韌體",
+      "last_seen": "最後心跳",
+      "loading_nodes": "載入節點中…",
+      "mac": "MAC",
+      "no_bound_nodes": "該主機當前未繫結任何節點",
+      "no_hosts": "暫無主機",
+      "serial_no": "序列號",
+      "status": "狀態",
+      "sw_ver": "韌體",
+      "unbound": "未繫結",
+      "unknown": "未知"
+    },
+    "toolbar": {
+      "auto_refresh": "自動重新整理（10s）",
+      "query": "查詢",
+      "refresh": "重新整理",
+      "search_placeholder": "搜尋 MAC / 序列號 / UUID",
+      "stats": "主機：{hostsTotal} 臺（線上 {hostsOnline}） · 節點：{nodesTotal} 臺（線上 {nodesOnline}）"
+    }
+  },
+  "debug_emcy_logs": {
+    "actions": {
+      "clear": "清空日誌",
+      "load_more": "載入更多",
+      "refresh": "重新整理"
+    },
+    "confirm": {
+      "clear": "確認清空該主機全部 EMCY 日誌？此操作無法復原。"
+    },
+    "filters": {
+      "node": "Node ID"
+    },
+    "host_options": {
+      "online_suffix": " (線上)",
+      "select_placeholder": "請選擇主機"
+    },
+    "select_host": "告警篩選",
+    "subtitle": "CANopen Emergency 報文(error_code/register/data),按主機查詢。",
+    "table": {
+      "data": "data(5B)",
+      "description": "描述",
+      "empty": "無 EMCY 記錄",
+      "error_code": "error_code",
+      "error_bit": "錯誤位",
+      "node": "Node",
+      "register": "register",
+      "time": "時間",
+      "vendor_data": "廠商資料"
+    },
+    "title": "EMCY 緊急報文日誌",
+    "total": "共 {total} 筆記錄，目前顯示最近若干筆",
+    "toast": {
+      "cleared": "已清空 {count} 筆 EMCY 日誌",
+      "error_title": "錯誤",
+      "load_failed": "載入失敗"
+    }
+  },
+  "debug_alert_events": {
+    "select_host": "遙測警報篩選",
+    "filters": {
+      "status": "狀態",
+      "all": "全部狀態",
+      "firing": "警報中",
+      "resolved": "已恢復"
+    },
+    "table": {
+      "time": "時間",
+      "node": "節點",
+      "rule": "規則",
+      "severity": "嚴重程度",
+      "metric": "指標",
+      "value": "目前值",
+      "threshold": "閾值",
+      "status": "狀態",
+      "message": "訊息",
+      "empty": "暫無遙測警報"
+    }
+  },
+  "debug_mqtt_stream": {
+    "actions": {
+      "clear": "清空",
+      "collapse": "收起",
+      "expand": "展開",
+      "expand_all_off": "展開所有 payload (已關閉)",
+      "expand_all_on": "展開所有 payload (已開啟)",
+      "hide_heartbeat_off": "隱藏心跳幀 (已關閉)",
+      "hide_heartbeat_on": "隱藏心跳幀 (已開啟)",
+      "pause": "暫停",
+      "reconnect": "重連",
+      "resume": "恢復"
+    },
+    "column": {
+      "device": "裝置",
+      "kind": "型別",
+      "payload": "報文",
+      "summary": "摘要",
+      "time": "時間",
+      "topic": "Topic"
+    },
+    "desc": "實時訂閱後端轉發的 MQTT 報文,本面板僅視覺化,不會向裝置下發任何命令",
+    "empty": "尚未收到訊息",
+    "empty_no_host": "請先選擇主機",
+    "filter": {
+      "all_hosts": "全部主機",
+      "host_placeholder": "請選擇主機",
+      "kind_all": "型別 全部",
+      "kind_heartbeat": "心跳(無變化)",
+      "kind_serial": "串列埠/日誌",
+      "kind_status": "狀態(變化)",
+      "topic_placeholder": "topic 關鍵字"
+    },
+    "filter_section": "過濾與控制",
+    "kind": {
+      "ack": "回執",
+      "command": "命令",
+      "emcy": "EMCY",
+      "error": "錯誤",
+      "heartbeat": "心跳",
+      "log": "日誌",
+      "lwt": "掉線",
+      "od_dump": "OD",
+      "ota": "OTA",
+      "provision": "啟用",
+      "serial": "串列埠",
+      "status": "狀態",
+      "unknown": "其他"
+    },
+    "status": {
+      "connected": "已連線",
+      "disconnected": "斷開",
+      "idle": "未訂閱"
+    },
+    "summary": {
+      "action": "動作 {action}",
+      "click_expand": "點選展開檢視詳情",
+      "error_code": "錯誤碼 {code}",
+      "fw_version": "韌體 {ver}",
+      "heartbeat": "週期心跳",
+      "more_lines": "{text} (+{count} 行)",
+      "nodes": "節點 {online}/{total}",
+      "od_entries": "{n} 條 OD",
+      "ota_status": "OTA 狀態 {status}"
+    },
+    "title": "MQTT 訊息流"
+  },
+  "debug_sensor_history": {
+    "description": "查詢單元(unit)的感測器歷史記錄,支援時間快捷範圍、欄位多選、折線圖與 CSV 匯出。",
+    "empty": {
+      "chart_failed": "圖表元件載入失敗,降級顯示資料表格",
+      "no_numeric": "當前所選欄位無數值型別資料,無法繪製折線圖",
+      "no_records": "暫無記錄"
+    },
+    "fields_button": {
+      "all": "全部 ({count})",
+      "none_selected": "未選欄位(全部)",
+      "partial": "已選 {selected} / {total}",
+      "waiting": "(待選單元)"
+    },
+    "form": {
+      "clear": "清空",
+      "datetime_placeholder": "點選選擇日期時間",
+      "end_label": "結束時間",
+      "export_csv": "匯出 CSV",
+      "fields_hint": "選擇單元后從最新一條記錄自動列出可選欄位",
+      "fields_label": "顯示欄位",
+      "page_size_label": "每頁",
+      "quick_label": "時間快捷",
+      "select_all": "全選",
+      "start_label": "開始時間",
+      "submit": "查詢",
+      "unit_label": "單元(unit)"
+    },
+    "quick": {
+      "custom": "自定義",
+      "d30": "最近 30d",
+      "d7": "最近 7d",
+      "h1": "最近 1h",
+      "h24": "最近 24h"
+    },
+    "section": {
+      "chart": "折線趨勢(數值欄位)",
+      "filter": "歷史資料查詢"
+    },
+    "title": "歷史資料",
+    "toast": {
+      "load_failed": "載入失敗",
+      "load_failed_title": "錯誤"
+    },
+    "unit_options": {
+      "select": "請選擇單元"
+    }
+  },
+  "debug_serial_logs": {
+    "actions": {
+      "download": "下載",
+      "load_more": "載入更多",
+      "refresh": "重新整理"
+    },
+    "card_select_host": "裝置日誌套件篩選",
+    "empty_text": "暫無裝置日誌套件",
+    "fields": {
+      "actions": "操作",
+      "ended_at": "結束時間",
+      "file_name": "檔案",
+      "level": "級別",
+      "line_count": "行數",
+      "size": "大小",
+      "source": "來源",
+      "started_at": "開始時間",
+      "trigger_type": "觸發原因"
+    },
+    "filters": {
+      "nid": "NID"
+    },
+    "host_select_placeholder": "請選擇主機",
+    "host_status_online": " (線上)",
+    "level_options": {
+      "all": "全部級別"
+    },
+    "log": {
+      "download_failed": "下載裝置日誌套件失敗",
+      "load_hosts_failed": "載入主機列表失敗",
+      "load_logs_failed": "載入裝置日誌套件失敗"
+    },
+    "source_options": {
+      "all": "全部來源"
+    },
+    "subtitle": "查看並下載裝置上傳的完整診斷日誌套件；即時串列埠輸出仍可在裝置除錯串流中查看。",
+    "title": "裝置日誌套件",
+    "toast": {
+      "error_title": "錯誤"
+    },
+    "trigger_options": {
+      "all": "全部觸發原因",
+      "crash": "當機",
+      "manual": "手動",
+      "ota_failed": "OTA 失敗",
+      "watchdog": "看門狗"
+    }
+  },
+  "doc_page": {
+    "default_description": "頁面說明",
+    "default_section": "文件",
+    "default_title": "文件頁面",
+    "doc_source": "文件來源：",
+    "placeholder_tip": "當前為選單佔位頁，可逐步替換為真實業務頁面。"
+  },
+  "errors": {
+    "E1000": "伺服器內部錯誤，請稍後重試",
+    "E1002": "請先登入",
+    "E1003": "無權訪問此資源",
+    "E1004": "請求的資源不存在",
+    "E2001": "使用者名稱或密碼錯誤",
+    "E2002": "登入已過期，請重新登入",
+    "E2010": "使用者不存在",
+    "E2011": "使用者名稱或郵箱已存在",
+    "E3001": "公司不存在",
+    "E4001": "主機不存在",
+    "E7001": "預約不存在或無權存取",
+    "E7002": "靜音艙未開通預約或已停用",
+    "E7003": "所選時段已被佔用",
+    "E7004": "預約已被修改，請重新整理",
+    "E7005": "房間仍有未來預約",
+    "E7006": "目前來源仍有未來預約",
+    "E7007": "該房間已有其他預約主來源",
+    "E7010": "該第三方平台尚未實作或不受支援",
+    "web_ui_json_required": "裝置 UI 僅接受 JSON 檔案",
+    "web_ui_document_too_large": "裝置 UI 文件不能超過 1 MiB",
+    "web_ui_json_invalid": "裝置 UI 檔案不是有效的 UTF-8 JSON",
+    "web_ui_document_invalid": "裝置 UI 文件驗證失敗",
+    "web_ui_not_applicable": "Node 軟體版本不適用裝置 UI",
+    "web_ui_if_match_required": "裝置 UI 已存在，請重新整理後再修改",
+    "web_ui_etag_mismatch": "裝置 UI 已被其他操作修改，請重新整理後再試",
+    "software_version_immutable": "此軟體版本已被裝置使用，不能修改裝置 UI",
+    "software_version_not_found": "軟體版本不存在",
+    "asset_blob_missing": "找不到與 UI 資源清單相符的檔案",
+    "E7011": "目前連線不具備所需能力",
+    "E7012": "第三方平台連線不可用",
+    "E7013": "外部會議室尚未驗證",
+    "E7014": "外部會議室對映衝突"
+  },
+  "file_manager": {
+    "actions": {
+      "add_relation": "新增關聯",
+      "add_tag": "+ 新增標籤",
+      "close": "關閉",
+      "delete": "刪除",
+      "download": "下載",
+      "manage_relations": "關聯",
+      "preview": "預覽",
+      "refresh": "重新整理",
+      "remove": "移除",
+      "upload": "上傳檔案",
+      "view_logs": "日誌"
+    },
+    "business_type": {
+      "audio": "音訊",
+      "document": "文件",
+      "image": "圖片",
+      "other": "其他",
+      "select_placeholder": "選擇業務型別",
+      "video": "影片"
+    },
+    "category": {
+      "audio": "音訊素材",
+      "background": "背景素材",
+      "firmware": "韌體檔案",
+      "other": "其他",
+      "product_doc": "產品資料",
+      "select_placeholder": "請選擇檔案分類",
+      "user_doc": "使用文件"
+    },
+    "filters": {
+      "search_placeholder": "檔名、型別",
+      "type_placeholder": "全部型別"
+    },
+    "image_format": {
+      "select_placeholder": "選擇格式"
+    },
+    "language": {
+      "en": "English",
+      "select_placeholder": "選擇語言",
+      "zh_cn": "簡體中文"
+    },
+    "metadata_format": {
+      "is_latest": "最新：{value}",
+      "play_mode": "模式：{value}",
+      "version": "版本：{value}",
+      "volume": "音量：{value}"
+    },
+    "modal": {
+      "delete_file_confirm": "確認刪除檔案 \"{name}\"？如果檔案有關聯關係則無法刪除。",
+      "delete_relation_confirm": "確認刪除該檔案關聯嗎？",
+      "delete_title": "刪除確認",
+      "edit": "編輯",
+      "ok_title_delete": "確認刪除",
+      "save": "儲存"
+    },
+    "orientation": {
+      "landscape": "橫向 (landscape)",
+      "portrait": "縱向 (portrait)",
+      "select_placeholder": "選擇方向"
+    },
+    "play_mode": {
+      "loop": "迴圈播放 (loop)",
+      "once": "播放一次 (once)",
+      "shuffle": "隨機播放 (shuffle)"
+    },
+    "preview": {
+      "loading": "載入中...",
+      "type_unsupported": "不支援線上預覽此檔案型別，請下載檢視。",
+      "video_unsupported": "您的瀏覽器不支援影片播放"
+    },
+    "relation_file_type": {
+      "avatar": "頭像/產品圖片 (avatar)",
+      "config": "配置檔案 (config)",
+      "document": "文件 (document)",
+      "draw": "圖紙 (draw)",
+      "firmware": "韌體 (firmware)",
+      "image": "圖片 (image)",
+      "logo": "公司 Logo (logo)",
+      "manual": "使用手冊 (manual)",
+      "music": "音樂 (music)",
+      "sch": "原理圖 (sch)",
+      "select_placeholder": "請選擇檔案型別"
+    },
+    "relation_file_type_label": {
+      "avatar": "頭像/產品圖",
+      "config": "配置檔案",
+      "document": "文件",
+      "draw": "圖紙",
+      "firmware": "韌體",
+      "image": "圖片",
+      "logo": "Logo",
+      "manual": "使用手冊",
+      "music": "音樂",
+      "sch": "原理圖"
+    },
+    "relation_type": {
+      "company": "公司 (company)",
+      "hn_model": "主機/節點型號 (hn_model)",
+      "host": "主機例項 (host)",
+      "node": "節點例項 (node)",
+      "pod": "靜音艙例項 (pod)",
+      "pod_model": "靜音艙型號 (pod_model)",
+      "user": "使用者 (user)"
+    },
+    "relation_type_label": {
+      "company": "公司",
+      "hn_model": "主機/節點型號",
+      "host": "主機例項",
+      "node": "節點例項",
+      "pod": "靜音艙例項",
+      "pod_model": "靜音艙型號",
+      "user": "使用者"
+    },
+    "relations": {
+      "add_title": "新增關聯",
+      "alt_text_label": "替代文字",
+      "alt_text_placeholder": "請輸入替代文字",
+      "caption_label": "圖片說明",
+      "caption_placeholder": "請輸入圖片說明",
+      "display_order_label": "顯示順序",
+      "edit_title": "編輯關聯",
+      "end_time_label": "結束時間",
+      "end_time_placeholder": "選擇結束時間",
+      "file_name_label": "檔名：",
+      "file_size_label": "檔案大小：",
+      "file_type_label": "檔案型別：",
+      "file_type_placeholder": "請選擇檔案型別",
+      "file_type_select_label": "檔案型別",
+      "is_enabled_label": "是否啟用",
+      "is_latest_label": "是否最新版",
+      "is_primary_label": "是否主檔案",
+      "is_thumbnail_label": "是否縮圖",
+      "metadata_firmware_title": "韌體後設資料",
+      "metadata_image_title": "圖片後設資料",
+      "metadata_music_title": "音樂播放後設資料",
+      "min_hw_ver_label": "最低硬體版本",
+      "min_hw_ver_placeholder": "如：H1.0",
+      "no": "否",
+      "object_label": "關聯物件",
+      "object_placeholder_prefix": "請選擇",
+      "play_days_label": "播放星期",
+      "play_mode_label": "播放模式",
+      "sort_order_label": "排序順序",
+      "start_time_label": "開始時間",
+      "start_time_placeholder": "選擇開始時間",
+      "title": "檔案關聯管理",
+      "type_label": "關聯型別",
+      "type_placeholder": "請選擇關聯型別",
+      "volume_label": "音量 (0-100)",
+      "yes": "是"
+    },
+    "stats": {
+      "image_files": "圖片檔案",
+      "total_files": "檔案總數",
+      "total_size": "總大小",
+      "video_files": "影片檔案"
+    },
+    "table": {
+      "actions": "操作",
+      "category": "分類",
+      "download_count": "下載次數",
+      "file": "檔案",
+      "file_type": "檔案型別",
+      "is_primary": "主檔案",
+      "metadata": "後設資料",
+      "play_count": "播放次數",
+      "relation_object": "關聯物件",
+      "relation_type_col": "關聯型別",
+      "sort_order": "排序",
+      "status": "狀態",
+      "uploader": "上傳者"
+    },
+    "toast": {
+      "delete_failed": "刪除失敗：",
+      "delete_failed_default": "刪除失敗，檔案可能有關聯關係",
+      "delete_success": "檔案刪除成功",
+      "download_failed": "下載失敗：",
+      "download_success": "下載成功",
+      "load_list_failed": "載入檔案列表失敗：",
+      "load_relations_failed": "載入關聯列表失敗：",
+      "no_change_log": "該檔案暫無變更日誌",
+      "relation_add_failed": "新增關聯失敗：",
+      "relation_add_success": "關聯新增成功",
+      "relation_save_failed": "儲存失敗",
+      "relation_update_failed": "更新關聯失敗：",
+      "relation_update_success": "關聯更新成功",
+      "relations_hint": "請在檔案列表中點擊「{action}」管理檔案關係",
+      "select_file": "請選擇要上傳的檔案",
+      "size_too_large": "檔案大小不能超過 100MB",
+      "upload_failed": "檔案上傳失敗：",
+      "upload_failed_default": "檔案上傳失敗",
+      "upload_success": "檔案上傳成功",
+      "validate_category": "請選擇檔案分類",
+      "validate_description": "請輸入檔案描述",
+      "validate_file_type": "請選擇檔案型別",
+      "validate_relation_object": "請選擇關聯物件",
+      "validate_relation_type": "請選擇關聯型別",
+      "validate_language": "請選擇文件語言"
+    },
+    "upload": {
+      "album_label": "專輯",
+      "album_placeholder": "請輸入專輯名稱",
+      "artist_label": "藝術家",
+      "artist_placeholder": "請輸入藝術家名稱",
+      "author_label": "作者",
+      "author_placeholder": "請輸入作者名稱",
+      "build_date_label": "構建日期",
+      "build_date_placeholder": "選擇日期",
+      "build_number_label": "構建編號",
+      "cancel_title": "取消",
+      "category_label": "檔案分類",
+      "click_to_select": "點選選擇檔案上傳",
+      "description_label": "檔案描述",
+      "description_placeholder": "請輸入檔案描述資訊",
+      "duration_label": "時長 (秒)",
+      "format_label": "格式",
+      "genre_label": "流派",
+      "genre_placeholder": "如：白噪音",
+      "height_label": "高度 (畫素)",
+      "is_stable_label": "穩定版本",
+      "language_label": "語言",
+      "metadata_title": "檔案後設資料",
+      "ok_title": "上傳",
+      "orientation_label": "方向",
+      "pages_label": "頁數",
+      "release_notes_label": "釋出說明",
+      "release_notes_placeholder": "請輸入版本更新說明",
+      "select_file": "選擇檔案",
+      "tags_label": "標籤",
+      "tip": "支援任何格式的檔案，單個檔案最大 100MB",
+      "title": "上傳檔案",
+      "version_label": "版本號",
+      "version_placeholder_doc": "如：2.1",
+      "version_placeholder_firmware": "如：1.3.0",
+      "width_label": "寬度 (畫素)"
+    },
+    "weekday": {
+      "fri": "週五",
+      "mon": "週一",
+      "sat": "週六",
+      "sun": "週日",
+      "thu": "週四",
+      "tue": "週二",
+      "wed": "週三"
+    }
+  },
+  "firmware_manager": {
+    "filter": {
+      "refresh": "重新整理",
+      "search_placeholder": "搜尋檔名 / 版本"
+    },
+    "header": {
+      "subtitle": "上傳 / 管理 ESP32 裝置韌體映象（按目標晶片分類）",
+      "title": "韌體版本管理",
+      "upload": "上傳韌體"
+    },
+    "table": {
+      "actions": "操作",
+      "created_at": "上傳時間",
+      "delete": "刪除",
+      "download": "下載",
+      "empty": "暫無韌體",
+      "loading": "載入中...",
+      "name": "名稱",
+      "sha256": "SHA256",
+      "size": "大小",
+      "target_chip": "目標晶片",
+      "version": "版本"
+    },
+    "target_options": {
+      "all": "全部晶片",
+      "coproc_c6": "協處理 ESP32-C6",
+      "host_p4": "主機 ESP32-P4",
+      "host_st7701": "屏主機 ESP32-S3 (ST7701)",
+      "node_c3": "節點 ESP32-C3",
+      "s3": "ESP32-S3"
+    },
+    "toast": {
+      "delete_confirm": "確認刪除韌體 \"{name}\"？",
+      "delete_failed": "刪除失敗",
+      "delete_success": "刪除成功",
+      "download_failed": "下載失敗",
+      "load_failed": "載入韌體列表失敗",
+      "select_file": "請選擇韌體檔案",
+      "title_error": "錯誤",
+      "title_success": "成功",
+      "title_warning": "提示",
+      "upload_failed": "上傳失敗",
+      "upload_success": "韌體上傳成功"
+    },
+    "upload": {
+      "cancel": "取消",
+      "drop_placeholder": "放下檔案以上傳",
+      "file": "選擇韌體檔案 (.bin)",
+      "file_placeholder": "點選或拖拽 .bin 檔案到此處",
+      "hardware_line": "硬體版本列",
+      "config_manifest_sha256": "設定產生清單 SHA-256",
+      "final_signed_sha256": "最終核准簽名 BIN SHA-256",
+      "hardware_line_placeholder": "請選擇精確硬體版本列",
+      "name": "韌體名稱",
+      "ota_approval": "確認此最終簽名映像已核准用於 OTA",
+      "ota_approval_hint": "核准前必須完整填寫專案名稱和三項 SHA-256；候選韌體請保持未勾選。",
+      "ota_metadata_hint": "D1 OTA 中繼資料（候選可留空；正式下發時必須完整且綁定 released、簽名驗證通過的 Configs/OD）",
+      "sha256_placeholder": "64 位十六進位 SHA-256",
+      "name_placeholder": "例：host_p4_main",
+      "od_import": "OD 匯入包（新 OD 首版必填）",
+      "od_import_invalid": "OD 匯入包不是有效的 JSON",
+      "od_import_placeholder": "選擇正式 HNModel 匯入 JSON",
+      "od_import_required": "此硬體版本尚無該 OD；首版必須同時上傳正式匯入包，韌體版本必須為 0.0.1。",
+      "od_policy_hint": "必須填寫真實 OD 版本；legacy-unknown 僅供歷史讀取，不能上傳新韌體。",
+      "od_version": "OD 版本",
+      "od_version_placeholder": "例如 0.0.1",
+      "ok": "上傳",
+      "partition_table_sha256": "分割區表 SHA-256",
+      "project_name": "ESP-IDF 專案名稱",
+      "remark": "備註",
+      "target_chip": "目標晶片",
+      "title": "上傳韌體",
+      "uploading": "上傳中...",
+      "version": "版本號",
+      "version_placeholder": "例：1.2.3"
+    }
+  },
+  "font_size_toggle": {
+    "aria_label": "字型大小",
+    "large": "大號字型",
+    "medium": "中號字型（預設）",
+    "small": "小號字型"
+  },
+  "hn_models": {
+    "actions": {
+      "delete_model": "刪除型號",
+      "manage_attrs": "屬性",
+      "view": "檢視",
+      "view_logs": "日誌"
+    },
+    "attr_dialog": {
+      "title": "屬性管理"
+    },
+    "publication": {
+      "active": "目前已啟用",
+      "config_version": "設定版本",
+      "configs_package": "Configs 產品發佈包",
+      "product_model": "產品型號",
+      "profile_id": "屬性 Profile ID",
+      "published_at": "發佈時間",
+      "readonly": "唯讀",
+      "source": "來源",
+      "title": "目前生效發佈"
+    },
+    "options_editor": {
+      "title": "數值顯示方式（選填）"
+    },
+    "attr_form": {
+      "access_type": "訪問型別",
+      "attr_code": "屬性編碼",
+      "attr_name": "屬性名稱",
+      "category": "欄位分組",
+      "co_index": "索引",
+      "co_sub_index": "子索引",
+      "data_type": "資料型別",
+      "default_val": "預設值",
+      "description": "描述",
+      "display_order": "顯示順序",
+      "group_name": "群組名稱",
+      "max_val": "最大值",
+      "min_val": "最小值",
+      "unit": "單位",
+      "web_control_table": "強制加入控制面板",
+      "web_display": "在裝置控制台顯示",
+      "web_editable": "允許編輯"
+    },
+    "column": {
+      "created_at": "建立時間",
+      "desc": "描述",
+      "model_code": "型號編碼",
+      "model_name": "型號名稱",
+      "status": "狀態",
+      "type": "型別",
+      "updated_at": "更新時間",
+      "url": "產品連結"
+    },
+    "confirm": {
+      "delete_model": "確定要刪除型號 \"{name}\" 嗎？"
+    },
+    "create_dialog": {
+      "add_title": "新增型號",
+      "saving": "儲存中..."
+    },
+    "detail_dialog": {
+      "title": "型號詳情"
+    },
+    "edit_form": {
+      "placeholder_body": "請從左側選擇一項屬性查看詳情",
+      "placeholder_title": "請選擇屬性",
+      "viewing": "屬性詳情：{name}"
+    },
+    "filter": {
+      "search_placeholder": "型號編碼或名稱",
+      "status_all": "全部狀態",
+      "type_all": "全部型別"
+    },
+    "form": {
+      "part_number": "物料號",
+      "command_capabilities": "裝置命令能力",
+      "command_capabilities_help": "僅勾選目前主機韌體已實作且可回傳 ACK 的命令；未宣告的操作會在控制面板隱藏並由後端拒絕。",
+      "desc": "描述",
+      "desc_placeholder": "請輸入型號描述",
+      "model_code": "型號編碼",
+      "model_code_placeholder": "型號編碼（如 DE-H100）",
+      "model_name": "型號名稱",
+      "model_name_placeholder": "請輸入型號名稱",
+      "status": "狀態",
+      "status_placeholder": "請選擇狀態",
+      "type": "型別",
+      "type_placeholder": "請選擇型別",
+      "url": "產品連結",
+      "url_placeholder": "請輸入產品連結 URL"
+    },
+    "index_tree": {
+      "empty_configs": "目前型號沒有生效的屬性設定，請在 Configs 中設定並發佈產品版本。",
+      "no_matches": "沒有符合的屬性",
+      "search_placeholder": "搜尋屬性編碼、索引或名稱",
+      "title": "屬性列表",
+      "ungrouped": "未分組"
+    },
+    "label": {
+      "model_code": "型號編碼：",
+      "model_name": "型號名稱："
+    },
+    "status": {
+      "active": "啟用",
+      "frozen": "凍結"
+    },
+    "version_catalog": {
+      "hw_version": "硬體版本",
+      "od_version": "OD 版本",
+      "software_version": "軟體版本",
+      "summary": "{versions} 個版本 / {revisions} 個 OD",
+      "version_summary": "版本 / OD"
+    },
+    "toast": {
+      "create_model_failed": "建立型號失敗",
+      "create_model_success": "型號建立成功",
+      "delete_model_failed": "刪除型號失敗",
+      "delete_model_success": "型號刪除成功",
+      "fetch_detail_failed": "獲取詳情失敗",
+      "field_updated": "欄位更新成功",
+      "index_list_failed": "載入索引列表失敗",
+      "list_load_failed": "載入型號列表失敗，請稍後重試",
+      "model_id_missing": "型號 ID 不存在",
+      "update_failed": "更新失敗"
+    },
+    "type": {
+      "host": "主機",
+      "node": "節點"
+    },
+    "validation": {
+      "model_code_required": "請輸入型號編碼",
+      "model_name_required": "請輸入型號名稱",
+      "status_required": "請選擇狀態",
+      "type_required": "請選擇型別"
+    }
+  },
+  "host_detail": {
+    "actions": {
+      "clear": "清空",
+      "copy_key": "複製",
+      "copy_key_title": "點選複製金鑰",
+      "rotate_key": "更新金鑰"
+    },
+    "dialog": {
+      "address_placeholder": "請輸入安裝地址",
+      "can_addr": "CAN地址",
+      "can_addr_placeholder": "1-127",
+      "company_disabled": "公司資訊不可修改",
+      "binding_replace_reason": "透過主機詳情的節點綁定管理更換節點",
+      "edit_title": "編輯主機配置",
+      "heartbeat_placeholder": "請選擇心跳間隔",
+      "heartbeat_tip": "裝置將按照此間隔傳送心跳包",
+      "hw_disabled": "硬體版本不可修改",
+      "mac_disabled": "MAC地址不可修改",
+      "node_fw_ver": "韌體版本：{value}",
+      "node_hw_model": "硬體型號：{value}",
+      "node_info_title": "節點資訊：",
+      "node_label": "節點",
+      "node_mac": "MAC地址：{value}",
+      "node_status": "狀態：",
+      "node_tip_max": "主機最多可繫結3個節點（A/B/C位置）",
+      "node_tip_swap": "已繫結的節點可以更換，空位置可以繫結新節點",
+      "node_title": "管理節點繫結",
+      "node_unbound": "(未繫結)",
+      "ok_save_binding": "儲存繫結",
+      "ok_save_config": "儲存配置",
+      "position": "位置 {pos}",
+      "remark_placeholder": "請輸入備註資訊",
+      "serial_disabled": "序列號不可修改",
+      "stats_available": "可用節點：{count}",
+      "stats_bound": "已繫結節點：{count} / 3",
+      "sw_disabled": "軟體版本不可修改"
+    },
+    "fallback_notice": "當前後端可能未開放主機詳情介面，已使用列表搜尋結果作為詳情展示。",
+    "fields": {
+      "company": "所屬公司",
+      "created_at": "建立時間",
+      "device_id": "裝置ID",
+      "hardware_model_code": "硬體型號程式碼",
+      "heartbeat_interval": "心跳間隔",
+      "hn_model_id": "主機型號 ID",
+      "hw_ver": "硬體版本",
+      "installation_address": "安裝地址",
+      "key_chars": "{n} 字元",
+      "key_fingerprint": "金鑰指紋",
+      "key_length": "金鑰長度",
+      "key_status": "金鑰狀態",
+      "last_seen": "最後心跳",
+      "mac_address": "MAC 地址",
+      "mqtt_key": "MQTT 金鑰",
+      "online_status": "線上狀態",
+      "product_code": "產品程式碼",
+      "seconds": "{n} 秒",
+      "serial_no": "序列號",
+      "sw_ver": "軟體版本"
+    },
+    "fields_label": {
+      "address": "安裝地址",
+      "company": "所屬公司",
+      "heartbeat": "心跳間隔",
+      "hw_ver": "硬體版本",
+      "mac": "MAC地址",
+      "remark": "備註",
+      "serial": "主機編號",
+      "sw_ver": "軟體版本"
+    },
+    "heartbeat_desc": {
+      "limited": "(流量受限)",
+      "power_save": "(省電模式)",
+      "realtime": "(實時監控)",
+      "standard": "(標準配置)"
+    },
+    "heartbeat_options": {
+      "limited": "300秒 (流量受限)",
+      "power_save": "120秒 (省電模式)",
+      "realtime": "30秒 (實時監控)",
+      "standard": "60秒 (標準配置)"
+    },
+    "loading": "正在載入主機詳情...",
+    "node_status": {
+      "maintenance": "維護",
+      "offline": "離線",
+      "online": "線上",
+      "unbound": "未繫結",
+      "unknown": "未知"
+    },
+    "sections": {
+      "basic": "基礎資訊",
+      "mqtt_log": "MQTT 訊息日誌 ({count})",
+      "runtime": "執行狀態",
+      "security": "安全配置"
+    },
+    "toast": {
+      "can_required": "位置 {pos} 的CAN地址不能為空",
+      "fetch_detail_failed": "獲取主機詳情失敗，使用備用資料",
+      "fetch_nodes_default": "請稍後重試",
+      "fetch_nodes_failed": "獲取關聯節點失敗：{msg}",
+      "field_update_failed": "更新失敗",
+      "field_update_success": "欄位更新成功",
+      "host_id_missing": "主機 ID 不存在",
+      "host_update_failed": "更新主機配置失敗",
+      "host_update_success": "主機配置更新成功",
+      "key_copied": "MQTT金鑰已複製到剪貼簿",
+      "key_copy_failed": "複製失敗，請手動複製",
+      "key_update_failed": "更新金鑰失敗",
+      "key_updated": "金鑰已更新",
+      "key_updated_refresh": "金鑰已更新，請重新整理頁面檢視新金鑰",
+      "node_binding_failed": "儲存節點繫結失敗",
+      "node_binding_success": "節點繫結更新成功",
+      "node_info_incomplete": "節點資訊不完整",
+      "validate_heartbeat": "請選擇心跳間隔"
+    }
+  },
+  "host_node_binding": {
+    "actions": {
+      "add": "新增節點",
+      "cancel": "取消",
+      "delete": "刪除",
+      "edit": "編輯",
+      "save": "儲存",
+      "submit": "提交中...",
+      "submit_add": "新增",
+      "submit_save": "儲存"
+    },
+    "delete_confirm": {
+      "cancel": "取消",
+      "msg": "確定要刪除該節點繫結嗎？刪除後該節點可以被繫結到其他主機。",
+      "ok": "確定",
+      "title": "提示"
+    },
+    "empty_text": "還沒有繫結的節點",
+    "fields": {
+      "actions": "操作",
+      "can_node_id": "CAN Node ID",
+      "created_at": "繫結時間",
+      "node_mac_address": "節點 MAC 地址",
+      "node_model_name": "節點型號",
+      "node_serial_no": "節點序列號"
+    },
+    "list_title": "節點繫結列表",
+    "modal": {
+      "alert_line_1_keyword": "CAN Node ID",
+      "alert_line_1_prefix": "• 一個主機下每個節點都需要唯一的 ",
+      "alert_line_2_keyword": "node_pos",
+      "alert_line_2_prefix": "• 位置標籤 ",
+      "alert_line_2_suffix": " 現在支援更靈活的字串",
+      "alert_title": "繫結說明",
+      "label_can_node_id": "CAN Node ID",
+      "label_current_node": "當前節點",
+      "label_model": "型號：",
+      "label_replace_node": "更換節點",
+      "label_select_node": "選擇節點",
+      "label_serial": "序列號：",
+      "more_count": "等{count}個",
+      "no_available_nodes": "沒有可用的未繫結節點，請先新增或匯入節點",
+      "node_placeholder": "請選擇要繫結的節點",
+      "occupied_label": "已佔用的 CAN Node ID：",
+      "switch_replace": "更換為其他節點",
+      "tip_can_node_id": "必須是 2 到 127 的整數（1 保留給主機），同一主機下不可重複",
+      "title_add": "新增節點",
+      "title_edit": "編輯節點繫結"
+    },
+    "stats_label": "已繫結節點數",
+    "toast": {
+      "add_success": "新增成功",
+      "add_success_with_validation": "新增成功，裝置配置正常",
+      "allowed_models_prefix": "\n允許的節點型號：",
+      "binding_missing": "繫結關係不存在",
+      "can_id_taken": "該 CAN Node ID 已被佔用，請選擇其他 ID",
+      "delete_failed": "刪除失敗：",
+      "delete_success": "刪除成功",
+      "device_validation_failed_default": "裝置配置不符合要求",
+      "device_validation_suffix": "\n請繫結型號定義中必需的節點裝置",
+      "duplicate_binding": "繫結關係重複，請檢查節點或 CAN Node ID 是否已被佔用",
+      "host_or_node_missing": "主機或節點不存在",
+      "limit_reached": "已達到繫結數量上限",
+      "load_failed": "載入節點列表失敗：",
+      "load_failed_simple": "載入節點列表失敗",
+      "model_mismatch_default": "節點型號與靜音艙型號不匹配",
+      "node_already_bound": "該節點已繫結到其他主機，請選擇其他節點或先解除繫結",
+      "operation_failed": "操作失敗",
+      "operation_failed_prefix": "操作失敗：",
+      "update_success": "更新成功",
+      "validation_warning_prefix": "繫結成功，但存在警告：\n",
+      "validation_warning_suffix": "\n建議：請繫結型號定義中必需的節點裝置"
+    },
+    "validation": {
+      "can_node_id_invalid": "CAN Node ID 必須是 2 到 127 的整數（1 保留給主機）",
+      "can_node_id_required": "請輸入 CAN Node ID",
+      "can_node_id_taken": "CAN Node ID {id} 已被佔用，請選擇其他 ID",
+      "node_required": "請選擇節點"
+    }
+  },
+  "hosts": {
+    "actions": {
+      "confirm_receipt": "確認收貨",
+      "check_firmware": "韌體",
+      "ship": "出貨",
+      "view_logs": "日誌"
+    },
+    "column": {
+      "firmware_version": "韌體版本",
+      "hn_model_name": "主機型號",
+      "hw_ver": "硬體型號",
+      "is_active": "是否啟用",
+      "last_seen": "最後心跳",
+      "mac_address": "MAC 地址",
+      "manufacturer": "所屬公司",
+      "serial_no": "序列號",
+      "status": "線上狀態",
+      "sw_type": "軟體型別",
+      "sw_ver": "軟體版本"
+    },
+    "create_dialog": {
+      "confirm_ok": "確認錄入",
+      "title": "錄入新主機"
+    },
+    "filter": {
+      "active_all": "全部啟用狀態",
+      "search_placeholder": "MAC 或序列號",
+      "status_all": "全部線上狀態"
+    },
+    "form": {
+      "device_key": "MQTT認證金鑰",
+      "device_key_placeholder": "請輸入32-64字元的MQTT認證金鑰",
+      "hn_model": "主機型號",
+      "hn_model_placeholder": "請選擇主機型號",
+      "hw_ver": "硬體版本",
+      "hw_ver_placeholder": "如：1.0",
+      "mac_address": "MAC地址",
+      "mac_address_placeholder": "格式：00:1A:2B:3C:4D:5E",
+      "product_code": "產品程式碼",
+      "product_code_placeholder": "如：DE-H100-2025",
+      "remark": "備註",
+      "remark_placeholder": "請輸入備註資訊",
+      "sw_ver": "軟體版本",
+      "sw_ver_placeholder": "如：1.2.0"
+    },
+    "receipt_confirm": {
+      "message": "確認已收到主機 {serial}？",
+      "title": "確認主機收貨"
+    },
+    "ship_dialog": {
+      "confirm_ok": "確認出貨",
+      "precheck_1": "裝置已完成出廠檢測和除錯",
+      "precheck_2": "裝置韌體已升級到最新版本",
+      "precheck_3": "已記錄裝置序列號和 MAC 地址",
+      "precheck_4": "已與廠家確認收貨資訊和安裝地址",
+      "precheck_title": "出貨前請確認：",
+      "target_company": "目標廠家",
+      "target_company_placeholder": "請選擇目標廠家",
+      "title": "出貨給廠家"
+    },
+    "sort": {
+      "created_asc": "建立時間（舊到新）",
+      "created_desc": "建立時間（新到舊）",
+      "last_seen_asc": "最近線上（舊到新）",
+      "last_seen_desc": "最近線上（新到舊）",
+      "serial_asc": "序列號（A-Z）",
+      "serial_desc": "序列號（Z-A）"
+    },
+    "status": {
+      "active": "啟用",
+      "inactive": "停用",
+      "maintenance": "維護中",
+      "topology_pending": "待完善"
+    },
+    "toast": {
+      "activated": "主機已啟用",
+      "create_failed": "主機錄入失敗",
+      "create_success": "主機錄入成功",
+      "deactivated": "主機已停用",
+      "firmware_check_failed": "檢查韌體更新失敗",
+      "firmware_latest": "主機韌體已是最新版本",
+      "firmware_new": "發現新版本韌體：{latest}，當前版本：{current}",
+      "host_id_missing": "主機 ID 不存在",
+      "list_load_failed": "主機列表載入失敗，請稍後重試",
+      "no_change_log": "該主機暫無變更日誌",
+      "no_edit_perm": "您沒有編輯許可權",
+      "ship_failed": "主機出貨失敗",
+      "ship_success": "主機出貨成功",
+      "update_active_failed": "更新啟用狀態失敗"
+    },
+    "validation": {
+      "device_key_length": "金鑰長度應為32-64個字元",
+      "device_key_required": "請輸入MQTT認證金鑰",
+      "hn_model_required": "請選擇主機型號",
+      "hw_ver_required": "請輸入硬體版本",
+      "mac_format": "請輸入有效的MAC地址格式，如：00:1A:2B:3C:4D:5E",
+      "mac_required": "請輸入MAC地址",
+      "product_code_required": "請輸入產品程式碼",
+      "sw_ver_required": "請輸入軟體版本",
+      "target_company_required": "請選擇目標廠家"
+    }
+  },
+  "device_language_manager": {
+    "actions": {
+      "send": "下發切換"
+    },
+    "confirm": {
+      "body": "確認向主機下發語言切換?\nlang_id={lang_id} ({lang_code})\ndevice_id={device_id}",
+      "ok": "確認下發"
+    },
+    "desc": "裝置出廠自帶多語言資源(中/英/日/韓/德/法/西 共 7 種),本面板僅下發 MQTT 切換命令,不再管理 .bin 離線包上傳。",
+    "form": {
+      "host": "主機",
+      "host_placeholder": "請選擇主機",
+      "target_lang": "目標語言"
+    },
+    "history": {
+      "column": {
+        "host": "主機",
+        "lang": "語言",
+        "operator": "操作人",
+        "result": "結果",
+        "time": "時間"
+      },
+      "empty": "暫無切換記錄",
+      "title": "歷史切換記錄"
+    },
+    "send_section": "下發語言切換",
+    "title": "語言切換面板",
+    "toast": {
+      "load_hosts_failed": "載入主機列表失敗",
+      "load_languages_failed": "載入裝置語言索引失敗",
+      "send_failed": "下發失敗",
+      "send_success": "下發成功",
+      "switched": "主機 {host} 切換為 {lang_code} ({lang_name})"
+    }
+  },
+  "layout": {
+    "collapse_sidebar": "收起側邊欄",
+    "expand_sidebar": "展開側邊欄",
+    "skip_to_content": "跳至主內容",
+    "suspended_title": "目前組織已暫停",
+    "suspended_message": "你仍可檢視已授權資料，但在組織恢復前，業務修改與裝置操作均為唯讀。"
+  },
+  "location_detail": {
+    "card": {
+      "basic_info": "基礎資訊",
+      "coordinates_relations": "座標與關聯資料",
+      "remark": "備註"
+    },
+    "edit": {
+      "building_label": "樓棟",
+      "building_placeholder": "如：A 座",
+      "cancel_title": "取消",
+      "city_label": "城市",
+      "city_placeholder": "請選擇城市",
+      "country_label": "國家",
+      "country_placeholder": "請選擇國家",
+      "district_label": "區域",
+      "district_placeholder": "請選擇區域",
+      "lat_label": "緯度",
+      "lat_placeholder": "如：39.98446",
+      "lng_label": "經度",
+      "lng_placeholder": "如：116.30743",
+      "timezone_label": "\u6642\u5340",
+      "timezone_placeholder": "\u4f8b\u5982\uff1aAsia/Shanghai",
+      "location_name_label": "位置名稱",
+      "location_name_placeholder": "如：北京錄音棚 A、會議室 A",
+      "ok_title": "儲存",
+      "province_label": "省份",
+      "province_placeholder": "請選擇省份",
+      "remark_label": "備註",
+      "remark_placeholder": "請輸入備註資訊",
+      "street_label": "街道",
+      "street_placeholder": "如：中關村大廈",
+      "title": "編輯位置"
+    },
+    "field": {
+      "building": "樓棟",
+      "city": "城市",
+      "country": "國家",
+      "created_at": "建立時間",
+      "district": "區域",
+      "full_address": "完整地址",
+      "lat_label": "緯度：",
+      "lng_label": "經度：",
+      "location_name": "位置名稱",
+      "province": "省份",
+      "street": "街道",
+      "timezone": "\u6642\u5340\uff1a"
+    },
+    "gps": {
+      "not_set": "未設定 GPS 座標",
+      "title": "GPS 座標",
+      "view_in_map": "在地圖中檢視"
+    },
+    "loading": "載入位置詳情中...",
+    "pods": {
+      "count_label": "數量：",
+      "count_unit": "個",
+      "more": "還有 {count} 個靜音艙...",
+      "none": "未關聯靜音艙",
+      "title": "關聯靜音艙",
+      "view": "檢視"
+    },
+    "toast": {
+      "load_failed_prefix": "位置詳情載入失敗：",
+      "no_gps": "該位置未設定 GPS 座標",
+      "retry_later": "請稍後重試",
+      "update_failed_prefix": "更新位置資訊失敗：",
+      "update_success": "位置資訊更新成功"
+    },
+    "validate": {
+      "location_name_required": "請輸入位置名稱"
+    }
+  },
+  "locations": {
+    "actions": {
+      "create": "新增地址"
+    },
+    "confirm": {
+      "delete_message": "確認刪除位置 \"{name}\"？",
+      "delete_title": "刪除確認"
+    },
+    "country_china": "中國",
+    "create_dialog": {
+      "title": "新增地址"
+    },
+    "edit_dialog": {
+      "title": "編輯地址"
+    },
+    "filter": {
+      "active_all": "全部狀態",
+      "active_label": "是否啟用",
+      "active_no": "未啟用",
+      "active_yes": "已啟用",
+      "city_label": "城市",
+      "city_placeholder": "選擇城市",
+      "gps_all": "全部狀態",
+      "gps_label": "GPS 座標",
+      "gps_no": "無座標",
+      "gps_status_placeholder": "GPS 狀態",
+      "gps_yes": "有座標",
+      "province_label": "省份",
+      "province_placeholder": "選擇省份"
+    },
+    "form": {
+      "building_label": "樓棟",
+      "building_placeholder": "如：A 座",
+      "city_label": "城市",
+      "city_placeholder": "請選擇城市",
+      "country_label": "國家",
+      "country_placeholder": "請選擇國家",
+      "detail_address": "詳細地址",
+      "district_label": "區域",
+      "district_placeholder": "請選擇區域",
+      "gps_optional": "GPS 座標（可選）",
+      "lat_label": "緯度",
+      "lat_placeholder": "如：39.98446",
+      "lng_label": "經度",
+      "lng_placeholder": "如：116.30743",
+      "timezone_label": "\u6642\u5340",
+      "timezone_placeholder": "\u4f8b\u5982\uff1aAsia/Shanghai",
+      "location_name_label": "位置名稱",
+      "location_name_placeholder": "如：北京錄音棚 A、會議室 A",
+      "province_label": "省份",
+      "province_placeholder": "請選擇省份",
+      "remark_label": "備註",
+      "remark_placeholder": "請輸入備註資訊",
+      "street_label": "街道",
+      "street_placeholder": "如：中關村大廈"
+    },
+    "icons": {
+      "details": "詳情"
+    },
+    "table": {
+      "city": "城市",
+      "country": "國家",
+      "created_at": "建立時間",
+      "district": "區域",
+      "full_address": "完整地址",
+      "gps_coordinates": "GPS 座標",
+      "is_active": "是否啟用",
+      "location_name": "位置名稱",
+      "pod_count": "靜音艙數",
+      "province": "省份"
+    },
+    "toast": {
+      "active_toggled": "地址已{status}",
+      "create_failed": "地址建立失敗",
+      "create_success": "地址建立成功",
+      "delete_success": "位置刪除成功",
+      "load_failed": "位置列表載入失敗：",
+      "load_provinces_failed": "載入省份列表失敗：",
+      "no_permission": "您沒有編輯許可權",
+      "retry_later": "請稍後重試",
+      "toggle_failed": "更新啟用狀態失敗",
+      "update_failed": "地址更新失敗",
+      "update_success": "地址更新成功"
+    },
+    "validation": {
+      "name_required": "請輸入位置名稱"
+    }
+  },
+  "mqtt_banned": {
+    "actions": {
+      "add": "新增黑名單",
+      "remove": "移除"
+    },
+    "add_modal": {
+      "cancel": "取消",
+      "label_reason": "原因",
+      "label_type": "封禁型別",
+      "label_until": "到期時間",
+      "ok": "確認新增",
+      "reason_placeholder": "可選,記錄原因",
+      "title": "新增黑名單",
+      "until_placeholder": "留空表示永久",
+      "warning_prefix": "⚠ 新增後該 ",
+      "warning_suffix": " 將立即被 EMQX 拒絕接入,操作記審計日誌。",
+      "who_placeholder": {
+        "clientid": "例如 device-001",
+        "peerhost": "例如 192.168.1.99",
+        "username": "例如 attacker"
+      }
+    },
+    "as_label": {
+      "clientid": "Client ID",
+      "default": "物件",
+      "peerhost": "Peer Host (IP)",
+      "peerhost_short": "Peer Host",
+      "username": "Username"
+    },
+    "empty": "黑名單為空",
+    "fields": {
+      "actions": "操作",
+      "as": "型別",
+      "by": "操作人",
+      "reason": "原因",
+      "until": "到期",
+      "who": "物件"
+    },
+    "loading": "載入中…",
+    "log": {
+      "add_failed": "加入黑名單失敗:",
+      "fetch_failed": "MQTT banned 獲取失敗:",
+      "health_failed": "MQTT health 獲取失敗:",
+      "remove_failed": "移除黑名單失敗:"
+    },
+    "not_configured_desc_prefix": "請聯絡管理員配置後端 ",
+    "not_configured_desc_suffix": "。",
+    "not_configured_title": "MQTT 伺服器管理未配置",
+    "permanent": "永久",
+    "remove_modal": {
+      "cancel": "取消",
+      "confirm_middle": " 移出黑名單嗎?",
+      "confirm_prefix": "確定要將 ",
+      "footer_note": "移除後該物件將可重新接入 broker,操作記審計日誌。",
+      "ok": "確認移除",
+      "title": "移除黑名單確認"
+    },
+    "subtitle": "禁止指定 clientid / username / IP 接入 EMQX(寫操作僅 持平臺管理權限的根公司管理員 可見)",
+    "title": "MQTT 伺服器 / 黑名單",
+    "toast": {
+      "add_failed": "加入黑名單失敗",
+      "add_success": "已加入黑名單",
+      "fetch_failed": "獲取黑名單失敗",
+      "remove_failed": "移除黑名單失敗",
+      "remove_success": "已移除",
+      "title": "MQTT 黑名單"
+    },
+    "view_only": "僅檢視",
+    "who_label_ip": "IP 地址"
+  },
+  "mqtt_clients": {
+    "actions": {
+      "details": "詳情",
+      "kick": "強制下線",
+      "reset": "重置",
+      "search": "搜尋"
+    },
+    "detail_modal": {
+      "close": "關閉",
+      "title": "客戶端詳情:{clientid}"
+    },
+    "filter": {
+      "clientid_placeholder": "按 clientid 模糊搜尋",
+      "username_placeholder": "按 username 模糊搜尋"
+    },
+    "kick_modal": {
+      "body": "確定要強制下線客戶端 ?",
+      "cancel": "取消",
+      "ok": "確認下線",
+      "tip": "斷開後客戶端會立即收到 disconnect,需要其自身重連。此操作會寫入審計日誌。",
+      "title": "強制下線確認"
+    },
+    "not_configured": {
+      "tip": "請聯絡管理員配置後端",
+      "title": "MQTT 伺服器管理未配置"
+    },
+    "status": {
+      "offline": "離線",
+      "online": "線上"
+    },
+    "subtitle": "EMQX 當前連線的 MQTT 客戶端列表(支援 clientid / username 模糊搜尋)",
+    "table": {
+      "actions": "操作",
+      "client_id": "Client ID",
+      "connected_at": "連線時間",
+      "empty": "無客戶端連線",
+      "ip": "IP",
+      "loading": "載入中…",
+      "proto": "Proto",
+      "status": "狀態",
+      "username": "Username"
+    },
+    "title": "MQTT 伺服器 / 客戶端",
+    "toast": {
+      "kick_failed": "強制下線失敗",
+      "kicked": "已下線 {clientid}",
+      "load_failed": "獲取客戶端列表失敗",
+      "title": "MQTT 客戶端"
+    }
+  },
+  "mqtt_overview": {
+    "actions": {
+      "refresh": "重新整理",
+      "retry": "重試"
+    },
+    "error": {
+      "tip": "請檢查後端日誌或 EMQX 服務狀態。",
+      "title": "無法連線到 EMQX Dashboard"
+    },
+    "next_refresh": "下次自動重新整理:{count} 秒後",
+    "node_table": {
+      "connections": "連線數",
+      "empty": "未返回節點資訊",
+      "node": "節點 ID",
+      "role": "角色",
+      "status": "狀態",
+      "uptime": "執行時間",
+      "version": "版本"
+    },
+    "nodes_card": "EMQX 節點",
+    "not_configured": {
+      "tip": "請聯絡管理員配置後端環境變數",
+      "title": "MQTT 伺服器管理未配置"
+    },
+    "stat": {
+      "connections": "客戶端連線數",
+      "received_rate": "每秒接收 (msg/s)",
+      "retained": "Retained 訊息",
+      "retained_sub": "保留訊息總數",
+      "routes_sub": "路由 {count}",
+      "sent_rate": "每秒傳送 (msg/s)",
+      "sessions_sub": "會話 {count}",
+      "shared_subscriptions_sub": "共享訂閱 {count}",
+      "subscriptions": "訂閱數",
+      "topics": "主題數"
+    },
+    "status": {
+      "connection_error": "連線異常",
+      "not_configured": "未配置",
+      "running": "EMQX {version} 執行中"
+    },
+    "subtitle": "實時統計來自 EMQX Dashboard,經 iot_server 代理讀取",
+    "title": "MQTT 伺服器 / 總覽",
+    "toast": {
+      "fetch_failed": "獲取 MQTT 總覽失敗",
+      "title": "MQTT 伺服器"
+    },
+    "uptime": {
+      "days_hours": "{days}天 {hours}小時",
+      "hours_minutes": "{hours}小時 {minutes}分",
+      "minutes": "{minutes}分"
+    }
+  },
+  "mqtt_subscriptions": {
+    "actions": {
+      "reset": "重置",
+      "search": "搜尋"
+    },
+    "filter": {
+      "clientid_placeholder": "按 clientid 子串搜尋",
+      "topic_placeholder": "按 topic 子串搜尋"
+    },
+    "not_configured": {
+      "tip": "請聯絡管理員配置後端",
+      "title": "MQTT 伺服器管理未配置"
+    },
+    "subtitle": "EMQX 當前所有客戶端訂閱關係(支援 topic 與 clientid 子串模糊匹配)",
+    "table": {
+      "client_id": "Client ID",
+      "empty": "無訂閱",
+      "loading": "載入中…",
+      "node": "所在節點",
+      "qos": "QoS",
+      "shared": "共享訂閱",
+      "shared_value": "共享",
+      "topic": "Topic"
+    },
+    "title": "MQTT 伺服器 / 訂閱",
+    "toast": {
+      "load_failed": "獲取訂閱列表失敗",
+      "title": "MQTT 訂閱"
+    }
+  },
+  "mqtt_topics": {
+    "empty_metrics": "無主題指標(需在 EMQX 端配置 topic-metrics)",
+    "empty_routes": "無路由",
+    "fields": {
+      "clientid_count": "訂閱數",
+      "metric": "指標名",
+      "node": "節點",
+      "topic": "Topic",
+      "value": "值"
+    },
+    "limit_options": {
+      "10": "10/頁",
+      "20": "20/頁",
+      "50": "50/頁",
+      "100": "100/頁"
+    },
+    "loading": "載入中…",
+    "log": {
+      "health_failed": "MQTT health 獲取失敗:",
+      "metrics_failed": "MQTT topic metrics 獲取失敗:",
+      "topics_failed": "MQTT topics 獲取失敗:"
+    },
+    "metrics_card_header": "主題指標 (Topic Metrics)",
+    "not_configured_desc_prefix": "請聯絡管理員配置後端 ",
+    "not_configured_desc_suffix": "。",
+    "not_configured_title": "MQTT 伺服器管理未配置",
+    "reset": "重置",
+    "routes_card_header": "主題路由表 (Routes)",
+    "search": "搜尋",
+    "subtitle": "EMQX 路由表 + 主題級指標(從 broker 直接讀取)",
+    "title": "MQTT 伺服器 / 主題",
+    "toast": {
+      "fetch_failed": "獲取主題列表失敗",
+      "title": "MQTT 主題"
+    },
+    "topic_filter_placeholder": "按 topic 子串過濾",
+    "total_count": "共 {total} 條"
+  },
+  "nav": {
+    "dashboard": "資料看板",
+    "hosts": "主機管理",
+    "logout": "退出登入",
+    "users": "使用者管理",
+    "pods": "靜音艙管理"
+  },
+  "node_detail": {
+    "active_options": {
+      "active": "啟用",
+      "inactive": "停用"
+    },
+    "field": {
+      "company": "所屬公司",
+      "created_at": "建立時間",
+      "heartbeat_interval": "心跳間隔",
+      "hw_ver": "硬體型號",
+      "is_active": "是否啟用",
+      "last_seen": "最後通訊",
+      "mac_address": "MAC 地址",
+      "node_id": "節點 ID",
+      "node_type": "節點型別",
+      "online_status": "線上狀態",
+      "serial_no": "序列號",
+      "shipped_at": "出貨時間",
+      "sw_ver": "韌體版本"
+    },
+    "heartbeat_desc": {
+      "limited": "(流量受限)",
+      "powersave": "(省電模式)",
+      "realtime": "(實時監控)",
+      "standard": "(標準配置)"
+    },
+    "heartbeat_options": {
+      "120s": "120 秒 (省電模式)",
+      "300s": "300 秒 (流量受限)",
+      "30s": "30 秒 (實時監控)",
+      "60s": "60 秒 (標準配置)"
+    },
+    "heartbeat_unit": "秒",
+    "loading": "載入節點詳情中...",
+    "online_options": {
+      "maintenance": "維護中",
+      "offline": "離線",
+      "online": "線上"
+    },
+    "section": {
+      "basic_info": "基礎資訊",
+      "running_status": "執行狀態"
+    },
+    "toast": {
+      "load_failed_prefix": "節點詳情載入失敗：",
+      "retry_later": "請稍後重試",
+      "update_failed_prefix": "更新失敗：",
+      "update_success": "修改成功"
+    }
+  },
+  "nodes": {
+    "actions": {
+      "check_firmware": "韌體",
+      "close": "關閉",
+      "create": "新增",
+      "refresh": "重新整理",
+      "ship_to_factory": "出貨",
+      "confirm_receipt": "確認收貨",
+      "view_detail": "詳情",
+      "view_logs": "日誌"
+    },
+    "active_options": {
+      "active": "已啟用",
+      "all": "全部啟用狀態",
+      "inactive": "未啟用"
+    },
+    "active_status": {
+      "active": "啟用",
+      "inactive": "停用"
+    },
+    "create_dialog": {
+      "cancel_title": "取消",
+      "device_key_label": "裝置金鑰",
+      "device_key_placeholder": "請輸入裝置金鑰",
+      "hn_model_label": "節點型號",
+      "hn_model_placeholder": "請選擇節點型號",
+      "hw_ver_label": "硬體版本",
+      "hw_ver_placeholder": "例如：1.0",
+      "mac_label": "MAC 地址",
+      "mac_placeholder": "格式：00:11:22:33:44:55",
+      "ok_title": "確認建立",
+      "product_code_label": "產品程式碼",
+      "product_code_placeholder": "例如：NODE-SENSOR-001",
+      "remark_label": "備註",
+      "remark_placeholder": "請輸入備註資訊",
+      "sw_ver_label": "韌體版本",
+      "sw_ver_placeholder": "例如：1.0.0",
+      "title": "新增節點"
+    },
+    "delete_confirm": {
+      "cancel_title": "取消",
+      "message": "確認解綁展示位 \"{slot}\" 的產品？",
+      "ok_title": "確認解綁",
+      "title": "刪除確認"
+    },
+    "filters": {
+      "search_placeholder": "序列號、MAC 地址"
+    },
+    "receipt_confirm": {
+      "message": "確認已收到主機 {serial}？",
+      "title": "確認主機收貨"
+    },
+    "ship_dialog": {
+      "cancel_title": "取消",
+      "company_placeholder": "請選擇公司",
+      "ok_title": "確認出貨",
+      "target_company_label": "目標公司",
+      "title": "出貨給廠家"
+    },
+    "status_label": {
+      "maintenance": "維護中",
+      "offline": "離線",
+      "online": "線上"
+    },
+    "status_options": {
+      "all": "全部狀態",
+      "maintenance": "維護中",
+      "offline": "離線",
+      "online": "線上"
+    },
+    "table": {
+      "can_node_id": "CAN 地址",
+      "hn_model_name": "節點型號",
+      "hw_ver": "硬體型號",
+      "is_active": "是否啟用",
+      "last_seen": "最後通訊",
+      "mac_address": "MAC 地址",
+      "manufacturer_name": "所屬公司",
+      "serial_number": "序列號",
+      "status": "線上狀態",
+      "sw_ver": "韌體版本"
+    },
+    "toast": {
+      "active_changed": "節點已{status}",
+      "active_status_failed": "更新啟用狀態失敗",
+      "bind_success": "產品繫結成功",
+      "create_failed": "建立節點失敗",
+      "create_success": "節點建立成功",
+      "firmware_check_failed": "檢查韌體失敗",
+      "firmware_latest": "節點韌體已是最新版本",
+      "load_bindings_failed": "載入產品繫結列表失敗",
+      "load_failed": "載入節點列表失敗",
+      "load_hw_failed": "載入硬體型號失敗，請稍後重試",
+      "no_change_log": "該節點暫無變更日誌",
+      "no_edit_permission": "您沒有編輯許可權",
+      "rebind_success": "產品換綁成功",
+      "save_failed": "儲存失敗",
+      "ship_failed": "節點出貨失敗",
+      "ship_success": "節點出貨成功",
+      "receipt_failed": "確認主機收貨失敗",
+      "receipt_success": "確認主機收貨成功",
+      "unbind_failed": "解綁失敗",
+      "unbind_success": "產品解綁成功"
+    },
+    "validate": {
+      "device_key_required": "請輸入裝置金鑰",
+      "hn_model_required": "請選擇節點型號",
+      "mac_required": "請輸入 MAC 地址",
+      "product_required": "請選擇產品",
+      "slot_required": "請選擇展示位",
+      "target_company_required": "請選擇目標廠家"
+    }
+  },
+  "not_found": {
+    "back_home": "返回首頁",
+    "message": "頁面未找到"
+  },
+  "od_manager": {
+    "actions": {
+      "collapse_matched": "摺疊匹配項",
+      "diagnose_now": "立即診斷",
+      "expand": "展開",
+      "expand_matched": "展開匹配項",
+      "refresh_snapshot": "重新整理快照"
+    },
+    "detail": {
+      "access": "訪問:",
+      "bytes": "位元組:",
+      "full_name": "完整名:",
+      "meaning": "說明:"
+    },
+    "empty": {
+      "tip1": "選擇線上主機 + 目標 + 規範型號後點選「立即診斷」。",
+      "tip2_html": "資料來源：主機/節點韌體直接讀取真實記憶體，透過 MQTT 上報到 <code>wf2/&lt;uuid&gt;/od_dump</code>，裝置由 payload 的 <code>nid</code> 識別。",
+      "tip3_html": "target 選擇裝置；profile 選擇 <code>fault/startup/maintenance/full/custom</code> 快照範圍。custom 可填寫 <code>0x1001, 0x1003:1</code>。"
+    },
+    "filters": {
+      "custom_objects_placeholder": "自訂物件，如 0x1001, 0x1003:1",
+      "filter_placeholder": "按 index/name 過濾",
+      "no_online_host": "暫無線上主機",
+      "select_host_first": "請先選主機",
+      "select_online_host": "選擇線上主機",
+      "select_spec": "選擇 OD 規範型號",
+      "select_profile": "選擇快照範圍",
+      "select_target_device": "選擇目標裝置"
+    },
+    "meaning": {
+      "canopen_comm": "CANopen 通訊物件",
+      "node_business": "節點業務欄位",
+      "platform_common": "平臺公共欄位",
+      "unit": "單位: {unit}"
+    },
+    "profiles": {
+      "custom": "自訂物件",
+      "fault": "故障快照",
+      "full": "完整快照",
+      "maintenance": "維護快照",
+      "startup": "啟動快照"
+    },
+    "status_label": {
+      "match": "匹配",
+      "missing_in_device": "裝置缺失",
+      "missing_in_spec": "規範未定義",
+      "runtime": "執行時值",
+      "value_mismatch": "值不同"
+    },
+    "summary": {
+      "compare_spec": "對比規範 {device}:",
+      "completed": "完成",
+      "host": "主機:",
+      "in_progress": "進行中",
+      "match": "匹配 {n}",
+      "missing_in_spec": "規範未定義 {n}",
+      "received_total": "實機條目:",
+      "runtime": "執行時值 {n}",
+      "status": "狀態:",
+      "summary_diff": "異常項 {bad} / 匹配 {match}",
+      "target": "目標:",
+      "target_value": "device_id={id}（{label}）",
+      "updated_at": "更新於:",
+      "value_mismatch": "值不同 {n}"
+    },
+    "table": {
+      "collapsed_count": "已摺疊 {n} 條匹配項",
+      "device": "實機",
+      "expanded": "已展開,",
+      "host_self": "主機自身 (device_id=1)",
+      "index": "Index",
+      "name": "名稱",
+      "no_match": "無匹配條目",
+      "status": "狀態",
+      "type": "型別",
+      "yaml": "YAML"
+    },
+    "toast": {
+      "title": "OD 診斷",
+      "trigger_failed": "觸發失敗"
+    },
+    "warning": {
+      "custom_objects_invalid": "custom 至少填寫 1 個、最多 128 個不重複物件；格式為 0xINDEX 或 0xINDEX:十進位SubIndex。",
+      "dump_timeout": "60 秒內未收到本次 OD Dump 的新快照，請檢查裝置線上狀態和 MQTT 鏈路。",
+      "model_unknown": "無法識別該裝置的 CANopen 型號，未自動套用 NU0001；請選擇正確的 OD 規範型號。",
+      "spec_unavailable": "所選 OD 規範不可用。"
+    }
+  },
+  "ota_console": {
+    "actions": {
+      "cancel": "取消",
+      "create": "新建升級任務",
+      "delete": "刪除",
+      "refresh": "重新整理",
+      "view_detail": "詳情"
+    },
+    "confirm": {
+      "cancel_task": "確認取消任務 {id}？",
+      "delete_task": "確認刪除任務 {id}？"
+    },
+    "create_dialog": {
+      "cancel_title": "取消",
+      "firmware_label": "韌體",
+      "firmware_placeholder": "請選擇韌體",
+      "host_label": "目標主機 UUID",
+      "host_placeholder": "請選擇目標主機",
+      "node_label": "目標節點 ID（可選）",
+      "node_placeholder": "留空則升級主機自身",
+      "note_label": "備註",
+      "note_placeholder": "可選",
+      "ok_title": "建立",
+      "title": "新建 OTA 任務"
+    },
+    "detail_dialog": {
+      "firmware_label": "韌體：",
+      "host_label": "主機：",
+      "error_empty": "（無）",
+      "error_label": "錯誤資訊：",
+      "progress_label": "進度：",
+      "status_label": "狀態：",
+      "title": "任務詳情",
+      "uuid_label": "UUID："
+    },
+    "filters": {
+      "host_all": "全部主機",
+      "realtime": "每 3 秒自動重新整理",
+      "search_placeholder": "搜尋任務 UUID / 主機",
+      "total_count": "共 {count} 個任務"
+    },
+    "status_options": {
+      "all": "全部狀態",
+      "canceled": "已取消",
+      "canceling": "取消中",
+      "cancelled": "已取消",
+      "downloading": "下載中",
+      "failed": "失敗",
+      "flashing": "安裝中",
+      "pending": "待處理",
+      "running": "進行中",
+      "sent": "已下發",
+      "success": "成功"
+    },
+    "subtitle": "建立韌體升級任務，並自動重新整理下發進度",
+    "table": {
+      "actions": "操作",
+      "created_at": "建立時間",
+      "empty": "暫無 OTA 任務",
+      "firmware": "韌體",
+      "host": "主機",
+      "loading": "載入中...",
+      "progress": "進度",
+      "status": "狀態",
+      "task_uuid": "任務 UUID"
+    },
+    "title": "OTA 控制檯",
+    "toast": {
+      "cancel_failed": "取消失敗",
+      "create_failed": "建立 OTA 任務失敗",
+      "delete_failed": "刪除失敗",
+      "error_title": "錯誤",
+      "load_failed": "載入 OTA 任務失敗",
+      "select_firmware": "請選擇韌體",
+      "select_host": "請選擇目標主機",
+      "success_title": "成功",
+      "task_created": "OTA 任務已建立",
+      "warning_title": "提示"
+    }
+  },
+  "pod_control_panel": {
+    "actions": {
+      "cancel": "取消",
+      "custom_command": "自定義命令",
+      "get_status": "獲取狀態",
+      "refresh": "重新整理",
+      "restart_device": "重啟裝置",
+      "send_command": "傳送命令",
+      "send_control": "傳送控制",
+      "sending": "傳送中..."
+    },
+    "confirm": {
+      "cancel": "取消",
+      "ok_restart": "確認重啟",
+      "restart_message": "確定要重啟裝置嗎？裝置將暫時斷開連線。",
+      "restart_title": "確認重啟"
+    },
+    "empty": {
+      "no_modules": "當前靜音艙型號暫無可控制模組"
+    },
+    "history_table": {
+      "command": "命令",
+      "command_id": "指令ID",
+      "payload": "引數",
+      "sent_at": "傳送時間",
+      "status": "狀態"
+    },
+    "module_dialog": {
+      "badge_empty": "—",
+      "chart_placeholder": "時序資料展示（圖表元件待接入）",
+      "command_label": "命令名稱",
+      "command_placeholder": "例如：write_attrs / restart / custom",
+      "control_target": "控制物件",
+      "input_placeholder": "請輸入",
+      "payload_label": "命令引數",
+      "payload_placeholder": "例如：{\"target_uuid\":\"xxx\",\"attrs\":{\"fan_speed\":2}}",
+      "switch_off": "關",
+      "switch_on": "開",
+      "title_custom": "自定義命令",
+      "title_default": "裝置控制",
+      "unbound_warning": "該模組對應的裝置型號已配置，但當前靜音艙例項尚未繫結，暫時無法下發控制。",
+      "unit_prefix": "單位："
+    },
+    "module_status": {
+      "bound": "已繫結",
+      "unbound": "未繫結"
+    },
+    "offline": {
+      "control_disabled": "裝置離線，恢復連線後即可操作",
+      "description": "裝置目前不在線，暫時無法進行即時控制。",
+      "description_with_last_seen": "裝置目前不在線，暫時無法進行即時控制。最後在線：{time}",
+      "title": "裝置離線"
+    },
+    "instance_counter": "實例 {current}/{total}",
+    "node_id": "Node {id}",
+    "position_prefix": "位置 {pos}",
+    "section": {
+      "command_history": "命令歷史",
+      "common_actions": "公共操作",
+      "device_control": "裝置控制"
+    },
+    "status_label": {
+      "failed": "失敗",
+      "queued": "排隊中",
+      "sent": "已發佈，等待裝置確認",
+      "success": "成功",
+      "timeout": "超時"
+    },
+    "shadow": {
+      "acknowledged": "等待狀態上報",
+      "applied": "已生效",
+      "failed": "執行失敗",
+      "pending": "等待 ACK",
+      "reported": "裝置已上報",
+      "reported_value": "目前上報：{value}",
+      "unknown_value": "位置未知",
+      "superseded": "已被新命令取代",
+      "timeout": "執行超時"
+    },
+    "toast": {
+      "all_failed": "全部 {count} 條命令失敗：{detail}",
+      "command_required": "請輸入命令名稱",
+      "control_rollback": "{field} {status}，已恢復為裝置最新上報值",
+      "invalid_range": "{field} 超出允許範圍 {min}～{max}",
+      "invalid_value": "{field} 的值不是有效數字",
+      "json_invalid": "JSON 格式錯誤：",
+      "load_failed": "載入控制面板失敗：",
+      "no_field": "當前模組沒有可提交的控制欄位",
+      "partial": "{success} 條成功，{failed} 條失敗",
+      "publish_failed": "命令未能發佈到訊息代理",
+      "queued": "已發佈到訊息代理，等待裝置 ACK",
+      "send_failed": "命令傳送失敗：",
+      "sent_count": "已下發 {count} 條控制命令"
+    }
+  },
+  "pod_history": {
+    "tab": "拓撲與生命週期", "current_version": "目前拓撲版本", "refresh": "重新整理", "replace_host": "更換主機", "topology_title": "拓撲版本歷史", "lifecycle_title": "生命週期事件", "no_topology": "暫無拓撲版本", "no_lifecycle": "暫無生命週期事件", "version": "版本", "host": "主機", "change_type": "變更類型", "node_count": "節點數", "reason": "變更原因", "reason_required": "請輸入變更原因", "occurred_at": "發生時間", "event_type": "事件類型", "transition": "變更前 → 變更後", "source": "來源", "version_detail": "拓撲版本 v{version}", "node_serial": "節點序號", "node_model": "節點型號", "slot": "槽位", "can_address": "CAN 位址", "position": "節點位置", "target_host": "目標主機", "target_host_hint": "輸入主機 ID 或 UUID", "cancel": "取消", "submit": "確認更換", "submitting": "提交中...", "force_replace": "強制更換", "replace_success": "主機更換成功，已產生拓撲版本 v{version}", "replace_failed": "主機更換失敗", "load_failed": "歷史資料載入失敗",
+    "events": { "initial_bind": "首次綁定", "host_replace": "更換主機", "node_add": "新增節點", "node_remove": "移除節點", "node_replace": "更換節點", "slot_change": "槽位/CAN 變更", "unbind": "解除綁定", "rebind": "重新綁定", "backfilled_current_state": "目前狀態回填", "control_transfer": "控制權移轉", "location_move": "位置遷移", "retire": "退役", "restore": "恢復" }
+  },
+  "pod_handover": {
+    "accept": "接受接管", "accept_confirm": "確認接管靜音艙「{pod}」？", "accept_failed": "接管失敗", "accept_title": "確認接管", "accepted": "接管成功", "actions": "操作", "active_relation": "有效", "cancel": "取消", "cancel_failed": "取消請求失敗", "cancel_request": "取消請求", "cancelled": "請求已取消", "commissioner_company": "委託裝配組織", "company_id": "組織 ID", "create": "發起接管/流轉", "create_failed": "建立請求失敗", "create_title": "發起接管或流轉", "created": "接管請求已建立", "created_at": "建立時間", "empty": "暫無接管請求", "from_company": "來源組織", "grant_relation": "新增協作組織", "history": "接管歷史", "inbox_help": "僅顯示發給目前組織的接管邀請；接受後目前組織成為唯一 owner。", "inbox_title": "接管工作台", "lifecycle": "生命週期", "load_failed": "載入接管資料失敗", "no_history": "暫無接管歷史", "no_relations": "暫無資源關係", "owner_company": "目前 owner", "ownership_tab": "歸屬與流轉", "pod": "靜音艙", "reason": "原因", "refresh": "重新整理", "relation_failed": "新增協作關係失敗", "relation_granted": "協作關係已新增", "relation_revoked": "協作關係已撤銷", "relation_role": "關係角色", "relations": "協作組織", "retain_commissioner": "接管後保留委託裝配方的維護關係", "revoke_failed": "撤銷協作關係失敗", "revoke_relation": "撤銷", "status": "狀態", "submit": "提交", "target_company": "目標組織", "type": "類型", "unowned": "尚未接管", "validity": "有效期",
+    "roles": { "maintainer": "維護方", "operator": "營運方", "owner": "Owner", "viewer": "唯讀方" },
+    "statuses": { "accepted": "已接受", "cancelled": "已取消", "expired": "已過期", "pending": "待確認" },
+    "lifecycle_states": { "active": "使用中", "assembled": "已裝配", "assembly_pending": "裝配中", "inventory": "已入庫", "retired": "已退役", "takeover_pending": "待首次接管", "transfer_pending": "待流轉確認" }
+  },
+  "pod_detail": {
+    "actions": {
+      "close": "關閉",
+      "copy_mac": "複製 MAC",
+      "download": "下載",
+      "export": "匯出",
+      "search": "查詢",
+      "view_files": "檢視",
+      "view_nodes": "檢視"
+    },
+    "active_options": {
+      "false": "停用",
+      "true": "啟用"
+    },
+    "card": {
+      "history": "執行記錄",
+      "info": "靜音倉資訊",
+      "status": "執行狀態"
+    },
+    "default_country": "中國",
+    "region_data": {
+      "empty": "暫無可用的中國省市區資料，請聯絡管理員初始化行政區劃",
+      "load_failed": "省市區資料載入失敗，請重試"
+    },
+    "events": {
+      "file_count_suffix": " 個檔案",
+      "node_count_suffix": " 個節點"
+    },
+    "fields": {
+      "address_full": "詳細地址",
+      "bound_nodes": "繫結節點",
+      "building": "詳細地址",
+      "city": "城市",
+      "company_name": "製造商",
+      "country": "國家",
+      "created_at": "建立時間",
+      "district": "區/縣",
+      "firmware_label": "韌體版本",
+      "host_device": "主機裝置",
+      "is_active": "是否啟用",
+      "last_seen": "最後通訊",
+      "location_name": "安裝位置",
+      "spot": "????",
+      "model_name": "型號",
+      "online_status": "線上狀態",
+      "province": "省份",
+      "related_files": "關聯檔案",
+      "remark": "備註",
+      "serial_number": "主控機序列號"
+    },
+    "file_type_label": {
+      "archive": "壓縮包",
+      "audio": "音訊",
+      "document": "文件",
+      "image": "圖片",
+      "other": "其他",
+      "video": "影片"
+    },
+    "files_table": {
+      "actions": "操作",
+      "file_name": "檔名",
+      "file_type": "型別",
+      "size": "大小"
+    },
+    "history_table": {
+      "description": "描述",
+      "event_type": "事件型別",
+      "operator": "操作者",
+      "timestamp": "時間"
+    },
+    "labels": {
+      "air_quality": "空氣質量",
+      "fan_speed": "風速",
+      "fan_switch": "風扇開關",
+      "humidity": "溼度",
+      "is_online": "線上狀態",
+      "light_brightness": "燈光亮度",
+      "light_switch": "燈光開關",
+      "noise": "噪音",
+      "off": "關",
+      "offline": "離線",
+      "on": "開",
+      "online": "線上",
+      "report": "狀態上報",
+      "temperature": "溫度"
+    },
+    "loading": "載入靜音倉詳情中...",
+    "loading_history": "載入中...",
+    "metric": {
+      "air_quality": "空氣質量",
+      "humidity": "溼度",
+      "noise": "噪音",
+      "temperature": "溫度"
+    },
+    "modal": {
+      "files_title": "關聯檔案",
+      "nodes_title": "繫結節點",
+      "ws_log_close": "關閉",
+      "ws_log_console_msg": "WebSocket 訊息日誌（已輸出到控制檯）",
+      "ws_log_no_data": "暫無日誌記錄",
+      "ws_log_recent_title": "最近 {count} 條 WebSocket 訊息",
+      "ws_log_title": "WebSocket 訊息日誌"
+    },
+    "nodes_table": {
+      "actions": "操作",
+      "can_node_id": "CAN 節點 ID",
+      "mac_address": "MAC 地址",
+      "model_code": "型號編碼",
+      "model_name": "節點名稱"
+    },
+    "status": {
+      "active": "啟用",
+      "active_alt": "執行中",
+      "error": "故障",
+      "idle": "空閒",
+      "in_use": "使用中",
+      "inactive": "停用",
+      "maintenance": "維護中",
+      "offline": "離線",
+      "online": "線上",
+      "pending": "等待中",
+      "stopped": "已停止",
+      "unknown": "未知"
+    },
+    "tabs": {
+      "control": "控制面板",
+      "history": "歷史記錄",
+      "info": "基本資訊"
+    },
+    "toast": {
+      "command_confirm_cancel": "取消",
+      "command_confirm_msg": "確認執行\"{cmd}\"命令？",
+      "command_confirm_ok": "確認",
+      "command_confirm_title": "提示",
+      "command_sent": "命令\"{cmd}\"已傳送",
+      "default_retry": "請稍後重試",
+      "download_start": "開始下載：",
+      "export_count_suffix": "已匯出 {count} 條歷史記錄",
+      "export_failed_prefix": "匯出失敗：",
+      "exporting": "正在匯出，請稍候...",
+      "filepath_copied": "檔案路徑已複製到剪貼簿",
+      "history_filename_suffix": "_歷史記錄.xlsx",
+      "load_detail_failed": "載入靜音倉詳情失敗，請稍後重試",
+      "load_files_failed_prefix": "載入檔案列表失敗：",
+      "load_history_failed": "載入歷史記錄失敗，請稍後重試",
+      "load_locations_failed": "載入位置列表失敗",
+      "load_nodes_failed_prefix": "載入節點列表失敗：",
+      "load_status_failed": "載入狀態資料失敗，請稍後重試",
+      "mac_copied_prefix": "MAC 地址已複製到剪貼簿：",
+      "mac_copy_failed": "複製失敗，請手動複製",
+      "modify_success": "修改成功",
+      "no_file_path": "該檔案無儲存路徑",
+      "no_files": "該靜音倉未關聯任何檔案",
+      "no_mac": "該節點無 MAC 地址",
+      "no_nodes_bound": "該靜音倉未繫結任何節點",
+      "no_pod_id": "無法獲取靜音倉 ID",
+      "save_failed_prefix": "儲存失敗：",
+      "save_location_invalid": "請選擇完整的省市區資訊",
+      "save_location_success": "位置資訊儲存成功",
+      "send_command_failed_prefix": "傳送命令失敗：",
+      "update_failed_prefix": "更新失敗：",
+      "ws_check_disconnect": "WebSocket 未連線，無法檢查",
+      "ws_simulate_pushed": "已模擬推送：狀態切換為 {status}",
+      "ws_status_change_msg": "WebSocket 推送：裝置已{status}",
+      "ws_status_offline": "離線",
+      "ws_status_online": "上線",
+      "ws_test_connected": "WebSocket 已連線！連線狀態正常",
+      "ws_test_print_done": "已列印 MQTT 測試資訊到控制檯，請使用 MQTTX 工具傳送",
+      "ws_test_reconnecting": "WebSocket 未連線，正在嘗試重新連線..."
+    }
+  },
+  "pod_models": {
+    "actions": {
+      "create": "新增"
+    },
+    "active": {
+      "all": "全部狀態",
+      "no": "未啟用",
+      "yes": "已啟用"
+    },
+    "attr_dialog": {
+      "create": "新增屬性",
+      "table_actions": "操作",
+      "table_attr_code": "屬性編碼",
+      "table_attr_value": "屬性值",
+      "table_category": "分類",
+      "table_description": "描述",
+      "title": "屬性管理"
+    },
+    "attr_form": {
+      "attr_code_label": "屬性編碼",
+      "attr_code_placeholder": "如：width",
+      "boolean_label": "屬性值",
+      "category_label": "屬性分類",
+      "category_placeholder": "選擇分類",
+      "description_label": "描述",
+      "description_placeholder": "請輸入描述資訊（可選）",
+      "max_label": "最大值",
+      "min_label": "最小值",
+      "number_label": "數值",
+      "string_label": "屬性值",
+      "string_placeholder": "請輸入屬性值",
+      "title_create": "新增屬性",
+      "title_edit": "編輯屬性",
+      "unit_label": "單位",
+      "unit_placeholder": "如：mm, kg, dB",
+      "value_type_label": "屬性值型別"
+    },
+    "category": {
+      "appearance": "外觀屬性",
+      "appearance_select": "外觀屬性 (appearance)",
+      "capacity": "容量屬性",
+      "capacity_select": "容量屬性 (capacity)",
+      "dimension": "尺寸屬性",
+      "dimension_select": "尺寸屬性 (dimension)"
+    },
+    "company": {
+      "select_create": "請選擇公司",
+      "select_filter": "選擇公司"
+    },
+    "confirm": {
+      "delete_attr_message": "確認刪除屬性 \"{code}\"？",
+      "delete_attr_title": "刪除確認",
+      "delete_device_message_host": "刪除主機配置後，需要重新新增主機。確認要刪除嗎？",
+      "delete_device_message_node": "確認刪除裝置配置 \"{name}\"？",
+      "delete_device_title_host": "確認刪除主機配置",
+      "delete_device_title_node": "確認刪除裝置配置 \"{name}\"",
+      "device_change_impact_message": "此修改將影響 {affected} 個靜音艙，其中 {bound} 個已綁定裝置。是否繼續？",
+      "device_delete_impact_suffix": "此配置正被 {affected} 個靜音艙使用，其中 {bound} 個已綁定裝置。"
+    },
+    "create_dialog": {
+      "avatar_label": "圖片 URL",
+      "avatar_tip": "支援 JPG/PNG/GIF 格式，檔案大小不超過 5MB",
+      "code_label": "型號編碼",
+      "code_placeholder": "如：PRS-2000",
+      "company_label": "所屬公司",
+      "description_label": "描述",
+      "description_placeholder": "請輸入型號描述",
+      "name_label": "型號名稱",
+      "name_placeholder": "請輸入型號名稱",
+      "title_create": "新增型號",
+      "title_edit": "編輯型號"
+    },
+    "detail_dialog": {
+      "click_upload": "點選上傳",
+      "code_label": "型號編碼",
+      "company_label": "所屬公司",
+      "description_label": "描述",
+      "image_label": "圖片",
+      "is_active_label": "是否啟用",
+      "name_label": "型號名稱",
+      "title": "型號詳情"
+    },
+    "device_dialog": {
+      "add_device": "新增裝置",
+      "device_hint_host": "主機模型只能選擇",
+      "device_hint_node": "節點模型可以選擇",
+      "device_hint_quantity": "可以指定每種裝置的數量和是否必需",
+      "many": "多個",
+      "one": "1 個",
+      "table_actions": "操作",
+      "table_code": "裝置編碼",
+      "table_name": "裝置名稱",
+      "table_quantity": "數量",
+      "table_required": "是否必需",
+      "table_type": "型別",
+      "title": "裝置配置"
+    },
+    "device_form": {
+      "host_conflict_body": "當前單元型號已配置了主機，無法再新增主機。如需更改，請先刪除原有主機配置，或選擇\"節點\"型別繼續新增。",
+      "host_conflict_title": "無法新增主機",
+      "is_required_label": "是否必需",
+      "model_label": "裝置型號",
+      "quantity_label": "數量",
+      "title_create": "新增裝置",
+      "title_edit": "編輯裝置",
+      "type_label": "裝置型別"
+    },
+    "device_type": {
+      "host": "主機",
+      "node": "節點"
+    },
+    "filter": {
+      "search_placeholder": "型號編碼或名稱"
+    },
+    "icons": {
+      "delete": "刪除",
+      "delete_host_warn": "刪除主機（需謹慎）",
+      "details": "詳情",
+      "device_config": "裝置配置",
+      "edit": "編輯",
+      "view_logs": "日誌"
+    },
+    "image_preview_alt": "預覽",
+    "table": {
+      "attributes": "屬性數量",
+      "code": "型號編碼",
+      "company_name": "所屬公司",
+      "description": "描述",
+      "image": "圖片",
+      "is_active": "是否啟用",
+      "name": "型號名稱",
+      "no_image": "無圖片"
+    },
+    "toast": {
+      "active_toggled": "型號已{status}",
+      "attr_create_success": "屬性新增成功",
+      "attr_delete_success": "屬性刪除成功",
+      "attr_update_success": "屬性更新成功",
+      "delete_attr_failed": "刪除屬性失敗",
+      "device_create_failed": "新增裝置失敗",
+      "device_create_success": "裝置新增成功",
+      "device_duplicate": "該裝置型號已存在，無需重複新增",
+      "device_update_failed": "更新裝置失敗",
+      "device_update_success": "裝置更新成功",
+      "host_already": "當前單元型號已配置了主機，無法再新增主機。如需更改，請先刪除原有主機配置。",
+      "image_upload_failed": "圖片上傳失敗，請重試",
+      "image_upload_failed_msg": "圖片上傳失敗：",
+      "image_upload_no_url": "圖片上傳成功，但未返回圖片 URL",
+      "image_upload_success": "圖片上傳成功",
+      "load_attr_failed": "載入屬性列表失敗：",
+      "load_detail_failed": "獲取詳情失敗",
+      "load_device_failed": "載入裝置列表失敗：",
+      "load_failed": "載入型號列表失敗：",
+      "load_options_failed": "載入選項失敗：",
+      "model_create_failed": "建立型號失敗：",
+      "model_create_success": "型號建立成功",
+      "model_update_failed": "更新型號失敗：",
+      "model_update_success": "型號更新成功",
+      "must_be_image": "只能上傳圖片檔案！",
+      "no_log": "該型號暫無變更日誌",
+      "save_attr_failed": "儲存屬性失敗",
+      "size_limit": "圖片大小不能超過 5MB！",
+      "size_too_big": "圖片大小不能超過 5MB",
+      "toggle_failed": "更新啟用狀態失敗"
+    },
+    "validation": {
+      "attr_code_required": "請輸入屬性編碼",
+      "attr_value_required": "請輸入屬性值",
+      "category_required": "請選擇屬性分類",
+      "code_required": "請輸入型號編碼",
+      "company_required": "請選擇所屬公司",
+      "device_model_required": "請選擇裝置型號",
+      "device_type_required": "請選擇裝置型別",
+      "name_required": "請輸入型號名稱",
+      "quantity_required": "請輸入有效數量",
+      "value_type_required": "請選擇屬性值型別"
+    },
+    "value_type": {
+      "boolean": "布林型",
+      "number": "數值型",
+      "string": "字串型"
+    }
+  },
+  "pods": {
+    "actions": {
+      "assign_to_child": "分配",
+      "cancel": "取消",
+      "confirm_assign": "確認分配",
+      "create": "新增",
+      "manage_node": "節點",
+      "submitting": "提交中...",
+      "view_detail": "詳情",
+      "view_logs": "日誌"
+    },
+    "active_options": {
+      "active": "已啟用",
+      "all": "全部啟用狀態",
+      "inactive": "未啟用"
+    },
+    "active_status": {
+      "active": "啟用",
+      "inactive": "停用"
+    },
+    "assign_dialog": {
+      "alert_item_1": "目標公司必須是當前公司的下級公司",
+      "alert_item_2": "分配後靜音倉的使用權將轉移給目標公司",
+      "alert_item_3": "分配操作不可逆，請謹慎操作",
+      "alert_title": "分配前請確認：",
+      "city_label": "城市",
+      "city_placeholder": "請選擇城市",
+      "company_role_label": "公司角色",
+      "company_role_placeholder": "請選擇公司角色",
+      "country_china": "中國",
+      "country_label": "國家",
+      "current_company_label": "當前公司：",
+      "district_label": "區/縣",
+      "district_placeholder": "請選擇區/縣",
+      "model_label": "型號：",
+      "pod_info_label": "靜音倉資訊",
+      "province_label": "省份",
+      "province_placeholder": "請選擇省份",
+      "serial_no_label": "序列號：",
+      "target_company_label": "目標公司",
+      "target_company_placeholder": "請選擇下一級公司",
+      "title": "分配靜音倉給下一級公司"
+    },
+    "company_role_options": {
+      "agent": "代理商",
+      "brand": "品牌商",
+      "distributor": "經銷商",
+      "enduser": "終端用戶"
+    },
+    "create_dialog": {
+      "cancel_title": "取消",
+      "company_label": "製造商",
+      "company_placeholder": "請選擇製造商",
+      "binding_permission_tip": "目前帳號沒有節點綁定權限，請聯絡管理員或維護人員處理。",
+      "configure_nodes": "設定所選主機的節點",
+      "device_check_failed": "裝置設定不完整，請先補齊並綁定型號要求的節點。",
+      "device_check_loading": "正在檢查主機與型號的裝置設定…",
+      "device_check_passed": "裝置設定符合型號要求，可以建立。",
+      "device_check_unavailable": "暫時無法預檢裝置設定，提交時仍會由伺服器驗證。",
+      "device_count": "{code}：已綁定 {actual}/{required}",
+      "host_label": "主機",
+      "host_placeholder": "請選擇主機",
+      "model_label": "靜音倉型號",
+      "model_placeholder": "請選擇型號",
+      "ok_title": "確認建立",
+      "remark_label": "備註",
+      "remark_placeholder": "請輸入備註資訊",
+      "serial_no_hint": "用於識別完整靜音倉，而非主控機。",
+      "serial_no_label": "序列號（選填）",
+      "serial_no_placeholder": "請輸入序列號",
+      "title": "新增"
+    },
+    "filters": {
+      "search_placeholder": "名稱、序列號"
+    },
+    "node_binding_dialog": {
+      "title": "靜音倉節點管理"
+    },
+    "online_options": {
+      "all": "全部線上狀態",
+      "offline": "離線",
+      "online": "線上"
+    },
+    "status": {
+      "error": "故障",
+      "idle": "空閒",
+      "in_use": "使用中",
+      "maintenance": "維護中"
+    },
+    "table": {
+      "building": "詳細地址",
+      "city": "城市",
+      "company_name": "所屬公司",
+      "country": "國家",
+      "current_status": "當前狀態",
+      "district": "區/縣",
+      "is_active": "是否啟用",
+      "is_online": "線上狀態",
+      "last_seen": "最後通訊",
+      "manufacturer_name": "製造商",
+      "model_name": "型號",
+      "pod_name": "靜音倉名稱",
+      "province": "省份",
+      "serial_number": "主控機序列號",
+      "serial_no": "序列號",
+      "serial_no_missing": "未錄入"
+    },
+    "toast": {
+      "active_changed": "靜音倉已{status}",
+      "active_status_failed": "更新啟用狀態失敗",
+      "assign_failed": "分配靜音倉失敗",
+      "assign_success": "靜音倉分配成功",
+      "create_failed": "建立靜音倉失敗",
+      "create_success": "靜音倉建立成功",
+      "load_failed": "載入靜音倉列表失敗",
+      "load_options_failed": "載入選項資料失敗",
+      "no_change_log": "該靜音倉暫無變更日誌",
+      "no_edit_permission": "您沒有編輯許可權"
+    },
+    "transfers": {
+      "confirm_initiate": "確認發起",
+      "incoming_message": "{company} 正在向您交接 {pod}",
+      "incoming_title": "待接收交接",
+      "initiate": "發起交接",
+      "initiate_failed": "發起交接失敗",
+      "initiate_success": "交接已發起，等待目標公司接收",
+      "notice_item_1": "發起後目前公司仍為所有者。",
+      "notice_item_2": "只有目標公司接收後才會變更所有權。",
+      "notice_item_3": "一個靜音倉只能有一個待處理交接。",
+      "notice_title": "交接流程",
+      "reason_label": "交接備註",
+      "reason_placeholder": "選填交接備註",
+      "receive": "確認接收",
+      "receive_confirm": "確認接收靜音倉 {pod}？",
+      "receive_success": "靜音倉接收成功",
+      "reject": "拒絕",
+      "reject_confirm": "確認拒絕靜音倉 {pod}？",
+      "reject_success": "已拒絕靜音倉交接",
+      "title": "發起靜音倉交接"
+    },
+    "validate": {
+      "company_required": "請選擇製造商",
+      "company_role_required": "請選擇公司角色",
+      "host_required": "請選擇主機",
+      "model_required": "請選擇靜音倉型號",
+      "target_company_required": "請選擇目標公司"
+    }
+  },
+  "meeting": {
+    "menu": "會議預約",
+    "settings_menu": "預約設定",
+    "list_title": "會議預約",
+    "calendar_title": "預約日曆",
+    "detail_title": "預約詳情",
+    "settings_title": "預約設定",
+    "page_description": "統一查看與管理靜音艙的本地及第三方預約。",
+    "settings_description": "設定可預約靜音艙、平台連線與會議室對映。",
+    "backend_unavailable": "目前後端尚未載入會議預約 API，請更新或重啟後端服務。",
+    "settings_load_failed": "預約設定載入失敗。",
+    "action_failed": "操作失敗，請重試。",
+    "list_view": "清單管理",
+    "calendar_view": "日程檢視",
+    "view_mode": "預約檢視",
+    "calendar_scale": "日曆範圍",
+    "calendar_day": "日",
+    "calendar_week": "週",
+    "calendar_today": "今天",
+    "calendar_previous": "上一時段",
+    "calendar_next": "下一時段",
+    "calendar_day_empty": "當天暫無預約",
+    "calendar_limit_hint": "目前顯示前 {count} 筆，共 {total} 筆預約，請依靜音艙或狀態縮小範圍。",
+    "new_booking": "新增預約",
+    "from_date": "開始日期",
+    "to_date": "結束日期",
+    "room": "靜音艙",
+    "status": "狀態",
+    "search": "查詢",
+    "all_rooms": "全部靜音艙",
+    "all_statuses": "全部狀態",
+    "select_room": "請選擇靜音艙",
+    "empty": "暫無預約",
+    "subject": "會議主題",
+    "time": "時間",
+    "source": "來源",
+    "actions": "操作",
+    "details": "詳情",
+    "start_at": "開始時間",
+    "end_at": "結束時間",
+    "participant_count": "參會人數",
+    "close": "關閉",
+    "save": "儲存",
+    "saving": "儲存中…",
+    "invalid_time": "結束時間必須晚於開始時間，且不得超過 24 小時。",
+    "created": "預約已建立",
+    "updated": "預約已更新",
+    "cancelled": "預約已取消",
+    "save_failed": "儲存失敗",
+    "load_failed": "載入預約失敗",
+    "loading": "載入中…",
+    "back": "返回",
+    "edit": "編輯",
+    "edit_booking": "編輯預約",
+    "cancel_booking": "取消預約",
+    "cancel_confirm": "確定取消此預約？",
+    "confirm": "確定",
+    "change_history": "變更記錄",
+    "no_history": "暫無變更記錄",
+    "dispatch_title": "裝置下發",
+    "dispatch_summary": "下發狀態",
+    "dispatch_not_queued": "未排隊",
+    "dispatch_empty": "暫無下發記錄",
+    "dispatch_revision": "預約版本",
+    "dispatch_attempts": "嘗試次數",
+    "dispatch_updated_at": "更新時間",
+    "dispatch_error": "最近錯誤",
+    "dispatch_retry": "重新下發",
+    "dispatch_retry_confirm": "確認重新下發目前預約版本嗎？裝置離線時工作將保持等待並自動重試。",
+    "dispatch_retry_success": "已重新加入下發佇列",
+    "dispatch_load_failed": "載入下發狀態失敗",
+    "dispatch_status_pending": "待下發",
+    "dispatch_status_sent": "等待裝置確認",
+    "dispatch_status_acked": "裝置已確認",
+    "dispatch_status_superseded": "已被新版本取代",
+    "dispatch_status_failed": "下發失敗",
+    "change": "變更",
+    "reason": "原因",
+    "status_scheduled": "已預約",
+    "status_upcoming": "未開始",
+    "status_active": "進行中",
+    "status_completed": "已結束",
+    "status_cancelled": "已取消",
+    "source_local": "本系統",
+    "source_integration": "第三方平台",
+    "source_none": "未啟用",
+    "event_created": "已建立",
+    "event_updated": "已更新",
+    "event_cancelled": "已取消",
+    "local_rooms": "靜音艙預約",
+    "providers": "第三方平台",
+    "room_mappings": "會議室對映",
+    "capability_notice": "設備可控制不等於可預約；僅明確開通的靜音艙可接受預約。",
+    "no_rooms": "暫無靜音艙",
+    "capability": "預約能力",
+    "active_source": "目前主來源",
+    "capability_enabled": "可預約",
+    "capability_disabled": "已停用",
+    "capability_unconfigured": "未開通",
+    "enable_local": "開通本地預約",
+    "disable_local": "關閉本地預約",
+    "room_enabled": "本地預約已開通",
+    "source_updated": "預約主來源已更新",
+    "new_connection": "新增平台連線",
+    "no_connections": "暫無平台連線",
+    "connection_name": "連線名稱",
+    "provider": "平台",
+    "company": "所屬公司",
+    "connection_status": "連線狀態",
+    "test_connection": "測試連線",
+    "sync_now": "立即同步",
+    "sync_completed": "同步完成：新增 {created}，更新 {updated}，取消 {cancelled}",
+    "available_providers": "Provider 能力",
+    "available": "可用",
+    "not_available": "尚未實作",
+    "select_company": "請選擇公司",
+    "select_provider": "請選擇平台",
+    "connection_created": "平台連線已建立",
+    "connection_ok": "連線測試通過",
+    "connection_connected": "已連線",
+    "connection_untested": "未測試",
+    "connection_degraded": "異常",
+    "connection_disabled": "已停用",
+    "mapping_notice": "必須使用第三方穩定會議室 ID 與靜音艙綁定，名稱僅供人工確認。",
+    "new_mapping": "新增對映",
+    "no_mappings": "暫無會議室對映",
+    "connection": "平台連線",
+    "external_room": "第三方會議室",
+    "external_room_id": "第三方會議室 ID",
+    "external_room_name": "第三方會議室名稱",
+    "verification": "驗證狀態",
+    "active": "已啟用",
+    "verify": "驗證",
+    "use_as_source": "設為主來源",
+    "yes": "是",
+    "no": "否",
+    "select_connection": "請選擇平台連線",
+    "company_mismatch": "平台連線與靜音艙必須屬於同一公司。",
+    "mapping_created": "會議室對映已建立",
+    "mapping_verified": "會議室對映已驗證",
+    "verify_unverified": "未驗證",
+    "verify_verified": "已驗證",
+    "verify_failed": "驗證失敗",
+    "empty_filtered_hint": "目前篩選條件下沒有預約記錄。",
+    "cancel_action": "取消",
+    "save_connection": "儲存連線",
+    "invalid_date_range": "開始日期不能晚於結束日期。",
+    "room_required": "請選擇可預約靜音艙。",
+    "start_in_past": "開始時間不能早於目前時間。",
+    "invalid_participant_count": "參會人數必須大於 0。",
+    "timezone_hint": "時間依靜音艙所在時區顯示與儲存。",
+    "duration_minutes": "{count} 分鐘",
+    "duration_hours": "{count} 小時",
+    "duration_hours_minutes": "{hours} 小時 {minutes} 分鐘",
+    "rooms_load_failed": "可預約靜音艙載入失敗，請重試。",
+    "configure_rooms": "設定可預約靜音艙",
+    "no_bookable_rooms": "尚未開通可預約靜音艙",
+    "no_bookable_rooms_hint": "請先在預約設定中開通靜音艙預約能力。",
+    "go_to_settings": "前往預約設定",
+    "no_rooms_hint": "請先建立靜音艙設備，再返回此處開通預約能力。",
+    "go_to_rooms": "前往靜音艙清單",
+    "source_switch_title": "切換預約來源",
+    "source_switch_confirm": "確定切換「{room}」的預約主來源嗎？切換後新的預約將由新來源管理。",
+    "settings_partial_load_failed": "部分預約設定載入失敗，已保留可用資料。",
+    "no_connections_hint": "新增企業微信等平台連線，並完成連線測試。",
+    "provider_capability_room_list": "會議室清單",
+    "provider_capability_room_verify": "會議室驗證",
+    "provider_capability_poll_changes": "預約同步",
+    "provider_capability_http_webhook": "HTTP 回呼",
+    "provider_capability_stream": "即時事件",
+    "provider_capability_attendees": "參會人",
+    "no_mappings_hint": "將第三方會議室與本系統靜音艙進行綁定。",
+    "mapping_prerequisites": "請先開通靜音艙預約，並建立一個測試通過的平台連線。",
+    "loading_external_rooms": "正在載入第三方會議室…",
+    "no_external_rooms_hint": "未取得第三方會議室，請先同步平台資料或檢查連線。",
+    "activate_mapping_confirm": "確定將「{room}」切換為第三方平台主來源嗎？",
+    "booking_policy": {
+      "title": "預約策略",
+      "default_scene": "預設場景",
+      "default_scene_help": "第三方預約或未選擇場景時自動使用。",
+      "cleaning_policy": "清潔策略",
+      "clean_after_session": "每次使用結束後清潔",
+      "cleaning_buffer_minutes": "清潔緩衝（分鐘）",
+      "scheduled_cleaning": "定時清潔",
+      "start_time": "開始時間",
+      "cleaning_duration_minutes": "時長（分鐘）",
+      "iso_weekdays": "適用星期（1=週一）",
+      "iso_weekdays_placeholder": "例如：1,2,3,4,5",
+      "add_cleaning_window": "新增清潔時段",
+      "remove_cleaning_window": "刪除清潔時段",
+      "lifecycle_actions": "生命週期動作與通知",
+      "scene_action": "場景動作",
+      "offset_minutes": "提前時間（分鐘）",
+      "grace_minutes": "寬限時間（分鐘）",
+      "notify": "傳送通知",
+      "audience": "接收對象",
+      "channel": "通知管道",
+      "template": "通知範本",
+      "none_option": "不執行場景",
+      "audience_occupant": "使用者",
+      "audience_organizer": "組織者",
+      "audience_guest": "訪客",
+      "audience_cleaner": "清潔人員",
+      "audience_staff": "工作人員",
+      "channel_dashboard": "管理看板",
+      "channel_pod_screen": "靜音艙螢幕",
+      "invalid_iso_weekdays": "適用星期必須為 1–7，且不可重複。"
+    }
+  },
+  "route": {
+    "dashboard": {
+      "title": "資料看板"
+    },
+    "dashboard_status": {
+      "title": "線上狀態總覽"
+    },
+    "dashboard_alerts": {
+      "title": "告警與待辦"
+    },
+    "dashboard_charts": {
+      "title": "圖表統計"
+    },
+    "org_companies": {
+      "title": "公司"
+    },
+    "company_detail": {
+      "title": "公司詳情"
+    },
+    "company_relationships": {
+      "title": "公司合作關係"
+    },
+    "company_dashboard_config": {
+      "title": "公司看板設定"
+    },
+    "company_dashboard_config_new": {
+      "title": "新增公司看板設定"
+    },
+    "company_dashboard_config_detail": {
+      "title": "公司看板設定詳情"
+    },
+    "company_dashboard_config_edit": {
+      "title": "編輯公司看板設定"
+    },
+    "template_review": {
+      "title": "審核與發佈"
+    },
+    "users": {
+      "title": "用戶管理"
+    },
+    "organization_access": {
+      "title": "公司角色與成員資格"
+    },
+    "user_detail": {
+      "title": "用戶詳情"
+    },
+    "user_profile": {
+      "title": "個人中心"
+    },
+  "notifications": {
+      "account": "帳號",
+      "acknowledge": "確認",
+      "alert": "警報",
+      "all_states": "全部狀態",
+      "status": "狀態",
+      "all_types": "全部類型",
+    "content": "通知內容",
+    "phase_labels": {
+      "service_assigned": "服務派單",
+      "service_updated": "服務更新",
+      "service_resolved": "服務已解決",
+      "service_rated": "服務已評價",
+      "pre_start": "會前提醒",
+      "start": "會議開始",
+      "end": "會議結束",
+      "overstay": "逾時佔用",
+      "vacated": "已騰空",
+      "cleaning": "清潔中",
+      "cleaned": "清潔完成"
+    },
+    "status_labels": {
+      "pending": "待傳送",
+      "sent": "已傳送",
+      "failed": "失敗",
+      "acked": "已確認"
+    },
+      "empty": "暫無通知",
+      "read": "已讀",
+      "related_object": "關聯物件",
+      "search": "搜尋通知內容",
+      "system": "系統",
+      "task": "任務",
+      "time": "通知時間",
+      "title": "通知",
+      "type": "類型",
+      "unread_first": "未讀優先"
+    },
+    "hn_models": {
+      "title": "主機/節點型號表"
+    },
+    "hosts": {
+      "title": "主機列表"
+    },
+    "host_detail": {
+      "title": "主機詳情"
+    },
+    "nodes": {
+      "title": "節點列表"
+    },
+    "node_detail": {
+      "title": "節點詳情"
+    },
+    "api_keys": {
+      "title": "API Keys"
+    },
+    "debug_devices": {
+      "title": "設備管理"
+    },
+    "debug_ota_console": {
+      "title": "OTA 控制台"
+    },
+    "debug_firmwares": {
+      "title": "韌體管理"
+    },
+    "debug_device_language": {
+      "title": "裝置語言"
+    },
+    "debug_od": {
+      "title": "OD 診斷"
+    },
+    "debug_device_control": {
+      "title": "設備控制台"
+    },
+    "debug_mqtt_stream": {
+      "title": "MQTT 訊息流"
+    },
+    "debug_credentials": {
+      "title": "設備憑證"
+    },
+    "history_audit": {
+      "title": "用戶操作"
+    },
+    "history_serial": {
+      "title": "設備日誌"
+    },
+    "history_emcy": {
+      "title": "EMCY 告警"
+    },
+    "history_alerts": {
+      "title": "遙測警報"
+    },
+    "history_sensors": {
+      "title": "感測器資料"
+    },
+    "mqtt_server": {
+      "title": "MQTT 伺服器"
+    },
+    "mqtt_clients": {
+      "title": "MQTT 用戶端"
+    },
+    "mqtt_subscriptions": {
+      "title": "MQTT 訂閱"
+    },
+    "mqtt_topics": {
+      "title": "MQTT 主題"
+    },
+    "mqtt_banned": {
+      "title": "MQTT 黑名單"
+    },
+    "locations": {
+      "title": "位置管理"
+    },
+    "location_detail": {
+      "title": "位置詳情"
+    },
+    "files": {
+      "title": "檔案管理"
+    },
+    "files_upload": {
+      "title": "檔案上傳"
+    },
+    "monitor_health": {
+      "title": "系統健康"
+    },
+    "monitor_metrics": {
+      "title": "監控指標"
+    },
+    "monitor_mqtt": {
+      "title": "MQTT 監控"
+    },
+    "config_rules": {
+      "title": "配置規則",
+      "description": "遠端配置規則定義。"
+    },
+    "config_history": {
+      "title": "配置歷史",
+      "description": "配置變更稽核與還原。"
+    },
+    "ota_firmware": {
+      "title": "韌體庫",
+      "description": "韌體上傳、版本與發佈管理。"
+    },
+    "ota_tasks": {
+      "title": "升級任務",
+      "description": "遠端升級執行與結果追蹤。"
+    },
+    "files_relations": {
+      "title": "檔案關聯",
+      "description": "檔案與物件關聯管理。"
+    },
+    "files_stats": {
+      "title": "檔案統計",
+      "description": "檔案使用統計資訊。"
+    },
+    "audit_export": {
+      "title": "日誌匯出",
+      "description": "稽核日誌匯出功能。"
+    },
+    "audit_operation_logs": {
+      "title": "操作稽核日誌",
+      "description": "關鍵操作追蹤與匯出。"
+    },
+    "integration_api": {
+      "title": "API 文件",
+      "description": "REST API 介面文件。"
+    },
+    "integration_auth": {
+      "title": "登入驗證",
+      "description": "JWT 登入與權杖使用。"
+    },
+    "integration_mqtt": {
+      "title": "MQTT 主題",
+      "description": "MQTT 主題與訊息格式。"
+    },
+    "integration_websocket": {
+      "title": "WebSocket",
+      "description": "即時 WebSocket 推送。"
+    },
+    "docs_project_overview": {
+      "title": "專案總覽",
+      "description": "專案定位、核心功能與價值。"
+    },
+    "docs_architecture": {
+      "title": "系統架構",
+      "description": "分層架構、多租戶和即時通訊。"
+    },
+    "docs_data_model": {
+      "title": "資料模型總覽",
+      "description": "核心資料表關係與業務模型。"
+    },
+    "docs_development": {
+      "title": "開發指南",
+      "description": "本地開發與擴充說明。"
+    },
+    "docs_deployment": {
+      "title": "部署與維運",
+      "description": "部署流程與生產建議。"
+    },
+    "docs_troubleshooting": {
+      "title": "故障排查",
+      "description": "常見問題與排障指令。"
+    },
+    "section": {
+      "config_ota": "配置與 OTA",
+      "files_media": "檔案與媒體",
+      "audit_logs": "稽核與日誌",
+      "api_integration": "API 與整合",
+      "docs_center": "文件中心"
+    },
+    "controller_console": {
+      "title": "控制器控制台"
+    },
+    "mqtt_host_console": {
+      "title": "MQTT 主機控制台"
+    },
+    "manuals": {
+      "title": "技术文档"
+    },
+    "manuals_admin": {
+      "title": "手册库管理"
+    },
+    "icon_library": {
+      "title": "圖示庫"
+    },
+    "product_catalog": {
+      "title": "產品手冊"
+    },
+    "pod_models": {
+      "title": "靜音艙型號"
+    },
+    "pods": {
+      "title": "靜音艙"
+    },
+    "pod_detail": {
+      "title": "靜音艙"
+    }
+  },
+  "sidebar": {
+    "default_brand": "德恩基",
+    "menu": {
+      "resources": "資料庫",
+      "icon_library": "圖示庫",
+      "product_catalog": "產品手冊",
+      "api_keys": "API Keys",
+      "blacklist": "黑名單",
+      "charts": "資料看板",
+      "clients": "客戶端",
+      "companies": "公司",
+      "company_relationships": "公司合作關係",
+      "customers": "客戶管理",
+      "config_center": "設定中心",
+      "brand_login": "品牌與登入頁",
+      "custom_ui": "介面管理",
+      "credentials": "裝置憑證",
+      "device_admin": "裝置管理",
+      "dashboard_config": "資料看板設定",
+      "device_console": "控制台",
+      "device_logs": "裝置日誌",
+      "device_mgmt": "裝置管理",
+      "display_mgmt": "展示道具管理",
+      "emcy_alerts": "EMCY 告警",
+      "alert_events": "遙測警報",
+      "files": "檔案",
+      "files_logs": "檔案/日誌",
+      "firmwares": "韌體管理",
+      "history": "歷史資料",
+      "host_table": "主機",
+      "device_language": "裝置語言",
+      "list": "靜音艙",
+      "model_list": "靜音艙型號",
+      "model_table": "主機/節點型號",
+      "mqtt": "MQTT",
+      "mqtt_stream": "MQTT 訊息流",
+      "node_table": "節點",
+      "od_diagnose": "OD",
+      "ota_console": "OTA 控制檯",
+      "overview": "總覽",
+      "review_publish": "審核與發佈",
+      "pods_mgmt": "靜音艙管理",
+      "sensor_data": "感測器資料",
+      "subscriptions": "訂閱",
+      "system_debug": "系統除錯",
+      "template_review": "設定審核",
+      "template_versions": "設定版本",
+      "topics": "主題",
+      "user_audit": "使用者操作",
+      "users": "使用者",
+      "mqtt_host_console": "MQTT 主機控制台",
+      "manuals": "技术文档",
+      "manuals_admin": "手册库管理"    },
+    "toggle_collapse": "收起側邊欄"
+  },
+  "system_monitor": {
+    "actions": {
+      "check_now": "立即檢查",
+      "refresh": "重新整理",
+      "refresh_all": "重新整理所有"
+    },
+    "health": {
+      "card_title": "系統健康狀態",
+      "label": {
+        "api": "API服務",
+        "db": "資料庫",
+        "mqtt": "MQTT Broker",
+        "redis": "Redis快取"
+      },
+      "loading": "載入中...",
+      "ready_desc": "所有核心服務已就緒，系統執行正常",
+      "ready_title": "系統就緒",
+      "status_text": {
+        "disabled": "已依設定停用",
+        "healthy": "正常",
+        "warning": "告警"
+      },
+      "summary_title": "系統就緒狀態"
+    },
+    "metrics": {
+      "card_title": "系統指標",
+      "cpu": "CPU使用率",
+      "db_active_max": "活躍/最大: {active}/{max}",
+      "db_conn": "資料庫連線",
+      "disk": "磁碟使用率",
+      "loading": "載入中...",
+      "memory": "記憶體使用率",
+      "section_resource": "系統資源使用率",
+      "section_services": "服務狀態"
+    },
+    "metrics_interval": {
+      "15m": "15分鐘",
+      "1d": "1天",
+      "1h": "1小時",
+      "5m": "5分鐘"
+    },
+    "mqtt": {
+      "backend_consumer_connections": "本程序 MQTT 消費連線",
+      "buffer_capacity": "緩衝區容量",
+      "buffer_full": "緩衝區已滿",
+      "buffer_messages": "緩衝訊息數",
+      "buffer_title": "程序內緩衝區",
+      "buffer_topics": "緩衝主題數",
+      "debug_stream_subscribers": "除錯串流訂閱者",
+      "newest_buffered_at": "最新緩衝時間",
+      "oldest_buffered_at": "最早緩衝時間",
+      "scope_notice": "本頁只顯示目前後端程序的 MQTT 消費連線與記憶體緩衝區，不是 EMQX Broker 全域統計。全域客戶端、訂閱與主題請以 MQTT 伺服器總覽為準。",
+      "card_title": "MQTT Broker 狀態",
+      "clients_active": "活躍客戶端",
+      "clients_total": "客戶端總數",
+      "connect_rate": "連線速率",
+      "disconnect_rate": "斷開速率",
+      "loading": "載入中...",
+      "message_latency": "訊息延遲",
+      "message_loss_rate": "訊息丟失率",
+      "messages_today": "今日訊息",
+      "messages_total": "訊息總數",
+      "publish_rate": "釋出速率",
+      "rate_title": "實時速率",
+      "stats_title": "連線統計",
+      "subscribe_rate": "訂閱速率",
+      "subscriptions": "訂閱數",
+      "topics": "主題數",
+      "topics_title": "熱門主題流量"
+    },
+    "service_table": {
+      "disabled": "已停用",
+      "failed": "執行失敗",
+      "health": "健康度",
+      "running": "執行中",
+      "service": "服務名稱",
+      "status": "狀態",
+      "stopped": "停止",
+      "uptime": "執行時間",
+      "version": "版本"
+    },
+    "subtitle": "監控系統執行狀態與效能指標。",
+    "tabs": {
+      "health": "健康檢查",
+      "metrics": "監控指標",
+      "mqtt": "MQTT監控"
+    },
+    "title": "系統監控",
+    "toast": {
+      "health_failed": "健康檢查失敗",
+      "metrics_failed": "載入監控指標失敗",
+      "mqtt_failed": "載入MQTT統計失敗",
+      "refresh_all_success": "所有監控資料已重新整理"
+    },
+    "topic_table": {
+      "observed_messages": "緩衝區觀察訊息",
+      "scope": "統計範圍",
+      "last_active": "最後活動",
+      "publish_count": "釋出數量",
+      "qos": "QoS",
+      "retain": "保留訊息",
+      "subscribe_count": "訂閱數量",
+      "topic": "主題"
+    }
+  },
+  "template_detail": {
+    "actions": {
+      "back": "返回",
+      "close": "關閉",
+      "delete": "刪除",
+      "disable": "禁用",
+      "enable": "發佈",
+      "edit": "編輯",
+      "new_version": "建立新版本",
+      "rollback": "回滾",
+      "rollback_to_version": "回滾到此版本",
+      "restore_dashboard_default": "恢復預設看板",
+      "use_default": "使用預設版本",
+      "submit_review": "提交稽核",
+      "view": "檢視"
+    },
+    "confirm": {
+      "cancel": "取消",
+      "confirm": "確認",
+      "confirm_delete": "確認刪除",
+      "delete_message": "確認刪除該模板嗎？此操作不可恢復",
+      "delete_title": "警告",
+      "disable_message": "確認禁用該模板嗎？",
+      "enable_message": "確認發佈此設定嗎？發佈後將立即生效。",
+      "ok": "確定",
+      "rollback_message": "確認回滾到版本 v{version} 嗎？",
+      "restore_dashboard_default_message": "確認恢復系統預設資料看板嗎？目前自訂設定將停止生效，歷史版本仍會保留。",
+      "restore_dashboard_default_title": "恢復預設看板",
+      "use_default_message": "確認使用系統預設登入頁嗎？目前自訂登入頁將停止生效，歷史版本仍會保留。",
+      "use_default_title": "使用預設登入頁",
+      "submit_message": "確認提交稽核嗎？提交後將無法修改",
+      "submit_title": "提示"
+    },
+    "lifecycle": {
+      "aria_label": "設定發佈流程",
+      "draft": "編輯草稿",
+      "message_draft": "目前為草稿，可繼續編輯和預覽；確認無誤後提交審核。",
+      "message_pending": "設定正在等待平台管理員審核，審核完成前不可修改。",
+      "message_published": "此版本目前已發佈並對使用者生效。新修改請建立新版本。",
+      "message_ready_publish": "設定已通過審核，等待平台管理員發佈。",
+      "message_rejected": "設定已被駁回，請依審核意見修改後重新提交。",
+      "preview": "預覽確認",
+      "publish": "發佈生效",
+      "review": "平台審核",
+      "status_published": "已發佈",
+      "status_ready_publish": "待發佈",
+      "submit": "提交審核",
+      "version_summary": "設定版本 v{version}"
+    },
+    "empty": {
+      "no_css": "無 CSS 內容",
+      "no_html": "無 HTML 內容",
+      "no_modules": "暫無啟用的模組配置",
+      "no_versions": "暫無版本歷史"
+    },
+    "fields": {
+      "created_at": "建立時間",
+      "creator": "建立人",
+      "review_comment": "稽核意見",
+      "reviewed_at": "稽核時間",
+      "status": "狀態",
+      "submitted_at": "提交時間",
+      "template_type": "模板型別",
+      "version": "版本"
+    },
+    "module": {
+      "disabled": "未啟用",
+      "enabled": "已啟用"
+    },
+    "module_catalog": {
+      "alert_stats": {
+        "name": "系統告警統計",
+        "description": "顯示告警級別分佈和數量統計"
+      },
+      "alert_trend": {
+        "name": "告警趨勢",
+        "description": "按日期顯示告警數量變化，協助識別異常波動"
+      },
+      "detailed_stats": {
+        "name": "詳細統計資料",
+        "description": "顯示完整的統計資料表格，支援匯出"
+      },
+      "device_online_rate": {
+        "name": "裝置在線率趨勢",
+        "description": "顯示主機和節點的在線率趨勢圖表"
+      },
+      "device_status_distribution": {
+        "name": "裝置狀態分佈",
+        "description": "顯示在線、離線、維護中和已停用裝置的數量分佈"
+      },
+      "file_usage_stats": {
+        "name": "檔案使用統計",
+        "description": "顯示檔案類型分佈和儲存空間使用統計"
+      },
+      "pod_usage_distribution": {
+        "name": "靜音艙使用時長分佈",
+        "description": "顯示靜音艙使用時段和使用時長分佈統計"
+      },
+      "pod_usage_trend": {
+        "name": "靜音艙使用趨勢",
+        "description": "按日期顯示靜音艙使用次數和平均使用時長趨勢"
+      },
+      "stats_preview": {
+        "name": "統計預覽",
+        "description": "顯示裝置總數、使用者數和靜音艙使用率等關鍵指標"
+      }
+    },
+    "module_config": {
+      "auto_refresh": "自動重新整理",
+      "page_size": "每頁顯示數量",
+      "refresh_interval": "重新整理間隔",
+      "show_export": "顯示匯出按鈕"
+    },
+    "module_value": {
+      "no": "否",
+      "seconds": "{value} 秒",
+      "yes": "是"
+    },
+    "section": {
+      "basic_info": "基本資訊",
+      "security_check": "安全檢測",
+      "template_content": "模板內容",
+      "version_detail": "版本詳情",
+      "version_history": "版本歷史"
+    },
+    "security": {
+      "dangerous_css": "⚠️ 危險 CSS",
+      "dangerous_js": "⚠️ 危險 JS",
+      "failed": "發現安全風險",
+      "passed": "安全檢測透過",
+      "xss_risk": "⚠️ XSS 風險"
+    },
+    "status_label": {
+      "N": "草稿",
+      "P": "待稽核",
+      "R": "已駁回",
+      "Y": "審核通過"
+    },
+    "tabs": {
+      "css": "CSS",
+      "html": "HTML",
+      "js": "JS"
+    },
+    "template_type": {
+      "custom_page": "自定義頁面",
+      "dashboard_header": "頁頭",
+      "dashboard_sidebar": "側邊欄",
+      "email_signature": "郵件簽名",
+      "footer": "頁尾",
+      "login_page": "登入頁",
+      "notification_bar": "通知欄"
+    },
+    "toast": {
+      "active_no_delete": "已啟用的模板無法刪除，請先禁用",
+      "delete_failed": "刪除失敗",
+      "delete_success": "刪除成功",
+      "load_failed": "獲取模板詳情失敗",
+      "load_versions_failed": "獲取版本歷史失敗",
+      "operation_failed": "操作失敗",
+      "disable_success": "設定已停止生效",
+      "enable_success": "設定已發佈並生效",
+      "rollback_failed": "回滾失敗",
+      "rollback_success": "回滾成功",
+      "restore_dashboard_default_success": "已恢復系統預設資料看板",
+      "use_default_success": "已切換到系統預設登入頁",
+      "submit_failed": "提交稽核失敗",
+      "submit_success": "已提交稽核，等待平臺管理員稽核"
+    },
+    "version_dialog": {
+      "loading": "載入中...",
+      "title": "版本詳情 - v{version}"
+    },
+    "version_table": {
+      "actions": "操作",
+      "created_at": "建立時間",
+      "creator": "建立人",
+      "status": "狀態",
+      "version": "版本"
+    }
+  },
+  "template_editor": {
+    "actions": {
+      "back": "返回",
+      "save": "儲存草稿",
+      "saving": "儲存中..."
+    },
+    "confirm_default": {
+      "cancel": "取消",
+      "ok": "確定",
+      "title": "提示"
+    },
+    "form": {
+      "array_placeholder": "用逗號分隔多個值",
+      "collapse_module": "收合模組設定",
+      "dashboard_help": "選擇要啟用的模組，並配置每個模組的引數",
+      "drag_hint": "拖曳調整模組順序",
+      "expand_module": "展開模組設定",
+      "is_enabled_help_no": "只有稽核透過（已啟用/已禁用）的模板才能設定啟用狀態",
+      "is_enabled_help_yes": "切換後將立即生效",
+      "label_css": "CSS 內容（可選）",
+      "label_dashboard_modules": "資料看板模組設定",
+      "label_html": "HTML 內容",
+      "label_is_enabled": "啟用狀態",
+      "label_js": "JavaScript 內容（可選，需稽核）",
+      "label_type": "設定類型",
+      "loading_modules": "載入模組中...",
+      "module_enabled": "啟用",
+      "module_count": "已啟用 {enabled}/{total} 個模組",
+      "layout_height": "模組高度",
+      "layout_height_help": "可設定 1–12 行，數值越大模組越高",
+      "layout_preview": "版面預覽",
+      "layout_width": "模組寬度",
+      "layout_width_help": "採用 12 欄網格，12/12 表示佔滿整行",
+      "move_down": "下移模組",
+      "move_up": "上移模組",
+      "no_js_warning": "{type} 模板不允許包含 JavaScript",
+      "no_modules": "暫無可用的儀表盤模組。",
+      "placeholder_css": "請輸入 CSS 樣式內容",
+      "placeholder_html": "請輸入 HTML 內容",
+      "placeholder_js": "請輸入 JavaScript 指令碼內容（某些模板型別禁止 JS）",
+      "page_subtitle_dashboard": "設定資料看板顯示的模組、排列順序、版面與重新整理策略。",
+      "page_subtitle_default": "設定目前介面版本的顯示內容與視覺樣式。",
+      "refresh_modules": "同步模組清單",
+      "switch_is_enabled": "啟用此模板",
+      "type_help": "儲存後不可修改設定類型"
+    },
+    "preview": {
+      "no_css": "無 CSS 內容",
+      "tab_css": "CSS 原始碼",
+      "tab_html": "HTML 原始碼",
+      "tab_preview": "效果預覽",
+      "title": "實時預覽"
+    },
+    "preview_default": {
+      "account": "帳號",
+      "account_placeholder": "郵箱/手機號",
+      "brand": "Office pods",
+      "contact_admin": "聯絡管理員",
+      "footer_copyright": "© 2026 公司平臺 版權所有",
+      "forgot_password": "忘記密碼？",
+      "login_button": "登入",
+      "password": "密碼",
+      "password_placeholder": "請輸入密碼",
+      "subtitle": "歡迎回來，請登入繼續使用控制檯"
+    },
+    "visual": {
+      "background_url": "登入頁背景圖片",
+      "background_color": "登入頁背景色",
+      "background_upload_help": "支援 PNG、JPG、WebP，建議 1920×1080，最大 5 MB。",
+      "image_browse": "選擇圖片",
+      "image_placeholder": "請選擇要上傳的圖片",
+      "image_uploading": "圖片上傳中...",
+      "inherit_brand_help": "目前繼承基礎品牌設定；基礎品牌更新後，此版本會自動套用最新設定。",
+      "copyright": "版權資訊",
+      "description": "說明文字",
+      "footer_settings": "頁尾配置",
+      "kicker": "英文眉題",
+      "layout": "頁面佈局",
+      "layout_brand_statement": "品牌宣言分欄",
+      "layout_centered": "置中卡片",
+      "layout_split": "左右分欄",
+      "hero_description": "左側說明文字",
+      "hero_subtitle": "左側英文副標題",
+      "hero_title": "左側主標題",
+      "legacy_notice": "這是舊版原始碼範本。儲存後會轉換為安全的宣告式配置，原登入流程不會改變。",
+      "live_preview": "即時預覽",
+      "login_settings": "登入頁配置",
+      "logo_url": "登入頁專用 Logo（可選）",
+      "logo_upload_help": "支援 PNG、JPG、WebP，建議使用透明背景，最大 2 MB。",
+      "preview_hint": "預覽不會提交登入資訊",
+      "primary_color": "登入頁專用主色（可選）",
+      "show_forgot": "顯示忘記密碼",
+      "show_remember": "顯示記住登入狀態",
+      "use_brand_logo": "使用基礎品牌 Logo",
+      "use_brand_primary_color": "使用基礎品牌主色",
+      "title": "登入標題",
+      "website_label": "網站連結文字",
+      "website_url": "網站網址"
+    },
+    "title_create": "新增介面設定",
+    "title_edit": "編輯介面設定",
+    "toast": {
+      "default_retry": "請稍後重試",
+      "edit_only_draft": "只能編輯草稿或已駁回的模板",
+      "fetch_failed": "獲取模板詳情失敗",
+      "image_invalid_type": "僅支援 PNG、JPG、WebP 圖片",
+      "image_too_large": "圖片不能超過 {size} MB",
+      "image_upload_failed": "圖片上傳失敗，請重試",
+      "image_upload_success": "圖片上傳成功",
+      "module_load_failed": "獲取儀表盤模組列表失敗，請重試",
+      "no_js_error": "{type} 模板不允許包含 JavaScript",
+      "only_audited": "只有稽核透過的模板才能設定啟用狀態",
+      "operation_failed_prefix": "操作失敗：",
+      "save_at_least_one": "請至少啟用一個儀表盤模組",
+      "save_confirm_cancel": "取消",
+      "save_confirm_msg": "確認儲存嗎？",
+      "save_confirm_ok": "確認",
+      "save_confirm_title": "提示",
+      "save_failed": "儲存失敗",
+      "save_first": "新增模板請先儲存",
+      "save_success": "儲存成功",
+      "tpl_disabled": "模板已禁用",
+      "tpl_enabled": "模板已啟用"
+    },
+    "type_options": {
+      "custom_page": "自定義頁面",
+      "dashboard_header": "頁頭",
+      "dashboard_modules": "資料看板",
+      "dashboard_sidebar": "側邊欄",
+      "email_signature": "郵件簽名",
+      "footer": "頁尾",
+      "login_page": "登入頁",
+      "notification_bar": "通知欄"
+    }
+  },
+  "template_review": {
+    "actions": {
+      "approve": "透過",
+      "publish": "發佈",
+      "reject": "駁回",
+      "search": "搜尋",
+      "view": "檢視"
+    },
+    "confirm": {
+      "publish_message": "確認發佈此設定嗎？發佈後將立即取代同類型目前生效的版本。",
+      "publish_title": "發佈設定"
+    },
+    "filter": {
+      "company_placeholder": "公司名稱"
+    },
+    "review_dialog": {
+      "approve_confirm": "確認稽核透過該模板嗎？",
+      "cancel": "取消",
+      "comment_label": "駁回原因",
+      "comment_placeholder": "請輸入駁回原因，方便公司管理員修改",
+      "ok": "確認",
+      "title_approve": "稽核透過",
+      "title_reject": "稽核駁回"
+    },
+    "stats": {
+      "active": "已啟用",
+      "pending": "待稽核",
+      "published": "已發佈",
+      "ready_to_publish": "待發佈",
+      "rejected": "已駁回",
+      "total": "模板總數"
+    },
+    "status_filter": {
+      "approved": "待發佈",
+      "pending": "待稽核",
+      "published": "已發佈",
+      "rejected": "已駁回"
+    },
+    "status_label": {
+      "N": "草稿",
+      "P": "待稽核",
+      "R": "已駁回",
+      "Y": "審核通過",
+      "published": "已發佈",
+      "ready_to_publish": "待發佈"
+    },
+    "table": {
+      "actions": "操作",
+      "company": "公司",
+      "empty": "暫無待稽核模板",
+      "status": "狀態",
+      "submitted_info": "提交資訊",
+      "type": "型別",
+      "version": "版本"
+    },
+    "toast": {
+      "approved": "稽核透過",
+      "comment_required": "駁回時必須填寫原因",
+      "load_failed": "獲取待稽核列表失敗",
+      "rejected": "已駁回",
+      "review_failed": "稽核操作失敗",
+      "publish_failed": "發佈失敗",
+      "published": "設定已發佈"
+    },
+    "workspace": {
+      "description": "集中處理各公司的待審核設定、待發佈版本和發佈記錄。",
+      "flow_notice": "先審核內容與安全性；通過後進入「待發佈」，由平台管理員確認發佈。發佈新版本會自動停用同類型舊版本。",
+      "title": "審核與發佈"
+    },
+    "total_count": "共 {total} 條記錄",
+    "type_label": {
+      "custom_page": "自定義頁面",
+      "dashboard_header": "頁頭",
+      "dashboard_sidebar": "側邊欄",
+      "email_signature": "郵件簽名",
+      "footer": "頁尾",
+      "login_page": "登入頁",
+      "notification_bar": "通知欄"
+    },
+    "type_options": {
+      "all": "全部型別",
+      "custom_page": "自定義頁面",
+      "dashboard_header": "頁頭",
+      "dashboard_sidebar": "側邊欄",
+      "email_signature": "郵件簽名",
+      "footer": "頁尾",
+      "login_page": "登入頁",
+      "notification_bar": "通知欄"
+    },
+    "view_dialog": {
+      "close": "關閉",
+      "field_company": "公司",
+      "field_submitted_at": "提交時間",
+      "field_template_type": "模板型別",
+      "field_version": "版本",
+      "section_basic": "基本資訊",
+      "section_css": "CSS 內容",
+      "section_html": "HTML 內容",
+      "section_js": "JS 內容",
+      "title": "模板詳情"
+    }
+  },
+  "templates": {
+    "actions": {
+      "configure_dashboard": "設定資料看板",
+      "configure_footer": "配置頁尾",
+      "configure_login": "配置登入頁",
+      "delete": "刪除",
+      "edit": "編輯",
+      "remove": "刪除",
+      "save_config": "儲存配置",
+      "save_settings": "儲存設定",
+      "submit_review": "提交稽核",
+      "view": "檢視"
+    },
+    "branding": {
+      "company_slug": "公司標識 (companySlug)",
+      "company_slug_placeholder": "如：companyA",
+      "company_slug_set": "已設定",
+      "company_slug_status_label": "狀態：",
+      "company_slug_tip": "用於訪問自定義登入頁：",
+      "company_slug_unset": "未設定",
+      "custom_domain": "自定義域名",
+      "custom_domain_tip": "請按 DNS 提示配置 CNAME/TXT 記錄。",
+      "favicon_label": "Favicon",
+      "favicon_placeholder": "請輸入 Favicon 連結",
+      "font_family": "字型系列",
+      "font_options": {
+        "helvetica": "Helvetica/Arial",
+        "system": "系統預設（推薦）",
+        "noto": "思源黑體 / Noto Sans SC",
+        "pingfang": "蘋方 / 微軟雅黑"
+      },
+      "logo_browse": "上傳",
+      "logo_label": "公司 Logo",
+      "logo_placeholder": "選擇檔案",
+      "logo_preview_alt": "Logo 預覽",
+      "logo_preview_text": "預覽上傳的公司 Logo",
+      "logo_selected": "已選擇 Logo",
+      "logo_tip": "支援 PNG/JPG，建議 200x200px，最大 2MB",
+      "primary_color": "主色調",
+      "section_basic": "基本資訊",
+      "section_color": "顏色配置",
+      "section_domain": "域名管理",
+      "subdomain": "子域名"
+    },
+    "dialog": {
+      "confirm_delete": "確認刪除",
+      "delete_msg": "確認刪除該模板嗎？此操作不可恢復",
+      "submit_review_msg": "確認提交稽核嗎？提交後將無法修改",
+      "tip_title": "提示",
+      "warn_title": "警告"
+    },
+    "filter": {
+      "all_status": "全部狀態",
+      "all_types": "全部型別",
+      "keyword": "關鍵詞"
+    },
+    "pagination": {
+      "total": "共 {n} 條記錄"
+    },
+    "status_options": {
+      "active": "審核通過",
+      "draft": "草稿",
+      "pending": "待稽核",
+      "rejected": "已駁回"
+    },
+    "section_description": {
+      "branding": "管理公司標誌、品牌色、存取網域以及登入頁和頁尾設定。",
+      "dashboard": "維護本公司資料看板版面，儲存草稿後提交平台審核。",
+      "versions": "查看各類介面設定的版本、審核狀態和生效狀態。"
+    },
+    "table": {
+      "actions": "操作",
+      "index": "#",
+      "is_enabled": "啟用",
+      "is_no": "否",
+      "is_yes": "是",
+      "status": "狀態",
+      "type": "型別",
+      "updated_at": "更新時間",
+      "version": "版本"
+    },
+    "workspace": {
+      "branding_description": "管理 Logo、品牌色、字型和存取網域，儲存後立即生效。",
+      "branding_title": "基礎品牌",
+      "continue_editing": "繼續編輯",
+      "create_draft": "建立草稿",
+      "choose_help": "設定已依生效方式分組；查看目前狀態後，直接執行下一步。",
+      "choose_title": "選擇要設定的內容",
+      "current_configs": "目前設定",
+      "current_configs_help": "每類設定顯示最新版本；已發佈設定需透過新版本繼續修改。",
+      "dashboard_description": "控制資料儀表板模組、順序、尺寸和重新整理策略。",
+      "dashboard_title": "資料儀表板",
+      "description": "集中管理品牌、登入頁、頁尾和資料儀表板，並清楚查看每項設定的生效方式與目前狀態。",
+      "footer_description": "設定全站頁尾的版權資訊和網站連結。",
+      "footer_title": "頁尾",
+      "login_description": "設定租戶登入頁版面、文案、背景和品牌展示。",
+      "login_title": "登入頁",
+      "immediate_group_help": "適用於基礎品牌與存取網域，無需審核。",
+      "immediate_group_title": "儲存後立即生效",
+      "manage_branding": "管理品牌",
+      "new_version": "建立新版本",
+      "review_publish": "審核與發佈",
+      "review_group_help": "適用於登入頁、頁尾和資料看板，依下列流程發佈。",
+      "review_group_title": "審核發佈後生效",
+      "status_immediate": "立即生效",
+      "status_immediate_help": "修改品牌或網域並儲存後，使用者會立即看到更新。",
+      "status_draft_help": "草稿可繼續修改，完成後預覽並提交審核。",
+      "status_pending_help": "已提交，正在等待平台管理員審核。",
+      "status_published": "已發佈",
+      "status_published_help": "此版本目前正在使用；如需修改請建立新版本。",
+      "status_ready_publish": "待發佈",
+      "status_ready_publish_help": "審核已通過，等待平台管理員發佈。",
+      "status_rejected_help": "審核未通過，請繼續編輯後重新提交。",
+      "status_unconfigured": "未設定",
+      "status_unconfigured_help": "尚未建立版本，請先新增草稿。",
+      "step_draft": "編輯草稿",
+      "step_draft_help": "儲存後可繼續修改",
+      "step_preview": "預覽確認",
+      "step_preview_help": "核對實際效果",
+      "step_publish": "發佈生效",
+      "step_publish_help": "取代目前版本",
+      "step_review": "平台審核",
+      "step_review_help": "通過或駁回",
+      "step_submit": "提交審核",
+      "step_submit_help": "提交後鎖定",
+      "tab_branding": "基礎品牌",
+      "tab_overview": "設定概覽",
+      "tab_versions": "版本記錄",
+      "tabs_label": "介面設定導覽",
+      "title": "介面設定中心",
+      "updated_at": "最近更新",
+      "version": "最新版本",
+      "view_details": "查看詳情",
+      "view_review": "查看進度",
+      "workflow_notice": "登入頁、頁尾和資料儀表板採版本化流程；基礎品牌與網域目前儲存後立即生效。"
+    },
+    "workflow": {
+      "branding_immediate": "品牌和網域設定儲存後直接生效；登入頁、頁尾和看板設定需要提交審核，並由平台管理員發佈。"
+    },
+    "toast": {
+      "branding_save_failed": "儲存失敗：{msg}",
+      "branding_saved": "品牌配置已儲存",
+      "default_retry": "請稍後重試",
+      "delete_disabled": "已啟用的模板無法刪除，請先禁用",
+      "delete_failed": "刪除失敗",
+      "delete_success": "刪除成功",
+      "fetch_failed": "獲取模板列表失敗：{msg}",
+      "logo_invalid_type": "僅支援 PNG/JPG 格式",
+      "logo_too_large": "檔案大小不能超過 2MB",
+      "submit_review_failed": "提交稽核失敗",
+      "submit_review_success": "已提交稽核，等待平臺管理員稽核"
+    },
+    "type_options": {
+      "custom_page": "自定義頁面",
+      "dashboard_header": "頁頭",
+      "dashboard_modules": "資料看板",
+      "dashboard_sidebar": "側邊欄",
+      "email_signature": "郵件簽名",
+      "footer": "頁尾",
+      "login_page": "登入頁",
+      "notification_bar": "通知欄"
+    }
+  },
+  "theme_toggle": {
+    "aria_brightness": "亮度",
+    "mode_dark": "深色",
+    "mode_light": "淺色",
+    "tip_auto": "當前：跟隨系統（點選切換淺色）",
+    "tip_dark": "當前：深色（點選切換淺色）",
+    "tip_default": "切換主題",
+    "tip_light": "當前：淺色（點選切換深色）",
+    "title_adjust_brightness": "調節亮度",
+    "title_brightness": "亮度",
+    "title_theme": "主題"
+  },
+  "topbar": {
+    "company_types": {
+      "agent": "代理商",
+      "brand": "品牌",
+      "distributor": "分銷商",
+      "enduser": "終端用戶",
+      "manufacturer": "廠家",
+      "platform": "平臺公司"
+    },
+    "default_user_name": "使用者",
+    "groups": {
+      "data": "Data",
+      "device": "Device",
+      "management": "Management",
+      "platform": "Platform",
+      "system": "System"
+    },
+    "page_descriptions": {
+      "alerts": "裝置遙測警報事件與處理狀態",
+      "api_keys": "大型模型 Provider 金鑰與呼叫設定",
+      "audit": "平台帳號的操作稽核記錄",
+      "company_dashboard_config": "公司品牌與資料看板設定",
+      "company_relationships": "供方與買方的合作申請和權限",
+      "credentials": "MQTT 認證金鑰與憑證有效期",
+      "dashboard": "平台運行概覽",
+      "debug_devices": "主機與節點統一除錯面板",
+      "device_control": "線上裝置的指令下發與即時回執",
+      "emcy": "CANopen 緊急報文與處理狀態",
+      "files": "裝置回傳檔案與平台上傳資源",
+      "firmwares": "上傳 / 管理 ESP32 裝置韌體映像",
+      "hn_models": "主機與節點型號規格、協議與投產狀態",
+      "hosts": "已錄入主機的線上狀態、韌體與所屬公司",
+      "device_language": "選擇韌體內建的裝置介面語言",
+      "mqtt_banned": "被封鎖的用戶端、使用者名稱與 IP",
+      "mqtt_clients": "線上連線的工作階段與網路資訊",
+      "mqtt_server": "EMQX 叢集運行狀態代理檢視",
+      "mqtt_stream": "即時訂閱平台與裝置之間的報文",
+      "mqtt_subscriptions": "用戶端訂閱關係與 QoS",
+      "mqtt_topics": "主題分布與訊息速率",
+      "nodes": "節點裝置的綁定關係、韌體與心跳",
+      "notifications": "系統警報、任務與帳號相關的通知訊息",
+      "od": "CANopen 物件字典讀寫與即時診斷",
+      "org_companies": "公司層級與其下屬帳號",
+      "org_users": "平台帳號、角色與登入狀態",
+      "ota_console": "韌體升級任務的下發與進度追蹤",
+      "sensors": "溫濕度、噪音與佔用感測器歷史曲線",
+      "serial": "裝置序列埠與運行日誌檢索",
+      "user_profile": "帳號資料、安全設定與登入記錄",
+      "pod_models": "靜音艙型號規格與適配主機",
+      "pods": "聯網靜音艙的歸屬、位置與使用狀態"
+    },
+    "roles": {
+      "admin": "公司管理員",
+      "data_entry": "錄入員",
+      "maintainer": "運維員",
+      "operator": "營運管理",
+      "viewer": "檢視員"
+    },
+    "user_menu": {
+      "company": "所屬公司",
+      "household": "家庭",
+      "school": "學校",
+      "company_type": "公司型別",
+      "switch_organization": "切換組織",
+      "switch_organization_failed": "切換組織失敗",
+      "email": "郵箱",
+      "phone": "手機號",
+      "profile": "個人中心",
+      "role": "角色"
+    }
+  },
+  "user_detail": {
+    "company_options": {
+      "brand": "品牌方",
+      "dengtec": "德恩基",
+      "manufacturer": "靜音艙廠家"
+    },
+    "fields": {
+      "company": "所屬公司",
+      "created_at": "建立時間",
+      "created_by": "建立人",
+      "display_name": "顯示名稱",
+      "email": "郵箱",
+      "last_login": "最後登入",
+      "last_login_ip": "最後登入 IP",
+      "locale": "語言偏好",
+      "phone": "手機號",
+      "role": "角色",
+      "status": "狀態",
+      "timezone": "時區偏好",
+      "updated_at": "更新時間",
+      "updated_by": "更新人",
+      "username": "使用者名稱",
+      "uuid": "UUID"
+    },
+    "locale_label": {
+      "en_us": "English (US)",
+      "zh_cn": "中文 (簡體)"
+    },
+    "role_label": {
+      "admin": "公司管理員",
+      "data_entry": "資料錄入員",
+      "maintainer": "系統維護人員",
+      "operator": "營運管理",
+      "viewer": "資料檢視員"
+    },
+    "rules": {
+      "company_required": "請選擇所屬公司",
+      "display_name_required": "請輸入顯示名稱",
+      "email_invalid": "請輸入正確的郵箱地址",
+      "email_invalid_format": "請輸入正確的郵箱格式",
+      "email_required": "請輸入郵箱",
+      "phone_invalid": "請輸入正確的手機號碼格式",
+      "role_required": "請選擇角色",
+      "username_required": "請輸入使用者名稱"
+    },
+    "sections": {
+      "account": "帳戶資訊",
+      "login": "登入資訊",
+      "role": "角色與許可權",
+      "system": "系統資訊"
+    },
+    "status_label": {
+      "active": "啟用",
+      "inactive": "停用",
+      "is_active": "啟用中",
+      "is_inactive": "已停用"
+    },
+    "toast": {
+      "fetch_failed": "載入使用者詳情失敗",
+      "field_update_failed": "更新失敗",
+      "field_update_success": "更新成功",
+      "role_update_failed": "更新角色失敗",
+      "role_update_success": "角色更新成功",
+      "user_update_failed": "更新使用者資訊失敗",
+      "user_update_success": "使用者資訊更新成功"
+    }
+  },
+  "user_profile": {
+    "actions": {
+      "change_password": "修改密碼"
+    },
+    "avatar": {
+      "click_upload": "點選上傳頭像",
+      "delete_confirm_cancel": "取消",
+      "delete_confirm_msg": "確定要刪除頭像嗎？",
+      "delete_confirm_ok": "確定",
+      "delete_confirm_title": "刪除確認",
+      "right_click_delete": "右鍵刪除頭像"
+    },
+    "company_card": {
+      "company_id": "公司 ID",
+      "company_type": "公司型別",
+      "join_at": "加入時間",
+      "title": "公司資訊",
+      "user_role": "使用者角色"
+    },
+    "company_type_label": {
+      "AG": "代理商",
+      "BR": "品牌商",
+      "CP": "渠道合作夥伴",
+      "DS": "分銷商",
+      "EU": "終端用戶",
+      "MF": "製造商",
+      "PF": "平臺公司",
+      "display": "展示道具型別",
+      "pod": "靜音艙型別"
+    },
+    "default_user": "使用者",
+    "fields": {
+      "account_status": "帳號狀態",
+      "company": "所屬公司",
+      "created_at": "註冊時間",
+      "email": "郵箱",
+      "phone": "手機號",
+      "username": "使用者名稱"
+    },
+    "form_placeholder": {
+      "display_name": "請輸入顯示名稱",
+      "email": "請輸入郵箱",
+      "phone": "請輸入手機號"
+    },
+    "login_log": {
+      "fields": {
+        "device": "裝置",
+        "ip_address": "IP 地址",
+        "location": "登入地點",
+        "login_time": "登入時間",
+        "success": "狀態"
+      },
+      "loading": "載入中...",
+      "success_no": "失敗",
+      "success_yes": "成功",
+      "title": "登入日誌"
+    },
+    "password_modal": {
+      "cancel": "取消",
+      "label_confirm": "確認密碼",
+      "label_new": "新密碼",
+      "label_old": "當前密碼",
+      "ok": "確認修改",
+      "placeholder_confirm": "請再次輸入",
+      "placeholder_new": "請輸入新密碼",
+      "placeholder_old": "請輸入當前密碼",
+      "title": "修改密碼"
+    },
+    "role_label": {
+      "admin": "管理員",
+      "data_entry": "資料錄入員",
+      "maintainer": "系統維護人員",
+      "operator": "營運管理",
+      "unknown": "未知角色",
+      "viewer": "檢視員"
+    },
+    "status": {
+      "disabled": "禁用",
+      "normal": "正常",
+      "running": "正常運營"
+    },
+    "toast": {
+      "change_password_failed": "修改密碼失敗",
+      "change_password_success": "密碼修改成功，請重新登入",
+      "delete_avatar_failed": "刪除頭像失敗",
+      "delete_avatar_success": "頭像刪除成功",
+      "email_invalid": "請輸入正確的郵箱地址",
+      "image_too_large": "圖片大小不能超過 5MB",
+      "image_type_invalid": "請選擇圖片檔案（支援 JPG、PNG、GIF、WebP 格式）",
+      "modify_failed": "修改失敗",
+      "modify_success": "修改成功",
+      "new_password_too_short": "新密碼長度不能少於 6 位",
+      "old_password_required": "請輸入當前密碼",
+      "password_mismatch": "兩次輸入的密碼不一致",
+      "phone_invalid": "請輸入正確的手機號",
+      "upload_failed": "上傳頭像失敗",
+      "upload_success": "頭像上傳成功"
+    }
+  },
+  "invitation": {
+    "title": "接受組織邀請",
+    "help": "已有帳號可直接接受；新帳號請先設定自己的密碼。",
+    "password_label": "新帳號密碼（已有帳號請留空）",
+    "password_help": "密碼至少 8 位並同時包含字母和數字。管理員不會看到此密碼。",
+    "password_placeholder": "新帳號請輸入密碼",
+    "confirm_label": "確認密碼",
+    "accept_action": "接受邀請",
+    "submitting": "正在接受…",
+    "accepted": "邀請已接受，現在可以登入或切換到該組織。",
+    "sign_in": "前往登入",
+    "missing_token": "邀請連結缺少 token，請從邀請郵件重新開啟。",
+    "password_mismatch": "兩次輸入的密碼不一致。",
+    "failed": "邀請無效、已過期或已撤銷。",
+    "account_detection_help": "繼續後系統會識別帳號類型：已有帳號直接加入，新帳號再設定密碼。",
+    "continue_action": "繼續接受邀請",
+    "create_account_action": "設定密碼並接受",
+    "password_invalid": "密碼至少 8 位，並同時包含字母和數字。",
+    "accepted_new_account": "帳號已啟用並加入組織，請登入。",
+    "accepted_existing_account": "已使用現有帳號加入組織，可登入後切換組織。",
+    "existing_login_required": "此電子郵件已有帳號。請先登入對應帳號，再明確接受邀請。",
+    "sign_in_to_accept": "登入並接受"
+  },
+  "company_relationships": {
+    "title": "公司合作關係",
+    "subtitle": "管理目前公司的供方與買方合作關係。",
+    "scope_notice": "只顯示目前公司參與的關係。待處理申請必須由買方授權成員接受後才會生效。",
+    "empty": "暫無公司合作關係",
+    "load_failed": "載入公司合作關係失敗",
+    "request_action": "發起合作申請",
+    "request_title": "向買方發起合作申請",
+    "request_help": "請輸入買方的準確公司編碼。申請會保持待處理，直到買方授權成員接受。",
+    "buyer_code_label": "買方公司編碼",
+    "buyer_code_placeholder": "例如 CO-ABC123",
+    "buyer_code_required": "請輸入 4–32 個字元的公司編碼",
+    "requested": "合作申請已提交",
+    "request_failed": "提交合作申請失敗",
+    "direction": "本方角色",
+    "direction_supplier": "供方",
+    "direction_buyer": "買方",
+    "supplier": "供方公司",
+    "buyer": "買方公司",
+    "status_label": "狀態",
+    "status": { "pending": "待處理", "active": "已生效", "rejected": "已拒絕", "ended": "已結束" },
+    "response": "買方處理",
+    "responded_by": "處理人用戶 #{id}",
+    "allow_token_resale": "Token 轉售",
+    "capabilities": "裝置存取授權",
+    "capability_request_help": "五項權限預設關閉。固定授權由供方控制；買方可調授權在接受關係後可自行開啟或關閉。",
+    "capability_status_view": "檢視即時狀態",
+    "capability_history_view": "檢視歷史與匯出",
+    "capability_remote_control": "遠端控制",
+    "capability_remote_diagnostics": "遠端診斷",
+    "capability_firmware_upgrade": "韌體升級",
+    "capability_state": {
+      "fixed_allowed": "固定授權",
+      "buyer_allowed": "買方允許",
+      "buyer_denied": "買方拒絕"
+    },
+    "capability_updated": "合作權限已更新",
+    "capability_update_failed": "更新合作權限失敗",
+    "accept_action": "接受",
+    "accept_title": "接受合作關係",
+    "accept_confirm": "接受來自「{company}」的合作申請嗎？",
+    "accept_success": "合作關係已接受",
+    "accept_failed": "接受合作關係失敗",
+    "reject_action": "拒絕",
+    "reject_title": "拒絕合作關係",
+    "reject_confirm": "拒絕來自「{company}」的合作申請嗎？",
+    "reject_success": "合作關係已拒絕",
+    "reject_failed": "拒絕合作關係失敗",
+    "end_action": "結束",
+    "end_title": "結束合作關係",
+    "end_confirm": "結束與「{company}」的合作關係嗎？現有關係權限將停止生效。",
+    "end_success": "合作關係已結束",
+    "end_failed": "結束合作關係失敗"
+  },
+  "company_status_change": {
+    "activate_title": "啟用公司",
+    "deactivate_title": "停用公司",
+    "activate_action": "確認啟用",
+    "deactivate_action": "確認停用",
+    "activate_impact": "啟用「{company}」後，有效成員可恢復存取；個別停用的成員不會自動恢復。",
+    "deactivate_impact": "停用「{company}」將阻止所有成員存取該公司，但不影響平台帳號或其他公司資格。"
+  },
+  "organization_access": {
+    "title": "公司角色與成員資格",
+    "subtitle": "角色和成員操作只影響所選公司。",
+    "company_label": "目標公司",
+    "scope_notice": "所有操作限定在「{company}」，伺服器會再次驗證權限範圍。",
+    "load_failed": "載入公司權限資料失敗",
+    "roles": {
+      "title": "角色與權限",
+      "create_action": "建立角色",
+      "system_scope": "系統角色",
+      "company_scope": "公司角色",
+      "create_title": "建立公司角色",
+      "name_label": "角色名稱",
+      "permissions_label": "權限範圍",
+      "delegable_label": "允許將此角色授予其他成員",
+      "scope_label": "作用範圍",
+      "delegable_column": "可授予",
+      "no_permissions": "無權限",
+      "created": "公司角色已建立",
+      "create_failed": "建立公司角色失敗"
+    },
+    "members": {
+      "title": "成員資格",
+      "user_fallback": "使用者 #{id}",
+      "status_active": "有效",
+      "status_invited": "待接受",
+      "status_inactive": "已停用",
+      "member_label": "成員",
+      "status_label": "狀態",
+      "role_label": "角色",
+      "since_label": "加入／邀請時間",
+      "actions_label": "操作",
+      "change_role": "調整角色",
+      "deactivate": "停用成員資格",
+      "last_admin": "最後一名有效管理員不可停用或降級。",
+      "change_role_title": "調整公司成員角色",
+      "change_role_impact": "只修改「{member}」在「{company}」中的角色，不影響其他公司。",
+      "role_updated": "成員角色已更新",
+      "role_update_failed": "更新成員角色失敗",
+      "deactivate_title": "停用公司成員資格",
+      "deactivate_impact": "只停用「{member}」在「{company}」中的成員資格，不影響平台帳號或其他公司。",
+      "deactivated": "成員資格已停用",
+      "deactivate_failed": "停用成員資格失敗"
+    }
+  },
+  "users": {
+    "invitation": {
+      "action": "邀請使用者",
+      "create_title": "邀請使用者",
+      "send_action": "傳送邀請",
+      "help": "系統會傳送一次性邀請連結；管理員不需設定或傳遞密碼。",
+      "display_name_required": "請輸入顯示名稱",
+      "sent": "邀請郵件已傳送",
+      "delivery_confirmed": "邀請已傳送；接受前不會授予存取權",
+      "new_account": "新帳號",
+      "existing_account": "已有帳號",
+      "expires_at": "有效至 {value}",
+      "resend_action": "重新傳送",
+      "revoke_action": "撤銷邀請",
+      "resent": "已重新傳送邀請，舊連結已失效",
+      "resend_failed": "重新傳送邀請失敗",
+      "revoked": "邀請已撤銷",
+      "revoke_failed": "撤銷邀請失敗"
+    },
+    "actions": {
+      "change_role": "變更角色",
+      "manage_access": "角色與成員資格",
+      "create": "新增",
+      "detail": "詳情",
+      "disable": "停用",
+      "edit": "編輯",
+      "enable": "啟用",
+      "reset_password": "重設密碼"
+    },
+    "dialog": {
+      "assigned_scope_label": "額外資料權限範圍",
+      "change_role_for": "變更 {name} 的角色",
+      "change_role_title": "變更使用者角色",
+      "company_label": "所屬公司",
+      "company_select": "請選擇公司",
+      "confirm_disable_msg": "確認停用使用者「{name}」？",
+      "confirm_enable_msg": "確認啟用使用者「{name}」？",
+      "create_title": "新增使用者",
+      "display_name_label": "顯示名稱",
+      "display_name_placeholder": "請輸入顯示名稱",
+      "edit_title": "編輯使用者",
+      "email_label": "電子郵件",
+      "email_placeholder": "user@example.com",
+      "password_label": "密碼",
+      "password_placeholder": "至少 8 位",
+      "phone_label": "手機號",
+      "phone_placeholder": "請輸入手機號",
+      "role_label": "角色",
+      "role_select": "請選擇角色",
+      "username_label": "使用者名稱",
+      "username_placeholder": "請輸入使用者名稱"
+    },
+    "filter": {
+      "active_all": "所有狀態",
+      "company_all": "所有公司",
+      "active_only": "僅啟用",
+      "inactive_only": "僅停用",
+      "keyword_placeholder": "搜尋使用者名 / 電子郵件 / 顯示名稱",
+      "role_all": "所有角色"
+    },
+    "form": {
+      "assigned_scope": "資料權限範圍",
+      "company": "所屬公司",
+      "display_name": "顯示名稱",
+      "email": "電子郵件",
+      "password": "密碼",
+      "phone": "手機",
+      "role": "角色",
+      "username": "使用者名"
+    },
+    "form_placeholder": {
+      "display_name": "請輸入顯示名稱",
+      "email": "user@example.com",
+      "password": "至少 8 位",
+      "phone": "請輸入手機號",
+      "username": "請輸入使用者名"
+    },
+    "password_reset": {
+      "title": "管理員重設密碼",
+      "confirm_title": "確認重設密碼",
+      "confirm_message": "向「{name}」傳送一次性密碼重設連結。管理員不會查看或設定密碼。",
+      "confirm_action": "傳送重設郵件",
+      "success": "已為「{name}」請求傳送密碼重設郵件。",
+      "temporary_password_label": "新密碼",
+      "force_change_hint": "為保護隱私，即使郵件無法送達也會傳回相同結果；使用者透過郵件連結完成重設。",
+      "copied": "臨時密碼已複製",
+      "copy_failed": "複製失敗，請手動複製",
+      "failed": "重設密碼失敗"
+    },
+    "status": {
+      "active": "啟用",
+      "inactive": "停用",
+      "invited": "等待接受邀請"
+    },
+    "table": {
+      "column": {
+        "actions": "操作",
+        "company": "所屬公司",
+        "created_at": "建立時間",
+        "display_name": "顯示名稱",
+        "email": "電子郵件",
+        "is_active": "狀態",
+        "last_login": "最後登入",
+        "phone": "手機",
+        "role": "角色",
+        "username": "使用者名"
+      }
+    },
+    "title": "使用者管理",
+    "toast": {
+      "create_failed": "使用者建立失敗",
+      "create_success": "使用者建立成功",
+      "disable_success": "已停用使用者",
+      "enable_success": "已啟用使用者",
+      "load_failed": "載入使用者清單失敗",
+      "role_changed": "角色已變更",
+      "update_failed": "使用者更新失敗",
+      "update_success": "使用者更新成功"
+    },
+    "validation": {
+      "email_invalid": "電子郵件格式不正確",
+      "email_required": "請輸入電子郵件",
+      "password_required": "請輸入密碼",
+      "password_too_short": "密碼至少 8 位",
+      "username_required": "請輸入使用者名"
+    }
+  },
+  "controller_console": {
+    "title": "控制器控制台",
+    "online": "線上",
+    "offline": "離線",
+    "refresh": "重新整理",
+    "apply": "套用",
+    "select_hint": "請選擇一個控制器",
+    "select_placeholder": "選擇控制器…",
+    "no_commands": "暫無命令記錄",
+    "cmd_op": "命令",
+    "cmd_status": "狀態",
+    "cmd_time": "時間",
+    "tabs": {
+      "radar": "雷達",
+      "commands": "命令歷史",
+      "fan": "風扇",
+      "light": "冷暖燈光",
+      "indicator": "指示燈",
+      "system": "系統",
+      "current": "電流",
+      "register": "暫存器"
+    },
+    "radar": {
+      "monitor": "即時監視",
+      "config": "配置",
+      "present": "有目標",
+      "absent": "無目標",
+      "count": "進入次數",
+      "last_ms": "距上次進入",
+      "model": "型號",
+      "sens": "靈敏度",
+      "dist": "最遠距離",
+      "hold": "進入去抖",
+      "unatt": "離開延時",
+      "report_enable": "存在上報",
+      "read": "讀取配置"
+    },
+    "toast": {
+      "queued": "命令已下發",
+      "send_failed": "下發失敗：",
+      "load_failed": "載入失敗"
+    },
+    "cancel": "取消",
+    "fan": {
+      "monitor": "風扇監視",
+      "config": "風扇控制",
+      "rpm": "實測轉速",
+      "tach": "累計脈衝",
+      "fault": "停轉標誌",
+      "fault_ok": "正常",
+      "fault_stall": "停轉",
+      "power": "電源開關",
+      "duty": "佔空比",
+      "duty_stop": "停止",
+      "duty_full": "全速",
+      "freq": "頻率",
+      "note": "提示：PWM=0 不一定停轉，需配合電源開關切斷。"
+    },
+    "light": {
+      "config": "冷暖燈光控制",
+      "mode": "模式",
+      "mode_direct": "直驅",
+      "mode_link": "聯動",
+      "mode_fade": "漸變",
+      "warm": "暖色",
+      "cool": "冷色",
+      "bright": "亮度",
+      "temp": "色溫",
+      "temp_warm": "全暖",
+      "temp_cool": "全冷",
+      "fade": "漸變時長"
+    },
+    "indicator": {
+      "config": "指示燈配置 (WS2811)",
+      "mode": "模式",
+      "mode_off": "關閉",
+      "mode_solid": "單色",
+      "mode_anim": "動畫",
+      "color": "顏色",
+      "bright": "全域亮度",
+      "pixels": "燈珠數量",
+      "anim": "動畫模式",
+      "anim_marquee": "跑馬燈",
+      "anim_rainbow": "彩虹",
+      "anim_breath": "呼吸",
+      "anim_comet": "彗星",
+      "anim_strobe": "頻閃",
+      "speed": "速度",
+      "loop": "循環播放",
+      "loop_cnt": "循環次數",
+      "loop_cnt_hint": "0 表示無限循環;勾選「循環播放」時忽略此值"
+    },
+    "system": {
+      "monitor": "系統監視",
+      "control": "系統控制",
+      "vext": "主輸入電壓",
+      "ext_pwr": "外部電源",
+      "overcur": "過流",
+      "ready": "就緒",
+      "cfg_err": "配置校驗",
+      "int_flags": "中斷標誌",
+      "chip": "晶片型號",
+      "fw": "韌體版本",
+      "online": "線上",
+      "missing": "缺失",
+      "normal": "正常",
+      "overcurrent": "過流",
+      "error": "錯誤",
+      "yes": "是",
+      "no": "否",
+      "wdt": "看門狗逾時",
+      "set_wdt": "設定看門狗",
+      "save": "儲存 EEPROM",
+      "reset": "軟重設",
+      "factory": "恢復出廠",
+      "factory_ok": "確認恢復出廠",
+      "factory_confirm": "此操作將清除所有配置並恢復出廠設定，且不可撤銷，確定繼續嗎？"
+    },
+    "current": {
+      "monitor": "電流監視",
+      "online_status": "線上狀態",
+      "online_all": "兩顆線上",
+      "online_partial": "未全線上",
+      "empty": "暫無通道資料",
+      "col_name": "通道",
+      "col_addr": "地址",
+      "col_current": "電流",
+      "col_voltage": "母線電壓",
+      "col_shunt": "分流",
+      "col_ok": "線上"
+    },
+    "register": {
+      "monitor": "暫存器監視",
+      "read": "讀取暫存器",
+      "empty": "暫無暫存器資料",
+      "hex": "十六進位",
+      "dec": "十進位",
+      "col_addr": "地址",
+      "col_value": "值",
+      "seg_system": "系統",
+      "seg_fan": "風扇",
+      "seg_light": "冷暖燈",
+      "seg_radar": "雷達",
+      "seg_indicator": "指示燈"
+    }
+  },
+  "mqtt_host_console": {
+    "title": "MQTT 主機控制台",
+    "desc": "向 MQTT 主機（YDP395 螢幕主機 / host_s3）下發控制命令：照明、通風、模式、雷達、定時、重啟。命令經後台 MQTT 下發，裝置即時回 ACK。",
+    "online": "線上",
+    "offline": "離線",
+    "refresh": "重新整理",
+    "send": "下發",
+    "select_hint": "請選擇一台 MQTT 主機",
+    "select_placeholder": "選擇主機…",
+    "no_commands": "暫無命令記錄",
+    "cmd_op": "命令",
+    "cmd_attr": "屬性",
+    "cmd_status": "狀態",
+    "cmd_time": "時間",
+    "group": {
+      "light": "照明",
+      "fan": "通風",
+      "mode": "模式 / AI / 螢幕",
+      "timer": "定時器",
+      "radar": "雷達",
+      "system": "系統維護",
+      "commands": "命令歷史",
+      "automation": "自動化",
+      "ws_led": "門頭燈（RGB）"
+    },
+    "attr": {
+      "light_on": "燈開關",
+      "brightness": "燈亮度",
+      "cct": "色溫",
+      "fan_on": "風扇開關",
+      "fan_speed": "風扇轉速",
+      "active_mode": "工作模式",
+      "ai_mode": "AI 模式",
+      "scr_bright": "螢幕亮度",
+      "timer_min": "定時（分鐘）",
+      "timer_start": "開始計時",
+      "timer_off": "取消定時",
+      "radar_sensitivity": "雷達靈敏度",
+      "radar_distance": "雷達最遠距離",
+      "radar_unattended": "無人離開延時",
+      "reboot": "重啟主機",
+      "radar_presence": "即時偵測",
+      "vent_enable": "無人定時通風",
+      "vent_period": "通風週期",
+      "vent_duration": "通風時長",
+      "occ_led_enable": "佔用燈色聯動",
+      "ws_mode": "工作模式",
+      "ws_color": "顏色",
+      "ws_bright": "亮度",
+      "ws_anim": "動畫燈效",
+      "ws_speed": "燈效速度"
+    },
+    "mode": {
+      "phone": "0 · 通話",
+      "work": "1 · 工作",
+      "relax": "2 · 放鬆",
+      "custom": "3 · 自訂"
+    },
+    "ai_mode": {
+      "off": "0 · 關閉",
+      "on": "1 · 開啟"
+    },
+    "confirm": {
+      "reboot": "確定要重啟該主機嗎？裝置將在 3 秒後重啟。"
+    },
+    "toast": {
+      "sent": "已下發 {code}",
+      "send_failed": "下發失敗：",
+      "reboot_sent": "重啟命令已下發",
+      "load_failed": "載入主機列表失敗",
+      "sending": "正在下發 {code}，等待裝置確認…",
+      "ack_success": "{code} 下發成功（裝置已確認）",
+      "ack_failed": "{code} 下發失敗（裝置拒絕/出錯）",
+      "ack_timeout": "{code} 逾時未確認（裝置未回執）"
+    },
+    "presence": {
+      "unknown": "未知",
+      "occupied": "有人",
+      "vacant": "無人",
+      "detect_cnt": "累計偵測 {n} 次"
+    },
+    "unit": {
+      "min": "分鐘"
+    },
+    "desc_customer": "遠端控制您的靜音艙設備：照明、通風、模式、雷達、定時等。點「下發」後設備會即時確認執行結果。",
+    "ws_led_hint": "⚠️ 佔用燈色聯動開啟時，手動設定會被雷達佔用覆蓋。如需手動控燈，請先關閉上方「佔用燈色聯動」。",
+    "ws_mode": {
+      "off": "滅",
+      "solid": "單色",
+      "anim": "動畫"
+    },
+    "ws_anim": {
+      "marquee": "跑馬燈",
+      "rainbow": "彩虹",
+      "breath": "呼吸",
+      "comet": "彗星",
+      "strobe": "頻閃"
+    },
+    "occ_on_title": "🔴 有人時燈效",
+    "occ_off_title": "🟢 無人時燈效",
+    "occ_led_desc": "雷達偵測到人/無人時自動套用下方對應燈效",
+    "ws_manual": "手動控制（聯動關閉時）"
+  },
+  "product_catalog": {
+    "empty": "目前沒有已開放展示的產品",
+    "load_failed": "產品手冊目錄載入失敗",
+    "loading": "正在載入產品手冊…",
+    "search_placeholder": "搜尋產品名稱、編碼或品牌",
+    "subtitle": "僅顯示管理員已開放的有效產品資料。",
+    "title": "產品手冊"
+  },
+  "icon_library": {
+    "title": "帶螢幕專案圖示庫",
+    "subtitle": "統一管理兩個帶螢幕韌體共用的 SVG、專案頁面位置、授權和 LVGL 生成資源",
+    "generate": "生成 LVGL",
+    "add": "新增圖示",
+    "shared_icons": "共用圖示",
+    "connected_projects": "接入專案",
+    "commercial": "可商用授權",
+    "lvgl_output": "LVGL 生成物",
+    "not_generated": "待生成",
+    "search": "搜尋名稱、關鍵字、頁面或位置",
+    "all_categories": "全部分類",
+    "all_projects": "全部專案",
+    "icon_view": "圖示檢視",
+    "project_view": "專案檢視",
+    "result_count": "顯示 {shown} / {total} 個圖示",
+    "used_at": "使用頁面與位置",
+    "unused": "目前篩選專案未使用",
+    "icons_across_pages": "分布在 {pages} 個頁面",
+    "edit_title": "編輯 {name}",
+    "name": "圖示名稱",
+    "symbol": "C 識別碼",
+    "label_zh": "中文名稱",
+    "label_en": "英文名稱",
+    "category": "分類",
+    "source": "來源",
+    "license": "授權條款",
+    "size": "生成尺寸",
+    "keywords": "關鍵字（逗號分隔）",
+    "usages": "專案使用位置",
+    "usages_help": "每行格式：專案 ID | 頁面 | 具體位置",
+    "svg": "SVG 原始碼",
+    "commercial_confirmed": "已確認允許商業使用",
+    "usage_format_error": "使用位置格式應為：專案 ID | 頁面 | 具體位置",
+    "saved": "圖示已儲存",
+    "confirm_delete": "確定將圖示 {name} 移入可復原回收區嗎？",
+    "deleted": "圖示已移入回收區",
+    "generated": "LVGL 圖示資源已生成"
+  },
+  "manuals": {
+    "list_title": "文档列表",
+    "empty": "暂无可查看的文档",
+    "select_hint": "请从左侧选择一份文档查看",
+    "load_failed": "文档加载失败",
+    "image_failed": "图片加载失败"
+  },
+  "manuals_admin": {
+    "title": "手册库管理",
+    "subtitle": "上传技术文档，并指定哪些用户可以查看",
+    "new": "新建文档",
+    "edit_title": "编辑文档",
+    "public": "公开",
+    "restricted": "指定用户",
+    "assign": "分配用户",
+    "assigned_count": "可见用户数",
+    "field_title": "标题",
+    "field_desc": "描述",
+    "field_public": "可见范围",
+    "public_hint": "本公司及目前管理範圍內的使用者可見",
+    "restricted_hint": "仅被分配的用户可见",
+    "field_import_md": "从 .md 文件导入正文(可选)",
+    "import_md_hint": "选择一个 Markdown 文件…",
+    "choose_file": "選擇檔案",
+    "field_content": "正文(Markdown)",
+    "field_upload_img": "上传图片(插入正文)",
+    "upload_img_hint": "选择图片上传…",
+    "choose_image": "選擇圖片",
+    "img_uploaded": "图片已上传并插入正文",
+    "title_content_required": "标题和正文不能为空",
+    "confirm_delete": "确定删除文档「{name}」吗?",
+    "assign_title": "分配文档「{name}」的可见用户",
+    "search_user": "搜索用户(用户名/姓名)…",
+    "no_user": "没有匹配的用户",
+    "assign_count": "已选 {n} 个用户",
+    "assign_saved": "分配已保存",
+    "no_match": "无匹配",
+    "search_manual": "搜索文档(标题/描述)…",
+    "preview": "预览",
+    "created_at": "创建时间"
+  },
+  "device_onboarding": {
+    "title": "新裝置接入",
+    "tabs": {
+      "pending": "待確認裝置",
+      "pending_help": "查看已上線裝置並確認歸屬",
+      "registered": "已登記裝置",
+      "registered_help": "管理允許接入平台的生產裝置"
+    }
+  },
+  "device_enrollment": {
+    "title": "裝置接入",
+    "detail_title": "接入裝置詳情",
+    "search": "搜尋序號、UUID 或硬體識別",
+    "all_states": "全部接入狀態",
+    "all_online": "全部連線狀態",
+    "online": "在線",
+    "online_limited": "在線（受限）",
+    "connection_unavailable": "連線狀態無法取得",
+    "host_record": "主機記錄",
+    "host_registered": "已註冊",
+    "host_unregistered": "未註冊",
+    "mqtt_connected_at": "MQTT 連線時間",
+    "last_processed_report": "最後受理上報",
+    "connection_limited_help": "裝置目前仍連線至 MQTT，但接入狀態或主機記錄不允許業務資料正常寫入；請勿將「在線」理解為裝置已可用。",
+    "all_report_status": "全部上報狀態",
+    "report_status": "接入上報",
+    "report_recent": "最近有上報",
+    "report_stale": "暫無新上報",
+    "offline": "離線",
+    "online_status": "連線狀態",
+    "first_seen": "首次發現",
+    "device": "裝置",
+    "topology": "拓撲與匹配",
+    "state": "接入狀態",
+    "node_count": "{count} 個節點",
+    "empty": "暫無接入裝置",
+    "disabled": "裝置自動接入尚未啟用。完成資料庫遷移、型號身份和裝配槽位後再開啟。",
+    "load_failed": "載入裝置接入資料失敗",
+    "load_options_failed": "載入認領選項失敗",
+    "unknown_error": "未知錯誤",
+    "select": "請選擇",
+    "identity": "裝置身份",
+    "host_uuid": "主機 UUID",
+    "hardware_uid": "硬體唯一識別",
+    "mac": "MAC 位址",
+    "vendor_product": "廠商 ID / 產品代碼",
+    "version": "硬體 / 軟體版本",
+    "match": "自動匹配結果",
+    "host_model": "主機型號 ID",
+    "manufacturer": "製造商 ID",
+    "topology_hash": "拓撲摘要",
+    "last_seen": "最後上報",
+    "no_nodes": "尚未上報節點",
+    "node_position": "槽位",
+    "can_id": "CAN 節點 ID",
+    "serial": "序號",
+    "risk_actions": "風險處置",
+    "risk_actions_help": "僅限平台管理員使用。隔離可解除；撤銷會永久作廢目前的 MQTT 憑證，但可透過身分驗證簽發新憑證以恢復接入。",
+    "rematch": "重新匹配",
+    "rematch_success": "已重新匹配",
+    "quarantine": "隔離",
+    "quarantine_warning": "隔離後，即使裝置仍連線至 MQTT，其上報也不會被接收入庫；憑證不會被撤銷，可透過「解除隔離」恢復。",
+    "release": "解除隔離",
+    "release_warning": "解除隔離後，裝置將恢復上報受理並重新進行拓撲匹配。",
+    "revoke": "撤銷憑證",
+    "revoke_warning": "撤銷後會立即停用目前的 MQTT 憑證，舊憑證無法恢復。業務資產與歷史記錄不會刪除；生產清單有效時，裝置可重新完成私鑰證明並取得新憑證。生產清單已撤銷或裝置私鑰已更換時，需先完成對應的恢復流程。",
+    "revoked_help": "目前憑證已撤銷，舊憑證無法恢復，但裝置資產與歷史記錄仍保留。請依撤銷原因重新完成身分驗證或授權恢復。",
+    "revoked_factory_help": "生產清單身分與 MQTT 憑證均已撤銷。請前往生產清單重新啟用，再讓裝置重新完成私鑰證明。",
+    "revoked_manual_help": "目前 MQTT 憑證已被管理員撤銷。生產清單仍有效時，裝置可重新完成私鑰證明以取得新憑證。",
+    "revoked_rekey_help": "返修換鑰已確認，目前憑證保持撤銷；請讓裝置使用新私鑰完成身分驗證，系統將簽發新憑證。",
+    "open_factory_registry": "前往生產清單",
+    "confirm_replacement": "確認更換主機並遷移節點",
+    "confirm_replacement_warning": "此操作會將現有 Pod 和所有節點從已離線的舊主機原子遷移至目前主機，並保留資產與拓撲歷史。請確認現場舊主機已斷電。",
+    "confirm_replacement_success": "主機更換及節點遷移成功",
+    "reason": "操作原因",
+    "action_success": "操作成功",
+    "action_failed": "操作失敗",
+    "error_detail": "詳細資訊",
+    "error_fallback": "裝置接入異常",
+    "error_messages": {
+      "UNKNOWN_HOST_MODEL": "找不到匹配的主機型號",
+      "AMBIGUOUS_HOST_MODEL": "多個主機型號同時匹配",
+      "UNKNOWN_NODE_MODEL": "找不到匹配的節點型號",
+      "AMBIGUOUS_NODE_MODEL": "多個節點型號同時匹配",
+      "POD_MODEL_MISMATCH": "找不到組成一致的整機範本",
+      "AMBIGUOUS_POD_MODEL": "多個整機範本同時匹配",
+      "SLOT_TEMPLATE_MISSING": "整機範本未設定節點槽位",
+      "SLOT_CONFLICT": "節點與裝配槽位衝突",
+      "TOPOLOGY_INCOMPLETE": "裝置拓撲不完整",
+      "IDENTITY_CONFLICT": "裝置身分衝突",
+      "TOPOLOGY_CHANGED": "已認領裝置的拓撲已變更",
+      "FACTORY_REGISTRY_REVOKED": "生產清單身分已撤銷",
+      "REPAIR_REKEY_PENDING": "返修換鑰已確認，等待裝置驗證新金鑰",
+      "MANUAL_QUARANTINE": "裝置已被管理員隔離",
+      "MANUAL_REVOKE": "裝置接入憑證已被管理員撤銷"
+    },
+    "manual_entry": {
+      "title": "手動輸入僅用於異常處置",
+      "description": "正常新裝置請在「裝置接入」完成自動發現與認領；此處僅用於歷史補錄、返修或自動接入失敗後的人工處理。",
+      "open_workbench": "開啟裝置接入",
+      "action": "異常補錄"
+    },
+    "vendor_id": "廠商 ID",
+    "product_code": "產品代碼",
+    "hw_version": "目前硬體版本",
+    "compatible_hw_versions": "相容硬體版本",
+    "compatible_hw_versions_help": "多個版本用英文逗號分隔",
+    "auto_discovery": "允許自動匹配",
+    "auto_discovery_help": "只有真實協議產品代碼和硬體版本已確認後才能開啟",
+    "product_code_required": "開啟自動匹配前必須填寫產品代碼",
+    "slots": {
+      "title": "裝配槽位",
+      "help": "槽位固定節點硬體身份、節點型號、物理位置和預期 CAN ID，用於自動拓撲匹配。",
+      "add": "新增槽位",
+      "edit": "編輯槽位",
+      "empty": "尚未設定裝配槽位",
+      "code": "槽位編碼",
+      "node_model": "節點型號",
+      "expected_can_id": "預期 CAN ID",
+      "required": "是否必需",
+      "display_order": "顯示順序",
+      "load_failed": "載入裝配槽位失敗",
+      "required_fields": "請填寫槽位編碼並選擇節點型號",
+      "delete_confirm": "確定刪除槽位 {code} 嗎？"
+    },
+    "summary": {
+      "waiting_inventory": "待拓撲穩定",
+      "ready": "可認領",
+      "attention": "需處理",
+      "claimed": "已認領"
+    },
+    "states": {
+      "factory_registered": "已登記生產清單",
+      "activated": "已啟用",
+      "topology_pending": "拓撲待穩定",
+      "ready_to_claim": "可認領",
+      "claiming": "認領中",
+      "claimed": "已認領",
+      "conflict": "衝突",
+      "quarantined": "已隔離",
+      "revoked": "已撤銷",
+      "retired": "已退役"
+    },
+    "claim": {
+      "title": "認領裝置",
+      "action": "開始認領",
+      "submit": "確認認領",
+      "identity_step": "確認裝置身分",
+      "topology_step": "確認型號與拓撲",
+      "ownership_step": "設定公司與位置",
+      "review_step": "預檢查與提交",
+      "manufacturer": "製造商",
+      "brand": "品牌商",
+      "channel_partner": "渠道商",
+      "distributor": "經銷商",
+      "agent": "代理商",
+      "enduser": "最終使用者",
+      "company_path": "下游公司層級",
+      "none": "暫不設定",
+      "location": "安裝位置",
+      "no_location": "暫不設定位置",
+      "slots": "節點槽位確認",
+      "slot": "槽位",
+      "node_uid": "節點硬體識別",
+      "can_id": "CAN ID",
+      "no_slots": "沒有可認領槽位",
+      "remark": "備註",
+      "preflight": "重新預檢查",
+      "preflight_ok": "認領預檢查通過",
+      "preflight_failed": "認領預檢查未通過",
+      "success": "裝置認領成功",
+      "failed": "裝置認領失敗",
+      "pod_model": "靜音艙型號",
+      "pod_name": "靜音艙名稱"
+    },
+    "pod_model": "靜音艙型號 ID"
+  },
+  "factory_registry": {
+    "attestation_lookup": "裝置證明狀態查詢",
+    "attestation_status_action": "查證明狀態",
+    "attestation_serial": "輸入裝置序號",
+    "attestation_check": "查詢",
+    "attestation_lookup_failed": "查詢裝置證明狀態失敗",
+    "attestation_public_key_help": "目前不能簽發執行期憑證。請等待裝置灌裝並核對真實 RSA 公鑰後再登記。",
+    "attestation_states": {
+      "unregistered": "未登記",
+      "awaiting_public_key": "待公鑰",
+      "awaiting_activation": "待啟用",
+      "active": "已啟用",
+      "revoked": "已撤銷",
+      "identity_conflict": "身分衝突"
+    },
+    "attestation_stage_labels": {
+      "registry": "登記",
+      "attestation": "裝置證明",
+      "credential": "執行憑證",
+      "online": "正式上線",
+      "bootstrap": "Bootstrap",
+      "expected_version": "允許版本",
+      "retryable": "裝置可重試"
+    },
+    "attestation_stage_values": {
+      "unregistered": "未登記",
+      "registered": "已登記",
+      "not_started": "未開始",
+      "blocked": "遭伺服器閘門阻擋",
+      "challenge_issued": "已簽發 Challenge",
+      "credential_issued": "證明通過，已簽發憑證",
+      "not_issued": "未簽發",
+      "issued": "已簽發，待正式上線",
+      "active": "已啟用",
+      "revoked": "已撤銷",
+      "identity_conflict": "身分衝突",
+      "never_seen": "尚未正式上線",
+      "online": "線上",
+      "offline": "離線",
+      "unavailable": "不可用",
+      "disabled": "總開關關閉",
+      "allowed": "允許受控重試"
+    },
+    "title": "生產清單",
+    "security_title": "密鑰安全邊界：",
+    "security_help": "生產清單只登記裝置公開身分與公鑰；裝置私鑰必須留在晶片安全區域，平台不會產生、接收或回傳私鑰。",
+    "blockers": "目前阻斷項",
+    "search": "搜尋序號、MAC、硬體 UID 或裝配號",
+    "batch": "生產批次",
+    "template": "下載範本",
+    "import": "匯入 CSV",
+    "add": "登記裝置",
+    "edit": "編輯生產清單",
+    "empty": "暫無生產清單記錄",
+    "identity": "裝置身分",
+    "production": "生產資訊",
+    "ownership": "製造商與型號",
+    "readiness": "啟用就緒度",
+    "state": "狀態",
+    "active": "有效",
+    "revoked": "已撤銷",
+    "all_states": "全部狀態",
+    "ready": "就緒",
+    "attestation_ready": "驗簽錨點就緒",
+    "not_ready": "未就緒",
+    "activated": "已啟用",
+    "reactivation_required": "再次啟用前需補充",
+    "not_activated": "尚未啟用",
+    "revoke": "撤銷",
+    "reactivate": "重新啟用",
+    "recover_unactivated": "恢復未啟用登記",
+    "recover_unactivated_title": "原子恢復未啟用生產登記",
+    "recover_unactivated_warning_title": "僅適用於尚未產生執行資產的裝置",
+    "recover_unactivated_warning": "此操作會在同一交易中校正型號、批次與裝置公鑰，並重新啟用原登記。若已存在接入記錄、MQTT 憑證或主機資產，伺服器會拒絕操作。",
+    "expected_public_key_sha256": "預期公鑰 SHA-256 指紋",
+    "expected_public_key_sha256_help": "填寫透過獨立可信管道核對的 64 位十六進位指紋；伺服器會按正規化公鑰重新計算並嚴格比對。",
+    "recovery_reason": "恢復原因或工單號",
+    "bootstrap_material_confirmed": "我已透過受控流程核對實物身分，並確認裝置端引導材料已正確寫入",
+    "confirm_recovery": "確認原子恢復並啟用",
+    "recover_unactivated_success": "裝置 {serial} 的生產登記已恢復，公鑰指紋：{fingerprint}…",
+    "recover_unactivated_failed": "恢復未啟用生產登記失敗",
+    "repair_rekey": "返修換鑰",
+    "repair_rekey_title": "確認返修換鑰",
+    "repair_rekey_warning_title": "高風險裝置身分操作",
+    "repair_rekey_warning": "僅適用於同一台實體裝置返修後更換密鑰對。操作會撤銷舊 MQTT 執行憑證，但保留主機、靜音艙、節點、綁定與歷史記錄。",
+    "new_device_pubkey": "返修後的新裝置公鑰",
+    "repair_rekey_public_key_help": "只貼上裝置匯出的公鑰。私鑰必須始終留在裝置安全區域，禁止上傳平台。",
+    "repair_reason": "返修原因或工單號",
+    "repair_rekey_offline_confirm": "我已核對實物身分，並確認裝置已斷電或離線",
+    "confirm_repair_rekey": "確認換鑰並撤銷舊憑證",
+    "repair_rekey_success": "裝置 {serial} 已進入換鑰驗簽等待狀態，新公鑰指紋：{fingerprint}…",
+    "repair_rekey_failed": "確認返修換鑰失敗",
+    "rotate_secret": "輪換引導密鑰",
+    "rotate_secret_confirm": "即將為裝置 {serial} 產生新的單機引導密鑰。目前 MQTT 執行憑據不受影響，但舊引導密鑰會立即失效。是否下載新密鑰？",
+    "rotate_secret_saved_confirm": "已下載裝置 {serial} 的新引導密鑰檔案。請確認檔案已保存至受控系統，並會在下次清除執行憑據前安全寫入裝置。確認後伺服器才會完成輪換。",
+    "rotate_secret_success": "裝置 {serial} 的引導密鑰已輪換",
+    "rotate_secret_failed": "輪換引導密鑰失敗",
+    "serial": "主機序號",
+    "manufacturer": "製造商",
+    "host_model": "主機型號",
+    "host_model_option": "{code} · HW {hw} · OD {od} · SW {sw} · {name}",
+    "mac": "主機 MAC",
+    "assembly": "生產日期",
+    "supplier": "供應商",
+    "material_lot": "物料批次",
+    "remark": "備註",
+    "hardware_uid": "主控晶片唯一 ID",
+    "efuse_chip_id": "eFuse 晶片 ID",
+    "device_pubkey": "裝置公鑰",
+    "trust_mode": "裝置信任方式",
+    "attestation_mode": "eFuse 私鑰證明（建議）",
+    "legacy_mode": "舊 Provision V2（過渡）",
+    "attestation_help": "登記裝置匯出的公鑰；私鑰必須留在晶片內，平台不會產生或接收私鑰。此步驟只建立信任錨，MQTT 握手需等待韌體協議落地。",
+    "legacy_help": "僅供已使用 HTTP Provision V2 的過渡裝置；瀏覽器產生的單機引導密鑰必須經受控管道交付。",
+    "vendor_id": "廠商 ID",
+    "product_code": "產品代碼",
+    "bootstrap_secret": "bootstrap 入口口令",
+    "bootstrap_help": "依頁面標示的策略交付受控 bootstrap 口令；平台不會再次回顯。",
+    "bootstrap_scheme_shared": "產品共用入口口令（product-shared-v1）",
+    "bootstrap_scheme_efuse": "逐機入口口令（efuse-v1）",
+    "bootstrap_help_shared": "P-0050 使用同型號共用的受控 bootstrap 口令。只在本次登記回應顯示；請透過受控管道交付，不可作為正式 MQTT 憑證。批次匯入時只顯示一次，不寫入逐機口令 CSV。",
+    "bootstrap_help_efuse": "後端依本機 eFuse 派生口令，只在登記成功回應顯示一次。請寫入裝置 NVS 憑證區並妥善保護；平台不會再次回顯。",
+    "shared_device_count": "適用於本次匯入的 {count} 台裝置",
+    "secret_ack": "我已將單機引導密鑰安全交付給燒錄流程或受控系統",
+    "regenerate": "重新產生",
+    "secret_copied": "引導密鑰已複製",
+    "form_help": "登記產線匯出的序號、主機型號、MAC、eFuse 晶片 ID 與裝置公鑰；私鑰必須留在裝置內，製造商由主機型號自動確定。",
+    "row": "第",
+    "import_confirm": "即將原子匯入 {count} 筆裝置公鑰生產清單；任一筆錯誤時整批不寫入。是否繼續？",
+    "import_success": "成功匯入 {count} 筆生產清單",
+    "import_failed": "匯入生產清單失敗",
+    "csv_header_error": "CSV 表頭不完整，請重新下載範本",
+    "save_success": "生產清單已儲存",
+    "save_failed": "儲存生產清單失敗",
+    "load_failed": "載入生產清單失敗",
+    "options_failed": "載入製造商或主機型號失敗",
+    "revoke_confirm": "確定撤銷裝置 {serial} 的生產身分嗎？",
+    "reactivate_confirm": "確定重新啟用裝置 {serial} 的生產身分嗎？",
+    "enrollment_switch": "自動接入總開關",
+    "enrollment_switch_help": "裝置首次啟用及接入工作台",
+    "v1_batches": "V1 已配置批次",
+    "v1_ready_count": "{count} 台 V1 裝置就緒",
+    "v2_status": "V2 服務與加密",
+    "v2_ready_count": "{count} 台 V2 裝置就緒",
+    "active_records": "有效清單",
+    "auto_claim_help": "自動認領保持關閉，由管理員確認歸屬",
+    "blocker_enrollment": "自動接入總開關未開啟",
+    "blocker_inventory": "裝置拓撲上報接收未開啟",
+    "blocker_attestation": "MQTT 裝置私鑰證明開關未開啟",
+    "blocker_bootstrap_secret": "產品引導主密鑰尚未在部署環境設定",
+    "blocker_batch": "部署環境尚未配置 V1 批次密鑰",
+    "blocker_auto_claim": "自動認領已開啟；目前設計要求人工確認歸屬",
+    "errors": {
+      "REGISTRY_REVOKED": "清單已撤銷",
+      "MANUFACTURER_REQUIRED": "缺少製造商",
+      "HOST_MODEL_REQUIRED": "缺少主機型號",
+      "HOST_MODEL_NOT_ACTIVE": "型號不是量產狀態",
+      "MODEL_MANUFACTURER_INVALID": "主機型號未關聯有效生產廠商",
+      "MODEL_MANUFACTURER_CONFLICT": "型號與製造商不一致",
+      "MAC_REQUIRED": "缺少 MAC",
+      "EFUSE_CHIP_ID_REQUIRED": "缺少 eFuse 晶片 ID",
+      "DEVICE_PUBLIC_KEY_REQUIRED": "缺少裝置公鑰",
+      "HARDWARE_UID_REQUIRED": "缺少主控晶片唯一 ID",
+      "VENDOR_ID_REQUIRED": "缺少廠商 ID",
+      "PRODUCT_CODE_REQUIRED": "缺少產品代碼",
+      "PROVISION_V2_DISABLED": "Provision V2 未啟用",
+      "BOOTSTRAP_ENCRYPTION_REQUIRED": "引導密鑰加密未設定"
+    }
+  },
+  "factory_stations": {
+    "title": "生產工位憑證",
+    "help": "為工位簽發獨立且可撤銷的憑證，並嚴格限定廠家、產品、型號與批次範圍。",
+    "add": "新增工位",
+    "empty": "暫無生產工位憑證",
+    "identity": "工位",
+    "station_code": "工位編碼",
+    "display_name": "顯示名稱",
+    "scope": "允許的生產範圍",
+    "scope_help": "工位只能在此精確範圍內建立及核對記錄；儲存後 token 只顯示一次。",
+    "validity": "有效性",
+    "expires_at": "到期時間（可選）",
+    "never_expires": "不設到期時間",
+    "last_used_at": "最近使用",
+    "token_title": "立即儲存工位 token",
+    "token_help": "此 token 只顯示一次。請存入產線治具的受保護密鑰儲存，禁止寫入原始碼或日誌。",
+    "token_copied": "工位 token 已複製",
+    "create_success": "生產工位憑證已建立",
+    "revoke": "撤銷",
+    "revoke_confirm": "確定撤銷工位 {code} 嗎？新的工位請求將立即被拒絕。",
+    "revoke_success": "生產工位憑證已撤銷",
+    "load_failed": "載入生產工位失敗",
+    "save_failed": "儲存生產工位失敗"
+  },
+  "factory_registry_current": {
+    "security_help": "單機引導密鑰由瀏覽器安全產生，只在本次登記中顯示；平台僅保存加密結果，不讀取、不回傳明文。生產清單用於登記完整裝置身分、製造商與主機型號。",
+    "bootstrap_secret": "單機引導密鑰",
+    "bootstrap_help": "該密鑰只在本次瀏覽器登記中顯示，必須在出廠燒錄時寫入裝置；儲存後平台不再回顯。",
+    "form_help": "請登記產線匯出的序號、主機型號、MAC、eFuse 晶片 ID 與裝置公鑰；私鑰必須留在裝置內，製造商由主機型號自動確定。",
+    "provision_status": "接入服務與加密",
+    "provision_ready_count": "{count} 台裝置已具備接入條件"
+  },
+  "host_files": {
+    "title": "主機檔案",
+    "subtitle": "型號預設、主機覆寫與下發歷史",
+    "refresh": "重新整理",
+    "effective": "目前生效檔案",
+    "deployments": "下發歷史",
+    "file_name": "檔案",
+    "file_type": "類型",
+    "purpose": "用途",
+    "slot": "槽位",
+    "slot_placeholder": "自訂圖片槽位時必填",
+    "order": "順序",
+    "source": "來源",
+    "status": "狀態",
+    "requested_at": "請求時間",
+    "error": "錯誤",
+    "actions": "操作",
+    "scope_host": "主機覆寫",
+    "scope_hn_model": "型號預設",
+    "no_effective": "目前沒有分配生效檔案。",
+    "no_deployments": "尚無下發記錄。",
+    "retry": "重試",
+    "rollback": "回復",
+    "rollback_confirm": "確認建立一個恢復到上一個已套用檔案的下發工作嗎？",
+    "retry_success": "已建立重試工作。",
+    "rollback_success": "已建立回復工作。",
+    "load_failed": "載入主機檔案失敗。",
+    "action_failed": "操作失敗。",
+    "status_pending": "待下發",
+    "status_downloading": "下載中",
+    "status_downloaded": "已下載",
+    "status_applied": "已套用",
+    "status_failed": "失敗",
+    "status_superseded": "已取代",
+    "published": "已發佈",
+    "draft": "草稿",
+    "publish": "發佈",
+    "disable": "停用",
+    "publish_success": "關聯已發佈。",
+    "disable_success": "關聯已停用，型號預設設定已回復生效。",
+    "purpose_required": "請選擇用途。",
+    "purpose_firmware": "韌體",
+    "purpose_background_music": "背景音樂",
+    "purpose_prompt": "提示音",
+    "purpose_background": "背景圖",
+    "purpose_screensaver": "螢幕保護",
+    "purpose_boot_logo": "啟動畫面",
+    "purpose_custom_slot": "自訂槽位",
+    "unsupported_type": "僅支援 BIN、MP3、JPG、PNG、GIF、WEBP、BMP 和 SVG 檔案。",
+    "firmware_forbidden": "韌體管理需要德恩基平台授權。"
+  },
+  "web_ui_renderer": {
+    "preview_label": "裝置 UI 安全預覽",
+    "invalid_document": "UI 文件未通過安全驗證。",
+    "no_screen": "沒有可顯示的 UI 頁面。"
+  },
+  "software_version_web_ui": {
+    "title": "裝置 UI",
+    "description": "UI 文件隨具體軟體版本儲存，並由安全渲染器預覽。",
+    "catalog_title": "軟體版本與裝置 UI",
+    "open_catalog": "裝置 UI",
+    "status": "設定狀態",
+    "configured": "已設定",
+    "unconfigured": "未設定",
+    "schema_version": "Schema 版本",
+    "source_project": "來源專案",
+    "source_revision": "來源修訂",
+    "not_applicable": "Node 軟體版本不適用裝置 UI，不能上傳文件。",
+    "select_replacement": "選擇替換檔案",
+    "select_upload": "選擇 JSON 檔案",
+    "replace": "替換 UI",
+    "upload": "上傳 UI",
+    "clear": "清空 UI",
+    "validation_failed": "UI 文件驗證失敗",
+    "download_json": "下載 UI JSON",
+    "assets": "關聯資源",
+    "preview": "安全預覽",
+    "no_document": "此軟體版本尚未設定裝置 UI。",
+    "load_failed": "載入裝置 UI 失敗",
+    "file_too_large": "JSON 檔案不能超過 1 MiB。",
+    "invalid_json": "檔案不是有效的 UTF-8 JSON。",
+    "confirm_replace": "確定用所選文件替換目前裝置 UI 嗎？",
+    "save_success": "裝置 UI 已儲存",
+    "save_failed": "儲存裝置 UI 失敗",
+    "confirm_clear": "確定清空目前軟體版本的裝置 UI 嗎？此操作會解除資源關聯。",
+    "clear_success": "裝置 UI 已清空",
+    "clear_failed": "清空裝置 UI 失敗",
+    "conflict": "裝置 UI 已被其他操作修改，請載入最新版本後重試。",
+    "reload_latest": "載入最新版本",
+    "download_failed": "下載 UI JSON 失敗",
+    "asset_download_failed": "下載 UI 資源失敗",
+    "asset_preview_failed": "部分 UI 資源未通過完整性驗證，預覽中已停用。",
+    "no_versions": "此硬體/OD 版本下沒有可用的軟體版本。",
+    "select_od": "請選擇 OD 版本",
+    "select_software": "請選擇軟體版本",
+    "catalog_load_failed": "載入版本目錄失敗"
+  }
+}

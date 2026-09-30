@@ -1,0 +1,18 @@
+[
+  {
+    "pod_uuid": "demo-pod-office-01",
+    "pod_name": "办公静音舱 A01",
+    "booking_config_uuid": "demo-booking-config-demo-pod-office-01",
+    "owner_company_id": 300,
+    "timezone": "Asia/Shanghai",
+    "booking_capability": "enabled"
+  },
+  {
+    "pod_uuid": "demo-pod-office-02",
+    "pod_name": "办公静音舱 A02",
+    "booking_config_uuid": "demo-booking-config-demo-pod-office-02",
+    "owner_company_id": 300,
+    "timezone": "Asia/Shanghai",
+    "booking_capability": "enabled"
+  }
+]

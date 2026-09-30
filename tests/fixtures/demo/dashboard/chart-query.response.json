@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "request_id": "device_online_rate",
+      "series": [
+        {
+          "name": "online_rate",
+          "points": [
+            {
+              "timestamp": "D1",
+              "value": 50
+            },
+            {
+              "timestamp": "D2",
+              "value": 45
+            },
+            {
+              "timestamp": "D3",
+              "value": 52
+            },
+            {
+              "timestamp": "D4",
+              "value": 48
+            },
+            {
+              "timestamp": "D5",
+              "value": 53
+            },
+            {
+              "timestamp": "D6",
+              "value": 51
+            },
+            {
+              "timestamp": "D7",
+              "value": 50
+            }
+          ]
+        }
+      ],
+      "statistics": {},
+      "cache": {
+        "hit": false,
+        "source": "demo"
+      },
+      "generated_at": "2026-09-17T00:00:00.000Z",
+      "data_version": 1,
+      "status": "ok",
+      "error": null
+    }
+  ]
+}

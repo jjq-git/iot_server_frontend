@@ -1,0 +1,27 @@
+
+.firmware-table__filename {
+  display: block;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.firmware-table__nowrap,
+.firmware-table__checksum {
+  white-space: nowrap;
+}
+
+.firmware-table__checksum {
+  display: inline-block;
+  max-width: 132px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+@media (width <= 768px) {
+  .firmware-table__filename {
+    max-width: 220px;
+  }
+}

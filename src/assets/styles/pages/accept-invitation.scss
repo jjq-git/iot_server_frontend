@@ -1,0 +1,31 @@
+.invitation-page {
+  align-items: center;
+  background: var(--color-bg-page);
+  display: flex;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.invitation-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 2rem;
+  width: 100%;
+}
+
+.invitation-mark {
+  color: var(--color-brand);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: var(--font-size-title-lg);
+  margin-bottom: 0.75rem;
+}

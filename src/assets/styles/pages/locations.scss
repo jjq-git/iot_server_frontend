@@ -1,0 +1,44 @@
+.locations__filters {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.locations__filter-field {
+  flex: 1 1 190px;
+  min-width: 190px;
+  max-width: 260px;
+  margin: 0;
+}
+
+.locations__filter-control {
+  width: 100%;
+}
+
+.locations__filter-action {
+  flex: none;
+  white-space: nowrap;
+}
+
+.locations__filter-actions {
+  align-self: flex-end;
+}
+
+.locations__pager {
+  margin-top: 20px;
+  text-align: right;
+}
+
+@media (width <= 576px) {
+  .locations__filter-field,
+  .locations__filter-actions,
+  .locations__filter-action {
+    width: 100%;
+    max-width: none;
+  }
+
+  .locations__filter-actions {
+    flex-direction: column;
+  }
+}

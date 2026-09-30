@@ -1,0 +1,32 @@
+// SCSS 入口：集中引入基础样式与页面样式
+// 1) theme-vars 必须最先,以保证后续模块/打包产物里 var(--color-*) 已定义。
+//    theme-vars 内部 @use "tokens"(SCSS 色板,无 CSS 输出),只输出 :root 与
+//    [data-theme="dark"] 两段 CSS 变量。
+@use "theme-vars";
+@use "base";
+@use "layout";
+@use "sidebar";
+@use "components";
+@use "form-controls";
+@use "pages";
+@use "bootstrap-overrides";
+@use "admin-foundation";
+@use "interaction";
+@use "resource-library";
+@use "dashboard";
+@use "login";
+@use "user-profile";
+@use "pod-control-panel";
+@use "sensor-history";
+@use "pod-models";
+@use "modal-workflows";
+@use "template-editor";
+@use "customization";
+
+// BootstrapVue 保守主题对接(仅在 [data-theme="dark"] 下生效)
+@use "bootstrap-theme";
+@use "admin-final";
+@use "shell-ux";
+@use "pod-history-panel";
+@use "web-ui-renderer";
+@use "software-version-web-ui";

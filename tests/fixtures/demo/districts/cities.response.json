@@ -1,0 +1,18 @@
+{
+  "total": 1,
+  "items": [
+    {
+      "id": 2,
+      "code": "310100",
+      "province_code": "310000",
+      "name": "上海市",
+      "parent_id": 1,
+      "level": "city",
+      "parent_code": "310000",
+      "full_path": "上海市/上海市",
+      "gps_lat": 31.2304,
+      "gps_lng": 121.4737,
+      "timezone": "Asia/Shanghai"
+    }
+  ]
+}

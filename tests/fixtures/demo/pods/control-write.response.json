@@ -1,0 +1,15 @@
+{
+  "uuid": "demo-control-fixture",
+  "command_id": "demo-control-fixture",
+  "message_id": "demo-control-fixture",
+  "pod_uuid": "demo-pod-office-01",
+  "command": "write_attr",
+  "payload": {
+    "attr_code": "brightness",
+    "value": 80,
+    "target_uuid": "demo-pod-office-01-light"
+  },
+  "status": "success",
+  "sent_at": "2026-09-17T00:00:00.000Z",
+  "published": true
+}

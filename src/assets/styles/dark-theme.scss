@@ -1,0 +1,588 @@
+/**
+ * 深色/浅色主题 CSS 变量与 BootstrapVue 适配
+ * 切换由 <html data-theme="light|dark"> + <html data-theme-mode="light|dark|auto"> 触发，
+ * 逻辑在 src/utils/dark-theme.js
+ *
+ * 设计：
+ * - 颜色变量参考微软 Fluent / OTA 平台配色（与 aliyun/web_components/theme_toggle 同源）
+ * - 全部以 --tt-* 为前缀，避免与项目现有 --color-primary 等变量冲突
+ * - Bootstrap class 映射在暗色下生效（!important）
+ * - 提供 .theme-toggle--floating 工具类用于全局 floating 挂载
+ */
+
+/* =============================================================================
+ * --tt-* 兼容层
+ * -----------------------------------------------------------------------------
+ * 真正的颜色定义已迁到 _tokens.scss + _theme-vars.scss(--color-*)。
+ * 这里只把所有现存 --tt-* 变量 alias 到新 --color-*,保证 P2/P3 迁移期
+ * 仍在使用 var(--tt-*) 的 .vue 不会立即坏掉。深浅切换由 --color-* 自行响应,
+ * 无需在 [data-theme="dark"] 重写一遍 --tt-*。
+ * ============================================================================= */
+:root {
+  // 背景
+  --tt-bg:          var(--color-bg-page);
+  --tt-bg-card:     var(--color-bg-card);
+  --tt-bg-topbar:   var(--color-bg-topbar);
+  --tt-bg-input:    var(--color-bg-input);
+  --tt-bg-hover:    var(--color-bg-hover);
+  --tt-bg-thead:    var(--color-bg-thead);
+  --tt-bg-disabled: var(--color-bg-disabled);
+  --tt-bg-code:     var(--color-bg-code);
+
+  // 文字
+  --tt-text:        var(--color-text);
+  --tt-text-sec:    var(--color-text-secondary);
+  --tt-text-hint:   var(--color-text-hint);
+  --tt-text-label:  var(--color-text-label);
+  --tt-text-code:   var(--color-text-code);
+
+  // 边框
+  --tt-border:        var(--color-border);
+  --tt-border-light:  var(--color-border-light);
+  --tt-border-input:  var(--color-border-input);
+  --tt-border-focus:  var(--color-border-focus);
+
+  // 强调
+  --tt-accent:       var(--color-accent);
+  --tt-accent-hover: var(--color-accent-hover);
+  --tt-accent-bg:    var(--color-accent-bg);
+
+  // 状态
+  --tt-green-bg:   var(--color-success-bg-strong);
+  --tt-green-text: var(--color-success-text);
+  --tt-green-bdr:  var(--color-success-bdr);
+  --tt-success:    var(--color-success-strong);
+  --tt-red-bg:   var(--color-error-bg-strong);
+  --tt-red-text: var(--color-error-text);
+  --tt-red-bdr:  var(--color-error-bdr);
+  --tt-warn-bg:   var(--color-warning-bg-strong);
+  --tt-warn-text: var(--color-warning-text);
+  --tt-warn-bdr:  var(--color-warning-bdr);
+
+  // 阴影
+  --tt-shadow:    var(--shadow-card);
+  --tt-shadow-md: var(--shadow-md);
+  --tt-shadow-pop: var(--shadow-lg);
+
+  // 滚动条
+  --tt-scrollbar-thumb: var(--color-scrollbar-thumb);
+  --tt-scrollbar-track: var(--color-scrollbar-track);
+}
+
+/* 全局 body 跟随主题（仅暗色生效，避免覆盖默认登录页渐变背景） */
+html[data-theme="dark"] body {
+  background: var(--tt-bg);
+  color: var(--tt-text);
+  transition:
+    background var(--motion-duration-theme) var(--motion-ease-standard),
+    color var(--motion-duration-theme) var(--motion-ease-standard);
+}
+
+/* ============ Bootstrap / BootstrapVue 暗色适配 ============
+   只在 [data-theme="dark"] 下生效，浅色模式不动 BS 默认样式 */
+html[data-theme="dark"] {
+  // 卡片 / 容器
+  .card, .card-body, .card-header, .card-footer,
+  .modal-content, .modal-header, .modal-footer,
+  .dropdown-menu, .popover, .tooltip-inner {
+    background-color: var(--tt-bg-card) !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border) !important;
+  }
+
+  .modal-backdrop {
+    background-color: var(--color-overlay-strong) !important;
+  }
+
+  .dropdown-item {
+    color: var(--tt-text) !important;
+
+    &:hover, &:focus {
+      background-color: var(--tt-bg-hover) !important;
+      color: var(--tt-text) !important;
+    }
+
+    &.active, &:active {
+      background-color: var(--tt-accent) !important;
+      color: var(--color-text-inverse) !important;
+    }
+  }
+  .dropdown-divider { border-top-color: var(--tt-border) !important; }
+
+  // 表格
+  .table, .table > tbody > tr > td, .table > thead > tr > th {
+    background-color: transparent !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border) !important;
+  }
+  .table > thead { background-color: var(--tt-bg-thead) !important; }
+
+  .table-hover > tbody > tr:hover {
+    background-color: var(--tt-bg-hover) !important;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--color-inverse-fill-faint) !important;
+  }
+
+  .table-bordered, .table-bordered > tbody > tr > td, .table-bordered > thead > tr > th {
+    border-color: var(--tt-border) !important;
+  }
+
+  // 输入框
+  .form-control, .custom-select, .input-group-text {
+    background-color: var(--tt-bg-input) !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border-input) !important;
+  }
+
+  .form-control:focus, .custom-select:focus {
+    background-color: var(--tt-bg-input) !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-accent) !important;
+    box-shadow: var(--shadow-focus-blue) !important;
+  }
+  .form-control::placeholder { color: var(--tt-text-hint) !important; }
+
+  .form-control:disabled, .form-control[readonly] {
+    background-color: var(--tt-bg-disabled) !important;
+  }
+
+  .custom-checkbox .custom-control-label::before,
+  .custom-radio .custom-control-label::before {
+    background-color: var(--tt-bg-input) !important;
+    border-color: var(--tt-border-input) !important;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--tt-accent) !important;
+    border-color: var(--tt-accent) !important;
+  }
+
+  // 按钮（保留 primary/danger/success 语义色，只调中性按钮）
+  .btn-light, .btn-outline-secondary, .btn-secondary {
+    background-color: var(--tt-bg-card) !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border) !important;
+  }
+
+  .btn-light:hover, .btn-outline-secondary:hover {
+    background-color: var(--tt-bg-hover) !important;
+    color: var(--tt-text) !important;
+  }
+  .btn-link { color: var(--tt-accent) !important; }
+  .btn-link:hover { color: var(--tt-accent-hover) !important; }
+
+  // 文本辅助色
+  .text-muted   { color: var(--tt-text-sec) !important; }
+  .text-secondary { color: var(--tt-text-sec) !important; }
+  .text-dark, .text-body { color: var(--tt-text) !important; }
+  .text-primary { color: var(--tt-accent) !important; }
+
+  // 边框
+  .border, .border-top, .border-right, .border-bottom, .border-left {
+    border-color: var(--tt-border) !important;
+  }
+
+  // 列表组
+  .list-group-item {
+    background-color: var(--tt-bg-card) !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border) !important;
+  }
+
+  .list-group-item.active {
+    background-color: var(--tt-accent) !important;
+    border-color: var(--tt-accent) !important;
+    color: var(--color-text-inverse) !important;
+  }
+
+  .list-group-item-action:hover {
+    background-color: var(--tt-bg-hover) !important;
+    color: var(--tt-text) !important;
+  }
+
+  // 分页
+  .page-link {
+    background-color: var(--tt-bg-card) !important;
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border) !important;
+  }
+
+  .page-link:hover {
+    background-color: var(--tt-bg-hover) !important;
+    color: var(--tt-accent) !important;
+  }
+
+  .page-item.active .page-link {
+    background-color: var(--tt-accent) !important;
+    border-color: var(--tt-accent) !important;
+  }
+
+  .page-item.disabled .page-link {
+    background-color: var(--tt-bg-disabled) !important;
+    color: var(--tt-text-hint) !important;
+  }
+
+  // 徽标
+  .badge-primary,
+  .badge-info {
+    background-color: var(--tt-accent-bg) !important;
+    border-color: var(--tt-border) !important;
+    color: var(--tt-accent) !important;
+  }
+
+  .badge-success {
+    background-color: var(--tt-green-bg) !important;
+    border-color: var(--tt-green-bdr) !important;
+    color: var(--tt-green-text) !important;
+  }
+
+  .badge-danger {
+    background-color: var(--tt-red-bg) !important;
+    border-color: var(--tt-red-bdr) !important;
+    color: var(--tt-red-text) !important;
+  }
+
+  .badge-warning {
+    background-color: var(--tt-warn-bg) !important;
+    border-color: var(--tt-warn-bdr) !important;
+    color: var(--tt-warn-text) !important;
+  }
+
+  .badge-light,
+  .badge-secondary,
+  .badge-dark {
+    background-color: var(--tt-bg-thead) !important;
+    border-color: var(--tt-border) !important;
+    color: var(--tt-text-sec) !important;
+  }
+
+  // alert
+  .alert-success {
+    background-color: var(--tt-green-bg) !important;
+    color: var(--tt-green-text) !important;
+    border-color: var(--tt-green-bdr) !important;
+  }
+
+  .alert-danger {
+    background-color: var(--tt-red-bg) !important;
+    color: var(--tt-red-text) !important;
+    border-color: var(--tt-red-bdr) !important;
+  }
+
+  .alert-warning {
+    background-color: var(--tt-warn-bg) !important;
+    color: var(--tt-warn-text) !important;
+    border-color: var(--tt-warn-bdr) !important;
+  }
+
+  .alert-info {
+    background-color: var(--tt-accent-bg) !important;
+    color: var(--tt-accent) !important;
+    border-color: var(--tt-border) !important;
+  }
+
+  // tab
+  .nav-tabs {
+    border-bottom-color: var(--tt-border) !important;
+  }
+
+  .nav-tabs .nav-link {
+    color: var(--tt-text-sec) !important;
+    border-color: transparent !important;
+  }
+
+  .nav-tabs .nav-link:hover {
+    color: var(--tt-text) !important;
+    border-color: var(--tt-border) var(--tt-border) var(--tt-border) !important;
+  }
+
+  .nav-tabs .nav-link.active {
+    background-color: var(--tt-bg-card) !important;
+    color: var(--tt-accent) !important;
+    border-color: var(--tt-border) var(--tt-border) var(--tt-bg-card) !important;
+  }
+
+  // toast
+  .toast {
+    background-color: var(--tt-bg-card) !important;
+  }
+
+  .toast-header {
+    background-color: var(--tt-bg-thead) !important;
+    color: var(--tt-text) !important;
+  }
+
+  // 通用背景类
+  .bg-white,
+  .bg-light {
+    background-color: var(--tt-bg-card) !important;
+    color: var(--tt-text) !important;
+  }
+
+  .bg-body {
+    background-color: var(--tt-bg) !important;
+  }
+
+  .bg-dark {
+    background-color: var(--color-bg-solid) !important;
+  }
+
+  // 关闭按钮
+  .close {
+    color: var(--tt-text) !important;
+    opacity: 0.8;
+  }
+
+  .close:hover {
+    opacity: 1;
+  }
+
+  // 代码
+  pre,
+  code {
+    background-color: var(--tt-bg-code) !important;
+    color: var(--tt-text-code) !important;
+    border-color: var(--tt-border) !important;
+  }
+
+  // 滚动条（webkit）
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--tt-scrollbar-track);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tt-scrollbar-thumb);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--tt-text-hint);
+  }
+
+  // hr
+  hr {
+    border-top-color: var(--tt-border) !important;
+  }
+
+  // 全局兜底（同事的页面如果没显式色，能跟着主题走）
+  // 注意：不能用 * 整体覆盖，否则会破坏 svg 等的 fill
+  .container,
+  .container-fluid,
+  .row {
+    color: inherit;
+  }
+}
+
+/* ============ 主题切换组件自身样式 (.tt-* 前缀) ============ */
+.tt-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* 内联模式按钮 — auto 宽度 + 图标在前 + 文字在后 */
+.tt-btn {
+  width: var(--list-control-height);
+  min-width: var(--list-control-height);
+  height: var(--list-control-height);
+  border-radius: 8px;
+  border: 1px solid var(--tt-border);
+  background: var(--tt-bg-card);
+  color: var(--tt-text-sec);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.15s;
+
+  &:hover {
+    background: var(--tt-bg-hover);
+    color: var(--tt-text);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--shadow-focus-blue-compact);
+  }
+}
+
+.tt-bright {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-caption);
+  color: var(--tt-text-sec);
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.tt-bright__val {
+  min-width: 28px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--tt-text-sec);
+}
+
+.tt-slider {
+  /* stylelint-disable-next-line property-no-vendor-prefix -- Safari compatibility */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--tt-border);
+  outline: none;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    /* stylelint-disable-next-line property-no-vendor-prefix -- Safari compatibility */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--tt-accent);
+    border: 2px solid var(--tt-bg-card);
+    box-shadow: var(--shadow-range-thumb);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--tt-accent);
+    border: 2px solid var(--tt-bg-card);
+    box-shadow: var(--shadow-range-thumb);
+    cursor: pointer;
+  }
+}
+
+/* ============ Floating 模式 ============ */
+.tt-controls--floating {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 9998; /* 低于亮度遮罩 9999 但高于一般内容 */
+  display: block;        // 内部 fab + panel 各占一行
+  pointer-events: auto;
+}
+
+.tt-fab {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--tt-border);
+  background: var(--tt-bg-card);
+  color: var(--tt-text-sec);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: var(--tt-shadow-md);
+  transition: all 0.15s ease;
+  margin-left: auto; /* 在右下面板对齐时仍贴右 */
+
+  &:hover {
+    background: var(--tt-bg-hover);
+    color: var(--tt-accent);
+    transform: translateY(-2px);
+    box-shadow: var(--tt-shadow-pop);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--shadow-focus-blue-strong), var(--tt-shadow-md);
+  }
+}
+
+.tt-panel {
+  position: absolute;
+  bottom: 56px; /* fab 高度 + 间隙 */
+  right: 0;
+  width: 220px;
+  background: var(--tt-bg-card);
+  border: 1px solid var(--tt-border);
+  border-radius: 8px;
+  box-shadow: var(--tt-shadow-pop);
+  padding: 12px 14px;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+
+  &--open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &__title {
+    font-size: var(--font-size-caption);
+    color: var(--tt-text-sec);
+    margin-bottom: 6px;
+
+    &--mt { margin-top: 12px; }
+  }
+
+  &__modes {
+    display: flex;
+    gap: 6px;
+  }
+}
+
+.tt-mode-btn {
+  flex: 1;
+  min-height: var(--list-control-height);
+  padding: 6px 0;
+  font-size: var(--font-size-caption);
+  background: transparent;
+  border: 1px solid var(--tt-border);
+  border-radius: 6px;
+  color: var(--tt-text);
+  cursor: pointer;
+  transition: all 0.12s;
+
+  &:hover {
+    background: var(--tt-bg-hover);
+  }
+
+  &--active {
+    background: var(--tt-accent);
+    border-color: var(--tt-accent);
+    color: var(--color-text-inverse);
+
+    &:hover { background: var(--tt-accent-hover); }
+  }
+}
+
+/* ============ 自家页面已全部改用 CSS 变量(--tt-*) ============
+   原先的兜底覆盖规则已删除，依赖 .vue 里直接写 var(--tt-*) 自然支持深浅切换 */
+
+/* ============ floating 在小屏幕上稍微缩 ============ */
+@media (width <= 576px) {
+  .tt-controls--floating {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .tt-fab {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tt-panel {
+    width: 200px;
+  }
+}

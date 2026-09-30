@@ -1,0 +1,25 @@
+{
+  "bootstrap-vue-icons": {
+    "source": "bootstrap-vue 2.23.1 icon paths",
+    "license": "MIT",
+    "usage": "Approved generic UI glyphs generated into the project-owned sprite"
+  },
+  "project-semantic-icons": {
+    "source": "Dengtec frontend design system",
+    "license": "Project internal",
+    "symbols": [
+      "controller-host",
+      "controller-node",
+      "controller-system",
+      "product-model",
+      "system-platform",
+      "controller-console",
+      "mqtt-broker",
+      "web-interface",
+      "lvgl-interface",
+      "modifier-plus",
+      "modifier-list",
+      "modifier-dot"
+    ]
+  }
+}

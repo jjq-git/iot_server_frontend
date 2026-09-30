@@ -1,0 +1,111 @@
+.company-detail {
+  min-width: 0;
+  container-name: company-detail;
+  container-type: inline-size;
+}
+
+.company-detail .card-style-b,
+.company-detail .waterfall-container,
+.company-detail .section-b,
+.company-detail .detail-list,
+.company-detail .detail-row__content {
+  min-width: 0;
+}
+
+.company-detail .value-text {
+  overflow-wrap: anywhere;
+}
+
+// Read-only company attributes are status indicators, not active form controls.
+// The override must beat BootstrapVue's disabled-checked color in both themes.
+.company-detail .type-tags-wrapper ::v-deep .custom-control-input:checked:disabled ~ .custom-control-label::before {
+  border-color: var(--color-text-muted) !important;
+  background-color: var(--color-text-muted) !important;
+}
+
+.company-detail .domain-value {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.domain-verification {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.domain-verification__step {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: start;
+  gap: 8px;
+}
+
+.domain-verification__instruction {
+  min-width: 0;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.domain-verification__action {
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+/* 依据实际内容区宽度切换，侧栏展开或 AI 面板打开时也能正确降为单栏。 */
+@container company-detail (width <= 900px) {
+  .company-detail .card-style-b .waterfall-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* 不支持容器查询的浏览器使用视口断点兜底。 */
+@media (width <= 1200px) {
+  .company-detail .card-style-b .waterfall-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (width <= 520px) {
+  .company-detail .card-style-b .detail-row {
+    min-height: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .company-detail .card-style-b .detail-row__label {
+    width: 100%;
+    padding: 12px 0 2px;
+    flex-basis: auto;
+    white-space: normal;
+  }
+
+  .company-detail .card-style-b .detail-row__content {
+    width: 100%;
+    min-height: 0;
+    padding: 4px 0 12px;
+  }
+
+  .company-detail .company-login-entry {
+    width: 100%;
+  }
+
+  .company-detail .company-login-entry__link {
+    flex: 1;
+  }
+
+  .domain-verification__step {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .domain-verification__step .badge {
+    justify-self: start;
+  }
+
+  .domain-verification__action {
+    width: 100%;
+  }
+}

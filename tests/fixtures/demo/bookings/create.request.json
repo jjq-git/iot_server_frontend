@@ -1,0 +1,9 @@
+{
+  "pod_uuid": "demo-pod-office-01",
+  "owner_company_id": 300,
+  "subject": "Demo contract review",
+  "start_at": "2026-09-17T02:00:00.000Z",
+  "end_at": "2026-09-17T03:00:00.000Z",
+  "timezone": "Asia/Shanghai",
+  "participant_count": 4
+}

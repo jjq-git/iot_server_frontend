@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "entries": {
+    "src/assets/styles/base.scss": {
+      "hardcodedThemeColors": 9,
+      "important": 10,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/bootstrap-overrides.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 12,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/components.scss": {
+      "hardcodedThemeColors": 24,
+      "important": 1,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/dark-theme.scss": {
+      "hardcodedThemeColors": 11,
+      "important": 107,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/layout.scss": {
+      "hardcodedThemeColors": 6,
+      "important": 14,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/pages/company-templates.scss": {
+      "hardcodedThemeColors": 13,
+      "important": 3,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/pages/file-manager.scss": {
+      "hardcodedThemeColors": 15,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/pages/pod-models.scss": {
+      "hardcodedThemeColors": 2,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/pages.scss": {
+      "hardcodedThemeColors": 1,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/variables.scss": {
+      "hardcodedThemeColors": 99,
+      "important": 0,
+      "reason": "Canonical token and theme-map definitions."
+    },
+    "src/assets/styles/_admin-system.scss": {
+      "hardcodedThemeColors": 92,
+      "important": 311,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_bootstrap-theme.scss": {
+      "hardcodedThemeColors": 1,
+      "important": 5,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_customization.scss": {
+      "hardcodedThemeColors": 1,
+      "important": 2,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_dashboard.scss": {
+      "hardcodedThemeColors": 1,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_form-controls.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 1,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_interaction.scss": {
+      "hardcodedThemeColors": 1,
+      "important": 25,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_login.scss": {
+      "hardcodedThemeColors": 3,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_pod-control-panel.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 6,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_pod-models.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 8,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_resource-library.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 6,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_sensor-history.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 5,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_template-editor.scss": {
+      "hardcodedThemeColors": 2,
+      "important": 2,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/assets/styles/_theme-vars.scss": {
+      "hardcodedThemeColors": 15,
+      "important": 0,
+      "reason": "Canonical token and theme-map definitions."
+    },
+    "src/assets/styles/_tokens.scss": {
+      "hardcodedThemeColors": 343,
+      "important": 0,
+      "reason": "Canonical token and theme-map definitions, including the fixed LVGL device-preview palette."
+    },
+    "src/components/base/BaseFormGroup.vue": {
+      "hardcodedThemeColors": 1,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/components/ColumnVisibility.vue": {
+      "hardcodedThemeColors": 0,
+      "important": 6,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/components/ControllerIndicatorPanel.vue": {
+      "hardcodedThemeColors": 2,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/components/ControllerRadarPanel.vue": {
+      "hardcodedThemeColors": 3,
+      "important": 0,
+      "reason": "Existing data-visualization or state palette; migrate to named data tokens when touched."
+    },
+    "src/components/ControllerRegisterPanel.vue": {
+      "hardcodedThemeColors": 0,
+      "important": 1,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/components/customization/LoginPageTemplate.vue": {
+      "hardcodedThemeColors": 3,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/components/dashboard/ChartWidget.vue": {
+      "hardcodedThemeColors": 1,
+      "important": 0,
+      "reason": "Existing data-visualization or state palette; migrate to named data tokens when touched."
+    },
+    "src/views/company-templates/TemplateEditor.vue": {
+      "hardcodedThemeColors": 1,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/views/company-templates/Templates.vue": {
+      "hardcodedThemeColors": 2,
+      "important": 0,
+      "reason": "Existing compatibility debt baseline; this allowance may only decrease."
+    },
+    "src/views/company-dashboard-config/DashboardConfigEditor.vue": {
+      "hardcodedThemeColors": 3,
+      "important": 0,
+      "reason": "Literal input placeholders document the accepted hex color format; they are not theme styling."
+    },
+    "src/views/Dashboard.vue": {
+      "hardcodedThemeColors": 39,
+      "important": 0,
+      "reason": "Existing data-visualization or state palette; migrate to named data tokens when touched."
+    },
+    "src/assets/styles/pages/audit-logs.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 3,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/company-templates/template-detail.scss": {
+      "hardcodedThemeColors": 2,
+      "important": 0,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/debug/credentials.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 1,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/debug/devices.scss": {
+      "hardcodedThemeColors": 26,
+      "important": 2,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/debug/emcy-logs.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 1,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/debug/mqtt-stream.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 8,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/debug/serial-logs.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 1,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/device-enrollments/enrollment-list.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 2,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/device-enrollments/factory-registry.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 2,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/host-node-binding.scss": {
+      "hardcodedThemeColors": 3,
+      "important": 0,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/meeting-booking-detail.scss": {
+      "hardcodedThemeColors": 1,
+      "important": 0,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    },
+    "src/assets/styles/pages/meeting-bookings.scss": {
+      "hardcodedThemeColors": 0,
+      "important": 3,
+      "reason": "Unchanged page styles moved from the Vue view; existing compatibility debt baseline may only decrease."
+    }
+  }
+}

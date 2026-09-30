@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "event_type": "created",
+    "source_type": "local",
+    "actor_type": "user",
+    "actor_display_name": "Demo User",
+    "actor_external_id": null,
+    "before": null,
+    "after": {
+      "subject": "项目周会",
+      "status": "scheduled",
+      "revision": 1
+    },
+    "reason": null,
+    "created_at": "2026-09-16T17:00:00.000Z"
+  }
+]

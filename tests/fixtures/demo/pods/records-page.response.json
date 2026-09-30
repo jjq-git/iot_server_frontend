@@ -1,0 +1,17 @@
+{
+  "records": [
+    {
+      "uuid": "demo-pod-office-01-record-0",
+      "recorded_at": "2026-09-17T00:00:00.000Z",
+      "event_type": "telemetry",
+      "record_data": {
+        "temperature": 23.5,
+        "humidity": 48,
+        "noise": 36
+      }
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "page_size": 10
+}

@@ -1,0 +1,555 @@
+// =============================================================================
+
+// LVGL 9.5 light theme used by the isolated device UI preview. These are
+// renderer colors, not IoT admin colors; they stay fixed in dark admin mode.
+$color-lvgl-preview-primary: #2196f3;
+$color-lvgl-preview-secondary: #f44336;
+$color-lvgl-preview-neutral: #eee;
+$color-lvgl-preview-screen: #fafafa;
+$color-lvgl-preview-card: #fff;
+$color-lvgl-preview-text: #424242;
+$color-lvgl-preview-shadow: #9e9e9e;
+// 设计令牌 (Design Tokens)
+// -----------------------------------------------------------------------------
+// 本文件用 SCSS 变量集中定义全部色板,只供 _theme-vars.scss 在编译期消费,
+// 不直接输出任何 CSS 规则。
+// 命名规则:
+//   $color-{角色}-{级别}-{light|dark}
+//     角色  : bg / text / border / brand / accent / state / shadow / scrollbar
+//     级别  : page / card / hover / thead / disabled / code / muted / primary 等
+//   阴影/特效用 $shadow-* 和 $overlay-*
+// 设计目标:
+//   1) 浅色色板与现状视觉 1:1 一致(每个原 hex 都有对应 SCSS 变量)
+//   2) 深色色板沿用 dark-theme.scss 中 [data-theme="dark"] 的现值
+//   3) 同一 hex 出现 N 次只建一个变量,语义化命名取最高频用法
+//   4) 后续新增颜色应先在此处加 SCSS 变量,再在 _theme-vars.scss 暴露 CSS 变量
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// 1. 基础灰阶 / 中性色 (light)
+// -----------------------------------------------------------------------------
+
+// 背景层
+$color-bg-page-light: #f4f3f2;     // N1 页面背景
+$color-bg-card-light: #fff;     // 卡片白底(#fff 60 / #ffffff 11)
+$color-bg-hover-light: #f4f3f2;     // N1 通用 hover
+$color-bg-thead-light: #f4f3f2;     // N1 表头
+$color-bg-disabled-light: #eeecec;     // N2 禁用态背景
+$color-bg-code-light: #f6f8fa;     // 代码块底色(出现 1,与 GitHub 同)
+$color-bg-input-light: #fff;     // 输入框底
+$color-bg-topbar-light: #fff;     // 顶栏底
+$color-bg-subtle-light: #f5f7fa;     // 次级面板底
+$color-bg-muted-light: #fafbfc;     // 中性填充
+$color-bg-soft-light: #e5e3e2;     // N3 软灰背景
+$color-bg-fafbfc-light: #fafbfc;     // 极浅灰
+$color-bg-fbfcfd-light: #fbfcfd;     // 极浅灰偏蓝
+$color-bg-f4f6f9-light: #f4f6f9;     // variables.scss 旧 --color-bg
+$color-bg-f4f5fb-light: #f4f5fb;     // 紫调浅底
+$color-bg-f7fafc-light: #f7fafc;
+$color-bg-f8fbfc-light: #f8fbfc;
+$color-bg-f5f8fb-light: #f5f8fb;
+$color-bg-edf1f5-light: #edf1f5;
+$color-bg-eef0f2-light: #eef0f2;
+$color-bg-f1f1f1-light: #f1f1f1;     // 滚动条 track
+$color-bg-efefef-light: #efefef;
+$color-bg-e3e3e3-light: #e3e3e3;
+$color-bg-d4d4d4-light: #d4d4d4;
+$color-bg-dcdcdc-light: #dcdcdc;
+
+// 文字层
+$color-text-body-light: #212529;     // 正文
+$color-text-primary-light: #303133;     // 标题/重点文字
+$color-text-secondary-light: #606266;     // 次级文字
+$color-text-muted-light: #686b6f;     // 辅助文字；页面底对比度 4.83:1
+$color-text-hint-light: #706d6a;     // N5 占位/提示；页面底对比度 4.64:1
+$color-text-label-light: #67635f;     // N6 表单 label
+$color-text-disabled-light: #c0c4cc;     // 禁用文字
+$color-text-code-light: #d6336c;     // 代码字色
+$color-text-strong-light: #1c1a19;     // N7 强调文字
+$color-text-495057-light: #495057;     // BS gray-700(出现 26)
+$color-text-6c757d-light: #6c757d;     // BS gray-600(出现 10)
+$color-text-2d3748-light: #2d3748;     // chakra/tailwind 灰(出现 8)
+$color-text-718096-light: #718096;     // chakra 灰(出现 5)
+$color-text-1c2a39-light: #1c2a39;
+$color-text-243444-light: #243444;     // 出现 4
+$color-text-6b7a88-light: #6b7a88;
+$color-text-8c98a4-light: #8c98a4;
+$color-text-708090-light: #708090;
+$color-text-9aa5b1-light: #9aa5b1;
+$color-text-6b7280-light: #6b7280;
+$color-text-70809a-light: #70809a;
+$color-text-707070-light: #707070;
+$color-text-878787-light: #878787;
+$color-text-555555-light: #555;
+$color-text-333-light: #333;
+$color-text-111-light: #111;
+$color-text-000-light: #000;
+$color-text-fff-light: #fff;     // 反白文字
+$color-text-242424-light: #242424;
+$color-text-8c939d-light: #8c939d;
+
+// 边框层
+$color-border-light-l: #eef0f2;     // 统一浅边框
+$color-border-l: #dee2e6;     // 主边框
+$color-border-input-l: #c9c5c2;     // N4 输入框边框
+$color-border-strong-l: #c0c4cc;     // 较深边框
+$color-border-ebeef5-l: #e5e3e2;     // N3 分隔线
+$color-border-dee2e6-l: #dee2e6;     // BS gray-300(出现 11)
+$color-border-ced4da-l: #ced4da;     // BS form-control(出现 6)
+$color-border-adb5bd-l: #adb5bd;     // BS gray-500(出现 5)
+$color-border-e4e7ed-l: #e4e7ed;
+$color-border-e0e0e0-l: #e0e0e0;     // --tt-border 浅
+$color-border-eee-l: #eee;     // 出现 8
+
+// 焦点高亮边
+$color-border-focus-l: #067a7a;     // 品牌色焦点边
+
+
+// -----------------------------------------------------------------------------
+// 2. 品牌色 / 强调色 (light)
+// -----------------------------------------------------------------------------
+
+$color-brand-light: #067a7a;    // 品牌主色 - 青绿(出现 66)
+$color-brand-dark-l: #04514f;    // 品牌深色 Deep
+$color-brand-darker-l: #055f5f;
+$color-brand-darkest-l: #088a8a;
+$color-brand-light-bg-l: #e6f4f3;    // 品牌浅填充
+$color-brand-soft-l: #e6f4f3;
+$color-brand-tint-l: #e6f4f3;
+$color-brand-mid-l: #0a9a9a;    // 出现 11
+$color-brand-mid2-l: #0c9f9f;
+$color-brand-light2-l: #3b9f9f;
+$color-brand-disabled-l: #5facac;    // --color-disabled
+$color-brand-tint2-l: #a0d7d7;
+
+// MS Fluent 蓝 / 通用 accent
+$color-accent-light: #28a745;
+$color-accent-hover-light: #106ebe;
+$color-accent-bg-light: #eff6fc;
+$color-accent-blue-light: #5e72e4;
+
+// 紫调强调(渐变背景常用)
+$color-purple-667eea-light: #667eea;
+$color-purple-764ba2-light: #764ba2;
+$color-purple-f093fb-light: #f093fb;
+$color-purple-4facfe-light: #4facfe;
+$color-purple-00f2fe-light: #00f2fe;
+$color-purple-fee140-light: #fee140;
+$color-purple-fa709a-light: #fa709a;
+$color-purple-f5576c-light: #f5576c;
+$color-purple-5e72e4-light: #5e72e4;
+$color-purple-1a237e-light: #1a237e;
+$color-purple-2c3350-light: #2c3350;
+$color-purple-4f6ddf-light: #4f6ddf;
+$color-purple-11998e-light: #11998e;
+$color-purple-38ef7d-light: #38ef7d;
+
+// BS primary / info 蓝
+$color-bs-primary-light: #0d6efd;
+$color-bs-primary-hover-l: #0b5ed7;
+$color-bs-primary-active-l: #0a58ca;
+$color-bs-primary-info-l: #084298;
+$color-bs-info-l: #11cdef;
+$color-bs-info-2-l: #0dcaf0;
+$color-bs-info-bg-l: #cff4fc;
+$color-bs-info-bdr-l: #b6effb;
+$color-bs-info-text-l: #055160;
+$color-bs-primary-bg-l: #cfe2ff;
+$color-bs-primary-bdr-l: #b6d4fe;
+$color-bs-primary-focus-l: #86b7fe;
+
+
+// -----------------------------------------------------------------------------
+// 3. 状态色 - 成功/警告/错误/信息 (light)
+// -----------------------------------------------------------------------------
+
+// 成功
+$color-success-light: #28a745;    // Success
+$color-success-deep-l: #85ce61;
+$color-success-bg-l: #f0f9eb;    // Element 浅底
+$color-success-13a10e-l: #13a10e;    // --tt-success
+$color-success-2faa28-l: #2faa28;
+$color-success-bg-dff6dd-l: #dff6dd;    // --tt-green-bg
+$color-success-text-0e700e-l: #0e700e;    // --tt-green-text
+$color-success-bdr-9ee09b-l: #9ee09b;
+$color-success-bs-l: #198754;    // BS success
+$color-success-bs-deep-l: #146c43;
+$color-success-bs-bg-l: #d1e7dd;
+$color-success-bs-bg2-l: #d4edda;
+$color-success-bs-bdr-l: #c3e6cb;
+$color-success-bs-bdr2-l: #badbcc;
+$color-success-bs-text-l: #0f5132;
+$color-success-bs-text2-l: #155724;
+$color-success-28a745-l: #28a745;
+$color-success-6a9955-l: #6a9955;
+
+// 警告
+$color-warning-light: #f0ad4e;    // Warning
+$color-warning-deep-l: #ffc107;    // BS warning
+$color-warning-fd7e14-l: #fd7e14;
+$color-warning-fb6340-l: #fb6340;
+$color-warning-bg-l: #fdf6ec;    // Element 浅底
+$color-warning-fff3cd-l: #fff3cd;    // BS warning bg
+$color-warning-fff1cc-l: #fff1cc;    // --tt-warn-bg
+$color-warning-text-8a6914-l: #8a6914;    // --tt-warn-text
+$color-warning-text-664d03-l: #664d03;    // BS warning text
+$color-warning-text-856404-l: #856404;
+$color-warning-bdr-f5d58a-l: #f5d58a;    // --tt-warn-bdr
+$color-warning-bdr-ffe69c-l: #ffe69c;
+$color-warning-bdr-ffecb5-l: #ffecb5;
+$color-warning-e0a800-l: #e0a800;
+$color-warning-ebb96a-l: #ebb96a;
+
+// 错误
+$color-error-light: #dc3545;    // Danger
+$color-error-deep-l: #f78c8c;
+$color-error-strong-l: #dc3545;    // BS danger
+$color-error-d-l: #b02a37;
+$color-error-d2-l: #842029;
+$color-error-d3-l: #b10e1c;    // --tt-red-text
+$color-error-eb5757-l: #eb5757;
+$color-error-f5365c-l: #f5365c;
+$color-error-f89191-l: #f89191;
+$color-error-bg-l: #fef0f0;    // Element 浅底
+$color-error-bg-fde7e9-l: #fde7e9;    // --tt-red-bg
+$color-error-bg-f8d7da-l: #f8d7da;
+$color-error-bg-fff5f5-l: #fff5f5;
+$color-error-bg-ffebeb-l: #ffebeb;
+$color-error-bdr-f5b0b5-l: #f5b0b5;    // --tt-red-bdr
+$color-error-bdr-f5c2c7-l: #f5c2c7;
+
+// 信息(参考蓝)
+$color-info-light: #17a2b8;
+$color-info-text-light: #055160;
+$color-info-tint-l: #eaf4fd;
+$color-info-soft-l: #ecf5ff;    // Element 浅底
+$color-info-fafe-l: #f5f9ff;
+
+
+// -----------------------------------------------------------------------------
+// 4. 阴影 / 透明遮罩 (light)
+// -----------------------------------------------------------------------------
+
+$shadow-xs-light: 0 1px 2px rgb(0 0 0 / 4%);                     // sm 兜底
+$shadow-sm-light: 0 1px 2px rgb(15 23 42 / 6%);
+$shadow-md-light: 0 4px 12px rgb(15 23 42 / 10%);
+$shadow-lg-light: 0 8px 24px rgb(0 0 0 / 12%);                    // 下拉/菜单
+$shadow-pop-light: 0 8px 24px rgb(0 0 0 / 15%);
+$shadow-card-light: 0 1px 3px rgb(28 26 25 / 7%);              // 规范卡片阴影
+$shadow-overlay-light: 0 12px 36px rgb(28 26 25 / 18%);
+$shadow-inset-light: inset 0 1px 2px rgb(0 0 0 / 4%);
+$shadow-focus-compact-l: 0 0 0 1px $color-brand-light;
+$shadow-focus-blue-l: 0 0 0 0.2rem rgb(75 160 232 / 25%);
+$shadow-focus-bs-l: 0 0 0 0.25rem rgb(13 110 253 / 20%);
+$shadow-focus-brand-l: 0 0 0 0.2rem rgb(6 122 122 / 16%);
+
+// 滚动条
+$color-scrollbar-thumb-light: #c1c1c1;
+$color-scrollbar-track-light: #f1f1f1;
+
+// 数据可视化：ECharts 无法直接消费 CSS 颜色，运行时从对应 CSS 变量读取。
+$color-chart-text-light: #6b7785;
+$color-chart-text-strong-light: #1f2a37;
+$color-chart-grid-light: #edf1f5;
+$color-chart-surface-light: #fff;
+$color-chart-success: #2da44e;
+$color-chart-warning: #d97706;
+$color-chart-error: #dc3545;
+$color-chart-info: #3b82f6;
+$color-chart-error-area: rgb(220 53 69 / 12%);
+$color-chart-tooltip-bg: rgb(20 25 30 / 92%);
+$color-chart-tooltip-border: rgb(255 255 255 / 8%);
+$color-chart-tooltip-text: #fff;
+
+// 应用外壳与半透明交互层
+$color-overlay-light: rgb(28 26 25 / 42%);
+$color-sidebar-bg-secondary-light: #0a0a0b;
+$color-sidebar-text-light: #d0d0d4;
+$color-sidebar-muted-light: rgb(255 255 255 / 78%);
+$color-sidebar-heading-light: rgb(255 255 255 / 38%);
+$color-sidebar-divider-light: rgb(255 255 255 / 6%);
+$color-inverse-fill-subtle: rgb(255 255 255 / 16%);
+$color-inverse-fill-faint: rgb(255 255 255 / 3%);
+$color-inverse-fill-soft: rgb(255 255 255 / 10%);
+$color-inverse-fill-medium: rgb(255 255 255 / 20%);
+$color-inverse-text-muted: rgb(255 255 255 / 50%);
+$color-inverse-text-secondary: rgb(255 255 255 / 80%);
+$color-inverse-text-strong: rgb(255 255 255 / 90%);
+$color-brand-fill-subtle-light: rgb(6 122 122 / 10%);
+$color-brand-border-soft-light: rgb(6 122 122 / 16%);
+$color-brand-border-light: rgb(6 122 122 / 22%);
+$color-control-border-brand-muted-light: rgb(6 122 122 / 18%);
+$color-control-border-brand-light: rgb(6 122 122 / 22%);
+$color-control-border-brand-strong-light: rgb(6 122 122 / 34%);
+$color-control-border-focus-light: rgb(6 122 122 / 55%);
+$color-error-border-soft-light: rgb(220 53 69 / 22%);
+$color-inverse-border-muted: rgb(255 255 255 / 8%);
+$color-inverse-border-light: rgb(255 255 255 / 18%);
+$color-inverse-surface: rgb(255 255 255 / 92%);
+$color-shell-topbar-light: rgb(255 255 255 / 92%);
+$color-surface-transparent-light: rgb(255 255 255 / 0%);
+$color-table-scroll-shadow-light: rgb(15 23 42 / 8%);
+$color-table-scroll-shadow-transparent-light: rgb(15 23 42 / 0%);
+$color-scrollbar-thumb-overlay: rgb(126 126 126 / 24%);
+$color-overlay-soft: rgb(0 0 0 / 20%);
+$color-login-overlay-start: rgb(4 20 20 / 55%);
+$color-login-overlay-end: rgb(4 20 20 / 82%);
+$color-file-card-border: rgb(0 0 0 / 12.5%);
+$shadow-menu-light: 0 12px 28px rgb(28 26 25 / 14%);
+$shadow-inset-soft-light: inset 0 1px 3px rgb(0 0 0 / 5%);
+$shadow-sidebar-light: 4px 0 18px rgb(15 23 42 / 38%);
+$shadow-floating-control-light: 0 8px 18px rgb(0 0 0 / 18%);
+$shadow-data-card-light: 0 1px 2px rgb(15 23 42 / 4%);
+$shadow-range-thumb: 0 1px 3px rgb(0 0 0 / 20%);
+$shadow-recessed-light: inset 1px 2px 14px rgb(28 26 25 / 6%);
+$shadow-dashboard-stat-light: 0 1px 2px rgb(28 26 25 / 8%);
+$shadow-template-card-light: 0 8px 24px rgb(0 0 0 / 7%);
+$shadow-template-footer-light: 0 -8px 18px -16px rgb(0 0 0 / 48%);
+$shadow-customization-preview-light: 0 18px 50px rgb(7 27 27 / 20%);
+$shadow-file-card-light: 0 0.5rem 1rem rgb(0 0 0 / 8%);
+$shadow-file-card-hover-light: 0 1rem 2rem rgb(0 0 0 / 12%);
+$shadow-file-icon-light: 0 4px 12px rgb(0 0 0 / 15%);
+$shadow-file-title-light: 0 2px 4px rgb(0 0 0 / 10%);
+$shadow-file-action-light: 0 4px 8px rgb(0 0 0 / 10%);
+$shadow-file-state-success: 0 2px 4px rgb(15 81 50 / 15%);
+$shadow-file-state-primary: 0 2px 4px rgb(8 66 152 / 15%);
+$shadow-file-state-info: 0 2px 4px rgb(5 81 96 / 15%);
+$shadow-file-state-warning: 0 2px 4px rgb(102 77 3 / 15%);
+$shadow-file-state-error: 0 2px 4px rgb(132 32 41 / 15%);
+$shadow-pod-model-focus-light: 0 0 0 2px rgb(6 122 122 / 20%);
+$shadow-pod-model-card-light: 0 2px 12px rgb(0 0 0 / 10%);
+
+
+// =============================================================================
+// 深色色板 (从现有 dark-theme.scss 取值)
+// =============================================================================
+
+// 背景层
+$color-bg-page-dark: #050606;
+$color-bg-card-dark: #252525;     // 比 --tt-bg-card 略深,统一卡片底
+$color-bg-card-2-dark: #0b0d0e;
+$color-bg-hover-dark: #151819;
+$color-bg-thead-dark: #0f1213;
+$color-bg-disabled-dark: #141718;
+$color-bg-code-dark: #080a0b;
+$color-bg-input-dark: #0d0f10;
+$color-bg-topbar-dark: #070808;
+$color-bg-subtle-dark: #0e1112;
+$color-bg-muted-dark: #101314;
+$color-bg-soft-dark: #090b0c;
+
+// 文字层
+$color-text-primary-dark: #e6edf3;
+$color-text-secondary-dark: #a6b3bf;
+$color-text-muted-dark: #8f9eaa;
+$color-text-hint-dark: #74838f;
+$color-text-label-dark: #bac5ce;
+$color-text-disabled-dark: #56636d;
+$color-text-code-dark: #f59cb5;
+$color-text-strong-dark: #f0f0f0;
+
+// 边框层
+$color-border-light-d: #1b1e20;
+$color-border-d: #26292b;
+$color-border-input-d: #303437;
+$color-border-strong-d: #3b4043;
+$color-border-divider-d: #202325;
+$color-border-bs-d: #404040;
+$color-border-form-d: #505050;
+$color-border-focus-d: #2bb5ad;
+
+// 品牌(深色微调:稍提亮以保对比度)
+$color-brand-dark: #24b3aa;
+$color-brand-hover-dark: #45c8c0;
+$color-brand-dark-d: #179b94;
+$color-brand-solid-dark: #0a9a9a;
+$color-brand-solid-hover-dark: #60aff0;
+$color-brand-light-dark: #1e2e3f;
+$color-brand-light-bg-d: #1c2a39;
+$color-brand-soft-d: #183634;
+$color-brand-tint-d: #16302f;
+
+// 强调
+$color-accent-dark: #24b3aa;
+$color-accent-hover-dark: #45c8c0;
+$color-accent-bg-dark: #183634;
+$color-accent-blue-dark: #67a9df;
+$color-bs-info-dark: #4ba0e8;
+$color-info-bg-dark: #1b2e3d;
+
+// 状态(深色)
+$color-success-dark: #55b97a;
+$color-success-bg-dark: #173326;
+$color-success-text-dark: #6bc98d;
+$color-success-bdr-dark: #28543b;
+$color-warning-dark: #d6ac4d;
+$color-warning-bg-dark: #342d19;
+$color-warning-text-dark: #e2bd64;
+$color-warning-bdr-dark: #574923;
+$color-error-dark: #e57682;
+$color-error-bg-dark: #351f25;
+$color-error-text-dark: #ee8c96;
+$color-error-bdr-dark: #59303a;
+$color-info-dark: #67a9df;
+$color-info-text-dark: $color-info-dark;
+
+// 阴影(深色加深)
+$shadow-xs-dark: 0 1px 2px rgb(0 0 0 / 30%);
+$shadow-sm-dark: 0 1px 2px rgb(0 0 0 / 40%);
+$shadow-md-dark: 0 4px 14px rgb(0 0 0 / 40%);
+$shadow-lg-dark: 0 8px 24px rgb(0 0 0 / 50%);
+$shadow-pop-dark: 0 8px 28px rgb(0 0 0 / 50%);
+$shadow-card-dark: 0 2px 6px rgb(0 0 0 / 25%);
+$shadow-overlay-dark: $shadow-overlay-light;
+$shadow-inset-dark: inset 0 1px 2px rgb(0 0 0 / 30%);
+$shadow-focus-compact-d: 0 0 0 1px $color-brand-dark;
+$shadow-focus-blue-d: 0 0 0 0.2rem rgb(75 160 232 / 30%);
+$shadow-focus-bs-d: 0 0 0 0.25rem rgb(13 110 253 / 30%);
+$shadow-focus-brand-d: 0 0 0 0.2rem rgb(6 122 122 / 40%);
+
+// 滚动条
+$color-scrollbar-thumb-dark: #303437;
+$color-scrollbar-track-dark: #070808;
+
+$color-chart-text-dark: #aab4bf;
+$color-chart-text-strong-dark: #eef2f5;
+$color-chart-grid-dark: #2c333a;
+$color-chart-surface-dark: #24292f;
+
+$color-overlay-dark: rgb(0 0 0 / 58%);
+$color-overlay-strong-dark: rgb(0 0 0 / 70%);
+$color-bg-solid-dark: #111;
+$color-sidebar-bg-dark: #050606;
+$color-sidebar-text-dark: #ceced3;
+$color-sidebar-muted-dark: #86868e;
+$color-sidebar-heading-dark: #6a6a71;
+$color-sidebar-hover-bg-dark: #171919;
+$color-sidebar-active-bg-dark: #151717;
+$color-sidebar-divider-dark: rgb(255 255 255 / 5%);
+$color-brand-fill-subtle-dark: rgb(147 206 203 / 10%);
+$color-brand-border-soft-dark: rgb(147 206 203 / 18%);
+$color-brand-border-dark: rgb(147 206 203 / 22%);
+$color-control-border-brand-muted-dark: $color-control-border-brand-muted-light;
+$color-control-border-brand-dark: $color-control-border-brand-light;
+$color-control-border-brand-strong-dark: $color-control-border-brand-strong-light;
+$color-control-border-focus-dark: $color-control-border-focus-light;
+$color-error-border-soft-dark: $color-error-border-soft-light;
+$color-shell-topbar-dark: rgb(5 6 6 / 97%);
+$color-surface-transparent-dark: rgb(11 13 14 / 0%);
+$color-table-scroll-shadow-dark: rgb(0 0 0 / 28%);
+$color-table-scroll-shadow-transparent-dark: rgb(0 0 0 / 0%);
+$shadow-menu-dark: $shadow-menu-light;
+$shadow-inset-soft-dark: $shadow-inset-soft-light;
+$shadow-sidebar-dark: $shadow-sidebar-light;
+$shadow-floating-control-dark: $shadow-floating-control-light;
+$shadow-data-card-dark: $shadow-data-card-light;
+$shadow-focus-blue-compact-dark: 0 0 0 2px rgb(75 160 232 / 30%);
+$shadow-focus-blue-strong-dark: 0 0 0 3px rgb(75 160 232 / 30%);
+$shadow-recessed-dark: $shadow-recessed-light;
+$shadow-dashboard-stat-dark: $shadow-dashboard-stat-light;
+$shadow-template-card-dark: $shadow-template-card-light;
+$shadow-template-footer-dark: $shadow-template-footer-light;
+$shadow-customization-preview-dark: $shadow-customization-preview-light;
+$shadow-file-card-dark: $shadow-file-card-light;
+$shadow-file-card-hover-dark: $shadow-file-card-hover-light;
+$shadow-file-icon-dark: $shadow-file-icon-light;
+$shadow-file-title-dark: $shadow-file-title-light;
+$shadow-file-action-dark: $shadow-file-action-light;
+$shadow-pod-model-focus-dark: $shadow-pod-model-focus-light;
+$shadow-pod-model-card-dark: $shadow-pod-model-card-light;
+
+
+// =============================================================================
+// 基础尺寸与交互节奏
+// =============================================================================
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 12px;
+$space-lg: 16px;
+$space-xl: 24px;
+$space-2xl: 32px;
+
+// 排版尺寸：保持现有后台密度，供语义排版令牌映射。
+$font-size-badge: 11px;
+$font-size-caption: 12px;
+$font-size-code: 12.5px;
+$font-size-meta: 12.5px;
+$font-size-control: 13px;
+$font-size-navigation: 13.5px;
+$font-size-body: 14px;
+$font-size-emphasis: 15px;
+$font-size-subtitle: 16px;
+$font-size-modal-title: 17px;
+$font-size-title-sm: 18px;
+$font-size-page-title: 20px;
+$font-size-title-md: 22px;
+$font-size-display-sm: 24px;
+$font-size-title-lg: 28px;
+$font-size-display-md: 32px;
+$font-size-display-lg: 40px;
+$font-size-display-xl: 48px;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-strong: 650;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$line-height-tight: 1;
+$line-height-compact: 1.2;
+$line-height-heading: 1.35;
+$line-height-body: 1.5;
+$line-height-relaxed: 1.6;
+
+// 控件与图标尺寸：语义组件在此选定统一档位，页面不自行创造新高度。
+$control-height-xs: 28px;
+$control-height-sm: 32px;
+$control-height-menu: 34px;
+$control-height-md: 40px;
+$control-height-lg: 44px;
+$icon-size-sm: 14px;
+$icon-size-md: 16px;
+$icon-size-lg: 20px;
+$icon-size-xl: 28px;
+$icon-button-size: 36px;
+
+// 动效与层级：与 BootstrapVue 的门户层级保持兼容。
+$motion-duration-fast: 120ms;
+$motion-duration-base: 150ms;
+$motion-duration-medium: 200ms;
+$motion-duration-slow: 300ms;
+$motion-duration-theme: 250ms;
+$motion-ease-standard: ease;
+$motion-ease-in-out: ease-in-out;
+$motion-ease-emphasized: cubic-bezier(0.4, 0, 0.2, 1);
+$z-raised: 1;
+$z-control: 2;
+$z-topbar: 9;
+$z-sticky: 10;
+$z-local-overlay: 20;
+$z-navigation: 999;
+$z-dropdown: 1000;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+$z-floating-control: 1080;
+$z-toast: 1100;
+
+// 圆角
+$radius-none: 0;
+$radius-xs: 2px;
+$radius-compact: 3px;
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+$radius-pill: 999px;
+$radius-circle: 50%;
+
+// 语义圆角：修改某一类组件的形状时，只调整这里的映射。
+$radius-control: $radius-none;
+$radius-surface: $radius-none;
+$radius-overlay: $radius-none;
+$radius-status: $radius-none;
+$radius-track: $radius-none;
+$radius-avatar: $radius-none;

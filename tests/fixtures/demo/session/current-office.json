@@ -1,0 +1,83 @@
+{
+  "access_token": "demo-session:office:fixture",
+  "user": {
+    "id": 300,
+    "user_id": "demo-user-office",
+    "uuid": "demo-user-office",
+    "email": "office@demo.podsc.com",
+    "phone": null,
+    "display_name": "Demo User",
+    "role": "admin",
+    "company_id": 300,
+    "company_name": "演示办公客户",
+    "company": {
+      "id": 300,
+      "uuid": "demo-company-office",
+      "company_code": "DEMO-OFFICE",
+      "company_name": "演示办公客户",
+      "short_name": "演示办公客户",
+      "name": "演示办公客户",
+      "company_type": "EU",
+      "parent_com_id": 200,
+      "created_by_company_id": 200,
+      "logo_file_id": null,
+      "logo_url": null,
+      "location_id": 1,
+      "country": "CN",
+      "domain": null,
+      "slogan": null,
+      "primary_color": null,
+      "secondary_color": null,
+      "accent_color": null,
+      "contact_person": null,
+      "contact_email": "office@demo.podsc.com",
+      "contact_phone": null,
+      "address": "上海市浦东新区世纪大道 100 号",
+      "pod_usage": "internal",
+      "status": "active",
+      "is_platform": false,
+      "is_active": true,
+      "is_pod_manufacturer": false,
+      "is_channel_partner": false,
+      "is_brand": false,
+      "is_enduser": true,
+      "is_household": false,
+      "is_school": false,
+      "created_by": null,
+      "updated_by": null,
+      "created_at": "2026-09-01T00:20:00.000Z",
+      "updated_at": "2026-09-01T00:20:00.000Z"
+    },
+    "company_type": "EU",
+    "pod_usage": "internal",
+    "permissions": [
+      "dashboard.view",
+      "company.view",
+      "pod.view",
+      "meeting.view",
+      "pod.receive"
+    ],
+    "allowed_companies": [
+      300
+    ],
+    "visible_companies": [
+      300
+    ],
+    "writable_companies": [
+      300
+    ],
+    "is_active": true,
+    "invitation_pending": false,
+    "must_change_password": false,
+    "password_changed_at": null,
+    "last_login_at": "2026-09-17T08:00:00.000Z",
+    "last_login_ip": "192.0.2.10",
+    "created_at": "2026-09-01T00:00:00.000Z",
+    "updated_at": "2026-09-17T08:00:00.000Z",
+    "locale": "zh-CN",
+    "preferred_language": "zh-CN",
+    "timezone": "Asia/Shanghai",
+    "membership_id": 300,
+    "authorization_version": 1
+  }
+}

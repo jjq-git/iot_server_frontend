@@ -1,0 +1,95 @@
+.pod-models {
+  .pod-models__filters {
+    margin-bottom: 0;
+  }
+  
+  .pod-models__pager {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* 属性数量：轻量可点击计数 chip（替代原来的实心圆徽章） */
+  .attr-count-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    min-width: 40px;
+    padding: 2px 8px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
+    background: var(--color-bg-hover);
+    color: var(--color-brand);
+    font-size: var(--font-size-control);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .attr-count-chip:hover {
+    border-color: var(--color-brand);
+    background: var(--color-brand-solid);
+    color: var(--color-text-inverse);
+  }
+  
+  .attr-count-chip:focus {
+    outline: none;
+    box-shadow: var(--shadow-pod-model-focus);
+  }
+  
+  .attr-count-chip__num {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .attr-count-chip__icon {
+    font-size: var(--font-size-badge);
+    opacity: 0.7;
+  }
+  
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+  
+  .table-image-placeholder {
+    width: 22px;
+    height: 22px;
+    color: var(--color-text-muted);
+    opacity: 0.55;
+  }
+  
+  .text-success {
+    color: var(--color-success);
+  }
+  
+  .image-preview-overlay {
+    position: fixed;
+    z-index: 9999;
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid var(--color-accent-blue);
+    border-radius: 4px;
+    box-shadow: var(--shadow-pod-model-card);
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+  
+  .attr-dialog-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .form-tip {
+    margin-top: 4px;
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+  }
+  
+}

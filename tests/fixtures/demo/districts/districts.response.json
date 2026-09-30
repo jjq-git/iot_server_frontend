@@ -1,0 +1,18 @@
+{
+  "total": 1,
+  "items": [
+    {
+      "id": 3,
+      "code": "310115",
+      "city_code": "310100",
+      "name": "浦东新区",
+      "parent_id": 2,
+      "level": "district",
+      "parent_code": "310100",
+      "full_path": "上海市/上海市/浦东新区",
+      "gps_lat": 31.2304,
+      "gps_lng": 121.5447,
+      "timezone": "Asia/Shanghai"
+    }
+  ]
+}

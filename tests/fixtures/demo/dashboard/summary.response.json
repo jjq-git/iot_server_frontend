@@ -1,0 +1,218 @@
+{
+  "stats": {
+    "totalDevices": 2,
+    "onlineDevices": 1,
+    "offlineDevices": 1,
+    "onlineRate": 50,
+    "podTotal": 2,
+    "podInUse": 0,
+    "podUsageRate": 0,
+    "fileTotal": 4,
+    "fileSize": "16 MB",
+    "alertsToday": 1,
+    "alertsWeek": 2,
+    "alertsPending": 1,
+    "fileDownloads": 8,
+    "filePlays": 20,
+    "fileNew": 1
+  },
+  "deviceStatusData": {
+    "online": 1,
+    "offline": 1,
+    "maintenance": 0,
+    "inactive": 0
+  },
+  "onlineRateData": [
+    50,
+    45,
+    52,
+    48,
+    53,
+    51,
+    50
+  ],
+  "onlineRateTrend": [
+    {
+      "label": "D1",
+      "value": 50
+    },
+    {
+      "label": "D2",
+      "value": 45
+    },
+    {
+      "label": "D3",
+      "value": 52
+    },
+    {
+      "label": "D4",
+      "value": 48
+    },
+    {
+      "label": "D5",
+      "value": 53
+    },
+    {
+      "label": "D6",
+      "value": 51
+    },
+    {
+      "label": "D7",
+      "value": 50
+    }
+  ],
+  "podDurationData": {
+    "short": 4,
+    "medium": 6,
+    "long": 2,
+    "total": 12
+  },
+  "podDurationPercent": {
+    "short": 33,
+    "medium": 50,
+    "long": 17
+  },
+  "podAvgDuration": 48,
+  "podLongestDuration": 132,
+  "podUsageTrend": [
+    {
+      "label": "Mon",
+      "usage_count": 2,
+      "avg_duration_minutes": 42
+    },
+    {
+      "label": "Tue",
+      "usage_count": 3,
+      "avg_duration_minutes": 44
+    },
+    {
+      "label": "Wed",
+      "usage_count": 4,
+      "avg_duration_minutes": 46
+    },
+    {
+      "label": "Thu",
+      "usage_count": 5,
+      "avg_duration_minutes": 48
+    },
+    {
+      "label": "Fri",
+      "usage_count": 6,
+      "avg_duration_minutes": 50
+    }
+  ],
+  "alertTypes": {
+    "offline": 1,
+    "communication": 0,
+    "other": 0
+  },
+  "alertTrend": [
+    {
+      "label": "D1",
+      "count": 1
+    },
+    {
+      "label": "D2",
+      "count": 0
+    },
+    {
+      "label": "D3",
+      "count": 1
+    },
+    {
+      "label": "D4",
+      "count": 0
+    },
+    {
+      "label": "D5",
+      "count": 1
+    },
+    {
+      "label": "D6",
+      "count": 0
+    },
+    {
+      "label": "D7",
+      "count": 1
+    }
+  ],
+  "tableData": [
+    {
+      "date": "2026-09-11",
+      "date_label": "2026-09-11",
+      "online_devices": 1,
+      "total_devices": 2,
+      "online_rate": 50,
+      "pod_usage": 2,
+      "avg_usage_time": 38,
+      "file_downloads": 4,
+      "alerts_count": 1
+    },
+    {
+      "date": "2026-09-12",
+      "date_label": "2026-09-12",
+      "online_devices": 0,
+      "total_devices": 2,
+      "online_rate": 0,
+      "pod_usage": 1,
+      "avg_usage_time": 41,
+      "file_downloads": 5,
+      "alerts_count": 2
+    },
+    {
+      "date": "2026-09-13",
+      "date_label": "2026-09-13",
+      "online_devices": 1,
+      "total_devices": 2,
+      "online_rate": 50,
+      "pod_usage": 4,
+      "avg_usage_time": 44,
+      "file_downloads": 6,
+      "alerts_count": 2
+    },
+    {
+      "date": "2026-09-14",
+      "date_label": "2026-09-14",
+      "online_devices": 1,
+      "total_devices": 2,
+      "online_rate": 50,
+      "pod_usage": 2,
+      "avg_usage_time": 47,
+      "file_downloads": 7,
+      "alerts_count": 1
+    },
+    {
+      "date": "2026-09-15",
+      "date_label": "2026-09-15",
+      "online_devices": 2,
+      "total_devices": 2,
+      "online_rate": 100,
+      "pod_usage": 5,
+      "avg_usage_time": 50,
+      "file_downloads": 8,
+      "alerts_count": 0
+    },
+    {
+      "date": "2026-09-16",
+      "date_label": "2026-09-16",
+      "online_devices": 1,
+      "total_devices": 2,
+      "online_rate": 50,
+      "pod_usage": 4,
+      "avg_usage_time": 53,
+      "file_downloads": 9,
+      "alerts_count": 2
+    },
+    {
+      "date": "2026-09-17",
+      "date_label": "2026-09-17",
+      "online_devices": 1,
+      "total_devices": 2,
+      "online_rate": 50,
+      "pod_usage": 2,
+      "avg_usage_time": 56,
+      "file_downloads": 10,
+      "alerts_count": 1
+    }
+  ]
+}

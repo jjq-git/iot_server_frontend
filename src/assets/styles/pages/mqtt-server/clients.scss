@@ -1,0 +1,18 @@
+.mqtt-clients {
+  &__detail-json {
+    max-height: 60vh;
+    overflow: auto;
+    background: var(--tt-bg-code);
+    color: var(--tt-text-code);
+    padding: 12px;
+    border-radius: 4px;
+    font-size: var(--font-size-caption);
+    margin: 0;
+  }
+}
+
+.mqtt-notconfigured {
+  border: 1px dashed var(--tt-border);
+  background: var(--tt-bg-thead);
+  color: var(--tt-text-sec);
+}

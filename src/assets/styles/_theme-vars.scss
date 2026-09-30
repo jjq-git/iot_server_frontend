@@ -1,0 +1,526 @@
+// =============================================================================
+// 主题 CSS 变量定义
+// -----------------------------------------------------------------------------
+// 把 _tokens.scss 中的 SCSS 变量映射到 :root / [data-theme="dark"] 的 CSS 变量,
+// 命名约定:
+//   --color-{角色}-{级别}     语义化,无 --tt- 前缀
+//   --shadow-{级别}
+// .vue 内只能用 var(--color-xxx),不要直接读 SCSS 变量。
+// =============================================================================
+
+@use "tokens" as *;
+
+:root {
+  --color-lvgl-preview-primary: #{$color-lvgl-preview-primary};
+  --color-lvgl-preview-primary-muted: #{rgba($color-lvgl-preview-primary, 0.2)};
+  --color-lvgl-preview-secondary: #{$color-lvgl-preview-secondary};
+  --color-lvgl-preview-neutral: #{$color-lvgl-preview-neutral};
+  --color-lvgl-preview-screen: #{$color-lvgl-preview-screen};
+  --color-lvgl-preview-card: #{$color-lvgl-preview-card};
+  --color-lvgl-preview-text: #{$color-lvgl-preview-text};
+  --shadow-lvgl-preview-button: 0 3px 3px #{rgba($color-lvgl-preview-shadow, 0.5)};
+  --font-family-brand: system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-family-monospace: ui-monospace, 'SFMono-Regular', menlo, consolas, 'Liberation Mono', monospace;
+
+  // ---------- 间距 ----------
+  --space-xs: #{$space-xs};
+  --space-sm: #{$space-sm};
+  --space-md: #{$space-md};
+  --space-lg: #{$space-lg};
+  --space-xl: #{$space-xl};
+  --space-2xl: #{$space-2xl};
+
+  // ---------- 排版 ----------
+  --font-size-badge: #{$font-size-badge};
+  --font-size-caption: #{$font-size-caption};
+  --font-size-code: #{$font-size-code};
+  --font-size-meta: #{$font-size-meta};
+  --font-size-control: #{$font-size-control};
+  --font-size-navigation: #{$font-size-navigation};
+  --font-size-body: #{$font-size-body};
+  --font-size-emphasis: #{$font-size-emphasis};
+  --font-size-subtitle: #{$font-size-subtitle};
+  --font-size-modal-title: #{$font-size-modal-title};
+  --font-size-title-sm: #{$font-size-title-sm};
+  --font-size-page-title: #{$font-size-page-title};
+  --font-size-title-md: #{$font-size-title-md};
+  --font-size-display-sm: #{$font-size-display-sm};
+  --font-size-title-lg: #{$font-size-title-lg};
+  --font-size-display-md: #{$font-size-display-md};
+  --font-size-display-lg: #{$font-size-display-lg};
+  --font-size-display-xl: #{$font-size-display-xl};
+  --font-weight-regular: #{$font-weight-regular};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-semibold: #{$font-weight-semibold};
+  --font-weight-strong: #{$font-weight-strong};
+  --font-weight-bold: #{$font-weight-bold};
+  --font-weight-extrabold: #{$font-weight-extrabold};
+  --line-height-tight: #{$line-height-tight};
+  --line-height-compact: #{$line-height-compact};
+  --line-height-heading: #{$line-height-heading};
+  --line-height-body: #{$line-height-body};
+  --line-height-relaxed: #{$line-height-relaxed};
+
+  // ---------- 控件与图标尺寸 ----------
+  --control-height-xs: #{$control-height-xs};
+  --control-height-sm: #{$control-height-sm};
+  --control-height-menu: #{$control-height-menu};
+  --control-height-md: #{$control-height-md};
+  --control-height-lg: #{$control-height-lg};
+  --icon-size-sm: #{$icon-size-sm};
+  --icon-size-md: #{$icon-size-md};
+  --icon-size-lg: #{$icon-size-lg};
+  --icon-size-xl: #{$icon-size-xl};
+  --icon-button-size: #{$icon-button-size};
+
+  // ---------- 动效与层级 ----------
+  --motion-duration-fast: #{$motion-duration-fast};
+  --motion-duration-base: #{$motion-duration-base};
+  --motion-duration-medium: #{$motion-duration-medium};
+  --motion-duration-slow: #{$motion-duration-slow};
+  --motion-duration-theme: #{$motion-duration-theme};
+  --motion-ease-standard: #{$motion-ease-standard};
+  --motion-ease-in-out: #{$motion-ease-in-out};
+  --motion-ease-emphasized: #{$motion-ease-emphasized};
+  --z-raised: #{$z-raised};
+  --z-control: #{$z-control};
+  --z-topbar: #{$z-topbar};
+  --z-sticky: #{$z-sticky};
+  --z-local-overlay: #{$z-local-overlay};
+  --z-navigation: #{$z-navigation};
+  --z-dropdown: #{$z-dropdown};
+  --z-modal: #{$z-modal};
+  --z-popover: #{$z-popover};
+  --z-tooltip: #{$z-tooltip};
+  --z-floating-control: #{$z-floating-control};
+  --z-toast: #{$z-toast};
+
+  // ---------- 圆角 ----------
+  --radius-none: #{$radius-none};
+  --radius-xs: #{$radius-xs};
+  --radius-compact: #{$radius-compact};
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+  --radius-pill: #{$radius-pill};
+  --radius-circle: #{$radius-circle};
+  --radius-control: #{$radius-control};
+  --radius-surface: #{$radius-surface};
+  --radius-overlay: #{$radius-overlay};
+  --radius-status: #{$radius-status};
+  --radius-track: #{$radius-track};
+  --radius-avatar: #{$radius-avatar};
+
+  // ---------- 背景 ----------
+  --color-bg-page:        #{$color-bg-page-light};
+  --color-bg-card:        #{$color-bg-card-light};
+  --color-bg-hover:       #{$color-bg-hover-light};
+  --color-bg-thead:       #{$color-bg-thead-light};
+  --color-bg-disabled:    #{$color-bg-disabled-light};
+  --color-bg-code:        #{$color-bg-code-light};
+  --color-bg-input:       #{$color-bg-input-light};
+  --color-bg-topbar:      #{$color-bg-topbar-light};
+  --color-bg-subtle:      #{$color-bg-subtle-light};   // BS gray-100 / 次级面板
+  --color-bg-muted:       #{$color-bg-muted-light};    // BS gray-200
+  --color-bg-soft:        #{$color-bg-soft-light};     // 软灰
+
+  // ---------- 文字 ----------
+  --color-text:           #{$color-text-body-light};
+  --color-text-primary:   #{$color-text-primary-light};
+  --color-text-secondary: #{$color-text-secondary-light};
+  --color-text-muted:     #{$color-text-muted-light};
+  --color-text-hint:      #{$color-text-hint-light};
+  --color-text-label:     #{$color-text-label-light};
+  --color-text-disabled:  #{$color-text-disabled-light};
+  --color-text-code:      #{$color-text-code-light};
+  --color-text-strong:    #{$color-text-strong-light};
+  --color-text-inverse:   #{$color-text-fff-light};   // 反白文字(深底上)
+
+  // ---------- 边框 ----------
+  --color-border:           #{$color-border-l};
+  --color-border-light:     #{$color-border-light-l};
+  --color-border-input:     #{$color-border-input-l};
+  --color-border-strong:    #{$color-border-strong-l};
+  --color-border-divider:   #{$color-border-ebeef5-l};   // 分隔线(Element)
+  --color-border-bs:        #{$color-border-dee2e6-l};   // BS 边框
+  --color-border-form:      #{$color-border-ced4da-l};
+  --color-border-focus:     #{$color-border-focus-l};
+
+  // ---------- 品牌色 ----------
+  --color-brand:            #{$color-brand-light};
+  --color-brand-hover:      #{$color-brand-mid-l};
+  --color-brand-dark:       #{$color-brand-dark-l};
+  --color-brand-soft:       #{$color-brand-soft-l};
+  --color-brand-tint:       #{$color-brand-tint-l};
+  --color-brand-bg:         #{$color-brand-light-bg-l};
+  --color-brand-disabled:   #{$color-brand-disabled-l};
+  --color-brand-light:      #{$color-brand-soft-l};
+  --color-brand-solid:      #{$color-brand-light};
+  --color-brand-solid-hover:#{$color-brand-mid-l};
+  --color-brand-outline:    #{$color-brand-light};
+  --color-on-brand:         #{$color-text-fff-light};
+
+  // ---------- 应用外壳 ----------
+  --color-overlay:           #{$color-overlay-light};
+  --color-overlay-strong:    #{$color-overlay-strong-dark};
+  --color-sidebar-bg:        #{$color-brand-light};
+  --color-sidebar-bg-secondary: #{$color-sidebar-bg-secondary-light};
+  --color-sidebar-text:      #{$color-sidebar-text-light};
+  --color-sidebar-muted:     #{$color-sidebar-muted-light};
+  --color-sidebar-active:    #{$color-text-fff-light};
+  --color-sidebar-heading:   #{$color-sidebar-heading-light};
+  --color-sidebar-hover-bg:  #{$color-brand-dark-l};
+  --color-sidebar-active-bg: #{$color-brand-dark-l};
+  --color-sidebar-divider:   #{$color-sidebar-divider-light};
+  --color-inverse-fill-subtle: #{$color-inverse-fill-subtle};
+  --color-inverse-fill-faint: #{$color-inverse-fill-faint};
+  --color-inverse-fill-soft: #{$color-inverse-fill-soft};
+  --color-inverse-fill-medium: #{$color-inverse-fill-medium};
+  --color-inverse-text-muted: #{$color-inverse-text-muted};
+  --color-inverse-text-secondary: #{$color-inverse-text-secondary};
+  --color-inverse-text-strong: #{$color-inverse-text-strong};
+  --color-brand-fill-subtle: #{$color-brand-fill-subtle-light};
+  --color-brand-border-soft: #{$color-brand-border-soft-light};
+  --color-brand-border: #{$color-brand-border-light};
+  --color-control-border-brand-muted: #{$color-control-border-brand-muted-light};
+  --color-control-border-brand: #{$color-control-border-brand-light};
+  --color-control-border-brand-strong: #{$color-control-border-brand-strong-light};
+  --color-control-border-focus: #{$color-control-border-focus-light};
+  --color-error-border-soft: #{$color-error-border-soft-light};
+  --color-inverse-border-muted: #{$color-inverse-border-muted};
+  --color-inverse-border: #{$color-inverse-border-light};
+  --color-inverse-surface: #{$color-inverse-surface};
+  --color-shell-topbar: #{$color-shell-topbar-light};
+  --color-surface-transparent: #{$color-surface-transparent-light};
+  --color-table-scroll-shadow: #{$color-table-scroll-shadow-light};
+  --color-table-scroll-shadow-transparent: #{$color-table-scroll-shadow-transparent-light};
+  --color-scrollbar-thumb-overlay: #{$color-scrollbar-thumb-overlay};
+  --color-overlay-soft: #{$color-overlay-soft};
+  --color-login-overlay-start: #{$color-login-overlay-start};
+  --color-login-overlay-end: #{$color-login-overlay-end};
+  --color-file-card-border: #{$color-file-card-border};
+  --size-sidebar-width:      248px;
+  --size-topbar-height:      76px;
+
+  // ---------- 列表页密度 ----------
+  --list-header-min-height:  88px;
+  --list-filter-min-height:  72px;
+  --list-content-padding:    30px;
+  --list-control-height:     40px;
+  --table-action-size:       var(--control-height-sm);
+  --list-table-header-height: 48px;
+  --list-table-row-height:   56px;
+  --list-footer-min-height:  64px;
+  --radius:                  var(--radius-surface); // 旧页面兼容；新样式使用上方语义令牌
+
+  // ---------- 强调色 ----------
+  --color-accent:           #{$color-accent-light};
+  --color-accent-hover:     #{$color-accent-hover-light};
+  --color-accent-bg:        #{$color-accent-bg-light};
+  --color-accent-blue:      #{$color-accent-blue-light};
+  --color-bs-primary:       #{$color-bs-primary-light};
+  --color-bs-primary-hover: #{$color-bs-primary-hover-l};
+  --color-bs-info:          #{$color-bs-info-l};
+
+  // ---------- 状态色 ----------
+  --color-success:          #{$color-success-light};
+  --color-success-strong:   #{$color-success-13a10e-l};
+  --color-success-bg:       #{$color-success-bg-l};
+  --color-success-bg-strong:#{$color-success-bg-dff6dd-l};
+  --color-success-text:     #{$color-success-text-0e700e-l};
+  --color-success-bdr:      #{$color-success-bdr-9ee09b-l};
+  --color-warning:          #{$color-warning-light};
+  --color-warning-strong:   #{$color-warning-deep-l};
+  --color-warning-bg:       #{$color-warning-bg-l};
+  --color-warning-bg-strong:#{$color-warning-fff1cc-l};
+  --color-warning-text:     #{$color-warning-text-8a6914-l};
+  --color-warning-bdr:      #{$color-warning-bdr-f5d58a-l};
+  --color-error:            #{$color-error-light};
+  --color-error-strong:     #{$color-error-strong-l};
+  --color-error-bg:         #{$color-error-bg-l};
+  --color-error-bg-strong:  #{$color-error-bg-fde7e9-l};
+  --color-error-text:       #{$color-error-d3-l};
+  --color-error-bdr:        #{$color-error-bdr-f5b0b5-l};
+  --color-info:             #{$color-info-light};
+  --color-info-text:        #{$color-info-text-light};
+  --color-info-bg:          #{$color-info-soft-l};
+
+  // ---------- 阴影 ----------
+  --shadow-xs:    #{$shadow-xs-light};
+  --shadow-sm:    #{$shadow-sm-light};
+  --shadow-md:    #{$shadow-md-light};
+  --shadow-lg:    #{$shadow-lg-light};
+  --shadow-pop:   #{$shadow-pop-light};
+  --shadow-card:  #{$shadow-card-light};
+  --shadow-overlay: #{$shadow-overlay-light};
+  --shadow-menu: #{$shadow-menu-light};
+  --shadow-inset: #{$shadow-inset-light};
+  --shadow-inset-soft: #{$shadow-inset-soft-light};
+  --shadow-sidebar: #{$shadow-sidebar-light};
+  --shadow-floating-control: #{$shadow-floating-control-light};
+  --shadow-data-card: #{$shadow-data-card-light};
+  --shadow-range-thumb: #{$shadow-range-thumb};
+  --shadow-recessed: #{$shadow-recessed-light};
+  --shadow-dashboard-stat: #{$shadow-dashboard-stat-light};
+  --shadow-template-card: #{$shadow-template-card-light};
+  --shadow-template-footer: #{$shadow-template-footer-light};
+  --shadow-customization-preview: #{$shadow-customization-preview-light};
+  --shadow-file-card: #{$shadow-file-card-light};
+  --shadow-file-card-hover: #{$shadow-file-card-hover-light};
+  --shadow-file-icon: #{$shadow-file-icon-light};
+  --shadow-file-title: #{$shadow-file-title-light};
+  --shadow-file-action: #{$shadow-file-action-light};
+  --shadow-file-state-success: #{$shadow-file-state-success};
+  --shadow-file-state-primary: #{$shadow-file-state-primary};
+  --shadow-file-state-info: #{$shadow-file-state-info};
+  --shadow-file-state-warning: #{$shadow-file-state-warning};
+  --shadow-file-state-error: #{$shadow-file-state-error};
+  --shadow-pod-model-focus: #{$shadow-pod-model-focus-light};
+  --shadow-pod-model-card: #{$shadow-pod-model-card-light};
+  --shadow-focus-blue-compact: #{$shadow-focus-blue-compact-dark};
+  --shadow-focus-blue-strong: #{$shadow-focus-blue-strong-dark};
+  --shadow-focus-compact: #{$shadow-focus-compact-l};
+  --shadow-focus-brand: #{$shadow-focus-brand-l};
+  --shadow-focus-blue:  #{$shadow-focus-blue-l};
+  --shadow-focus-bs:    #{$shadow-focus-bs-l};
+
+  // ---------- 滚动条 ----------
+  --color-scrollbar-thumb: #{$color-scrollbar-thumb-light};
+  --color-scrollbar-track: #{$color-scrollbar-track-light};
+
+  // ---------- 数据可视化 ----------
+  --color-chart-text: #{$color-chart-text-light};
+  --color-chart-text-strong: #{$color-chart-text-strong-light};
+  --color-chart-grid: #{$color-chart-grid-light};
+  --color-chart-surface: #{$color-chart-surface-light};
+  --color-chart-success: #{$color-chart-success};
+  --color-chart-warning: #{$color-chart-warning};
+  --color-chart-error: #{$color-chart-error};
+  --color-chart-info: #{$color-chart-info};
+  --color-chart-error-area: #{$color-chart-error-area};
+  --color-chart-tooltip-bg: #{$color-chart-tooltip-bg};
+  --color-chart-tooltip-border: #{$color-chart-tooltip-border};
+  --color-chart-tooltip-text: #{$color-chart-tooltip-text};
+
+  // ---------- 旧命名兼容别名 ----------
+  // 只保留引用关系，不再维护第二套颜色值。
+  --color-bg: var(--color-bg-page);
+  --color-card: var(--color-bg-card);
+  --color-primary: var(--color-brand);
+  --color-primary-dark: var(--color-brand-dark);
+  --color-primary-light: var(--color-brand-soft);
+  --color-muted: var(--color-brand);
+  --color-disabled: var(--color-brand-disabled);
+  --color-danger: var(--color-error);
+  --sidebar-bg: var(--color-sidebar-bg);
+  --sidebar-text: var(--color-sidebar-text);
+  --sidebar-active: var(--color-sidebar-active);
+  --sidebar-hover: var(--color-sidebar-hover-bg);
+  --el-switch-on-color: var(--color-brand);
+}
+
+
+// -----------------------------------------------------------------------------
+// 深色主题
+// -----------------------------------------------------------------------------
+[data-theme="dark"] {
+  // Device previews retain the LVGL light theme in dark admin mode.
+  --color-lvgl-preview-primary: #{$color-lvgl-preview-primary};
+  --color-lvgl-preview-primary-muted: #{rgba($color-lvgl-preview-primary, 0.2)};
+  --color-lvgl-preview-secondary: #{$color-lvgl-preview-secondary};
+  --color-lvgl-preview-neutral: #{$color-lvgl-preview-neutral};
+  --color-lvgl-preview-screen: #{$color-lvgl-preview-screen};
+  --color-lvgl-preview-card: #{$color-lvgl-preview-card};
+  --color-lvgl-preview-text: #{$color-lvgl-preview-text};
+  --shadow-lvgl-preview-button: 0 3px 3px #{rgba($color-lvgl-preview-shadow, 0.5)};
+
+  // 背景
+  --color-bg-page:        #{$color-bg-page-dark};
+  --color-bg-card:        #{$color-bg-card-2-dark};
+  --color-bg-hover:       #{$color-bg-hover-dark};
+  --color-bg-thead:       #{$color-bg-thead-dark};
+  --color-bg-disabled:    #{$color-bg-disabled-dark};
+  --color-bg-code:        #{$color-bg-code-dark};
+  --color-bg-input:       #{$color-bg-input-dark};
+  --color-bg-topbar:      #{$color-bg-topbar-dark};
+  --color-bg-subtle:      #{$color-bg-subtle-dark};
+  --color-bg-muted:       #{$color-bg-muted-dark};
+  --color-bg-soft:        #{$color-bg-soft-dark};
+
+  // 文字
+  --color-text:           #{$color-text-primary-dark};
+  --color-text-primary:   #{$color-text-primary-dark};
+  --color-text-secondary: #{$color-text-secondary-dark};
+  --color-text-muted:     #{$color-text-muted-dark};
+  --color-text-hint:      #{$color-text-hint-dark};
+  --color-text-label:     #{$color-text-label-dark};
+  --color-text-disabled:  #{$color-text-disabled-dark};
+  --color-text-code:      #{$color-text-code-dark};
+  --color-text-strong:    #{$color-text-strong-dark};
+  --color-text-inverse:   #{$color-text-fff-light};   // 深色下反白仍为白
+
+  // 边框
+  --color-border:           #{$color-border-d};
+  --color-border-light:     #{$color-border-light-d};
+  --color-border-input:     #{$color-border-input-d};
+  --color-border-strong:    #{$color-border-strong-d};
+  --color-border-divider:   #{$color-border-divider-d};
+  --color-border-bs:        #{$color-border-bs-d};
+  --color-border-form:      #{$color-border-form-d};
+  --color-border-focus:     #{$color-border-focus-d};
+
+  // 品牌
+  --color-brand:            #{$color-brand-dark};
+  --color-brand-hover:      #{$color-brand-hover-dark};
+  --color-brand-dark:       #{$color-brand-dark-d};
+  --color-brand-soft:       #{$color-brand-soft-d};
+  --color-brand-tint:       #{$color-brand-tint-d};
+  --color-brand-bg:         #{$color-brand-light-bg-d};
+  --color-brand-disabled:   #{$color-brand-disabled-l};   // 同名灰绿
+  --color-brand-light:      #{$color-brand-light-dark};
+  --color-brand-solid:      #{$color-brand-solid-dark};
+  --color-brand-solid-hover:#{$color-brand-solid-hover-dark};
+  --color-brand-outline:    #{$color-brand-solid-dark};
+  --color-on-brand:         #{$color-text-fff-light};
+
+  // 应用外壳
+  --color-overlay:           #{$color-overlay-dark};
+  --color-overlay-strong:    #{$color-overlay-strong-dark};
+  --color-bg-solid:          #{$color-bg-solid-dark};
+  --color-sidebar-bg:        #{$color-sidebar-bg-dark};
+  --color-sidebar-bg-secondary: #{$color-sidebar-bg-dark};
+  --color-sidebar-text:      #{$color-sidebar-text-dark};
+  --color-sidebar-muted:     #{$color-sidebar-muted-dark};
+  --color-sidebar-active:    #{$color-text-fff-light};
+  --color-sidebar-heading:   #{$color-sidebar-heading-dark};
+  --color-sidebar-hover-bg:  #{$color-sidebar-hover-bg-dark};
+  --color-sidebar-active-bg: #{$color-sidebar-active-bg-dark};
+  --color-sidebar-divider:   #{$color-sidebar-divider-dark};
+  --color-inverse-fill-subtle: #{$color-inverse-fill-subtle};
+  --color-inverse-fill-faint: #{$color-inverse-fill-faint};
+  --color-inverse-fill-soft: #{$color-inverse-fill-soft};
+  --color-inverse-fill-medium: #{$color-inverse-fill-medium};
+  --color-inverse-text-muted: #{$color-inverse-text-muted};
+  --color-inverse-text-secondary: #{$color-inverse-text-secondary};
+  --color-inverse-text-strong: #{$color-inverse-text-strong};
+  --color-brand-fill-subtle: #{$color-brand-fill-subtle-dark};
+  --color-brand-border-soft: #{$color-brand-border-soft-dark};
+  --color-brand-border: #{$color-brand-border-dark};
+  --color-control-border-brand-muted: #{$color-control-border-brand-muted-dark};
+  --color-control-border-brand: #{$color-control-border-brand-dark};
+  --color-control-border-brand-strong: #{$color-control-border-brand-strong-dark};
+  --color-control-border-focus: #{$color-control-border-focus-dark};
+  --color-error-border-soft: #{$color-error-border-soft-dark};
+  --color-inverse-border-muted: #{$color-inverse-border-muted};
+  --color-inverse-border: #{$color-inverse-border-light};
+  --color-inverse-surface: #{$color-inverse-surface};
+  --color-shell-topbar: #{$color-shell-topbar-dark};
+  --color-surface-transparent: #{$color-surface-transparent-dark};
+  --color-table-scroll-shadow: #{$color-table-scroll-shadow-dark};
+  --color-table-scroll-shadow-transparent: #{$color-table-scroll-shadow-transparent-dark};
+  --color-scrollbar-thumb-overlay: #{$color-scrollbar-thumb-overlay};
+  --color-overlay-soft: #{$color-overlay-soft};
+  --color-login-overlay-start: #{$color-login-overlay-start};
+  --color-login-overlay-end: #{$color-login-overlay-end};
+  --color-file-card-border: #{$color-file-card-border};
+
+  // 强调
+  --color-accent:           #{$color-accent-dark};
+  --color-accent-hover:     #{$color-accent-hover-dark};
+  --color-accent-bg:        #{$color-accent-bg-dark};
+  --color-accent-blue:      #{$color-accent-blue-dark};
+  --color-bs-primary:       #{$color-accent-dark};
+  --color-bs-primary-hover: #{$color-accent-hover-dark};
+  --color-bs-info:          #{$color-bs-info-dark};
+
+  // 状态
+  --color-success:          #{$color-success-dark};
+  --color-success-strong:   #{$color-success-dark};
+  --color-success-bg:       #{$color-success-bg-dark};
+  --color-success-bg-strong:#{$color-success-bg-dark};
+  --color-success-text:     #{$color-success-text-dark};
+  --color-success-bdr:      #{$color-success-bdr-dark};
+  --color-warning:          #{$color-warning-dark};
+  --color-warning-strong:   #{$color-warning-dark};
+  --color-warning-bg:       #{$color-warning-bg-dark};
+  --color-warning-bg-strong:#{$color-warning-bg-dark};
+  --color-warning-text:     #{$color-warning-text-dark};
+  --color-warning-bdr:      #{$color-warning-bdr-dark};
+  --color-error:            #{$color-error-dark};
+  --color-error-strong:     #{$color-error-dark};
+  --color-error-bg:         #{$color-error-bg-dark};
+  --color-error-bg-strong:  #{$color-error-bg-dark};
+  --color-error-text:       #{$color-error-text-dark};
+  --color-error-bdr:        #{$color-error-bdr-dark};
+  --color-info:             #{$color-info-dark};
+  --color-info-text:        #{$color-info-text-dark};
+  --color-info-bg:          #{$color-info-bg-dark};
+
+  // 阴影
+  --shadow-xs:    #{$shadow-xs-dark};
+  --shadow-sm:    #{$shadow-sm-dark};
+  --shadow-md:    #{$shadow-md-dark};
+  --shadow-lg:    #{$shadow-lg-dark};
+  --shadow-pop:   #{$shadow-pop-dark};
+  --shadow-card:  #{$shadow-card-dark};
+  --shadow-overlay: #{$shadow-overlay-dark};
+  --shadow-menu: #{$shadow-menu-dark};
+  --shadow-inset: #{$shadow-inset-dark};
+  --shadow-inset-soft: #{$shadow-inset-soft-dark};
+  --shadow-sidebar: #{$shadow-sidebar-dark};
+  --shadow-floating-control: #{$shadow-floating-control-dark};
+  --shadow-data-card: #{$shadow-data-card-dark};
+  --shadow-range-thumb: #{$shadow-range-thumb};
+  --shadow-recessed: #{$shadow-recessed-dark};
+  --shadow-dashboard-stat: #{$shadow-dashboard-stat-dark};
+  --shadow-template-card: #{$shadow-template-card-dark};
+  --shadow-template-footer: #{$shadow-template-footer-dark};
+  --shadow-customization-preview: #{$shadow-customization-preview-dark};
+  --shadow-file-card: #{$shadow-file-card-dark};
+  --shadow-file-card-hover: #{$shadow-file-card-hover-dark};
+  --shadow-file-icon: #{$shadow-file-icon-dark};
+  --shadow-file-title: #{$shadow-file-title-dark};
+  --shadow-file-action: #{$shadow-file-action-dark};
+  --shadow-file-state-success: #{$shadow-file-state-success};
+  --shadow-file-state-primary: #{$shadow-file-state-primary};
+  --shadow-file-state-info: #{$shadow-file-state-info};
+  --shadow-file-state-warning: #{$shadow-file-state-warning};
+  --shadow-file-state-error: #{$shadow-file-state-error};
+  --shadow-pod-model-focus: #{$shadow-pod-model-focus-dark};
+  --shadow-pod-model-card: #{$shadow-pod-model-card-dark};
+  --shadow-focus-blue-compact: #{$shadow-focus-blue-compact-dark};
+  --shadow-focus-blue-strong: #{$shadow-focus-blue-strong-dark};
+  --shadow-focus-compact: #{$shadow-focus-compact-d};
+  --shadow-focus-brand: #{$shadow-focus-brand-d};
+  --shadow-focus-blue:  #{$shadow-focus-blue-d};
+  --shadow-focus-bs:    #{$shadow-focus-bs-d};
+
+  // 滚动条
+  --color-scrollbar-thumb: #{$color-scrollbar-thumb-dark};
+  --color-scrollbar-track: #{$color-scrollbar-track-dark};
+
+  // 数据可视化
+  --color-chart-text: #{$color-chart-text-dark};
+  --color-chart-text-strong: #{$color-chart-text-strong-dark};
+  --color-chart-grid: #{$color-chart-grid-dark};
+  --color-chart-surface: #{$color-chart-surface-dark};
+  --color-chart-success: #{$color-chart-success};
+  --color-chart-warning: #{$color-chart-warning};
+  --color-chart-error: #{$color-chart-error};
+  --color-chart-info: #{$color-chart-info};
+  --color-chart-error-area: #{$color-chart-error-area};
+  --color-chart-tooltip-bg: #{$color-chart-tooltip-bg};
+  --color-chart-tooltip-border: #{$color-chart-tooltip-border};
+  --color-chart-tooltip-text: #{$color-chart-tooltip-text};
+
+  // 旧命名兼容别名也显式声明，满足主题契约并便于最终移除时审计。
+  --color-bg: var(--color-bg-page);
+  --color-card: var(--color-bg-card);
+  --color-primary: var(--color-brand);
+  --color-primary-dark: var(--color-brand-dark);
+  --color-primary-light: var(--color-brand-soft);
+  --color-muted: var(--color-brand);
+  --color-disabled: var(--color-brand-disabled);
+  --color-danger: var(--color-error);
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "booking_revision": 1,
+    "status": "acked",
+    "attempt_count": 1,
+    "next_retry_at": null,
+    "pushed_at": "2026-09-16T17:00:00.000Z",
+    "acked_at": "2026-09-16T17:00:00.000Z",
+    "last_error_code": null,
+    "last_error_detail": null,
+    "created_at": "2026-09-16T17:00:00.000Z",
+    "updated_at": "2026-09-16T17:00:00.000Z"
+  }
+]

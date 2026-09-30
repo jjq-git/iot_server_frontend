@@ -1,0 +1,6293 @@
+{
+  "demo": {
+    "badge": "产品演示",
+    "title": "选择一个演示场景",
+    "description": "无需账号。选择业务场景后即可使用一组本地合成数据体验系统。",
+    "notice": "所有数据仅保存在此浏览器中，不会连接正式后端。",
+    "start_failed": "无法启动演示场景",
+    "toolbar_label": "演示控制",
+    "switch_scenario": "切换演示场景",
+    "reset_data": "重置演示数据",
+    "reset_confirm": "这会清除当前浏览器中的所有演示修改并恢复初始数据，是否继续？",
+    "reset_failed": "无法重置演示数据",
+    "route_unavailable": "此功能未包含在当前演示中",
+    "scenarios": {
+      "manufacturer": { "title": "厂家", "description": "查看公司网络、设备流转、型号和运行状态。" },
+      "channel": { "title": "渠道", "description": "查看下级客户、已分配资产和客户静音舱。" },
+      "office": { "title": "办公", "description": "体验办公位置、内部预约和静音舱使用。" },
+      "rental": { "title": "租赁", "description": "体验公共租赁、预约记录和运营看板。" }
+    }
+  },
+  "company_dashboard_config": {
+    "title": "公司看板配置",
+    "description": "每家公司维护唯一一套品牌和看板面板配置。",
+    "create": "新建公司配置",
+    "create_title": "新增公司看板配置",
+    "edit_title": "编辑公司看板配置",
+    "detail_title": "公司看板配置详情",
+    "editor_description": "配置保存后直接生效，不再使用草稿、审核或版本发布流程。",
+    "company_id": "公司 ID：{id}",
+    "empty": "暂无公司看板配置",
+    "no_panels": "暂无看板面板",
+    "panels_help": "从平台支持的面板中选择，并调整显示顺序、标题和宽度。",
+    "custom_page_help": "仅在确有特殊展示需求时配置自定义页面代码。",
+    "upload_logo": "上传 Logo",
+    "replace_logo": "更换 Logo",
+    "remove_logo": "移除 Logo",
+    "logo_ready": "已关联品牌 Logo",
+    "logo_selected": "已选择新 Logo，保存后生效",
+    "logo_empty": "尚未上传 Logo",
+    "logo_help": "支持 PNG、JPG、WebP 或 GIF，文件不超过 5 MB，建议使用透明背景。",
+    "ownership_help": "选择配置归属公司，并决定保存后是否立即启用。",
+    "select_unconfigured_company": "仅显示尚未配置看板的公司。",
+    "all_companies_configured": "所有公司都已有看板配置，请从列表进入编辑。",
+    "active_help": "保存后立即应用到该公司的看板。",
+    "inactive_help": "保存配置，但继续使用平台默认看板。",
+    "branding_help": "设置品牌名称、字体、配色和站点标识，右侧会实时预览。",
+    "advanced_help": "选择看板内容，并调整面板的显示顺序、标题和布局。",
+    "show_advanced": "展开高级配置",
+    "hide_advanced": "收起高级配置",
+    "panel_count": "已选 {count} 个",
+    "select_panel": "选择要添加的面板",
+    "add_panel": "添加面板",
+    "panel_width": "{count} 列宽",
+    "panel_order": "显示顺序 {order}",
+    "move_up": "上移",
+    "move_down": "下移",
+    "remove_panel": "移除面板",
+    "custom_page_configured": "已配置",
+    "custom_page_empty": "未配置",
+    "configure_custom_page": "配置定制页面",
+    "edit_custom_page": "编辑定制页面",
+    "custom_page_editor_title": "定制页面高级编辑器",
+    "apply_custom_page": "应用本次编辑",
+    "custom_page_warning": "自定义代码会影响页面展示和安全性，仅粘贴已审核的 HTML、CSS 与 JavaScript。",
+    "chart_types": { "line": "折线图", "bar": "柱状图", "pie": "饼图", "gauge": "仪表盘", "number": "指标卡", "table": "数据表", "unknown": "未知类型" },
+    "panel_names": {
+      "stats_preview": "关键指标概览",
+      "device_online_rate": "设备在线率趋势",
+      "device_status_distribution": "设备状态分布",
+      "pod_usage_distribution": "静音舱使用时长",
+      "pod_usage_trend": "静音舱使用趋势",
+      "file_usage_stats": "文件使用统计",
+      "alert_stats": "告警类型分布",
+      "alert_trend": "告警趋势",
+      "detailed_stats": "详细统计数据",
+      "device_online_rate_gauge": "设备在线率仪表",
+      "pod_usage_rate_gauge": "静音舱使用率仪表",
+      "pod_environment_trend": "舱内温湿度趋势", "pod_noise_trend": "舱内噪声趋势",
+      "pod_occupancy_trend": "静音舱占用率趋势", "pod_power_trend": "静音舱功耗趋势",
+      "pod_fan_trend": "风机运行趋势", "pod_light_trend": "照明亮度趋势",
+      "pod_network_signal_trend": "网络信号趋势", "pod_desk_height_trend": "桌面高度趋势"
+    },
+    "font_options": {
+      "default": "跟随平台默认",
+      "system": "系统界面字体",
+      "cjk": "中日韩系统字体",
+      "noto": "Noto Sans"
+    },
+    "preview": {
+      "title": "品牌效果预览",
+      "live": "实时",
+      "sample": "示例",
+      "company_fallback": "请选择公司",
+      "dashboard": "运营概览",
+      "online": "在线设备",
+      "usage": "使用率",
+      "alerts": "今日告警"
+    },
+    "fields": {
+      "company": "公司",
+      "status": "状态",
+      "active": "启用此配置",
+      "panels": "面板数",
+      "custom_page": "定制页面",
+      "title": "标题",
+      "font_family": "字体",
+      "primary_color": "主色",
+      "secondary_color": "辅助色",
+      "accent_color": "强调色",
+      "logo": "品牌 Logo",
+      "logo_file_id": "Logo 文件 ID",
+      "favicon": "Favicon 地址",
+      "company_website": "公司网站",
+      "copyright_text": "版权文字",
+      "panel_width": "面板宽度",
+      "panels_json": "面板 JSON",
+      "html": "HTML",
+      "css": "CSS",
+      "javascript": "JavaScript",
+      "panel_id": "面板 ID",
+      "chart": "图表",
+      "source": "数据源",
+      "grid": "布局"
+    },
+    "sections": {
+      "ownership": "所属与状态",
+      "summary": "配置概览",
+      "branding": "品牌配置",
+      "advanced": "高级配置",
+      "panels": "看板面板",
+      "custom_page": "定制页面"
+    },
+    "messages": {
+      "load_failed": "加载配置失败：{message}",
+      "companies_failed": "加载公司列表失败：{message}",
+      "existing_configs_failed": "加载现有配置失败：{message}",
+      "config_already_exists": "该公司已有看板配置，请返回列表进入编辑。",
+      "invalid_color": "请输入 #RRGGBB 格式的颜色值",
+      "invalid_url": "请输入以 http:// 或 https:// 开头的有效网址",
+      "invalid_form": "请先修正表单中的无效字段",
+      "invalid_json": "面板 JSON 格式无效",
+      "invalid_config_at": "{path}：{message}",
+      "unsupported_module": "{path}：后端不支持数据源或图表模块“{module}”，请从可添加面板列表中选择",
+      "unsupported_chart": "{path}：模块“{module}”不支持图表类型“{chart}”",
+      "unsupported_field": "{path}：配置字段“{field}”不受支持",
+      "panels_array": "面板配置必须是 JSON 数组",
+      "saved": "公司看板配置已保存",
+      "save_failed": "保存配置失败：{message}",
+      "deactivate_confirm": "停用“{company}”后将立即回退到平台默认看板，确认继续吗？",
+      "deactivated": "公司看板配置已停用",
+      "deactivate_failed": "停用公司看板配置失败：{message}",
+      "upload_logo_failed": "上传响应缺少文件 ID",
+      "logo_type_invalid": "请选择 PNG、JPG、WebP 或 GIF 图片",
+      "logo_too_large": "Logo 文件不能超过 5 MB",
+      "logo_uploaded": "已选择 Logo，将在保存配置时上传",
+      "json_imported": "JSON 已导入可视化面板编辑器",
+      "preview_ready": "已加载 {count} 个面板的实时预览数据",
+      "preview_query_failed": "以下面板无法查询：{panels}",
+      "preview_query_unsupported": "后端不支持该数据查询",
+      "preview_resource_out_of_scope": "所选资源不属于当前公司",
+      "unknown_panel": "未知面板",
+      "json_too_large": "JSON 文件不能超过 1 MB"
+    },
+    "import_json": "导入 JSON",
+    "export_json": "导出 JSON",
+    "preview_data": "预览实时数据",
+    "download_example": "下载示例"
+  },
+  "api_keys": {
+    "actions": {
+      "activate": "激活",
+      "add": "添加 Key",
+      "copy_login_entry": "复制登录入口",
+      "delete": "删除",
+      "edit": "编辑",
+      "refresh": "刷新",
+      "test": "测试"
+    },
+    "default_brackets": "(默认)",
+    "base_url_required": "此 Provider 必须填写 Base URL",
+    "default_or_blank_base_url_hint": "留空走 provider 默认",
+    "empty": "暂无 API Key,请先添加",
+    "fields": {
+      "actions": "操作",
+      "base_url": "Base URL",
+      "masked_key": "Key (脱敏)",
+      "model_default": "默认模型",
+      "name": "别名",
+      "provider": "Provider",
+      "status": "状态",
+      "test": "最近测试"
+    },
+    "filter_all": "全部 Provider",
+    "is_enabled_label": "启用 (取消勾选则软停用,不会被业务调用选中)",
+    "key_placeholder_create": "粘贴明文 key,保存后只显示脱敏值",
+    "key_placeholder_edit": "不填则不修改密钥",
+    "loading": "加载中...",
+    "modal": {
+      "cancel": "取消",
+      "field_api_key": "API Key",
+      "field_base_url": "Base URL",
+      "field_model": "默认模型",
+      "field_name": "别名 (name)",
+      "field_provider": "Provider",
+      "ok": "保存",
+      "title_create": "添加 API Key",
+      "title_edit": "编辑 API Key"
+    },
+    "name_placeholder": "如 deepseek-prod",
+    "set_active_label": "创建后立即设为该 provider 的 active key",
+    "status": {
+      "active": "激活",
+      "disabled": "停用",
+      "enabled": "启用",
+      "inactive": "未激活"
+    },
+    "subtitle": "AI 服务密钥(DeepSeek/OpenAI/Mistral/Anthropic/Moonshot)。Fernet 加密存储,响应仅返回脱敏值。",
+    "test_status": {
+      "failed": "失败",
+      "ok": "OK",
+      "unsupported": "不支持测试",
+      "untested": "未测"
+    },
+    "title": "API Keys 管理",
+    "toast": {
+      "activate_failed": "激活失败",
+      "activate_success_text": "已激活 {provider}/{name}",
+      "activate_success_title": "激活成功",
+      "delete_confirm_cancel": "取消",
+      "delete_confirm_msg": "确定删除 {provider}/{name} 这个 API Key 吗?删除后业务调用如果依赖这条 key 会回退到环境变量。",
+      "delete_confirm_ok": "删除",
+      "delete_confirm_title": "确认删除",
+      "delete_failed": "删除失败",
+      "key_created": "API Key 已创建",
+      "key_deleted": "API Key 已删除",
+      "key_updated": "API Key 已更新",
+      "load_failed": "加载 API Keys 失败",
+      "load_provider_failed": "加载 provider 列表失败",
+      "submit_failed": "操作失败",
+      "test_failed": "测试失败",
+      "test_failed_title": "测试失败",
+      "test_ok_text": "{name} 测试通过",
+      "test_ok_text_with_latency": "{name} 测试通过 ({latency}ms)",
+      "test_ok_title": "测试 OK",
+      "test_request_failed": "测试请求失败",
+      "title_error": "错误",
+      "title_success": "成功"
+    }
+  },
+  "audit_logs": {
+    "action": {
+      "create": "创建",
+      "delete": "删除",
+      "login": "登录",
+      "login_failure": "登录失败",
+      "logout": "登出",
+      "update": "更新"
+    },
+    "column": {
+      "action": "操作类型",
+      "event_at": "操作时间",
+      "ip": "IP地址",
+      "operator": "操作者",
+      "result": "结果",
+      "target_id": "目标标识",
+      "target_type": "目标类型",
+      "uuid": "日志ID"
+    },
+    "detail": {
+      "action_info": "操作信息",
+      "after_data": "变更后",
+      "before_data": "变更前",
+      "change_data": "变更对比",
+      "created_at": "创建时间",
+      "details": "详细信息",
+      "email": "邮箱",
+      "environment": "操作环境",
+      "ip": "IP地址",
+      "log_id": "日志ID",
+      "name": "名称",
+      "operator": "操作者",
+      "result": "操作结果",
+      "target_id": "目标ID",
+      "title": "审计日志详情",
+      "user_agent": "用户代理",
+      "user_id": "用户ID"
+    },
+    "filter": {
+      "keyword_placeholder": "操作者名称/ID/邮箱"
+    },
+    "result": {
+      "failure": "失败",
+      "success": "成功"
+    },
+    "system_op": "系统操作",
+    "target": {
+      "auth": "认证",
+      "company": "公司",
+      "file": "文件",
+      "host": "主机",
+      "node": "节点",
+      "pod": "静音舱",
+      "user": "用户"
+    },
+    "toast": {
+      "export_failed": "导出失败：{msg}",
+      "export_truncated": "已导出 {exported} 条记录，共 {total} 条；其余记录超出单次导出上限",
+      "detail_load_failed": "加载审计详情失败：{msg}",
+      "export_success": "审计日志已导出",
+      "load_failed": "加载审计日志失败：",
+      "try_again": "请稍后重试"
+    },
+    "unknown": "未知"
+  },
+  "auth": {
+    "login": "登录",
+    "login_failed": "用户名或密码错误",
+    "login_page": {
+      "account_field": "账号：",
+      "account_label": "邮箱",
+      "account_placeholder": "请输入邮箱",
+      "brand": "Office pods",
+      "brand_mark": "OP",
+      "company_slug_hint": "访问公司自定义登录页",
+      "company_slug_label": "公司标识：{slug}",
+      "contact_admin": "联系管理员",
+      "copy_failed": "复制失败，请手动复制",
+      "copy_success": "已复制：{text}",
+      "forgot_password": "忘记密码？",
+      "brand_statement_description": "为每一台静音舱接入云端：状态实时可见，固件一键下发，告警秒级触达——让安静，触手可及。",
+      "brand_statement_subtitle": "YOUR QUIET SPACE, ALWAYS CONNECTED",
+      "brand_statement_title": "静享一方\n随时在线",
+      "management_description": "请使用平台分配的账号登录，账号问题联系系统管理员。",
+      "management_title": "登录管理后台",
+      "password_field": "密码：",
+      "password_label": "密码",
+      "password_placeholder": "请输入密码",
+      "platform_brand": "IoT Platform",
+      "prototype_account_placeholder": "请输入邮箱",
+      "remember_login": "记住登录状态",
+      "sign_in": "Sign in",
+      "submit": "登录",
+      "submit_failed": "登录失败，请稍后重试",
+      "support_copyright": "© 2026 技术支持：德恩基科技",
+      "test_account_tip": "请使用右下角测试账号登录",
+      "test_account_title": "测试账号",
+      "test_company_a": "静音舱厂家 A",
+      "test_company_b": "静音舱厂家 B",
+      "test_company_c": "静音舱厂家 C",
+      "validation_account_password_required": "请输入邮箱和密码",
+      "validation_account_required": "请输入邮箱",
+      "validation_password_required": "请输入密码",
+      "welcome": "欢迎回来，请登录继续使用控制台"
+    },
+    "password_reset": {
+      "title": "找回密码",
+      "account_help": "输入登录账号，系统将显示该账号已登记的安全联系方式。",
+      "account_label": "登录账号",
+      "account_placeholder": "用户名、邮箱或手机号",
+      "account_required": "请输入登录账号",
+      "method_help": "选择一种方式接收 6 位验证码。",
+      "method_label": "验证方式",
+      "channel_email": "邮箱验证",
+      "channel_phone": "手机验证",
+      "send_code": "发送验证码",
+      "code_sent": "验证码已发送至 {destination}，10 分钟内有效。",
+      "code_label": "验证码",
+      "code_placeholder": "请输入 6 位验证码",
+      "code_invalid": "请输入正确的 6 位验证码",
+      "resend": "重新发送",
+      "resend_countdown": "{seconds} 秒后重发",
+      "dev_code": "开发环境验证码：{code}",
+      "new_password_label": "新密码",
+      "new_password_placeholder": "请输入新密码",
+      "confirm_password_label": "确认新密码",
+      "confirm_password_placeholder": "请再次输入新密码",
+      "password_hint": "至少 8 位，并同时包含字母和数字。",
+      "password_invalid": "新密码必须至少 8 位并同时包含字母和数字",
+      "password_mismatch": "两次输入的密码不一致",
+      "reset_password": "重置密码",
+      "success": "密码重置成功，请使用新密码登录",
+      "request_failed": "请求失败，请稍后重试",
+      "request_accepted": "如果该账号可以重置，系统已向其邮箱发送一次性重置链接。",
+      "reset_failed": "验证码错误、已过期或尝试次数过多",
+      "unavailable_title": "无法自助找回密码",
+      "unavailable_help": "该账号没有可用的邮箱或手机号，请联系本公司管理员；公司管理员请联系平台管理员。"
+    },
+    "access_denied_back": "返回上一页",
+    "access_denied_help": "当前账号没有访问此页面所需的权限。如需使用此功能，请联系公司管理员或平台管理员。",
+    "access_denied_profile": "前往个人中心",
+    "access_denied_title": "无权访问",
+    "must_change_password_first": "请先修改初始密码后再使用",
+    "no_permission": "您没有权限访问该页面",
+    "password": "密码",
+    "session_expired": "登录失效，请重新登录",
+    "username": "用户名"
+  },
+  "base_modal": {
+    "cancel_default": "取消",
+    "ok_default": "确定"
+  },
+  "base_pagination": {
+    "per_page": "{count}条/页",
+    "per_page_label": "每页显示数量",
+    "previous_page": "上一页",
+    "next_page": "下一页"
+  },
+  "base_table": {
+    "empty_text": "暂无数据"
+  },
+  "breadcrumb": {
+    "groups": {
+      "config": "配置与 OTA",
+      "docs": "文档中心",
+      "files": "文件管理",
+      "integration": "API 与集成",
+      "locations": "位置管理",
+      "monitor": "系统监控"
+    },
+    "home": "首页",
+    "pages": {
+      "audit_export": "日志导出",
+      "audit_logs": "审计日志",
+      "audit_operation_logs": "操作审计",
+      "dashboard": "数据看板",
+      "dashboard_alerts": "告警与待办",
+      "dashboard_charts": "图表统计",
+      "dashboard_status": "在线状态大盘",
+      "devices_hn_models": "主机/节点型号表",
+      "devices_hosts": "主机列表",
+      "devices_nodes": "节点列表",
+      "docs_architecture": "系统架构",
+      "docs_data_model": "数据模型",
+      "docs_deployment": "部署与运维",
+      "docs_development": "开发指南",
+      "docs_project_overview": "项目总览",
+      "docs_troubleshooting": "故障排查",
+      "files": "文件管理",
+      "files_relations": "文件关联",
+      "files_stats": "文件统计",
+      "files_upload": "文件上传",
+      "integration_api": "API 文档",
+      "integration_auth": "登录鉴权",
+      "integration_mqtt": "MQTT 主题",
+      "integration_websocket": "WebSocket",
+      "locations": "位置管理",
+      "monitor_health": "系统健康",
+      "monitor_metrics": "监控指标",
+      "monitor_mqtt": "MQTT 监控",
+      "org_companies": "公司",
+      "org_company_dashboard_config": "公司看板配置",
+      "org_company_dashboard_config_detail": "看板配置详情",
+      "org_company_dashboard_config_edit": "编辑看板配置",
+      "org_company_dashboard_config_new": "新增看板配置",
+      "org_users": "公司用户",
+      "user_profile": "个人中心",
+      "pods": "静音舱列表"
+    }
+  },
+  "change_log_dialog": {
+    "action": {
+      "activate": "激活",
+      "create": "创建",
+      "deactivate": "停用",
+      "update": "更新"
+    },
+    "column": {
+      "action": "操作类型",
+      "change_content": "变更内容",
+      "changed_at": "变更时间",
+      "changed_by": "操作人",
+      "changed_field": "变更字段",
+      "reason": "变更原因"
+    },
+    "new_value": "新值：",
+    "old_value": "原值：",
+    "title": "变更日志"
+  },
+  "charts": {
+    "alerts": {
+      "pending": "未处理",
+      "title": "系统告警统计",
+      "today": "今日告警",
+      "type_comm": "通信异常：{n}",
+      "type_offline": "设备离线：{n}",
+      "type_other": "其他：{n}",
+      "week": "本周告警"
+    },
+    "duration": {
+      "avg_duration": "平均时长",
+      "avg_unit": "{n}小时",
+      "max_duration": "最长使用",
+      "max_value": "8.5 小时",
+      "range_0_1": "0-1 小时：{n}次 ({pct}%)",
+      "range_1_2": "1-2 小时：{n}次 ({pct}%)",
+      "range_2_4": "2-4 小时：{n}次 ({pct}%)",
+      "range_4plus": "4+ 小时：{n}次 ({pct}%)",
+      "title": "静音舱使用时长分布",
+      "today_uses": "今日使用",
+      "today_value": "{n}次",
+      "total_uses": "总使用次数"
+    },
+    "files": {
+      "downloads_unit": "{n}次",
+      "new_files": "新增文件",
+      "new_unit": "{n}个",
+      "plays_unit": "{n}次",
+      "title": "文件使用统计",
+      "total_downloads": "总下载量",
+      "total_plays": "总播放量"
+    },
+    "online": {
+      "area": "面积图",
+      "average": "平均：",
+      "line": "折线图",
+      "max": "最高：",
+      "min": "最低：",
+      "online_rate": "在线率",
+      "title": "设备在线率趋势"
+    },
+    "stats": {
+      "alerts_pending": "待处理：{n}",
+      "alerts_today": "今日告警",
+      "file_size": "总大小：{size}GB",
+      "file_total": "文件总数",
+      "online_devices": "在线设备",
+      "online_rate": "在线率：{rate}%",
+      "pod_total": "静音舱总数",
+      "usage_rate": "使用率：{rate}%"
+    },
+    "table": {
+      "alerts_count": "告警数量",
+      "avg_usage_time": "平均使用时长 (分钟)",
+      "date": "日期",
+      "file_downloads": "文件下载量",
+      "online_devices": "在线设备",
+      "online_rate": "在线率",
+      "pod_usage": "静音舱使用次数",
+      "refresh": "刷新",
+      "title": "详细统计数据",
+      "total_devices": "总设备数"
+    },
+    "toast": {
+      "alerts_updated": "告警统计已更新",
+      "data_refreshed": "数据已刷新",
+      "duration_updated": "时长分布已更新",
+      "files_updated": "文件统计已更新",
+      "online_updated": "在线率数据已更新"
+    }
+  },
+  "column_visibility": {
+    "title": "列显示控制",
+    "toggle": "显示列"
+  },
+  "common": {
+    "actions": "操作",
+    "active": "激活",
+    "add": "新增",
+    "all": "全部",
+    "all_status": "全部状态",
+    "all_status_filter": "全部状态",
+    "all_types": "全部类型",
+    "back": "返回",
+    "cancel": "取消",
+    "clear": "清空",
+    "close": "关闭",
+    "collapse": "收起",
+    "confirm": "确认",
+    "confirm_delete": "确认删除",
+    "copy": "复制",
+    "copy_failed": "复制失败",
+    "copy_success": "已复制",
+    "create": "新建",
+    "create_confirm": "确认创建",
+    "create_failed": "创建失败",
+    "created_at": "创建时间",
+    "creator": "创建人",
+    "datepicker": {
+      "today": "今天",
+      "no_date_selected": "未选择日期",
+      "help": "使用方向键浏览日期"
+    },
+    "delete": "删除",
+    "delete_confirm": "确认删除？",
+    "delete_failed": "删除失败",
+    "delete_failed_retry": "删除失败：",
+    "delete_success": "删除成功",
+    "description": "描述",
+    "detail": "详情",
+    "details": "详情",
+    "disable": "禁用",
+    "disabled": "已禁用",
+    "download": "下载",
+    "edit": "编辑",
+    "enable": "启用",
+    "enabled": "已启用",
+    "error": "错误",
+    "expand": "展开",
+    "export": "导出",
+    "filter": "筛选",
+    "hide": "隐藏",
+    "import": "导入",
+    "inactive": "停用",
+    "info": "信息",
+    "is_active": "已激活",
+    "is_inactive": "未激活",
+    "load_failed": "加载失败",
+    "loading": "加载中...",
+    "loading_more": "加载中…",
+    "loading_text": "加载中...",
+    "more": "更多",
+    "name": "名称",
+    "next": "下一步",
+    "no": "否",
+    "no_data": "暂无数据",
+    "no_permission_edit": "您没有编辑权限",
+    "no_records": "暂无数据",
+    "none": "无",
+    "ok": "确定",
+    "operation": "操作",
+    "operation_failed": "操作失败",
+    "operation_success": "操作成功",
+    "optional": "可选",
+    "page_size_10": "10/页",
+    "page_size_100": "100/页",
+    "page_size_20": "20/页",
+    "page_size_50": "50/页",
+    "page_size_options": {
+      "fifty": "50/页",
+      "hundred": "100/页",
+      "ten": "10/页",
+      "twenty": "20/页"
+    },
+    "please_select_company": "请选择公司",
+    "previous": "上一步",
+    "refresh": "刷新",
+    "remark": "备注",
+    "remove": "移除",
+    "reset": "重置",
+    "retire": "退役",
+    "restore": "恢复",
+    "restore_without_credential": "主机已恢复，但未找到受管 MQTT 凭证，请确认设备连接状态。",
+    "retry": "重试",
+    "save": "保存",
+    "save_confirm": "确认保存",
+    "save_failed": "保存失败",
+    "save_modify": "保存修改",
+    "save_success": "保存成功",
+    "search": "搜索",
+    "search_placeholder": "请输入搜索关键词",
+    "select_company": "选择公司",
+    "select_status": "选择状态",
+    "settings": "设置",
+    "show": "显示",
+    "status": {
+      "active": "启用中",
+      "configured": "已配置",
+      "connected": "已连接",
+      "disabled": "停用",
+      "disconnected": "未连接",
+      "enabled": "启用",
+      "inactive": "已停用",
+      "maintenance": "维护中",
+      "offline": "离线",
+      "online": "在线",
+      "unconfigured": "未配置"
+    },
+    "submit": "提交",
+    "success": "成功",
+    "switch_language": "切换语言",
+    "time": {
+      "days_ago": "{n}天前",
+      "hours_ago": "{n}小时前",
+      "minutes_ago": "{n}分钟前",
+      "seconds_ago": "{n}秒前"
+    },
+    "tip": "提示",
+    "total_count": "共 {total} 条",
+    "pagination_range": "第 {start}–{end} 条，共 {total} 条",
+    "total_records": "共 {total} 条记录",
+    "type": "类型",
+    "unknown": "未知",
+    "unknown_error": "未知错误",
+    "unnamed": "未命名",
+    "unsaved_changes_confirm": "您有未保存的更改，确定要离开吗？",
+    "update_failed": "更新失败",
+    "update_success": "更新成功",
+    "updated_at": "更新时间",
+    "updater": "更新人",
+    "upload": "上传",
+    "view": "查看",
+    "view_logs": "日志",
+    "warning": "警告",
+    "yes": "是"
+  },
+  "companies": {
+    "actions": {
+      "copy_login_entry": "复制登录入口",
+      "create_company": "新增公司",
+      "create_user": "新增用户"
+    },
+    "pagination": {
+      "summary": "显示 {start}–{end} 条，共 {total} 条",
+      "total": "共 {count} 条"
+    },
+    "stats": {
+      "account_total": "账号总数",
+      "active_rate": "激活率",
+      "company_total": "公司总数",
+      "inactive_accounts": "停用账号",
+      "summary": "公司统计"
+    },
+    "company_attribute": {
+      "enterprise": "企业组织",
+      "is_agent": "代理商",
+      "is_brand": "品牌方",
+      "is_channel_partner": "渠道合作方",
+      "is_distributor": "分销商",
+      "is_enduser": "最终用户",
+      "is_manufacturer": "生产厂家",
+      "is_pod_manufacturer": "生产厂家",
+      "is_household": "家庭组织",
+      "is_school": "学校组织"
+    },
+    "company_type": {
+      "AG": "代理商",
+      "BR": "品牌方",
+      "CP": "渠道合作方",
+      "DS": "分销商",
+      "EU": "最终用户",
+      "MF": "生产厂家",
+      "PF": "平台公司"
+    },
+    "create_dialog": {
+      "address_label": "公司地址",
+      "address_placeholder": "请输入公司地址",
+      "attributes_label": "公司属性",
+      "household_label": "组织类型",
+      "household_help": "家庭是最终用户称呼，不能与学校或上游业务角色同时选择。",
+      "school_help": "学校是最终用户称呼，不能与家庭或上游业务角色同时选择。",
+      "pod_usage_label": "静音舱用途",
+      "pod_usage_help": "最终用户必填，上游业务角色不适用。",
+      "first_admin_title": "首位管理员",
+      "first_admin_help": "公司创建后将向首位管理员发送邀请；对方接受前公司显示为待初始化，管理员无需代设密码。",
+      "admin_email_label": "管理员邮箱",
+      "admin_email_placeholder": "请输入首位管理员邮箱",
+      "admin_name_label": "管理员姓名",
+      "admin_name_placeholder": "请输入首位管理员姓名",
+      "admin_email_required": "请输入管理员邮箱",
+      "admin_email_invalid": "请输入有效的管理员邮箱",
+      "admin_name_required": "请输入管理员姓名",
+      "create_and_invite_action": "创建并邀请",
+      "create_and_invite_success": "公司已创建，管理员邀请已发送",
+      "invite_retry_title": "重试管理员邀请",
+      "invite_retry_action": "重新发送邀请",
+      "company_created_invite_pending": "公司“{company}”已创建，尚未完成首位管理员邀请。重试只会发送邀请，不会重复创建公司。",
+      "company_created_invite_failed": "公司已创建，但管理员邀请发送失败：{detail}",
+      "company_slug_label": "登录入口标识",
+      "company_slug_placeholder": "如 dengtec-zz（3-63 位小写字母、数字或连字符）",
+      "company_name_label": "公司全称",
+      "company_name_placeholder": "请输入公司全称",
+      "contact_email_placeholder": "联系邮箱",
+      "contact_label": "联系人信息",
+      "contact_person_placeholder": "联系人姓名",
+      "contact_phone_placeholder": "联系电话",
+      "custom_domain_label": "自定义域名",
+      "custom_domain_placeholder": "如 www.brandb.com",
+      "domain_label": "完整登录入口 URL",
+      "domain_placeholder": "如 https://pods.dengtec.com/dengtec-zz",
+      "slogan_label": "公司标语",
+      "slogan_placeholder": "显示在公司简称下方",
+      "display_name_label": "显示名称",
+      "display_name_placeholder": "请输入显示名称",
+      "parent_label": "上级公司",
+      "short_name_label": "简称",
+      "short_name_placeholder": "请输入简称",
+      "subdomain_label": "二级域名",
+      "subdomain_placeholder": "如 manufacturerA",
+      "title": "新增公司"
+    },
+    "pod_usage": {
+      "internal": "内部使用",
+      "rental": "公共租赁",
+      "both": "两者兼有",
+      "not_applicable": "不适用"
+    },
+    "expand": {
+      "loading_users": "加载用户中...",
+      "no_log": "该公司暂无变更日志",
+      "no_users": "暂无用户"
+    },
+    "filter": {
+      "keyword_placeholder": "公司名称",
+      "select_parent": "选择父公司",
+      "select_status": "选择状态"
+    },
+    "icons": {
+      "view_logs": "日志"
+    },
+    "locale": {
+      "en-US": "English (US)",
+      "zh-CN": "中文 (简体)"
+    },
+    "role": {
+      "admin": "公司管理员",
+      "data_entry": "数据录入员",
+      "maintainer": "系统维护人员",
+      "operator": "运营管理",
+      "select": "请选择角色",
+      "viewer": "数据查看员"
+    },
+    "table": {
+      "address": "公司地址",
+      "company_attributes": "公司属性",
+      "company_code": "公司编码",
+      "company_name": "公司名称",
+      "company_type": "公司类型",
+      "contact_email": "联系邮箱",
+      "contact_person": "联系人",
+      "contact_phone": "联系电话",
+      "created_at": "创建时间",
+      "custom_domain": "自定义域名",
+      "display_name": "显示名称",
+      "domain_verified": "域名验证",
+      "slogan": "公司标语",
+      "domain_verified_no": "未验证",
+      "domain_verified_yes": "已验证",
+      "is_active": "状态",
+      "login_entry": "登录入口",
+      "login_entry_unset": "未配置",
+      "parent_company_name": "上级公司",
+      "short_name": "简称",
+      "subdomain": "二级域名"
+    },
+    "toast": {
+      "company_create_failed": "创建公司失败",
+      "company_create_success": "公司创建成功",
+      "enduser_conflict": "最终用户不能与其他属性同时选择，已自动取消其他选项",
+      "load_failed": "加载公司列表失败",
+      "load_user_failed": "加载用户列表失败",
+      "login_entry_copied": "登录入口已复制",
+      "login_entry_copy_failed": "复制登录入口失败",
+      "user_create_failed": "创建用户失败",
+      "user_create_success": "用户创建成功"
+    },
+    "user_company": {
+      "select": "请选择所属公司"
+    },
+    "user_dialog": {
+      "company_label": "所属公司",
+      "confirm_password_label": "确认密码",
+      "confirm_password_placeholder": "请再次输入密码",
+      "display_name_label": "显示名称",
+      "display_name_placeholder": "请输入显示名称",
+      "email_label": "邮箱",
+      "email_placeholder": "请输入邮箱",
+      "locale_label": "语言偏好",
+      "password_label": "密码",
+      "password_placeholder": "请输入密码",
+      "phone_label": "手机号",
+      "phone_placeholder": "请输入手机号",
+      "role_label": "角色",
+      "timezone_label": "时区偏好",
+      "title": "新增用户",
+      "username_label": "用户名",
+      "username_placeholder": "请输入用户名"
+    },
+    "user_table": {
+      "display_name": "显示名称",
+      "email": "邮箱",
+      "is_active": "状态",
+      "last_login": "最后登录",
+      "phone": "手机号",
+      "role": "角色",
+      "username": "用户名"
+    },
+    "validation": {
+      "company_slug_invalid": "登录入口标识须为 3-63 位小写字母、数字或连字符，且不能以连字符开头或结尾",
+      "company_name_required": "请输入公司全称",
+      "short_name_required": "请输入公司简称",
+      "domain_invalid": "请输入不含账号、端口、查询参数或片段的完整 HTTPS URL",
+      "company_attribute_required": "请至少选择一种公司身份",
+      "pod_usage_required": "请选择最终用户的静音舱用途",
+      "company_required": "请选择所属公司",
+      "confirm_password_required": "请再次输入密码",
+      "email_invalid": "请输入正确的邮箱地址",
+      "email_required": "请输入邮箱",
+      "password_min_length": "密码长度不能小于 6 位",
+      "password_mismatch": "两次输入密码不一致",
+      "password_required": "请输入密码",
+      "role_required": "请选择角色",
+      "username_required": "请输入用户名"
+    }
+  },
+  "company_detail": {
+    "active_status": {
+      "active": "启用",
+      "active_badge": "启用中",
+      "inactive": "停用",
+      "inactive_badge": "已停用"
+    },
+    "company_type": {
+      "AG": "代理商",
+      "BR": "品牌方",
+      "CP": "渠道合作方",
+      "DS": "分销商",
+      "EU": "最终用户",
+      "MF": "生产厂家",
+      "PF": "平台公司"
+    },
+    "domain": {
+      "copy_entry": "复制登录入口",
+      "dns_verification": "DNS 验证",
+      "entry_unset": "请先配置登录入口标识",
+      "failed": "失败",
+      "pending": "待验证",
+      "unverified": "未验证",
+      "verified": "已验证",
+      "verify_now": "立即验证",
+      "verifying": "验证中..."
+    },
+    "field": {
+      "address": "公司地址",
+      "company_attr": "公司属性",
+      "company_code": "公司编码",
+      "company_name": "公司全称",
+      "company_slug": "登录入口标识",
+      "domain": "完整登录入口 URL",
+      "slogan": "公司标语",
+      "contact_email": "联系邮箱",
+      "contact_person": "联系人",
+      "contact_phone": "联系电话",
+      "created_at": "创建时间",
+      "custom_domain": "自定义域名",
+      "display_name": "显示名称",
+      "login_entry": "登录入口",
+      "parent_company": "上级公司",
+      "short_name": "简称",
+      "status": "状态",
+      "subdomain": "二级域名",
+      "updated_at": "更新时间",
+      "uuid": "UUID"
+    },
+    "no_parent": "无",
+    "section": {
+      "basic_info": "基础信息",
+      "company_attr": "公司属性",
+      "contact_info": "联系人信息",
+      "domain_info": "域名信息",
+      "remark": "备注",
+      "system_info": "系统信息"
+    },
+    "toast": {
+      "enduser_exclusive": "最终用户不能与其他属性同时选择，已自动取消其他选项",
+      "invalid_domain": "请输入正确的域名格式",
+      "invalid_email": "请输入正确的邮箱格式",
+      "invalid_phone": "请输入正确的手机号码格式",
+      "invalid_company_slug": "登录入口标识须为 3-63 位小写字母、数字或连字符",
+      "invalid_subdomain": "二级域名只能包含字母、数字和连字符，且不能以连字符开头或结尾",
+      "domain_verified": "域名验证通过",
+      "domain_verify_failed": "域名验证失败，请检查 DNS 配置",
+      "login_entry_copied": "登录入口已复制",
+      "login_entry_copy_failed": "复制登录入口失败",
+      "update_failed": "更新失败",
+      "update_success": "更新成功"
+    }
+  },
+  "dashboard": {
+    "dynamic": {
+      "attention": "需关注",
+      "in_use": "{count} 使用中",
+      "normal": "正常",
+      "online_rate_label": "在线率",
+      "pending_label": "待处理",
+      "total_size_label": "总大小",
+      "usage_rate_label": "使用率",
+      "config_fallback": "公司数据看板配置暂不可用，当前显示平台默认布局。",
+      "empty": "当前时间范围暂无数据",
+      "export": "导出 PNG",
+      "start_date": "开始日期",
+      "end_date": "结束日期",
+      "subtitle": "平台运行概览 · {range}",
+      "title": "图表统计",
+      "unsupported_title": "配置不受支持",
+      "pod_devices": "台",
+      "pod_count": "座",
+      "pod_files": "个",
+      "pod_alerts": "条",
+      "current_value": "当前值",
+      "series": {
+        "temperature": "温度", "humidity": "湿度", "noise": "噪声", "occupancy": "占用率",
+        "estimated_power": "估算功耗", "fan_request": "风机设定", "fan_actual": "风机实际输出",
+        "fan_rpm": "风机转速", "light_level": "照明亮度", "wifi_rssi": "Wi-Fi 信号", "desk_height": "桌面高度"
+      }
+    },
+    "chart": {
+      "alerts": {
+        "pending": "未处理",
+        "title": "系统告警统计",
+        "type_communication": "通信异常：{n}",
+        "type_offline": "设备离线：{n}",
+        "type_other": "其他：{n}",
+        "week": "本周告警"
+      },
+      "alert_trend": {
+        "count": "告警数量",
+        "peak": "单日峰值",
+        "title": "告警趋势"
+      },
+      "device_status": {
+        "inactive": "已停用",
+        "maintenance": "维护中",
+        "offline": "离线",
+        "online": "在线",
+        "title": "设备状态分布"
+      },
+      "file_stats": {
+        "downloads": "总下载量",
+        "items": "{n}个",
+        "new_files": "新增文件",
+        "plays": "总播放量",
+        "times": "{n}次",
+        "title": "文件使用统计"
+      },
+      "online_trend": {
+        "area": "面积图",
+        "avg": "平均：",
+        "legend": "在线率",
+        "line": "折线图",
+        "max": "最高：",
+        "min": "最低：",
+        "title": "设备在线率趋势"
+      },
+      "pod_duration": {
+        "avg": "平均时长",
+        "bucket_0_1": "0-1 小时：{count}次 ({pct}%)",
+        "bucket_1_2": "1-2 小时：{count}次 ({pct}%)",
+        "bucket_2_4": "2-4 小时：{count}次 ({pct}%)",
+        "bucket_4_plus": "4+ 小时：{count}次 ({pct}%)",
+        "hours": "{n}小时",
+        "longest": "最长使用",
+        "times": "{n}次",
+        "title": "静音舱使用时长分布",
+        "today": "今日使用",
+        "total_uses": "总使用次数"
+      },
+      "pod_usage_trend": {
+        "avg_duration": "平均时长",
+        "daily_avg": "日均使用",
+        "peak": "单日峰值",
+        "title": "静音舱使用趋势",
+        "total": "总使用次数",
+        "uses": "使用次数"
+      }
+    },
+    "detail_table": {
+      "column": {
+        "alerts_count": "告警数量",
+        "avg_usage_time": "平均使用时长 (分钟)",
+        "date": "日期",
+        "file_downloads": "文件下载量",
+        "online_devices": "在线设备",
+        "online_rate": "在线率",
+        "pod_usage": "静音舱使用次数",
+        "total_devices": "总设备数"
+      },
+      "title": "详细统计数据"
+    },
+    "stat": {
+      "alerts_today": "今日告警",
+      "file_size": "总大小：{size}GB",
+      "file_total": "文件总数",
+      "online_devices": "在线设备",
+      "online_rate": "在线率：{rate}%",
+      "pending": "待处理：{count}",
+      "pod_total": "静音舱总数",
+      "pod_usage_rate": "使用率：{rate}%"
+    },
+    "toast": {
+      "alerts_updated": "告警统计已更新",
+      "duration_updated": "时长分布已更新",
+      "file_stats_updated": "文件统计已更新",
+      "load_failed": "数据看板加载失败",
+      "online_updated": "在线率数据已更新",
+      "refreshed": "数据已刷新"
+    },
+    "weekday": {
+      "fri": "周五",
+      "mon": "周一",
+      "sat": "周六",
+      "sun": "周日",
+      "thu": "周四",
+      "tue": "周二",
+      "wed": "周三"
+    }
+  },
+  "debug_credentials": {
+    "actions": {
+      "copy": "复制",
+      "create": "新建凭证",
+      "delete": "删除",
+      "dismiss_recorded": "我已记录，关闭",
+      "reset_password": "重置密码",
+      "restore": "恢复",
+      "revoke": "吊销",
+      "submit_create": "创建"
+    },
+    "column": {
+      "actions": "操作",
+      "created_at": "创建时间",
+      "factory_batch": "出厂批次",
+      "host": "主机 UUID",
+      "last_seen_at": "最近上线",
+      "mqtt_username": "MQTT 用户名",
+      "region": "区域",
+      "revoked": "状态",
+      "serial": "序列号",
+      "uuid": "凭证 UUID"
+    },
+    "confirm": {
+      "delete": "物理删除 {serial}？此操作不可撤销，建议先用吊销。",
+      "reset": "重置 {serial} 的密码？旧密码立即失效，设备会被踢下线。",
+      "reset_ok": "确认重置",
+      "restore": "恢复 {serial} 的连接权限？",
+      "revoke": "吊销 {serial}？设备将无法连接 MQTT。"
+    },
+    "desc_html": "管理设备端连接 MQTT/调试通道用的 mqtt_username + mqtt_password。<strong>新密码仅在创建/重置时显示一次</strong>，不会再次返回。",
+    "dialog": {
+      "click_copy_first": "请先点击复制再关闭",
+      "create_title": "新建设备凭证",
+      "secret_title": "MQTT 密码（一次性显示）",
+      "secret_warning_html": "<strong>这是密码最后一次显示</strong>，关闭弹窗后无法再取回。请立即复制并妥善保存。"
+    },
+    "empty": "暂无凭证",
+    "filter": {
+      "host_placeholder": "按主机 UUID 过滤",
+      "show_revoked": "显示已吊销"
+    },
+    "filter_section": "筛选",
+    "form": {
+      "factory_batch": "出厂批次",
+      "host_uuid": "主机 UUID（可选）",
+      "host_uuid_placeholder": "留空则自动生成",
+      "notes": "备注",
+      "password_plain": "MQTT 密码（明文，仅本次显示）",
+      "region": "区域",
+      "serial": "序列号",
+      "username": "MQTT 用户名"
+    },
+    "status": {
+      "normal": "正常",
+      "revoked": "已吊销"
+    },
+    "title": "设备凭证",
+    "toast": {
+      "copied": "已复制到剪贴板",
+      "copy_failed": "自动复制失败，密码已选中，请按 Ctrl+C 或右键复制",
+      "create_failed": "创建凭证失败",
+      "delete_failed": "删除失败",
+      "load_failed": "加载凭证列表失败",
+      "reset_failed": "重置密码失败",
+      "restore_failed": "恢复失败",
+      "revoke_failed": "吊销失败"
+    }
+  },
+  "debug_device_control": {
+    "actions": {
+      "refresh_spec": "刷新规范",
+      "refresh_state": "刷新设备状态",
+      "send": "下发"
+    },
+    "advanced": {
+      "attr_code_placeholder": "如 led_enable / P-15",
+      "desc": "当节点 OD 规范缺失或调试新字段时使用,直接 POST /control。",
+      "toggle": "高级 - 直接下发 raw attr_code"
+    },
+    "confirm": {
+      "default": "确认执行?",
+      "emergency_stop": "确认紧急停止该设备?",
+      "nmt_reset": "确认向节点 #{id} 发送 NMT Reset？节点会短暂离线并重新初始化。",
+      "reboot": "确认软重启该设备?"
+    },
+    "command_status": {
+      "section": "本次会话命令回执",
+      "target": "节点 #{id}"
+    },
+    "desc": "基于节点 OD 规范动态生成控件,选择 主机 / 节点 / 规范版本 后自动加载该型号的可写字段。",
+    "dir": {
+      "ro": "只读",
+      "wo": "只写"
+    },
+    "empty": {
+      "no_fields": "该组内无字段",
+      "select_first": "请先选择主机和节点 → 自动加载该节点 OD 规范后会按字段类型动态生成控件"
+    },
+    "form": {
+      "host": "主机",
+      "host_placeholder": "请选择主机",
+      "node": "节点",
+      "select_host_first": "请先选主机",
+      "select_target": "请选择目标",
+      "spec_version": "规范版本"
+    },
+    "json_placeholder": "JSON: 例如 \"abc\" / 123 / {\"k\":\"v\"}",
+    "maint": {
+      "emergency_stop": "紧急停止",
+      "nmt_action": "NMT 动作",
+      "reboot": "软重启",
+      "section": "维护命令(通用,所有节点支持)",
+      "send_nmt": "发送 NMT"
+    },
+    "nmt": {
+      "reset": "NMT Reset Node",
+      "start": "NMT Start (进入 OPERATIONAL)",
+      "stop": "NMT Stop"
+    },
+    "spec_info": "{device_id} / {version} | 共 {total} 字段 ({rw} RW + {ro} RO)",
+    "target": {
+      "host_default": "主机自身 (device_id=1)",
+      "host_with_pc": "主机自身 ({pc})",
+      "node_prefix": "节点 #{id}"
+    },
+    "title": "设备控制台",
+    "toast": {
+      "invalid_json": "{name} 不是合法 JSON",
+      "invalid_attr_code": "attr_code 只能包含字母、数字、点、下划线、冒号和连字符，且不能超过 64 个字符",
+      "maint_failed": "维护命令 {action} 失败: {msg}",
+      "maint_sent": "已下发维护命令 {action}{cmd}",
+      "raw_failed": "raw {code} 下发失败: {msg}",
+      "raw_sent": "已下发 raw {code}{cmd}",
+      "ack": "设备回执 {cmd}: {status}",
+      "select_host_first": "请先选择主机",
+      "send_failed_default": "下发失败",
+      "send_failed_named": "{name} 下发失败: {msg}",
+      "sent": "已下发 {name}={value}{cmd}",
+      "state_failed": "读取设备当前状态失败"
+    },
+    "unit": "单位 {unit}",
+    "value_source": {
+      "live": "设备当前值",
+      "unavailable": "当前值未知"
+    },
+    "warning": {
+      "load_spec_failed": "加载 OD 规范失败: {msg}",
+      "no_valid_spec": "后端未返回有效 OD 规范",
+      "model_unknown": "该设备没有有效的 CANopen 型号编码，已停止自动套用 NU0001。请先完善设备型号绑定。",
+      "spec_not_uploaded": "该型号 ({pc}) OD 规范未上传,无法动态生成控件。请使用下方\"高级 - raw attr\"模式。"
+    }
+  },
+  "debug_devices": {
+    "actions": {
+      "collapse": "收起",
+      "device_console": "控制台",
+      "emcy_logs": "EMCY",
+      "expand": "展开",
+      "host_detail": "详情",
+      "node_detail": "详情",
+      "od_diagnose": "OD",
+      "serial_logs": "设备日志包"
+    },
+    "errors": {
+      "load_failed": "加载失败",
+      "load_nodes_failed": "加载节点失败"
+    },
+    "page_options": {
+      "p10": "10/页",
+      "p100": "100/页",
+      "p20": "20/页",
+      "p50": "50/页"
+    },
+    "serial": {
+      "clear": "清空",
+      "filter_placeholder": "过滤关键字 (tag/msg)",
+      "open_independent": "跳转独立页查看历史",
+      "open_independent_short": "独立页",
+      "pause": "暂停",
+      "paused": "已暂停",
+      "resume": "继续",
+      "row_count": "{n} 行",
+      "title": "实时串口日志",
+      "wait_mqtt": "等待 MQTT 串口流…设备发布 wf2/{'{'}uuid{'}'}/serial/+ 后会实时出现"
+    },
+    "status_options": {
+      "all": "全部状态"
+    },
+    "table": {
+      "actions": "操作",
+      "bound": "已绑定",
+      "can_id": "CAN-ID",
+      "chip": "芯片",
+      "expand": "",
+      "fake_serial": "(CAN {id})",
+      "func": "功能/角色",
+      "func_unregistered": "未登记，请在 host-mac-types.js 中添加 MAC 映射",
+      "has_new_firmware": "有新固件",
+      "last_seen": "最后心跳",
+      "loading_nodes": "加载节点中…",
+      "mac": "MAC",
+      "no_bound_nodes": "该主机当前未绑定任何节点",
+      "no_hosts": "暂无主机",
+      "serial_no": "序列号",
+      "status": "状态",
+      "sw_ver": "固件",
+      "unbound": "未绑定",
+      "unknown": "未知"
+    },
+    "toolbar": {
+      "auto_refresh": "自动刷新（10s）",
+      "query": "查询",
+      "refresh": "刷新",
+      "search_placeholder": "搜索 MAC / 序列号 / UUID",
+      "stats": "主机：{hostsTotal} 台（在线 {hostsOnline}） · 节点：{nodesTotal} 台（在线 {nodesOnline}）"
+    }
+  },
+  "debug_emcy_logs": {
+    "actions": {
+      "clear": "清空日志",
+      "load_more": "加载更多",
+      "refresh": "刷新"
+    },
+    "confirm": {
+      "clear": "确认清空该主机全部 EMCY 日志？此操作不可撤销。"
+    },
+    "filters": {
+      "node": "Node ID"
+    },
+    "host_options": {
+      "online_suffix": " (在线)",
+      "select_placeholder": "请选择主机"
+    },
+    "select_host": "告警筛选",
+    "total": "共 {total} 条记录，当前显示最近若干条",
+    "subtitle": "CANopen Emergency 报文(error_code/register/data),按主机查询。",
+    "table": {
+      "data": "data(5B)",
+      "description": "描述",
+      "empty": "无 EMCY 记录",
+      "error_code": "error_code",
+      "error_bit": "错误位",
+      "node": "Node",
+      "register": "register",
+      "time": "时间",
+      "vendor_data": "厂商数据"
+    },
+    "title": "EMCY 紧急报文日志",
+    "toast": {
+      "error_title": "错误",
+      "load_failed": "加载失败",
+      "cleared": "已清空 {count} 条 EMCY 日志"
+    }
+  },
+  "debug_alert_events": {
+    "select_host": "遥测告警筛选",
+    "filters": {
+      "status": "状态",
+      "all": "全部状态",
+      "firing": "告警中",
+      "resolved": "已恢复"
+    },
+    "table": {
+      "time": "时间",
+      "node": "节点",
+      "rule": "规则",
+      "severity": "严重程度",
+      "metric": "指标",
+      "value": "当前值",
+      "threshold": "阈值",
+      "status": "状态",
+      "message": "消息",
+      "empty": "暂无遥测告警"
+    }
+  },
+  "debug_mqtt_stream": {
+    "actions": {
+      "clear": "清空",
+      "collapse": "收起",
+      "expand": "展开",
+      "expand_all_off": "展开所有 payload (已关闭)",
+      "expand_all_on": "展开所有 payload (已开启)",
+      "hide_heartbeat_off": "隐藏心跳帧 (已关闭)",
+      "hide_heartbeat_on": "隐藏心跳帧 (已开启)",
+      "pause": "暂停",
+      "reconnect": "重连",
+      "resume": "恢复"
+    },
+    "column": {
+      "device": "设备",
+      "kind": "类型",
+      "payload": "报文",
+      "summary": "摘要",
+      "time": "时间",
+      "topic": "Topic"
+    },
+    "desc": "实时订阅后端转发的 MQTT 报文,本面板仅可视化,不会向设备下发任何命令",
+    "empty": "尚未收到消息",
+    "empty_no_host": "请先选择主机",
+    "filter": {
+      "all_hosts": "全部主机",
+      "host_placeholder": "请选择主机",
+      "kind_all": "类型 全部",
+      "kind_heartbeat": "心跳(无变化)",
+      "kind_serial": "串口/日志",
+      "kind_status": "状态(变化)",
+      "topic_placeholder": "topic 关键字"
+    },
+    "filter_section": "过滤与控制",
+    "kind": {
+      "ack": "回执",
+      "command": "命令",
+      "emcy": "EMCY",
+      "error": "错误",
+      "heartbeat": "心跳",
+      "log": "日志",
+      "lwt": "掉线",
+      "od_dump": "OD",
+      "ota": "OTA",
+      "provision": "激活",
+      "serial": "串口",
+      "status": "状态",
+      "unknown": "其他"
+    },
+    "status": {
+      "connected": "已连接",
+      "disconnected": "断开",
+      "idle": "未订阅"
+    },
+    "summary": {
+      "action": "动作 {action}",
+      "click_expand": "点击展开查看详情",
+      "error_code": "错误码 {code}",
+      "fw_version": "固件 {ver}",
+      "heartbeat": "周期心跳",
+      "more_lines": "{text} (+{count} 行)",
+      "nodes": "节点 {online}/{total}",
+      "od_entries": "{n} 条 OD",
+      "ota_status": "OTA 状态 {status}"
+    },
+    "title": "MQTT 消息流"
+  },
+  "debug_sensor_history": {
+    "description": "查询单元(unit)的传感器历史记录,支持时间快捷范围、字段多选、折线图与 CSV 导出。",
+    "empty": {
+      "chart_failed": "图表组件加载失败,降级显示数据表格",
+      "no_numeric": "当前所选字段无数值类型数据,无法绘制折线图",
+      "no_records": "暂无记录"
+    },
+    "fields_button": {
+      "all": "全部 ({count})",
+      "none_selected": "未选字段(全部)",
+      "partial": "已选 {selected} / {total}",
+      "waiting": "(待选单元)"
+    },
+    "form": {
+      "clear": "清空",
+      "datetime_placeholder": "点击选择日期时间",
+      "end_label": "结束时间",
+      "export_csv": "导出 CSV",
+      "fields_hint": "选择单元后从最新一条记录自动列出可选字段",
+      "fields_label": "显示字段",
+      "page_size_label": "每页",
+      "quick_label": "时间快捷",
+      "select_all": "全选",
+      "start_label": "开始时间",
+      "submit": "查询",
+      "unit_label": "单元(unit)"
+    },
+    "quick": {
+      "custom": "自定义",
+      "d30": "最近 30d",
+      "d7": "最近 7d",
+      "h1": "最近 1h",
+      "h24": "最近 24h"
+    },
+    "section": {
+      "chart": "折线趋势(数值字段)",
+      "filter": "历史数据查询"
+    },
+    "title": "历史数据",
+    "toast": {
+      "load_failed": "加载失败",
+      "load_failed_title": "错误"
+    },
+    "unit_options": {
+      "select": "请选择单元"
+    }
+  },
+  "debug_serial_logs": {
+    "actions": {
+      "download": "下载",
+      "load_more": "加载更多",
+      "refresh": "刷新"
+    },
+    "card_select_host": "设备日志包筛选",
+    "empty_text": "暂无设备日志包",
+    "fields": {
+      "actions": "操作",
+      "ended_at": "结束时间",
+      "file_name": "文件",
+      "level": "级别",
+      "line_count": "行数",
+      "size": "大小",
+      "source": "来源",
+      "started_at": "开始时间",
+      "trigger_type": "触发原因"
+    },
+    "filters": {
+      "nid": "NID"
+    },
+    "host_select_placeholder": "请选择主机",
+    "host_status_online": " (在线)",
+    "level_options": {
+      "all": "全部级别"
+    },
+    "log": {
+      "download_failed": "下载设备日志包失败",
+      "load_hosts_failed": "加载主机列表失败",
+      "load_logs_failed": "加载设备日志包失败"
+    },
+    "source_options": {
+      "all": "全部来源"
+    },
+    "subtitle": "查看并下载设备上传的完整诊断日志包；实时串口输出仍在设备调试流中查看。",
+    "title": "设备日志包",
+    "toast": {
+      "error_title": "错误"
+    },
+    "trigger_options": {
+      "all": "全部触发原因",
+      "crash": "崩溃",
+      "manual": "手动",
+      "ota_failed": "OTA 失败",
+      "watchdog": "看门狗"
+    }
+  },
+  "doc_page": {
+    "default_description": "页面说明",
+    "default_section": "文档",
+    "default_title": "文档页面",
+    "doc_source": "文档来源：",
+    "placeholder_tip": "当前为菜单占位页，可逐步替换为真实业务页面。"
+  },
+  "errors": {
+    "E1000": "服务器内部错误，请稍后重试",
+    "E1002": "请先登录",
+    "E1003": "无权访问此资源",
+    "E1004": "请求的资源不存在",
+    "E2001": "用户名或密码错误",
+    "E2002": "登录已过期，请重新登录",
+    "E2010": "用户不存在",
+    "E2011": "用户名或邮箱已存在",
+    "E3001": "公司不存在",
+    "E4001": "主机不存在",
+    "E7001": "预约不存在或无权访问",
+    "E7002": "静音舱未开通预约或已停用",
+    "E7003": "所选时间段已被占用",
+    "E7004": "预约已被其他操作修改，请刷新",
+    "E7005": "房间仍有未来预约",
+    "E7006": "当前来源仍有未来预约",
+    "E7007": "该房间已有其他预约主来源",
+    "E7010": "该第三方平台尚未安装或不受支持",
+    "web_ui_json_required": "设备 UI 仅接受 JSON 文件",
+    "web_ui_document_too_large": "设备 UI 文档不能超过 1 MiB",
+    "web_ui_json_invalid": "设备 UI 文件不是有效的 UTF-8 JSON",
+    "web_ui_document_invalid": "设备 UI 文档校验失败",
+    "web_ui_not_applicable": "Node 软件版本不适用设备 UI",
+    "web_ui_if_match_required": "设备 UI 已存在，请刷新后再修改",
+    "web_ui_etag_mismatch": "设备 UI 已被其他操作修改，请刷新后重试",
+    "software_version_immutable": "此软件版本已被设备使用，不能修改设备 UI",
+    "software_version_not_found": "软件版本不存在",
+    "asset_blob_missing": "找不到与 UI 资源清单匹配的文件",
+    "E7011": "当前连接不具备所需能力",
+    "E7012": "第三方平台连接不可用",
+    "E7013": "外部会议室尚未验证",
+    "E7014": "外部会议室映射冲突"
+  },
+  "file_manager": {
+    "actions": {
+      "add_relation": "添加关联",
+      "add_tag": "+ 添加标签",
+      "close": "关闭",
+      "delete": "删除",
+      "download": "下载",
+      "manage_relations": "关联",
+      "preview": "预览",
+      "refresh": "刷新",
+      "remove": "移除",
+      "upload": "上传文件",
+      "view_logs": "日志"
+    },
+    "business_type": {
+      "audio": "音频",
+      "document": "文档",
+      "image": "图片",
+      "other": "其他",
+      "select_placeholder": "选择业务类型",
+      "video": "视频"
+    },
+    "category": {
+      "audio": "音频素材",
+      "background": "背景素材",
+      "firmware": "固件文件",
+      "other": "其他",
+      "product_doc": "产品资料",
+      "select_placeholder": "请选择文件分类",
+      "user_doc": "使用文档"
+    },
+    "filters": {
+      "search_placeholder": "文件名、类型",
+      "type_placeholder": "全部类型"
+    },
+    "image_format": {
+      "select_placeholder": "选择格式"
+    },
+    "language": {
+      "en": "English",
+      "select_placeholder": "选择语言",
+      "zh_cn": "简体中文"
+    },
+    "metadata_format": {
+      "is_latest": "最新：{value}",
+      "play_mode": "模式：{value}",
+      "version": "版本：{value}",
+      "volume": "音量：{value}"
+    },
+    "modal": {
+      "delete_file_confirm": "确认删除文件 \"{name}\"？如果文件有关联关系则无法删除。",
+      "delete_relation_confirm": "确认删除该文件关联吗？",
+      "delete_title": "删除确认",
+      "edit": "编辑",
+      "ok_title_delete": "确认删除",
+      "save": "保存"
+    },
+    "orientation": {
+      "landscape": "横向 (landscape)",
+      "portrait": "纵向 (portrait)",
+      "select_placeholder": "选择方向"
+    },
+    "play_mode": {
+      "loop": "循环播放 (loop)",
+      "once": "播放一次 (once)",
+      "shuffle": "随机播放 (shuffle)"
+    },
+    "preview": {
+      "loading": "加载中...",
+      "type_unsupported": "不支持在线预览此文件类型，请下载查看。",
+      "video_unsupported": "您的浏览器不支持视频播放"
+    },
+    "relation_file_type": {
+      "avatar": "头像/产品图片 (avatar)",
+      "config": "配置文件 (config)",
+      "document": "文档 (document)",
+      "draw": "图纸 (draw)",
+      "firmware": "固件 (firmware)",
+      "image": "图片 (image)",
+      "logo": "公司 Logo (logo)",
+      "manual": "使用手册 (manual)",
+      "music": "音乐 (music)",
+      "sch": "原理图 (sch)",
+      "select_placeholder": "请选择文件类型"
+    },
+    "relation_file_type_label": {
+      "avatar": "头像/产品图",
+      "config": "配置文件",
+      "document": "文档",
+      "draw": "图纸",
+      "firmware": "固件",
+      "image": "图片",
+      "logo": "Logo",
+      "manual": "使用手册",
+      "music": "音乐",
+      "sch": "原理图"
+    },
+    "relation_type": {
+      "company": "公司 (company)",
+      "hn_model": "主机/节点型号 (hn_model)",
+      "host": "主机实例 (host)",
+      "node": "节点实例 (node)",
+      "pod": "静音舱实例 (pod)",
+      "pod_model": "静音舱型号 (pod_model)",
+      "user": "用户 (user)"
+    },
+    "relation_type_label": {
+      "company": "公司",
+      "hn_model": "主机/节点型号",
+      "host": "主机实例",
+      "node": "节点实例",
+      "pod": "静音舱实例",
+      "pod_model": "静音舱型号",
+      "user": "用户"
+    },
+    "relations": {
+      "add_title": "添加关联",
+      "alt_text_label": "替代文本",
+      "alt_text_placeholder": "请输入替代文本",
+      "caption_label": "图片说明",
+      "caption_placeholder": "请输入图片说明",
+      "display_order_label": "显示顺序",
+      "edit_title": "编辑关联",
+      "end_time_label": "结束时间",
+      "end_time_placeholder": "选择结束时间",
+      "file_name_label": "文件名：",
+      "file_size_label": "文件大小：",
+      "file_type_label": "文件类型：",
+      "file_type_placeholder": "请选择文件类型",
+      "file_type_select_label": "文件类型",
+      "is_enabled_label": "是否启用",
+      "is_latest_label": "是否最新版",
+      "is_primary_label": "是否主文件",
+      "is_thumbnail_label": "是否缩略图",
+      "metadata_firmware_title": "固件元数据",
+      "metadata_image_title": "图片元数据",
+      "metadata_music_title": "音乐播放元数据",
+      "min_hw_ver_label": "最低硬件版本",
+      "min_hw_ver_placeholder": "如：H1.0",
+      "no": "否",
+      "object_label": "关联对象",
+      "object_placeholder_prefix": "请选择",
+      "play_days_label": "播放星期",
+      "play_mode_label": "播放模式",
+      "sort_order_label": "排序顺序",
+      "start_time_label": "开始时间",
+      "start_time_placeholder": "选择开始时间",
+      "title": "文件关联管理",
+      "type_label": "关联类型",
+      "type_placeholder": "请选择关联类型",
+      "volume_label": "音量 (0-100)",
+      "yes": "是"
+    },
+    "stats": {
+      "image_files": "图片文件",
+      "total_files": "文件总数",
+      "total_size": "总大小",
+      "video_files": "视频文件"
+    },
+    "table": {
+      "actions": "操作",
+      "category": "分类",
+      "download_count": "下载次数",
+      "file": "文件",
+      "file_type": "文件类型",
+      "is_primary": "主文件",
+      "metadata": "元数据",
+      "play_count": "播放次数",
+      "relation_object": "关联对象",
+      "relation_type_col": "关联类型",
+      "sort_order": "排序",
+      "status": "状态",
+      "uploader": "上传者"
+    },
+    "toast": {
+      "delete_failed": "删除失败：",
+      "delete_failed_default": "删除失败，文件可能有关联关系",
+      "delete_success": "文件删除成功",
+      "download_failed": "下载失败：",
+      "download_success": "下载成功",
+      "load_list_failed": "加载文件列表失败：",
+      "load_relations_failed": "加载关联列表失败：",
+      "no_change_log": "该文件暂无变更日志",
+      "relation_add_failed": "添加关联失败：",
+      "relation_add_success": "关联添加成功",
+      "relation_save_failed": "保存失败",
+      "relation_update_failed": "更新关联失败：",
+      "relation_update_success": "关联更新成功",
+      "relations_hint": "请在文件列表中点击「{action}」管理文件关系",
+      "select_file": "请选择要上传的文件",
+      "size_too_large": "文件大小不能超过 100MB",
+      "upload_failed": "文件上传失败：",
+      "upload_failed_default": "文件上传失败",
+      "upload_success": "文件上传成功",
+      "validate_category": "请选择文件分类",
+      "validate_description": "请输入文件描述",
+      "validate_file_type": "请选择文件类型",
+      "validate_relation_object": "请选择关联对象",
+      "validate_relation_type": "请选择关联类型",
+      "validate_language": "请选择文档语言"
+    },
+    "upload": {
+      "album_label": "专辑",
+      "album_placeholder": "请输入专辑名称",
+      "artist_label": "艺术家",
+      "artist_placeholder": "请输入艺术家名称",
+      "author_label": "作者",
+      "author_placeholder": "请输入作者名称",
+      "build_date_label": "构建日期",
+      "build_date_placeholder": "选择日期",
+      "build_number_label": "构建编号",
+      "cancel_title": "取消",
+      "category_label": "文件分类",
+      "click_to_select": "点击选择文件上传",
+      "description_label": "文件描述",
+      "description_placeholder": "请输入文件描述信息",
+      "duration_label": "时长 (秒)",
+      "format_label": "格式",
+      "genre_label": "流派",
+      "genre_placeholder": "如：白噪音",
+      "height_label": "高度 (像素)",
+      "is_stable_label": "稳定版本",
+      "language_label": "语言",
+      "metadata_title": "文件元数据",
+      "ok_title": "上传",
+      "orientation_label": "方向",
+      "pages_label": "页数",
+      "release_notes_label": "发布说明",
+      "release_notes_placeholder": "请输入版本更新说明",
+      "select_file": "选择文件",
+      "tags_label": "标签",
+      "tip": "支持任何格式的文件，单个文件最大 100MB",
+      "title": "上传文件",
+      "version_label": "版本号",
+      "version_placeholder_doc": "如：2.1",
+      "version_placeholder_firmware": "如：1.3.0",
+      "width_label": "宽度 (像素)"
+    },
+    "weekday": {
+      "fri": "周五",
+      "mon": "周一",
+      "sat": "周六",
+      "sun": "周日",
+      "thu": "周四",
+      "tue": "周二",
+      "wed": "周三"
+    }
+  },
+  "firmware_manager": {
+    "filter": {
+      "refresh": "刷新",
+      "search_placeholder": "搜索文件名 / 版本"
+    },
+    "header": {
+      "subtitle": "上传 / 管理 ESP32 设备固件镜像（按目标芯片分类）",
+      "title": "固件版本管理",
+      "upload": "上传固件"
+    },
+    "table": {
+      "actions": "操作",
+      "created_at": "上传时间",
+      "delete": "删除",
+      "download": "下载",
+      "empty": "暂无固件",
+      "loading": "加载中...",
+      "name": "名称",
+      "sha256": "SHA256",
+      "size": "大小",
+      "target_chip": "目标芯片",
+      "version": "版本"
+    },
+    "target_options": {
+      "all": "全部芯片",
+      "coproc_c6": "协处理 ESP32-C6",
+      "host_p4": "主机 ESP32-P4",
+      "host_st7701": "屏主机 ESP32-S3 (ST7701)",
+      "node_c3": "节点 ESP32-C3",
+      "s3": "ESP32-S3"
+    },
+    "toast": {
+      "delete_confirm": "确认删除固件 \"{name}\"？",
+      "delete_failed": "删除失败",
+      "delete_success": "删除成功",
+      "download_failed": "下载失败",
+      "load_failed": "加载固件列表失败",
+      "select_file": "请选择固件文件",
+      "title_error": "错误",
+      "title_success": "成功",
+      "title_warning": "提示",
+      "upload_failed": "上传失败",
+      "upload_success": "固件上传成功"
+    },
+    "upload": {
+      "cancel": "取消",
+      "drop_placeholder": "放下文件以上传",
+      "file": "选择固件文件 (.bin)",
+      "file_placeholder": "点击或拖拽 .bin 文件到此处",
+      "hardware_line": "硬件版本行",
+      "config_manifest_sha256": "配置生成清单 SHA-256",
+      "final_signed_sha256": "最终批准签名 BIN SHA-256",
+      "hardware_line_placeholder": "请选择精确硬件版本行",
+      "name": "固件名称",
+      "ota_approval": "确认该最终签名镜像已获准用于 OTA",
+      "ota_approval_hint": "勾选批准前必须完整填写项目名和三项 SHA-256；候选固件请保持未勾选。",
+      "ota_metadata_hint": "D1 OTA 元信息（候选可留空；正式下发时必须完整且与 released、签名验证通过的 Configs/OD 绑定）",
+      "sha256_placeholder": "64 位十六进制 SHA-256",
+      "name_placeholder": "例：host_p4_main",
+      "od_import": "OD 导入包（新 OD 首版必填）",
+      "od_import_invalid": "OD 导入包不是有效的 JSON",
+      "od_import_placeholder": "选择正式 HNModel 导入 JSON",
+      "od_import_required": "该硬件版本下尚无此 OD；首版必须同时上传正式导入包，固件版本必须为 0.0.1。",
+      "od_policy_hint": "必须填写真实 OD 版本；legacy-unknown 仅供历史读取，不能上传新固件。",
+      "od_version": "OD 版本",
+      "od_version_placeholder": "例如 0.0.1",
+      "ok": "上传",
+      "partition_table_sha256": "分区表 SHA-256",
+      "project_name": "ESP-IDF 项目名",
+      "remark": "备注",
+      "target_chip": "目标芯片",
+      "title": "上传固件",
+      "uploading": "上传中...",
+      "version": "版本号",
+      "version_placeholder": "例：1.2.3"
+    }
+  },
+  "font_size_toggle": {
+    "aria_label": "字体大小",
+    "large": "大号字体",
+    "medium": "中号字体（默认）",
+    "small": "小号字体"
+  },
+  "hn_models": {
+    "actions": {
+      "delete_model": "删除型号",
+      "manage_attrs": "属性",
+      "view": "查看",
+      "view_logs": "日志"
+    },
+    "attr_dialog": {
+      "title": "属性管理"
+    },
+    "publication": {
+      "active": "当前激活",
+      "config_version": "配置版本",
+      "configs_package": "Configs 产品发布包",
+      "product_model": "产品型号",
+      "profile_id": "属性 Profile ID",
+      "published_at": "发布时间",
+      "readonly": "只读",
+      "source": "来源",
+      "title": "当前生效发布"
+    },
+    "options_editor": {
+      "title": "数值显示方式（可选）"
+    },
+    "attr_form": {
+      "access_type": "访问类型",
+      "attr_code": "属性编码",
+      "attr_name": "属性名称",
+      "category": "字段分组",
+      "co_index": "索引",
+      "co_sub_index": "子索引",
+      "data_type": "数据类型",
+      "default_val": "默认值",
+      "description": "描述",
+      "display_order": "显示顺序",
+      "group_name": "分组名称",
+      "max_val": "最大值",
+      "min_val": "最小值",
+      "unit": "单位",
+      "web_control_table": "强制加入控制面板",
+      "web_display": "在设备控制台显示",
+      "web_editable": "允许编辑"
+    },
+    "column": {
+      "created_at": "创建时间",
+      "desc": "描述",
+      "model_code": "型号编码",
+      "model_name": "型号名称",
+      "status": "状态",
+      "type": "类型",
+      "updated_at": "更新时间",
+      "url": "产品链接"
+    },
+    "confirm": {
+      "delete_model": "确定要删除型号 \"{name}\" 吗？"
+    },
+    "create_dialog": {
+      "add_title": "新增型号",
+      "saving": "保存中..."
+    },
+    "detail_dialog": {
+      "title": "型号详情"
+    },
+    "edit_form": {
+      "placeholder_body": "请从左侧选择一项属性查看详情",
+      "placeholder_title": "请选择属性",
+      "viewing": "属性详情：{name}"
+    },
+    "filter": {
+      "search_placeholder": "型号编码或名称",
+      "status_all": "全部状态",
+      "type_all": "全部类型"
+    },
+    "form": {
+      "part_number": "物料号",
+      "command_capabilities": "设备命令能力",
+      "command_capabilities_help": "仅勾选当前主机固件已实现并可返回 ACK 的命令；未声明的操作会在控制面板隐藏并被后端拒绝。",
+      "desc": "描述",
+      "desc_placeholder": "请输入型号描述",
+      "model_code": "型号编码",
+      "model_code_placeholder": "型号编码（如 DE-H100）",
+      "model_name": "型号名称",
+      "model_name_placeholder": "请输入型号名称",
+      "status": "状态",
+      "status_placeholder": "请选择状态",
+      "type": "类型",
+      "type_placeholder": "请选择类型",
+      "url": "产品链接",
+      "url_placeholder": "请输入产品链接 URL"
+    },
+    "index_tree": {
+      "empty_configs": "当前型号没有生效的属性配置，请在 Configs 中配置并发布产品版本。",
+      "no_matches": "没有匹配的属性",
+      "search_placeholder": "搜索属性编码、索引或名称",
+      "title": "属性列表",
+      "ungrouped": "未分组"
+    },
+    "label": {
+      "model_code": "型号编码：",
+      "model_name": "型号名称："
+    },
+    "status": {
+      "active": "启用",
+      "frozen": "冻结"
+    },
+    "version_catalog": {
+      "hw_version": "硬件版本",
+      "od_version": "OD 版本",
+      "software_version": "软件版本",
+      "summary": "{versions} 个版本 / {revisions} 个 OD",
+      "version_summary": "版本 / OD"
+    },
+    "toast": {
+      "create_model_failed": "创建型号失败",
+      "create_model_success": "型号创建成功",
+      "delete_model_failed": "删除型号失败",
+      "delete_model_success": "型号删除成功",
+      "fetch_detail_failed": "获取详情失败",
+      "field_updated": "字段更新成功",
+      "index_list_failed": "加载索引列表失败",
+      "list_load_failed": "加载型号列表失败，请稍后重试",
+      "model_id_missing": "型号 ID 不存在",
+      "update_failed": "更新失败"
+    },
+    "type": {
+      "host": "主机",
+      "node": "节点"
+    },
+    "validation": {
+      "model_code_required": "请输入型号编码",
+      "model_name_required": "请输入型号名称",
+      "status_required": "请选择状态",
+      "type_required": "请选择类型"
+    }
+  },
+  "host_detail": {
+    "actions": {
+      "clear": "清空",
+      "copy_key": "复制",
+      "copy_key_title": "点击复制密钥",
+      "rotate_key": "更新密钥"
+    },
+    "dialog": {
+      "address_placeholder": "请输入安装地址",
+      "can_addr": "CAN地址",
+      "can_addr_placeholder": "1-127",
+      "company_disabled": "公司信息不可修改",
+      "binding_replace_reason": "通过主机详情的节点绑定管理更换节点",
+      "edit_title": "编辑主机配置",
+      "heartbeat_placeholder": "请选择心跳间隔",
+      "heartbeat_tip": "设备将按照此间隔发送心跳包",
+      "hw_disabled": "硬件版本不可修改",
+      "mac_disabled": "MAC地址不可修改",
+      "node_fw_ver": "固件版本：{value}",
+      "node_hw_model": "硬件型号：{value}",
+      "node_info_title": "节点信息：",
+      "node_label": "节点",
+      "node_mac": "MAC地址：{value}",
+      "node_status": "状态：",
+      "node_tip_max": "主机最多可绑定3个节点（A/B/C位置）",
+      "node_tip_swap": "已绑定的节点可以更换，空位置可以绑定新节点",
+      "node_title": "管理节点绑定",
+      "node_unbound": "(未绑定)",
+      "ok_save_binding": "保存绑定",
+      "ok_save_config": "保存配置",
+      "position": "位置 {pos}",
+      "remark_placeholder": "请输入备注信息",
+      "serial_disabled": "序列号不可修改",
+      "stats_available": "可用节点：{count}",
+      "stats_bound": "已绑定节点：{count} / 3",
+      "sw_disabled": "软件版本不可修改"
+    },
+    "fallback_notice": "当前后端可能未开放主机详情接口，已使用列表搜索结果作为详情展示。",
+    "fields": {
+      "company": "所属公司",
+      "created_at": "创建时间",
+      "device_id": "设备ID",
+      "hardware_model_code": "硬件型号代码",
+      "heartbeat_interval": "心跳间隔",
+      "hn_model_id": "主机型号 ID",
+      "hw_ver": "硬件版本",
+      "installation_address": "安装地址",
+      "key_chars": "{n} 字符",
+      "key_fingerprint": "密钥指纹",
+      "key_length": "密钥长度",
+      "key_status": "密钥状态",
+      "last_seen": "最后心跳",
+      "mac_address": "MAC 地址",
+      "mqtt_key": "MQTT 密钥",
+      "online_status": "在线状态",
+      "product_code": "产品代码",
+      "seconds": "{n} 秒",
+      "serial_no": "序列号",
+      "sw_ver": "软件版本"
+    },
+    "fields_label": {
+      "address": "安装地址",
+      "company": "所属公司",
+      "heartbeat": "心跳间隔",
+      "hw_ver": "硬件版本",
+      "mac": "MAC地址",
+      "remark": "备注",
+      "serial": "主机编号",
+      "sw_ver": "软件版本"
+    },
+    "heartbeat_desc": {
+      "limited": "(流量受限)",
+      "power_save": "(省电模式)",
+      "realtime": "(实时监控)",
+      "standard": "(标准配置)"
+    },
+    "heartbeat_options": {
+      "limited": "300秒 (流量受限)",
+      "power_save": "120秒 (省电模式)",
+      "realtime": "30秒 (实时监控)",
+      "standard": "60秒 (标准配置)"
+    },
+    "loading": "正在加载主机详情...",
+    "node_status": {
+      "maintenance": "维护",
+      "offline": "离线",
+      "online": "在线",
+      "unbound": "未绑定",
+      "unknown": "未知"
+    },
+    "sections": {
+      "basic": "基础信息",
+      "mqtt_log": "MQTT 消息日志 ({count})",
+      "runtime": "运行状态",
+      "security": "安全配置"
+    },
+    "toast": {
+      "can_required": "位置 {pos} 的CAN地址不能为空",
+      "fetch_detail_failed": "获取主机详情失败，使用备用数据",
+      "fetch_nodes_default": "请稍后重试",
+      "fetch_nodes_failed": "获取关联节点失败：{msg}",
+      "field_update_failed": "更新失败",
+      "field_update_success": "字段更新成功",
+      "host_id_missing": "主机 ID 不存在",
+      "host_update_failed": "更新主机配置失败",
+      "host_update_success": "主机配置更新成功",
+      "key_copied": "MQTT密钥已复制到剪贴板",
+      "key_copy_failed": "复制失败，请手动复制",
+      "key_update_failed": "更新密钥失败",
+      "key_updated": "密钥已更新",
+      "key_updated_refresh": "密钥已更新，请刷新页面查看新密钥",
+      "node_binding_failed": "保存节点绑定失败",
+      "node_binding_success": "节点绑定更新成功",
+      "node_info_incomplete": "节点信息不完整",
+      "validate_heartbeat": "请选择心跳间隔"
+    }
+  },
+  "host_node_binding": {
+    "actions": {
+      "add": "添加节点",
+      "cancel": "取消",
+      "delete": "删除",
+      "edit": "编辑",
+      "save": "保存",
+      "submit": "提交中...",
+      "submit_add": "添加",
+      "submit_save": "保存"
+    },
+    "delete_confirm": {
+      "cancel": "取消",
+      "msg": "确定要删除该节点绑定吗？删除后该节点可以被绑定到其他主机。",
+      "ok": "确定",
+      "title": "提示"
+    },
+    "empty_text": "还没有绑定的节点",
+    "fields": {
+      "actions": "操作",
+      "can_node_id": "CAN Node ID",
+      "created_at": "绑定时间",
+      "node_mac_address": "节点 MAC 地址",
+      "node_model_name": "节点型号",
+      "node_serial_no": "节点序列号"
+    },
+    "list_title": "节点绑定列表",
+    "modal": {
+      "alert_line_1_keyword": "CAN Node ID",
+      "alert_line_1_prefix": "• 一个主机下每个节点都需要唯一的 ",
+      "alert_line_2_keyword": "node_pos",
+      "alert_line_2_prefix": "• 位置标签 ",
+      "alert_line_2_suffix": " 现在支持更灵活的字符串",
+      "alert_title": "绑定说明",
+      "label_can_node_id": "CAN Node ID",
+      "label_current_node": "当前节点",
+      "label_model": "型号：",
+      "label_replace_node": "更换节点",
+      "label_select_node": "选择节点",
+      "label_serial": "序列号：",
+      "more_count": "等{count}个",
+      "no_available_nodes": "没有可用的未绑定节点，请先添加或导入节点",
+      "node_placeholder": "请选择要绑定的节点",
+      "occupied_label": "已占用的 CAN Node ID：",
+      "switch_replace": "更换为其他节点",
+      "tip_can_node_id": "必须是 2 到 127 的整数（1 预留给主机），同一主机下不可重复",
+      "title_add": "添加节点",
+      "title_edit": "编辑节点绑定"
+    },
+    "stats_label": "已绑定节点数",
+    "toast": {
+      "add_success": "添加成功",
+      "add_success_with_validation": "添加成功，设备配置正常",
+      "allowed_models_prefix": "\n允许的节点型号：",
+      "binding_missing": "绑定关系不存在",
+      "can_id_taken": "该 CAN Node ID 已被占用，请选择其他 ID",
+      "delete_failed": "删除失败：",
+      "delete_success": "删除成功",
+      "device_validation_failed_default": "设备配置不符合要求",
+      "device_validation_suffix": "\n请绑定型号定义中必需的节点设备",
+      "duplicate_binding": "绑定关系重复，请检查节点或 CAN Node ID 是否已被占用",
+      "host_or_node_missing": "主机或节点不存在",
+      "limit_reached": "已达到绑定数量上限",
+      "load_failed": "加载节点列表失败：",
+      "load_failed_simple": "加载节点列表失败",
+      "model_mismatch_default": "节点型号与静音舱型号不匹配",
+      "node_already_bound": "该节点已绑定到其他主机，请选择其他节点或先解除绑定",
+      "operation_failed": "操作失败",
+      "operation_failed_prefix": "操作失败：",
+      "update_success": "更新成功",
+      "validation_warning_prefix": "绑定成功，但存在警告：\n",
+      "validation_warning_suffix": "\n建议：请绑定型号定义中必需的节点设备"
+    },
+    "validation": {
+      "can_node_id_invalid": "CAN Node ID 必须是 2 到 127 的整数（1 预留给主机）",
+      "can_node_id_required": "请输入 CAN Node ID",
+      "can_node_id_taken": "CAN Node ID {id} 已被占用，请选择其他 ID",
+      "node_required": "请选择节点"
+    }
+  },
+  "hosts": {
+    "actions": {
+      "confirm_receipt": "确认收货",
+      "check_firmware": "固件",
+      "ship": "出货",
+      "view_logs": "日志"
+    },
+    "column": {
+      "firmware_version": "固件版本",
+      "hn_model_name": "主机型号",
+      "hw_ver": "硬件型号",
+      "is_active": "是否激活",
+      "last_seen": "最后心跳",
+      "mac_address": "MAC 地址",
+      "manufacturer": "所属公司",
+      "serial_no": "序列号",
+      "status": "在线状态",
+      "sw_type": "软件类型",
+      "sw_ver": "软件版本"
+    },
+    "create_dialog": {
+      "confirm_ok": "确认录入",
+      "title": "录入新主机"
+    },
+    "filter": {
+      "active_all": "全部激活状态",
+      "search_placeholder": "MAC 或序列号",
+      "status_all": "全部在线状态"
+    },
+    "form": {
+      "device_key": "MQTT认证密钥",
+      "device_key_placeholder": "请输入32-64字符的MQTT认证密钥",
+      "hn_model": "主机型号",
+      "hn_model_placeholder": "请选择主机型号",
+      "hw_ver": "硬件版本",
+      "hw_ver_placeholder": "如：1.0",
+      "mac_address": "MAC地址",
+      "mac_address_placeholder": "格式：00:1A:2B:3C:4D:5E",
+      "product_code": "产品代码",
+      "product_code_placeholder": "如：DE-H100-2025",
+      "remark": "备注",
+      "remark_placeholder": "请输入备注信息",
+      "sw_ver": "软件版本",
+      "sw_ver_placeholder": "如：1.2.0"
+    },
+    "receipt_confirm": {
+      "message": "确认已收到主机 {serial}？",
+      "title": "确认主机收货"
+    },
+    "ship_dialog": {
+      "confirm_ok": "确认出货",
+      "precheck_1": "设备已完成出厂检测和调试",
+      "precheck_2": "设备固件已升级到最新版本",
+      "precheck_3": "已记录设备序列号和 MAC 地址",
+      "precheck_4": "已与厂家确认收货信息和安装地址",
+      "precheck_title": "出货前请确认：",
+      "target_company": "目标厂家",
+      "target_company_placeholder": "请选择目标厂家",
+      "title": "出货给厂家"
+    },
+    "sort": {
+      "created_asc": "创建时间（旧到新）",
+      "created_desc": "创建时间（新到旧）",
+      "last_seen_asc": "最近在线（旧到新）",
+      "last_seen_desc": "最近在线（新到旧）",
+      "serial_asc": "序列号（A-Z）",
+      "serial_desc": "序列号（Z-A）"
+    },
+    "status": {
+      "active": "激活",
+      "inactive": "停用",
+      "maintenance": "维护中",
+      "topology_pending": "待完善"
+    },
+    "toast": {
+      "activated": "主机已激活",
+      "create_failed": "主机录入失败",
+      "create_success": "主机录入成功",
+      "deactivated": "主机已停用",
+      "firmware_check_failed": "检查固件更新失败",
+      "firmware_latest": "主机固件已是最新版本",
+      "firmware_new": "发现新版本固件：{latest}，当前版本：{current}",
+      "host_id_missing": "主机 ID 不存在",
+      "list_load_failed": "主机列表加载失败，请稍后重试",
+      "no_change_log": "该主机暂无变更日志",
+      "no_edit_perm": "您没有编辑权限",
+      "ship_failed": "主机出货失败",
+      "ship_success": "主机出货成功",
+      "update_active_failed": "更新激活状态失败"
+    },
+    "validation": {
+      "device_key_length": "密钥长度应为32-64个字符",
+      "device_key_required": "请输入MQTT认证密钥",
+      "hn_model_required": "请选择主机型号",
+      "hw_ver_required": "请输入硬件版本",
+      "mac_format": "请输入有效的MAC地址格式，如：00:1A:2B:3C:4D:5E",
+      "mac_required": "请输入MAC地址",
+      "product_code_required": "请输入产品代码",
+      "sw_ver_required": "请输入软件版本",
+      "target_company_required": "请选择目标厂家"
+    }
+  },
+  "device_language_manager": {
+    "actions": {
+      "send": "下发切换"
+    },
+    "confirm": {
+      "body": "确认向主机下发语言切换?\nlang_id={lang_id} ({lang_code})\ndevice_id={device_id}",
+      "ok": "确认下发"
+    },
+    "desc": "设备出厂自带多语言资源(中/英/日/韩/德/法/西 共 7 种),本面板仅下发 MQTT 切换命令,不再管理 .bin 离线包上传。",
+    "form": {
+      "host": "主机",
+      "host_placeholder": "请选择主机",
+      "target_lang": "目标语言"
+    },
+    "history": {
+      "column": {
+        "host": "主机",
+        "lang": "语言",
+        "operator": "操作人",
+        "result": "结果",
+        "time": "时间"
+      },
+      "empty": "暂无切换记录",
+      "title": "历史切换记录"
+    },
+    "send_section": "下发语言切换",
+    "title": "语言切换面板",
+    "toast": {
+      "load_hosts_failed": "加载主机列表失败",
+      "load_languages_failed": "加载设备语言索引失败",
+      "send_failed": "下发失败",
+      "send_success": "下发成功",
+      "switched": "主机 {host} 切换为 {lang_code} ({lang_name})"
+    }
+  },
+  "layout": {
+    "collapse_sidebar": "收起侧边栏",
+    "expand_sidebar": "展开侧边栏",
+    "skip_to_content": "跳到主内容",
+    "suspended_title": "当前组织已暂停",
+    "suspended_message": "你仍可查看授权数据，但在组织恢复前，业务修改和设备操作均为只读。"
+  },
+  "location_detail": {
+    "card": {
+      "basic_info": "基础信息",
+      "coordinates_relations": "坐标与关联数据",
+      "remark": "备注"
+    },
+    "edit": {
+      "building_label": "楼栋",
+      "building_placeholder": "如：A 座",
+      "cancel_title": "取消",
+      "city_label": "城市",
+      "city_placeholder": "请选择城市",
+      "country_label": "国家",
+      "country_placeholder": "请选择国家",
+      "district_label": "区域",
+      "district_placeholder": "请选择区域",
+      "lat_label": "纬度",
+      "lat_placeholder": "如：39.98446",
+      "lng_label": "经度",
+      "lng_placeholder": "如：116.30743",
+      "timezone_label": "\u65f6\u533a",
+      "timezone_placeholder": "\u5982\uff1aAsia/Shanghai",
+      "location_name_label": "位置名称",
+      "location_name_placeholder": "如：北京录音棚 A、会议室 A",
+      "ok_title": "保存",
+      "province_label": "省份",
+      "province_placeholder": "请选择省份",
+      "remark_label": "备注",
+      "remark_placeholder": "请输入备注信息",
+      "street_label": "街道",
+      "street_placeholder": "如：中关村大厦",
+      "title": "编辑位置"
+    },
+    "field": {
+      "building": "楼栋",
+      "city": "城市",
+      "country": "国家",
+      "created_at": "创建时间",
+      "district": "区域",
+      "full_address": "完整地址",
+      "lat_label": "纬度：",
+      "lng_label": "经度：",
+      "location_name": "位置名称",
+      "province": "省份",
+      "street": "街道",
+      "timezone": "\u65f6\u533a\uff1a"
+    },
+    "gps": {
+      "not_set": "未设置 GPS 坐标",
+      "title": "GPS 坐标",
+      "view_in_map": "在地图中查看"
+    },
+    "loading": "加载位置详情中...",
+    "pods": {
+      "count_label": "数量：",
+      "count_unit": "个",
+      "more": "还有 {count} 个静音舱...",
+      "none": "未关联静音舱",
+      "title": "关联静音舱",
+      "view": "查看"
+    },
+    "toast": {
+      "load_failed_prefix": "位置详情加载失败：",
+      "no_gps": "该位置未设置 GPS 坐标",
+      "retry_later": "请稍后重试",
+      "update_failed_prefix": "更新位置信息失败：",
+      "update_success": "位置信息更新成功"
+    },
+    "validate": {
+      "location_name_required": "请输入位置名称"
+    }
+  },
+  "locations": {
+    "actions": {
+      "create": "新增地址"
+    },
+    "confirm": {
+      "delete_message": "确认删除位置 \"{name}\"？",
+      "delete_title": "删除确认"
+    },
+    "country_china": "中国",
+    "create_dialog": {
+      "title": "新增地址"
+    },
+    "edit_dialog": {
+      "title": "编辑地址"
+    },
+    "filter": {
+      "active_all": "全部状态",
+      "active_label": "是否激活",
+      "active_no": "未激活",
+      "active_yes": "已激活",
+      "city_label": "城市",
+      "city_placeholder": "选择城市",
+      "gps_all": "全部状态",
+      "gps_label": "GPS 坐标",
+      "gps_no": "无坐标",
+      "gps_status_placeholder": "GPS 状态",
+      "gps_yes": "有坐标",
+      "province_label": "省份",
+      "province_placeholder": "选择省份"
+    },
+    "form": {
+      "building_label": "楼栋",
+      "building_placeholder": "如：A 座",
+      "city_label": "城市",
+      "city_placeholder": "请选择城市",
+      "country_label": "国家",
+      "country_placeholder": "请选择国家",
+      "detail_address": "详细地址",
+      "district_label": "区域",
+      "district_placeholder": "请选择区域",
+      "gps_optional": "GPS 坐标（可选）",
+      "lat_label": "纬度",
+      "lat_placeholder": "如：39.98446",
+      "lng_label": "经度",
+      "lng_placeholder": "如：116.30743",
+      "timezone_label": "\u65f6\u533a",
+      "timezone_placeholder": "\u5982\uff1aAsia/Shanghai",
+      "location_name_label": "位置名称",
+      "location_name_placeholder": "如：北京录音棚 A、会议室 A",
+      "province_label": "省份",
+      "province_placeholder": "请选择省份",
+      "remark_label": "备注",
+      "remark_placeholder": "请输入备注信息",
+      "street_label": "街道",
+      "street_placeholder": "如：中关村大厦"
+    },
+    "icons": {
+      "details": "详情"
+    },
+    "table": {
+      "city": "城市",
+      "country": "国家",
+      "created_at": "创建时间",
+      "district": "区域",
+      "full_address": "完整地址",
+      "gps_coordinates": "GPS 坐标",
+      "is_active": "是否激活",
+      "location_name": "位置名称",
+      "pod_count": "静音舱数",
+      "province": "省份"
+    },
+    "toast": {
+      "active_toggled": "地址已{status}",
+      "create_failed": "地址创建失败",
+      "create_success": "地址创建成功",
+      "delete_success": "位置删除成功",
+      "load_failed": "位置列表加载失败：",
+      "load_provinces_failed": "加载省份列表失败：",
+      "no_permission": "您没有编辑权限",
+      "retry_later": "请稍后重试",
+      "toggle_failed": "更新激活状态失败",
+      "update_failed": "地址更新失败",
+      "update_success": "地址更新成功"
+    },
+    "validation": {
+      "name_required": "请输入位置名称"
+    }
+  },
+  "mqtt_banned": {
+    "actions": {
+      "add": "添加黑名单",
+      "remove": "移除"
+    },
+    "add_modal": {
+      "cancel": "取消",
+      "label_reason": "原因",
+      "label_type": "封禁类型",
+      "label_until": "到期时间",
+      "ok": "确认添加",
+      "reason_placeholder": "可选,记录原因",
+      "title": "添加黑名单",
+      "until_placeholder": "留空表示永久",
+      "warning_prefix": "⚠ 添加后该 ",
+      "warning_suffix": " 将立即被 EMQX 拒绝接入,操作记审计日志。",
+      "who_placeholder": {
+        "clientid": "例如 device-001",
+        "peerhost": "例如 192.168.1.99",
+        "username": "例如 attacker"
+      }
+    },
+    "as_label": {
+      "clientid": "Client ID",
+      "default": "对象",
+      "peerhost": "Peer Host (IP)",
+      "peerhost_short": "Peer Host",
+      "username": "Username"
+    },
+    "empty": "黑名单为空",
+    "fields": {
+      "actions": "操作",
+      "as": "类型",
+      "by": "操作人",
+      "reason": "原因",
+      "until": "到期",
+      "who": "对象"
+    },
+    "loading": "加载中…",
+    "log": {
+      "add_failed": "加入黑名单失败:",
+      "fetch_failed": "MQTT banned 获取失败:",
+      "health_failed": "MQTT health 获取失败:",
+      "remove_failed": "移除黑名单失败:"
+    },
+    "not_configured_desc_prefix": "请联系管理员配置后端 ",
+    "not_configured_desc_suffix": "。",
+    "not_configured_title": "MQTT 服务器管理未配置",
+    "permanent": "永久",
+    "remove_modal": {
+      "cancel": "取消",
+      "confirm_middle": " 移出黑名单吗?",
+      "confirm_prefix": "确定要将 ",
+      "footer_note": "移除后该对象将可重新接入 broker,操作记审计日志。",
+      "ok": "确认移除",
+      "title": "移除黑名单确认"
+    },
+    "subtitle": "禁止指定 clientid / username / IP 接入 EMQX(写操作仅 持平台管理权限的根公司管理员 可见)",
+    "title": "MQTT 服务器 / 黑名单",
+    "toast": {
+      "add_failed": "加入黑名单失败",
+      "add_success": "已加入黑名单",
+      "fetch_failed": "获取黑名单失败",
+      "remove_failed": "移除黑名单失败",
+      "remove_success": "已移除",
+      "title": "MQTT 黑名单"
+    },
+    "view_only": "仅查看",
+    "who_label_ip": "IP 地址"
+  },
+  "mqtt_clients": {
+    "actions": {
+      "details": "详情",
+      "kick": "强制下线",
+      "reset": "重置",
+      "search": "搜索"
+    },
+    "detail_modal": {
+      "close": "关闭",
+      "title": "客户端详情:{clientid}"
+    },
+    "filter": {
+      "clientid_placeholder": "按 clientid 模糊搜索",
+      "username_placeholder": "按 username 模糊搜索"
+    },
+    "kick_modal": {
+      "body": "确定要强制下线客户端 ?",
+      "cancel": "取消",
+      "ok": "确认下线",
+      "tip": "断开后客户端会立即收到 disconnect,需要其自身重连。此操作会写入审计日志。",
+      "title": "强制下线确认"
+    },
+    "not_configured": {
+      "tip": "请联系管理员配置后端",
+      "title": "MQTT 服务器管理未配置"
+    },
+    "status": {
+      "offline": "离线",
+      "online": "在线"
+    },
+    "subtitle": "EMQX 当前连接的 MQTT 客户端列表(支持 clientid / username 模糊搜索)",
+    "table": {
+      "actions": "操作",
+      "client_id": "Client ID",
+      "connected_at": "连接时间",
+      "empty": "无客户端连接",
+      "ip": "IP",
+      "loading": "加载中…",
+      "proto": "Proto",
+      "status": "状态",
+      "username": "Username"
+    },
+    "title": "MQTT 服务器 / 客户端",
+    "toast": {
+      "kick_failed": "强制下线失败",
+      "kicked": "已下线 {clientid}",
+      "load_failed": "获取客户端列表失败",
+      "title": "MQTT 客户端"
+    }
+  },
+  "mqtt_overview": {
+    "actions": {
+      "refresh": "刷新",
+      "retry": "重试"
+    },
+    "error": {
+      "tip": "请检查后端日志或 EMQX 服务状态。",
+      "title": "无法连接到 EMQX Dashboard"
+    },
+    "next_refresh": "下次自动刷新:{count} 秒后",
+    "node_table": {
+      "connections": "连接数",
+      "empty": "未返回节点信息",
+      "node": "节点 ID",
+      "role": "角色",
+      "status": "状态",
+      "uptime": "运行时间",
+      "version": "版本"
+    },
+    "nodes_card": "EMQX 节点",
+    "not_configured": {
+      "tip": "请联系管理员配置后端环境变量",
+      "title": "MQTT 服务器管理未配置"
+    },
+    "stat": {
+      "connections": "客户端连接数",
+      "received_rate": "每秒接收 (msg/s)",
+      "retained": "Retained 消息",
+      "retained_sub": "保留消息总数",
+      "routes_sub": "路由 {count}",
+      "sent_rate": "每秒发送 (msg/s)",
+      "sessions_sub": "会话 {count}",
+      "shared_subscriptions_sub": "共享订阅 {count}",
+      "subscriptions": "订阅数",
+      "topics": "主题数"
+    },
+    "status": {
+      "connection_error": "连接异常",
+      "not_configured": "未配置",
+      "running": "EMQX {version} 运行中"
+    },
+    "subtitle": "实时统计来自 EMQX Dashboard,经 iot_server 代理读取",
+    "title": "MQTT 服务器 / 总览",
+    "toast": {
+      "fetch_failed": "获取 MQTT 总览失败",
+      "title": "MQTT 服务器"
+    },
+    "uptime": {
+      "days_hours": "{days}天 {hours}小时",
+      "hours_minutes": "{hours}小时 {minutes}分",
+      "minutes": "{minutes}分"
+    }
+  },
+  "mqtt_subscriptions": {
+    "actions": {
+      "reset": "重置",
+      "search": "搜索"
+    },
+    "filter": {
+      "clientid_placeholder": "按 clientid 子串搜索",
+      "topic_placeholder": "按 topic 子串搜索"
+    },
+    "not_configured": {
+      "tip": "请联系管理员配置后端",
+      "title": "MQTT 服务器管理未配置"
+    },
+    "subtitle": "EMQX 当前所有客户端订阅关系(支持 topic 与 clientid 子串模糊匹配)",
+    "table": {
+      "client_id": "Client ID",
+      "empty": "无订阅",
+      "loading": "加载中…",
+      "node": "所在节点",
+      "qos": "QoS",
+      "shared": "共享订阅",
+      "shared_value": "共享",
+      "topic": "Topic"
+    },
+    "title": "MQTT 服务器 / 订阅",
+    "toast": {
+      "load_failed": "获取订阅列表失败",
+      "title": "MQTT 订阅"
+    }
+  },
+  "mqtt_topics": {
+    "empty_metrics": "无主题指标(需在 EMQX 端配置 topic-metrics)",
+    "empty_routes": "无路由",
+    "fields": {
+      "clientid_count": "订阅数",
+      "metric": "指标名",
+      "node": "节点",
+      "topic": "Topic",
+      "value": "值"
+    },
+    "limit_options": {
+      "10": "10/页",
+      "20": "20/页",
+      "50": "50/页",
+      "100": "100/页"
+    },
+    "loading": "加载中…",
+    "log": {
+      "health_failed": "MQTT health 获取失败:",
+      "metrics_failed": "MQTT topic metrics 获取失败:",
+      "topics_failed": "MQTT topics 获取失败:"
+    },
+    "metrics_card_header": "主题指标 (Topic Metrics)",
+    "not_configured_desc_prefix": "请联系管理员配置后端 ",
+    "not_configured_desc_suffix": "。",
+    "not_configured_title": "MQTT 服务器管理未配置",
+    "reset": "重置",
+    "routes_card_header": "主题路由表 (Routes)",
+    "search": "搜索",
+    "subtitle": "EMQX 路由表 + 主题级指标(从 broker 直接读取)",
+    "title": "MQTT 服务器 / 主题",
+    "toast": {
+      "fetch_failed": "获取主题列表失败",
+      "title": "MQTT 主题"
+    },
+    "topic_filter_placeholder": "按 topic 子串过滤",
+    "total_count": "共 {total} 条"
+  },
+  "nav": {
+    "dashboard": "数据看板",
+    "hosts": "主机管理",
+    "logout": "退出登录",
+    "users": "用户管理",
+    "pods": "静音舱管理"
+  },
+  "node_detail": {
+    "active_options": {
+      "active": "激活",
+      "inactive": "停用"
+    },
+    "field": {
+      "company": "所属公司",
+      "created_at": "创建时间",
+      "heartbeat_interval": "心跳间隔",
+      "hw_ver": "硬件型号",
+      "is_active": "是否激活",
+      "last_seen": "最后通信",
+      "mac_address": "MAC 地址",
+      "node_id": "节点 ID",
+      "node_type": "节点类型",
+      "online_status": "在线状态",
+      "serial_no": "序列号",
+      "shipped_at": "出货时间",
+      "sw_ver": "固件版本"
+    },
+    "heartbeat_desc": {
+      "limited": "(流量受限)",
+      "powersave": "(省电模式)",
+      "realtime": "(实时监控)",
+      "standard": "(标准配置)"
+    },
+    "heartbeat_options": {
+      "120s": "120 秒 (省电模式)",
+      "300s": "300 秒 (流量受限)",
+      "30s": "30 秒 (实时监控)",
+      "60s": "60 秒 (标准配置)"
+    },
+    "heartbeat_unit": "秒",
+    "loading": "加载节点详情中...",
+    "online_options": {
+      "maintenance": "维护中",
+      "offline": "离线",
+      "online": "在线"
+    },
+    "section": {
+      "basic_info": "基础信息",
+      "running_status": "运行状态"
+    },
+    "toast": {
+      "load_failed_prefix": "节点详情加载失败：",
+      "retry_later": "请稍后重试",
+      "update_failed_prefix": "更新失败：",
+      "update_success": "修改成功"
+    }
+  },
+  "nodes": {
+    "actions": {
+      "check_firmware": "固件",
+      "close": "关闭",
+      "create": "新增",
+      "refresh": "刷新",
+      "ship_to_factory": "出货",
+      "confirm_receipt": "确认收货",
+      "view_detail": "详情",
+      "view_logs": "日志"
+    },
+    "active_options": {
+      "active": "已激活",
+      "all": "全部激活状态",
+      "inactive": "未激活"
+    },
+    "active_status": {
+      "active": "激活",
+      "inactive": "停用"
+    },
+    "create_dialog": {
+      "cancel_title": "取消",
+      "device_key_label": "设备密钥",
+      "device_key_placeholder": "请输入设备密钥",
+      "hn_model_label": "节点型号",
+      "hn_model_placeholder": "请选择节点型号",
+      "hw_ver_label": "硬件版本",
+      "hw_ver_placeholder": "例如：1.0",
+      "mac_label": "MAC 地址",
+      "mac_placeholder": "格式：00:11:22:33:44:55",
+      "ok_title": "确认创建",
+      "product_code_label": "产品代码",
+      "product_code_placeholder": "例如：NODE-SENSOR-001",
+      "remark_label": "备注",
+      "remark_placeholder": "请输入备注信息",
+      "sw_ver_label": "固件版本",
+      "sw_ver_placeholder": "例如：1.0.0",
+      "title": "新增节点"
+    },
+    "delete_confirm": {
+      "cancel_title": "取消",
+      "message": "确认解绑展示位 \"{slot}\" 的产品？",
+      "ok_title": "确认解绑",
+      "title": "删除确认"
+    },
+    "filters": {
+      "search_placeholder": "序列号、MAC 地址"
+    },
+    "receipt_confirm": {
+      "message": "确认已收到主机 {serial}？",
+      "title": "确认主机收货"
+    },
+    "ship_dialog": {
+      "cancel_title": "取消",
+      "company_placeholder": "请选择公司",
+      "ok_title": "确认出货",
+      "target_company_label": "目标公司",
+      "title": "出货给厂家"
+    },
+    "status_label": {
+      "maintenance": "维护中",
+      "offline": "离线",
+      "online": "在线"
+    },
+    "status_options": {
+      "all": "全部状态",
+      "maintenance": "维护中",
+      "offline": "离线",
+      "online": "在线"
+    },
+    "table": {
+      "can_node_id": "CAN 地址",
+      "hn_model_name": "节点型号",
+      "hw_ver": "硬件型号",
+      "is_active": "是否激活",
+      "last_seen": "最后通信",
+      "mac_address": "MAC 地址",
+      "manufacturer_name": "所属公司",
+      "serial_number": "序列号",
+      "status": "在线状态",
+      "sw_ver": "固件版本"
+    },
+    "toast": {
+      "active_changed": "节点已{status}",
+      "active_status_failed": "更新激活状态失败",
+      "bind_success": "产品绑定成功",
+      "create_failed": "创建节点失败",
+      "create_success": "节点创建成功",
+      "firmware_check_failed": "检查固件失败",
+      "firmware_latest": "节点固件已是最新版本",
+      "load_bindings_failed": "加载产品绑定列表失败",
+      "load_failed": "加载节点列表失败",
+      "load_hw_failed": "加载硬件型号失败，请稍后重试",
+      "no_change_log": "该节点暂无变更日志",
+      "no_edit_permission": "您没有编辑权限",
+      "rebind_success": "产品换绑成功",
+      "save_failed": "保存失败",
+      "ship_failed": "节点出货失败",
+      "ship_success": "节点出货成功",
+      "receipt_failed": "确认主机收货失败",
+      "receipt_success": "确认主机收货成功",
+      "unbind_failed": "解绑失败",
+      "unbind_success": "产品解绑成功"
+    },
+    "validate": {
+      "device_key_required": "请输入设备密钥",
+      "hn_model_required": "请选择节点型号",
+      "mac_required": "请输入 MAC 地址",
+      "product_required": "请选择产品",
+      "slot_required": "请选择展示位",
+      "target_company_required": "请选择目标厂家"
+    }
+  },
+  "not_found": {
+    "back_home": "返回首页",
+    "message": "页面未找到"
+  },
+  "od_manager": {
+    "actions": {
+      "collapse_matched": "折叠匹配项",
+      "diagnose_now": "立即诊断",
+      "expand": "展开",
+      "expand_matched": "展开匹配项",
+      "refresh_snapshot": "刷新快照"
+    },
+    "detail": {
+      "access": "访问:",
+      "bytes": "字节:",
+      "full_name": "完整名:",
+      "meaning": "说明:"
+    },
+    "empty": {
+      "tip1": "选择在线主机 + 目标 + 规范型号后点击「立即诊断」。",
+      "tip2_html": "数据来源：主机/节点固件直接读取真实内存，通过 MQTT 上报到 <code>wf2/&lt;uuid&gt;/od_dump</code>，设备由 payload 的 <code>nid</code> 标识。",
+      "tip3_html": "target 选择设备；profile 选择 <code>fault/startup/maintenance/full/custom</code> 快照范围。custom 可填写 <code>0x1001, 0x1003:1</code>。"
+    },
+    "filters": {
+      "custom_objects_placeholder": "自定义对象，如 0x1001, 0x1003:1",
+      "filter_placeholder": "按 index/name 过滤",
+      "no_online_host": "暂无在线主机",
+      "select_host_first": "请先选主机",
+      "select_online_host": "选择在线主机",
+      "select_spec": "选择 OD 规范型号",
+      "select_profile": "选择快照范围",
+      "select_target_device": "选择目标设备"
+    },
+    "meaning": {
+      "canopen_comm": "CANopen 通信对象",
+      "node_business": "节点业务字段",
+      "platform_common": "平台公共字段",
+      "unit": "单位: {unit}"
+    },
+    "profiles": {
+      "custom": "自定义对象",
+      "fault": "故障快照",
+      "full": "完整快照",
+      "maintenance": "维护快照",
+      "startup": "启动快照"
+    },
+    "status_label": {
+      "match": "匹配",
+      "missing_in_device": "设备缺失",
+      "missing_in_spec": "规范未定义",
+      "runtime": "运行时值",
+      "value_mismatch": "值不同"
+    },
+    "summary": {
+      "compare_spec": "对比规范 {device}:",
+      "completed": "完成",
+      "host": "主机:",
+      "in_progress": "进行中",
+      "match": "匹配 {n}",
+      "missing_in_spec": "规范未定义 {n}",
+      "received_total": "实机条目:",
+      "runtime": "运行时值 {n}",
+      "status": "状态:",
+      "summary_diff": "异常项 {bad} / 匹配 {match}",
+      "target": "目标:",
+      "target_value": "device_id={id}（{label}）",
+      "updated_at": "更新于:",
+      "value_mismatch": "值不同 {n}"
+    },
+    "table": {
+      "collapsed_count": "已折叠 {n} 条匹配项",
+      "device": "实机",
+      "expanded": "已展开,",
+      "host_self": "主机自身 (device_id=1)",
+      "index": "Index",
+      "name": "名称",
+      "no_match": "无匹配条目",
+      "status": "状态",
+      "type": "类型",
+      "yaml": "YAML"
+    },
+    "toast": {
+      "title": "OD 诊断",
+      "trigger_failed": "触发失败"
+    },
+    "warning": {
+      "custom_objects_invalid": "custom 至少填写 1 个、最多 128 个不重复对象；格式为 0xINDEX 或 0xINDEX:十进制SubIndex。",
+      "dump_timeout": "60 秒内未收到本次 OD Dump 的新快照，请检查设备在线状态和 MQTT 链路。",
+      "model_unknown": "无法识别该设备的 CANopen 型号，未自动套用 NU0001；请选择正确的 OD 规范型号。",
+      "spec_unavailable": "所选 OD 规范不可用。"
+    }
+  },
+  "ota_console": {
+    "actions": {
+      "cancel": "取消",
+      "create": "新建升级任务",
+      "delete": "删除",
+      "refresh": "刷新",
+      "view_detail": "详情"
+    },
+    "confirm": {
+      "cancel_task": "确认取消任务 {id}？",
+      "delete_task": "确认删除任务 {id}？"
+    },
+    "create_dialog": {
+      "cancel_title": "取消",
+      "firmware_label": "固件",
+      "firmware_placeholder": "请选择固件",
+      "host_label": "目标主机 UUID",
+      "host_placeholder": "请选择目标主机",
+      "node_label": "目标节点 ID（可选）",
+      "node_placeholder": "留空则升级主机自身",
+      "note_label": "备注",
+      "note_placeholder": "可选",
+      "ok_title": "创建",
+      "title": "新建 OTA 任务"
+    },
+    "detail_dialog": {
+      "firmware_label": "固件：",
+      "host_label": "主机：",
+      "error_empty": "（无）",
+      "error_label": "错误信息：",
+      "progress_label": "进度：",
+      "status_label": "状态：",
+      "title": "任务详情",
+      "uuid_label": "UUID："
+    },
+    "filters": {
+      "host_all": "全部主机",
+      "realtime": "每 3 秒自动刷新",
+      "search_placeholder": "搜索任务 UUID / 主机",
+      "total_count": "共 {count} 个任务"
+    },
+    "status_options": {
+      "all": "全部状态",
+      "canceled": "已取消",
+      "canceling": "取消中",
+      "cancelled": "已取消",
+      "downloading": "下载中",
+      "failed": "失败",
+      "flashing": "安装中",
+      "pending": "待处理",
+      "running": "进行中",
+      "sent": "已下发",
+      "success": "成功"
+    },
+    "subtitle": "创建固件升级任务，并自动刷新下发进度",
+    "table": {
+      "actions": "操作",
+      "created_at": "创建时间",
+      "empty": "暂无 OTA 任务",
+      "firmware": "固件",
+      "host": "主机",
+      "loading": "加载中...",
+      "progress": "进度",
+      "status": "状态",
+      "task_uuid": "任务 UUID"
+    },
+    "title": "OTA 控制台",
+    "toast": {
+      "cancel_failed": "取消失败",
+      "create_failed": "创建 OTA 任务失败",
+      "delete_failed": "删除失败",
+      "error_title": "错误",
+      "load_failed": "加载 OTA 任务失败",
+      "select_firmware": "请选择固件",
+      "select_host": "请选择目标主机",
+      "success_title": "成功",
+      "task_created": "OTA 任务已创建",
+      "warning_title": "提示"
+    }
+  },
+  "pod_control_panel": {
+    "actions": {
+      "cancel": "取消",
+      "custom_command": "自定义命令",
+      "get_status": "获取状态",
+      "refresh": "刷新",
+      "restart_device": "重启设备",
+      "send_command": "发送命令",
+      "send_control": "发送控制",
+      "sending": "发送中..."
+    },
+    "confirm": {
+      "cancel": "取消",
+      "ok_restart": "确认重启",
+      "restart_message": "确定要重启设备吗？设备将暂时断开连接。",
+      "restart_title": "确认重启"
+    },
+    "empty": {
+      "no_modules": "当前静音舱型号暂无可控制模块"
+    },
+    "history_table": {
+      "command": "命令",
+      "command_id": "指令ID",
+      "payload": "参数",
+      "sent_at": "发送时间",
+      "status": "状态"
+    },
+    "module_dialog": {
+      "badge_empty": "—",
+      "chart_placeholder": "时序数据展示（图表组件待接入）",
+      "command_label": "命令名称",
+      "command_placeholder": "例如：write_attrs / restart / custom",
+      "control_target": "控制对象",
+      "input_placeholder": "请输入",
+      "payload_label": "命令参数",
+      "payload_placeholder": "例如：{\"target_uuid\":\"xxx\",\"attrs\":{\"fan_speed\":2}}",
+      "switch_off": "关",
+      "switch_on": "开",
+      "title_custom": "自定义命令",
+      "title_default": "设备控制",
+      "unbound_warning": "该模块对应的设备型号已配置，但当前静音舱实例尚未绑定，暂时无法下发控制。",
+      "unit_prefix": "单位："
+    },
+    "module_status": {
+      "bound": "已绑定",
+      "unbound": "未绑定"
+    },
+    "offline": {
+      "control_disabled": "设备离线，恢复在线后可操作",
+      "description": "设备当前不在线，实时控制暂不可用。",
+      "description_with_last_seen": "设备当前不在线，实时控制暂不可用。最后在线：{time}",
+      "title": "设备离线"
+    },
+    "instance_counter": "实例 {current}/{total}",
+    "node_id": "Node {id}",
+    "position_prefix": "位置 {pos}",
+    "section": {
+      "command_history": "命令历史",
+      "common_actions": "公共操作",
+      "device_control": "设备控制"
+    },
+    "status_label": {
+      "failed": "失败",
+      "queued": "排队中",
+      "sent": "已发布，等待设备确认",
+      "success": "成功",
+      "timeout": "超时"
+    },
+    "shadow": {
+      "acknowledged": "等待状态上报",
+      "applied": "已生效",
+      "failed": "执行失败",
+      "pending": "等待 ACK",
+      "reported": "设备已上报",
+      "reported_value": "当前上报：{value}",
+      "unknown_value": "位置未知",
+      "superseded": "已被新命令替代",
+      "timeout": "执行超时"
+    },
+    "toast": {
+      "all_failed": "全部 {count} 条命令失败：{detail}",
+      "command_required": "请输入命令名称",
+      "control_rollback": "{field} {status}，已恢复为设备最新上报值",
+      "invalid_range": "{field} 超出允许范围 {min}～{max}",
+      "invalid_value": "{field} 的值不是有效数字",
+      "json_invalid": "JSON 格式错误：",
+      "load_failed": "加载控制面板失败：",
+      "no_field": "当前模块没有可提交的控制字段",
+      "partial": "{success} 条成功，{failed} 条失败",
+      "publish_failed": "命令未能发布到消息代理",
+      "queued": "已发布到消息代理，等待设备 ACK",
+      "send_failed": "命令发送失败：",
+      "sent_count": "已下发 {count} 条控制命令"
+    }
+  },
+  "pod_history": {
+    "tab": "拓扑与生命周期", "current_version": "当前拓扑版本", "refresh": "刷新", "replace_host": "更换主机", "topology_title": "拓扑版本历史", "lifecycle_title": "生命周期事件", "no_topology": "暂无拓扑版本", "no_lifecycle": "暂无生命周期事件", "version": "版本", "host": "主机", "change_type": "变更类型", "node_count": "节点数", "reason": "变更原因", "reason_required": "请输入变更原因", "occurred_at": "发生时间", "event_type": "事件类型", "transition": "变更前 → 变更后", "source": "来源", "version_detail": "拓扑版本 v{version}", "node_serial": "节点序列号", "node_model": "节点型号", "slot": "槽位", "can_address": "CAN 地址", "position": "节点位置", "target_host": "目标主机", "target_host_hint": "输入主机 ID 或 UUID", "cancel": "取消", "submit": "确认更换", "submitting": "提交中...", "force_replace": "强制更换", "replace_success": "主机更换成功，已生成拓扑版本 v{version}", "replace_failed": "主机更换失败", "load_failed": "历史数据加载失败",
+    "events": { "initial_bind": "首次绑定", "host_replace": "更换主机", "node_add": "新增节点", "node_remove": "移除节点", "node_replace": "更换节点", "slot_change": "槽位/CAN 变更", "unbind": "解绑", "rebind": "重新绑定", "backfilled_current_state": "当前状态回填", "control_transfer": "控制权流转", "location_move": "位置迁移", "retire": "退役", "restore": "恢复" }
+  },
+  "pod_handover": {
+    "accept": "接受接管", "accept_confirm": "确认接管静音舱“{pod}”？", "accept_failed": "接管失败", "accept_title": "确认接管", "accepted": "接管成功", "actions": "操作", "active_relation": "有效", "cancel": "取消", "cancel_failed": "取消请求失败", "cancel_request": "取消请求", "cancelled": "请求已取消", "commissioner_company": "委托装配组织", "company_id": "组织 ID", "create": "发起接管/流转", "create_failed": "创建请求失败", "create_title": "发起接管或流转", "created": "接管请求已创建", "created_at": "创建时间", "empty": "暂无接管请求", "from_company": "来源组织", "grant_relation": "添加协作组织", "history": "接管历史", "inbox_help": "仅显示发给当前组织的接管邀请；接受后当前组织成为唯一 owner。", "inbox_title": "接管工作台", "lifecycle": "生命周期", "load_failed": "加载接管数据失败", "no_history": "暂无接管历史", "no_relations": "暂无资源关系", "owner_company": "当前 owner", "ownership_tab": "归属与流转", "pod": "静音舱", "reason": "原因", "refresh": "刷新", "relation_failed": "添加协作关系失败", "relation_granted": "协作关系已添加", "relation_revoked": "协作关系已撤销", "relation_role": "关系角色", "relations": "协作组织", "retain_commissioner": "接管后保留委托装配方的维护关系", "revoke_failed": "撤销协作关系失败", "revoke_relation": "撤销", "status": "状态", "submit": "提交", "target_company": "目标组织", "type": "类型", "unowned": "尚未接管", "validity": "有效期",
+    "roles": { "maintainer": "维护方", "operator": "运营方", "owner": "Owner", "viewer": "只读方" },
+    "statuses": { "accepted": "已接受", "cancelled": "已取消", "expired": "已过期", "pending": "待确认" },
+    "lifecycle_states": { "active": "使用中", "assembled": "已装配", "assembly_pending": "装配中", "inventory": "已入库", "retired": "已退役", "takeover_pending": "待首次接管", "transfer_pending": "待流转确认" }
+  },
+  "pod_detail": {
+    "actions": {
+      "close": "关闭",
+      "copy_mac": "复制 MAC",
+      "download": "下载",
+      "export": "导出",
+      "search": "查询",
+      "view_files": "查看",
+      "view_nodes": "查看"
+    },
+    "active_options": {
+      "false": "停用",
+      "true": "激活"
+    },
+    "card": {
+      "history": "运行记录",
+      "info": "静音舱信息",
+      "status": "运行状态"
+    },
+    "default_country": "中国",
+    "region_data": {
+      "empty": "暂无可用的中国省市区数据，请联系管理员初始化行政区划",
+      "load_failed": "省市区数据加载失败，请重试"
+    },
+    "events": {
+      "file_count_suffix": " 个文件",
+      "node_count_suffix": " 个节点"
+    },
+    "fields": {
+      "address_full": "详细地址",
+      "bound_nodes": "绑定节点",
+      "building": "详细地址",
+      "city": "城市",
+      "company_name": "制造商",
+      "country": "国家",
+      "created_at": "创建时间",
+      "district": "区/县",
+      "firmware_label": "固件版本",
+      "host_device": "主机设备",
+      "is_active": "是否激活",
+      "last_seen": "最后通信",
+      "location_name": "安装位置",
+      "spot": "安装点位",
+      "model_name": "型号",
+      "online_status": "在线状态",
+      "province": "省份",
+      "related_files": "关联文件",
+      "remark": "备注",
+      "serial_number": "主控机序列号"
+    },
+    "file_type_label": {
+      "archive": "压缩包",
+      "audio": "音频",
+      "document": "文档",
+      "image": "图片",
+      "other": "其他",
+      "video": "视频"
+    },
+    "files_table": {
+      "actions": "操作",
+      "file_name": "文件名",
+      "file_type": "类型",
+      "size": "大小"
+    },
+    "history_table": {
+      "description": "描述",
+      "event_type": "事件类型",
+      "operator": "操作者",
+      "timestamp": "时间"
+    },
+    "labels": {
+      "air_quality": "空气质量",
+      "fan_speed": "风速",
+      "fan_switch": "风扇开关",
+      "humidity": "湿度",
+      "is_online": "在线状态",
+      "light_brightness": "灯光亮度",
+      "light_switch": "灯光开关",
+      "noise": "噪音",
+      "off": "关",
+      "offline": "离线",
+      "on": "开",
+      "online": "在线",
+      "report": "状态上报",
+      "temperature": "温度"
+    },
+    "loading": "加载静音舱详情中...",
+    "loading_history": "加载中...",
+    "metric": {
+      "air_quality": "空气质量",
+      "humidity": "湿度",
+      "noise": "噪音",
+      "temperature": "温度"
+    },
+    "modal": {
+      "files_title": "关联文件",
+      "nodes_title": "绑定节点",
+      "ws_log_close": "关闭",
+      "ws_log_console_msg": "WebSocket 消息日志（已输出到控制台）",
+      "ws_log_no_data": "暂无日志记录",
+      "ws_log_recent_title": "最近 {count} 条 WebSocket 消息",
+      "ws_log_title": "WebSocket 消息日志"
+    },
+    "nodes_table": {
+      "actions": "操作",
+      "can_node_id": "CAN 节点 ID",
+      "mac_address": "MAC 地址",
+      "model_code": "型号编码",
+      "model_name": "节点名称"
+    },
+    "status": {
+      "active": "激活",
+      "active_alt": "运行中",
+      "error": "故障",
+      "idle": "空闲",
+      "in_use": "使用中",
+      "inactive": "停用",
+      "maintenance": "维护中",
+      "offline": "离线",
+      "online": "在线",
+      "pending": "等待中",
+      "stopped": "已停止",
+      "unknown": "未知"
+    },
+    "tabs": {
+      "control": "控制面板",
+      "history": "历史记录",
+      "info": "基本信息"
+    },
+    "toast": {
+      "command_confirm_cancel": "取消",
+      "command_confirm_msg": "确认执行\"{cmd}\"命令？",
+      "command_confirm_ok": "确认",
+      "command_confirm_title": "提示",
+      "command_sent": "命令\"{cmd}\"已发送",
+      "default_retry": "请稍后重试",
+      "download_start": "开始下载：",
+      "export_count_suffix": "已导出 {count} 条历史记录",
+      "export_failed_prefix": "导出失败：",
+      "exporting": "正在导出，请稍候...",
+      "filepath_copied": "文件路径已复制到剪贴板",
+      "history_filename_suffix": "_历史记录.xlsx",
+      "load_detail_failed": "加载静音舱详情失败，请稍后重试",
+      "load_files_failed_prefix": "加载文件列表失败：",
+      "load_history_failed": "加载历史记录失败，请稍后重试",
+      "load_locations_failed": "加载位置列表失败",
+      "load_nodes_failed_prefix": "加载节点列表失败：",
+      "load_status_failed": "加载状态数据失败，请稍后重试",
+      "mac_copied_prefix": "MAC 地址已复制到剪贴板：",
+      "mac_copy_failed": "复制失败，请手动复制",
+      "modify_success": "修改成功",
+      "no_file_path": "该文件无存储路径",
+      "no_files": "该静音舱未关联任何文件",
+      "no_mac": "该节点无 MAC 地址",
+      "no_nodes_bound": "该静音舱未绑定任何节点",
+      "no_pod_id": "无法获取静音舱 ID",
+      "save_failed_prefix": "保存失败：",
+      "save_location_invalid": "请选择完整的省市区信息",
+      "save_location_success": "位置信息保存成功",
+      "send_command_failed_prefix": "发送命令失败：",
+      "update_failed_prefix": "更新失败：",
+      "ws_check_disconnect": "WebSocket 未连接，无法检查",
+      "ws_simulate_pushed": "已模拟推送：状态切换为 {status}",
+      "ws_status_change_msg": "WebSocket 推送：设备已{status}",
+      "ws_status_offline": "离线",
+      "ws_status_online": "上线",
+      "ws_test_connected": "WebSocket 已连接！连接状态正常",
+      "ws_test_print_done": "已打印 MQTT 测试信息到控制台，请使用 MQTTX 工具发送",
+      "ws_test_reconnecting": "WebSocket 未连接，正在尝试重新连接..."
+    }
+  },
+  "pod_models": {
+    "actions": {
+      "create": "新增"
+    },
+    "active": {
+      "all": "全部状态",
+      "no": "未激活",
+      "yes": "已激活"
+    },
+    "attr_dialog": {
+      "create": "新增属性",
+      "table_actions": "操作",
+      "table_attr_code": "属性编码",
+      "table_attr_value": "属性值",
+      "table_category": "分类",
+      "table_description": "描述",
+      "title": "属性管理"
+    },
+    "attr_form": {
+      "attr_code_label": "属性编码",
+      "attr_code_placeholder": "如：width",
+      "boolean_label": "属性值",
+      "category_label": "属性分类",
+      "category_placeholder": "选择分类",
+      "description_label": "描述",
+      "description_placeholder": "请输入描述信息（可选）",
+      "max_label": "最大值",
+      "min_label": "最小值",
+      "number_label": "数值",
+      "string_label": "属性值",
+      "string_placeholder": "请输入属性值",
+      "title_create": "新增属性",
+      "title_edit": "编辑属性",
+      "unit_label": "单位",
+      "unit_placeholder": "如：mm, kg, dB",
+      "value_type_label": "属性值类型"
+    },
+    "category": {
+      "appearance": "外观属性",
+      "appearance_select": "外观属性 (appearance)",
+      "capacity": "容量属性",
+      "capacity_select": "容量属性 (capacity)",
+      "dimension": "尺寸属性",
+      "dimension_select": "尺寸属性 (dimension)"
+    },
+    "company": {
+      "select_create": "请选择公司",
+      "select_filter": "选择公司"
+    },
+    "confirm": {
+      "delete_attr_message": "确认删除属性 \"{code}\"？",
+      "delete_attr_title": "删除确认",
+      "delete_device_message_host": "删除主机配置后，需要重新添加主机。确认要删除吗？",
+      "delete_device_message_node": "确认删除设备配置 \"{name}\"？",
+      "delete_device_title_host": "确认删除主机配置",
+      "delete_device_title_node": "确认删除设备配置 \"{name}\"",
+      "device_change_impact_message": "该修改将影响 {affected} 个静音舱，其中 {bound} 个已绑定设备。是否继续？",
+      "device_delete_impact_suffix": "该配置正被 {affected} 个静音舱使用，其中 {bound} 个已绑定设备。"
+    },
+    "create_dialog": {
+      "avatar_label": "图片 URL",
+      "avatar_tip": "支持 JPG/PNG/GIF 格式，文件大小不超过 5MB",
+      "code_label": "型号编码",
+      "code_placeholder": "如：PRS-2000",
+      "company_label": "所属公司",
+      "description_label": "描述",
+      "description_placeholder": "请输入型号描述",
+      "name_label": "型号名称",
+      "name_placeholder": "请输入型号名称",
+      "title_create": "新增型号",
+      "title_edit": "编辑型号"
+    },
+    "detail_dialog": {
+      "click_upload": "点击上传",
+      "code_label": "型号编码",
+      "company_label": "所属公司",
+      "description_label": "描述",
+      "image_label": "图片",
+      "is_active_label": "是否激活",
+      "name_label": "型号名称",
+      "title": "型号详情"
+    },
+    "device_dialog": {
+      "add_device": "添加设备",
+      "device_hint_host": "主机模型只能选择",
+      "device_hint_node": "节点模型可以选择",
+      "device_hint_quantity": "可以指定每种设备的数量和是否必需",
+      "many": "多个",
+      "one": "1 个",
+      "table_actions": "操作",
+      "table_code": "设备编码",
+      "table_name": "设备名称",
+      "table_quantity": "数量",
+      "table_required": "是否必需",
+      "table_type": "类型",
+      "title": "设备配置"
+    },
+    "device_form": {
+      "host_conflict_body": "当前单元型号已配置了主机，无法再添加主机。如需更改，请先删除原有主机配置，或选择\"节点\"类型继续添加。",
+      "host_conflict_title": "无法添加主机",
+      "is_required_label": "是否必需",
+      "model_label": "设备型号",
+      "quantity_label": "数量",
+      "title_create": "添加设备",
+      "title_edit": "编辑设备",
+      "type_label": "设备类型"
+    },
+    "device_type": {
+      "host": "主机",
+      "node": "节点"
+    },
+    "filter": {
+      "search_placeholder": "型号编码或名称"
+    },
+    "icons": {
+      "delete": "删除",
+      "delete_host_warn": "删除主机（需谨慎）",
+      "details": "详情",
+      "device_config": "设备配置",
+      "edit": "编辑",
+      "view_logs": "日志"
+    },
+    "image_preview_alt": "预览",
+    "table": {
+      "attributes": "属性数量",
+      "code": "型号编码",
+      "company_name": "所属公司",
+      "description": "描述",
+      "image": "图片",
+      "is_active": "是否激活",
+      "name": "型号名称",
+      "no_image": "无图片"
+    },
+    "toast": {
+      "active_toggled": "型号已{status}",
+      "attr_create_success": "属性添加成功",
+      "attr_delete_success": "属性删除成功",
+      "attr_update_success": "属性更新成功",
+      "delete_attr_failed": "删除属性失败",
+      "device_create_failed": "添加设备失败",
+      "device_create_success": "设备添加成功",
+      "device_duplicate": "该设备型号已存在，无需重复添加",
+      "device_update_failed": "更新设备失败",
+      "device_update_success": "设备更新成功",
+      "host_already": "当前单元型号已配置了主机，无法再添加主机。如需更改，请先删除原有主机配置。",
+      "image_upload_failed": "图片上传失败，请重试",
+      "image_upload_failed_msg": "图片上传失败：",
+      "image_upload_no_url": "图片上传成功，但未返回图片 URL",
+      "image_upload_success": "图片上传成功",
+      "load_attr_failed": "加载属性列表失败：",
+      "load_detail_failed": "获取详情失败",
+      "load_device_failed": "加载设备列表失败：",
+      "load_failed": "加载型号列表失败：",
+      "load_options_failed": "加载选项失败：",
+      "model_create_failed": "创建型号失败：",
+      "model_create_success": "型号创建成功",
+      "model_update_failed": "更新型号失败：",
+      "model_update_success": "型号更新成功",
+      "must_be_image": "只能上传图片文件！",
+      "no_log": "该型号暂无变更日志",
+      "save_attr_failed": "保存属性失败",
+      "size_limit": "图片大小不能超过 5MB！",
+      "size_too_big": "图片大小不能超过 5MB",
+      "toggle_failed": "更新激活状态失败"
+    },
+    "validation": {
+      "attr_code_required": "请输入属性编码",
+      "attr_value_required": "请输入属性值",
+      "category_required": "请选择属性分类",
+      "code_required": "请输入型号编码",
+      "company_required": "请选择所属公司",
+      "device_model_required": "请选择设备型号",
+      "device_type_required": "请选择设备类型",
+      "name_required": "请输入型号名称",
+      "quantity_required": "请输入有效数量",
+      "value_type_required": "请选择属性值类型"
+    },
+    "value_type": {
+      "boolean": "布尔型",
+      "number": "数值型",
+      "string": "字符串型"
+    }
+  },
+  "pods": {
+    "actions": {
+      "assign_to_child": "分配",
+      "cancel": "取消",
+      "confirm_assign": "确认分配",
+      "create": "新增",
+      "manage_node": "节点",
+      "submitting": "提交中...",
+      "view_detail": "详情",
+      "view_logs": "日志"
+    },
+    "active_options": {
+      "active": "已激活",
+      "all": "全部激活状态",
+      "inactive": "未激活"
+    },
+    "active_status": {
+      "active": "激活",
+      "inactive": "停用"
+    },
+    "assign_dialog": {
+      "alert_item_1": "目标公司必须是当前公司的下级公司",
+      "alert_item_2": "分配后静音舱的使用权将转移给目标公司",
+      "alert_item_3": "重新分配上级公司会清空其下游分配，请确认后操作",
+      "alert_title": "分配前请确认：",
+      "city_label": "城市",
+      "city_placeholder": "请选择城市",
+      "company_role_label": "公司角色",
+      "company_role_placeholder": "请选择公司角色",
+      "country_china": "中国",
+      "country_label": "国家",
+      "current_company_label": "当前公司：",
+      "district_label": "区/县",
+      "district_placeholder": "请选择区/县",
+      "model_label": "型号：",
+      "pod_info_label": "静音舱信息",
+      "province_label": "省份",
+      "province_placeholder": "请选择省份",
+      "serial_no_label": "序列号：",
+      "target_company_label": "目标公司",
+      "target_company_placeholder": "请选择下一级公司",
+      "title": "分配静音舱给下一级公司"
+    },
+    "company_role_options": {
+      "agent": "代理商",
+      "brand": "品牌商",
+      "distributor": "经销商",
+      "enduser": "终端用户"
+    },
+    "create_dialog": {
+      "cancel_title": "取消",
+      "company_label": "制造商",
+      "company_placeholder": "请选择制造商",
+      "binding_permission_tip": "当前账号没有节点绑定权限，请联系管理员或维护人员处理。",
+      "configure_nodes": "配置所选主机的节点",
+      "device_check_failed": "设备配置不完整，请先补齐并绑定型号要求的节点。",
+      "device_check_loading": "正在检查主机与型号的设备配置…",
+      "device_check_passed": "设备配置符合型号要求，可以创建。",
+      "device_check_unavailable": "暂时无法预检设备配置，提交时仍会由服务器校验。",
+      "device_count": "{code}：已绑定 {actual}/{required}",
+      "host_label": "主机",
+      "host_placeholder": "请选择主机",
+      "model_label": "静音舱型号",
+      "model_placeholder": "请选择型号",
+      "ok_title": "确认创建",
+      "remark_label": "备注",
+      "remark_placeholder": "请输入备注信息",
+      "serial_no_hint": "用于标识完整静音舱，而不是主控机。",
+      "serial_no_label": "序列号（可选）",
+      "serial_no_placeholder": "请输入序列号",
+      "title": "新增"
+    },
+    "filters": {
+      "search_placeholder": "名称、序列号"
+    },
+    "node_binding_dialog": {
+      "title": "静音舱节点管理"
+    },
+    "online_options": {
+      "all": "全部在线状态",
+      "offline": "离线",
+      "online": "在线"
+    },
+    "status": {
+      "error": "故障",
+      "idle": "空闲",
+      "in_use": "使用中",
+      "maintenance": "维护中"
+    },
+    "table": {
+      "building": "详细地址",
+      "city": "城市",
+      "company_name": "所属公司",
+      "country": "国家",
+      "current_status": "当前状态",
+      "district": "区/县",
+      "is_active": "是否激活",
+      "is_online": "在线状态",
+      "last_seen": "最后通信",
+      "manufacturer_name": "制造商",
+      "model_name": "型号",
+      "pod_name": "静音舱名称",
+      "province": "省份",
+      "serial_number": "主控机序列号",
+      "serial_no": "序列号",
+      "serial_no_missing": "未录入"
+    },
+    "toast": {
+      "active_changed": "静音舱已{status}",
+      "active_status_failed": "更新激活状态失败",
+      "assign_failed": "分配静音舱失败",
+      "assign_success": "静音舱分配成功",
+      "create_failed": "创建静音舱失败",
+      "create_success": "静音舱创建成功",
+      "load_failed": "加载静音舱列表失败",
+      "load_options_failed": "加载选项数据失败",
+      "no_change_log": "该静音舱暂无变更日志",
+      "no_edit_permission": "您没有编辑权限"
+    },
+    "transfers": {
+      "confirm_initiate": "确认发起",
+      "incoming_message": "{company} 正在向您交接 {pod}",
+      "incoming_title": "待接收交接",
+      "initiate": "发起交接",
+      "initiate_failed": "发起交接失败",
+      "initiate_success": "交接已发起，等待目标公司接收",
+      "notice_item_1": "发起后当前公司仍为所有者。",
+      "notice_item_2": "只有目标公司接收后才会变更所有权。",
+      "notice_item_3": "一个静音舱只能有一个待处理交接。",
+      "notice_title": "交接流程",
+      "reason_label": "交接备注",
+      "reason_placeholder": "可选交接备注",
+      "receive": "确认接收",
+      "receive_confirm": "确认接收静音舱 {pod}？",
+      "receive_success": "静音舱接收成功",
+      "reject": "拒绝",
+      "reject_confirm": "确认拒绝静音舱 {pod}？",
+      "reject_success": "已拒绝静音舱交接",
+      "title": "发起静音舱交接"
+    },
+    "validate": {
+      "company_required": "请选择制造商",
+      "company_role_required": "请选择公司角色",
+      "host_required": "请选择主机",
+      "model_required": "请选择静音舱型号",
+      "target_company_required": "请选择目标公司"
+    }
+  },
+  "meeting": {
+    "menu": "会议预约",
+    "settings_menu": "预约设置",
+    "list_title": "会议预约",
+    "calendar_title": "预约日历",
+    "detail_title": "预约详情",
+    "settings_title": "预约设置",
+    "page_description": "统一查看和管理静音舱的本地与第三方预约。",
+    "settings_description": "配置可预约静音舱、第三方平台连接和会议室映射。",
+    "backend_unavailable": "当前后端尚未加载会议预约接口，请更新或重启后端服务。",
+    "settings_load_failed": "预约设置加载失败。",
+    "action_failed": "操作失败，请重试。",
+    "list_view": "列表管理",
+    "calendar_view": "日程视图",
+    "view_mode": "预约视图",
+    "calendar_scale": "日历范围",
+    "calendar_day": "日",
+    "calendar_week": "周",
+    "calendar_today": "今天",
+    "calendar_previous": "上一时段",
+    "calendar_next": "下一时段",
+    "calendar_day_empty": "当天暂无预约",
+    "calendar_limit_hint": "当前显示前 {count} 条，共 {total} 条预约，请按静音舱或状态缩小范围。",
+    "new_booking": "新建预约",
+    "from_date": "开始日期",
+    "to_date": "结束日期",
+    "room": "静音舱",
+    "status": "状态",
+    "search": "查询",
+    "all_rooms": "全部静音舱",
+    "all_statuses": "全部状态",
+    "select_room": "请选择静音舱",
+    "empty": "暂无预约",
+    "empty_filtered_hint": "当前筛选条件下没有预约记录。",
+    "subject": "会议主题",
+    "time": "时间",
+    "source": "来源",
+    "actions": "操作",
+    "details": "详情",
+    "start_at": "开始时间",
+    "end_at": "结束时间",
+    "participant_count": "参会人数",
+    "close": "关闭",
+    "cancel_action": "取消",
+    "save": "保存",
+    "save_connection": "保存连接",
+    "saving": "保存中…",
+    "invalid_time": "结束时间必须晚于开始时间，且预约不得超过 24 小时。",
+    "invalid_date_range": "开始日期不能晚于结束日期。",
+    "room_required": "请选择可预约静音舱。",
+    "start_in_past": "开始时间不能早于当前时间。",
+    "invalid_participant_count": "参会人数必须大于 0。",
+    "timezone_hint": "时间按静音舱所在时区显示和保存。",
+    "duration_minutes": "{count} 分钟",
+    "duration_hours": "{count} 小时",
+    "duration_hours_minutes": "{hours} 小时 {minutes} 分钟",
+    "created": "预约已创建",
+    "updated": "预约已更新",
+    "cancelled": "预约已取消",
+    "save_failed": "保存失败",
+    "load_failed": "加载预约失败",
+    "rooms_load_failed": "可预约静音舱加载失败，请重试。",
+    "loading": "加载中…",
+    "back": "返回",
+    "edit": "编辑",
+    "edit_booking": "编辑预约",
+    "cancel_booking": "取消预约",
+    "cancel_confirm": "确定取消这条预约吗？",
+    "confirm": "确定",
+    "change_history": "变更记录",
+    "no_history": "暂无变更记录",
+    "dispatch_title": "设备下发",
+    "dispatch_summary": "下发状态",
+    "dispatch_not_queued": "未排队",
+    "dispatch_empty": "暂无下发记录",
+    "dispatch_revision": "预约版本",
+    "dispatch_attempts": "尝试次数",
+    "dispatch_updated_at": "更新时间",
+    "dispatch_error": "最近错误",
+    "dispatch_retry": "重新下发",
+    "dispatch_retry_confirm": "确认重新下发当前预约版本吗？设备离线时任务将保持等待并自动重试。",
+    "dispatch_retry_success": "已重新加入下发队列",
+    "dispatch_load_failed": "加载下发状态失败",
+    "dispatch_status_pending": "待下发",
+    "dispatch_status_sent": "等待设备确认",
+    "dispatch_status_acked": "设备已确认",
+    "dispatch_status_superseded": "已被新版本取代",
+    "dispatch_status_failed": "下发失败",
+    "change": "变更",
+    "reason": "原因",
+    "configure_rooms": "配置可预约静音舱",
+    "no_bookable_rooms": "尚未开通可预约静音舱",
+    "no_bookable_rooms_hint": "请先在预约设置中开通静音舱预约能力。",
+    "go_to_settings": "前往预约设置",
+    "status_scheduled": "已预约",
+    "status_upcoming": "未开始",
+    "status_active": "进行中",
+    "status_completed": "已结束",
+    "status_cancelled": "已取消",
+    "source_local": "本系统",
+    "source_integration": "第三方平台",
+    "source_none": "未启用",
+    "event_created": "已创建",
+    "event_updated": "已更新",
+    "event_cancelled": "已取消",
+    "local_rooms": "静音舱预约",
+    "providers": "第三方平台",
+    "room_mappings": "会议室映射",
+    "capability_notice": "设备可控制不代表可预约；只有在此显式开通的静音舱才能新建预约。",
+    "no_rooms": "暂无静音舱",
+    "no_rooms_hint": "请先创建静音舱设备，再返回此处开通预约能力。",
+    "go_to_rooms": "前往静音舱列表",
+    "capability": "预约能力",
+    "active_source": "当前主来源",
+    "capability_enabled": "可预约",
+    "capability_disabled": "已停用",
+    "capability_unconfigured": "未开通",
+    "enable_local": "开通本地预约",
+    "disable_local": "关闭本地预约",
+    "room_enabled": "本地预约已开通",
+    "source_updated": "预约主来源已更新",
+    "source_switch_title": "切换预约来源",
+    "source_switch_confirm": "确定切换“{room}”的预约主来源吗？切换后新的预约将由新来源管理。",
+    "settings_partial_load_failed": "部分预约设置加载失败，已保留可用数据。",
+    "new_connection": "新建平台连接",
+    "no_connections": "暂无平台连接",
+    "no_connections_hint": "添加企业微信等平台连接，并完成连接测试。",
+    "connection_name": "连接名称",
+    "provider": "平台",
+    "company": "所属公司",
+    "connection_status": "连接状态",
+    "test_connection": "测试连接",
+    "sync_now": "立即同步",
+    "sync_completed": "同步完成：新增 {created}，更新 {updated}，取消 {cancelled}",
+    "available_providers": "平台支持能力",
+    "available": "可用",
+    "not_available": "尚未实现",
+    "select_company": "请选择公司",
+    "select_provider": "请选择平台",
+    "connection_created": "平台连接已创建，请执行连接测试。",
+    "connection_ok": "连接测试通过",
+    "connection_connected": "已连接",
+    "connection_untested": "未测试",
+    "connection_degraded": "连接异常",
+    "connection_disabled": "已停用",
+    "provider_capability_room_list": "会议室列表",
+    "provider_capability_room_verify": "会议室验证",
+    "provider_capability_poll_changes": "预约同步",
+    "provider_capability_http_webhook": "HTTP 回调",
+    "provider_capability_stream": "实时事件",
+    "provider_capability_attendees": "参会人",
+    "mapping_notice": "会议室必须使用第三方稳定 ID 与静音舱绑定；名称只用于人工确认。",
+    "new_mapping": "新建映射",
+    "no_mappings": "暂无会议室映射",
+    "no_mappings_hint": "将第三方会议室与本系统静音舱进行绑定。",
+    "mapping_prerequisites": "请先开通静音舱预约，并创建一个测试通过的平台连接。",
+    "connection": "平台连接",
+    "external_room": "第三方会议室",
+    "external_room_id": "第三方会议室 ID",
+    "external_room_name": "第三方会议室名称",
+    "loading_external_rooms": "正在加载第三方会议室…",
+    "no_external_rooms_hint": "未获取到第三方会议室，请先同步平台数据或检查连接。",
+    "verification": "验证状态",
+    "active": "已启用",
+    "verify": "验证",
+    "use_as_source": "设为主来源",
+    "activate_mapping_confirm": "确定将“{room}”切换为第三方平台主来源吗？",
+    "yes": "是",
+    "no": "否",
+    "select_connection": "请选择平台连接",
+    "company_mismatch": "平台连接与静音舱必须属于同一公司。",
+    "mapping_created": "会议室映射已创建",
+    "mapping_verified": "会议室映射已验证",
+    "verify_unverified": "未验证",
+    "verify_verified": "已验证",
+    "verify_failed": "验证失败",
+    "booking_policy": {
+      "title": "预约策略",
+      "default_scene": "默认场景",
+      "default_scene_help": "第三方预约或未选择场景时自动使用。",
+      "cleaning_policy": "保洁策略",
+      "clean_after_session": "每场使用结束后保洁",
+      "cleaning_buffer_minutes": "保洁缓冲（分钟）",
+      "scheduled_cleaning": "定时保洁",
+      "start_time": "开始时间",
+      "cleaning_duration_minutes": "时长（分钟）",
+      "iso_weekdays": "适用星期（1=周一）",
+      "iso_weekdays_placeholder": "例如：1,2,3,4,5",
+      "add_cleaning_window": "添加保洁时段",
+      "remove_cleaning_window": "删除保洁时段",
+      "lifecycle_actions": "生命周期动作与通知",
+      "scene_action": "场景动作",
+      "offset_minutes": "提前时间（分钟）",
+      "grace_minutes": "宽限时间（分钟）",
+      "notify": "发送通知",
+      "audience": "接收对象",
+      "channel": "通知渠道",
+      "template": "通知模板",
+      "none_option": "不执行场景",
+      "audience_occupant": "使用人",
+      "audience_organizer": "组织者",
+      "audience_guest": "访客",
+      "audience_cleaner": "保洁人员",
+      "audience_staff": "工作人员",
+      "channel_dashboard": "管理看板",
+      "channel_pod_screen": "静音舱屏幕",
+      "invalid_iso_weekdays": "适用星期必须是 1–7，且不能重复。"
+    }
+  },
+  "route": {
+    "dashboard": {
+      "title": "数据看板"
+    },
+    "dashboard_status": {
+      "title": "在线状态大盘"
+    },
+    "dashboard_alerts": {
+      "title": "告警与待办"
+    },
+    "dashboard_charts": {
+      "title": "图表统计"
+    },
+    "org_companies": {
+      "title": "公司"
+    },
+    "company_detail": {
+      "title": "公司详情"
+    },
+    "company_relationships": {
+      "title": "公司合作关系"
+    },
+    "company_dashboard_config": {
+      "title": "公司看板配置"
+    },
+    "company_dashboard_config_new": {
+      "title": "新增公司看板配置"
+    },
+    "company_dashboard_config_detail": {
+      "title": "公司看板配置详情"
+    },
+    "company_dashboard_config_edit": {
+      "title": "编辑公司看板配置"
+    },
+    "template_review": {
+      "title": "审核与发布"
+    },
+    "users": {
+      "title": "用户管理"
+    },
+    "organization_access": {
+      "title": "公司角色与成员资格"
+    },
+    "user_detail": {
+      "title": "用户详情"
+    },
+    "user_profile": {
+      "title": "个人中心"
+    },
+  "notifications": {
+      "account": "账号",
+      "acknowledge": "确认",
+      "alert": "告警",
+      "all_states": "全部状态",
+      "status": "状态",
+      "all_types": "全部类型",
+    "content": "通知内容",
+    "phase_labels": {
+      "service_assigned": "服务派单",
+      "service_updated": "服务更新",
+      "service_resolved": "服务已解决",
+      "service_rated": "服务已评价",
+      "pre_start": "会前提醒",
+      "start": "会议开始",
+      "end": "会议结束",
+      "overstay": "超时占用",
+      "vacated": "已腾空",
+      "cleaning": "清洁中",
+      "cleaned": "清洁完成"
+    },
+    "status_labels": {
+      "pending": "待发送",
+      "sent": "已发送",
+      "failed": "失败",
+      "acked": "已确认"
+    },
+      "empty": "暂无通知",
+      "read": "已读",
+      "related_object": "关联对象",
+      "search": "搜索通知内容",
+      "system": "系统",
+      "task": "任务",
+      "time": "通知时间",
+      "title": "通知",
+      "type": "类型",
+      "unread_first": "未读优先"
+    },
+    "hn_models": {
+      "title": "主机/节点型号表"
+    },
+    "hosts": {
+      "title": "主机列表"
+    },
+    "host_detail": {
+      "title": "主机详情"
+    },
+    "nodes": {
+      "title": "节点列表"
+    },
+    "node_detail": {
+      "title": "节点详情"
+    },
+    "api_keys": {
+      "title": "API Keys"
+    },
+    "debug_devices": {
+      "title": "设备管理"
+    },
+    "debug_ota_console": {
+      "title": "OTA 控制台"
+    },
+    "debug_firmwares": {
+      "title": "固件管理"
+    },
+    "debug_device_language": {
+      "title": "设备语言"
+    },
+    "debug_od": {
+      "title": "OD 诊断"
+    },
+    "debug_device_control": {
+      "title": "设备控制台"
+    },
+    "debug_mqtt_stream": {
+      "title": "MQTT 消息流"
+    },
+    "debug_credentials": {
+      "title": "设备凭证"
+    },
+    "history_audit": {
+      "title": "用户操作"
+    },
+    "history_serial": {
+      "title": "设备日志"
+    },
+    "history_emcy": {
+      "title": "EMCY 告警"
+    },
+    "history_alerts": {
+      "title": "遥测告警"
+    },
+    "history_sensors": {
+      "title": "传感器数据"
+    },
+    "mqtt_server": {
+      "title": "MQTT 服务器"
+    },
+    "mqtt_clients": {
+      "title": "MQTT 客户端"
+    },
+    "mqtt_subscriptions": {
+      "title": "MQTT 订阅"
+    },
+    "mqtt_topics": {
+      "title": "MQTT 主题"
+    },
+    "mqtt_banned": {
+      "title": "MQTT 黑名单"
+    },
+    "locations": {
+      "title": "位置管理"
+    },
+    "location_detail": {
+      "title": "位置详情"
+    },
+    "files": {
+      "title": "文件管理"
+    },
+    "files_upload": {
+      "title": "文件上传"
+    },
+    "monitor_health": {
+      "title": "系统健康"
+    },
+    "monitor_metrics": {
+      "title": "监控指标"
+    },
+    "monitor_mqtt": {
+      "title": "MQTT监控"
+    },
+    "config_rules": {
+      "title": "配置规则",
+      "description": "远程配置规则定义。"
+    },
+    "config_history": {
+      "title": "配置历史",
+      "description": "配置变更审计与回滚。"
+    },
+    "ota_firmware": {
+      "title": "固件库",
+      "description": "固件上传、版本与发布管理。"
+    },
+    "ota_tasks": {
+      "title": "升级任务",
+      "description": "远程升级执行与结果追踪。"
+    },
+    "files_relations": {
+      "title": "文件关联",
+      "description": "文件与对象关联管理。"
+    },
+    "files_stats": {
+      "title": "文件统计",
+      "description": "文件使用统计信息。"
+    },
+    "audit_export": {
+      "title": "日志导出",
+      "description": "审计日志导出功能。"
+    },
+    "audit_operation_logs": {
+      "title": "操作审计日志",
+      "description": "关键操作追踪与导出。"
+    },
+    "integration_api": {
+      "title": "API 文档",
+      "description": "REST API 接口文档。"
+    },
+    "integration_auth": {
+      "title": "登录鉴权",
+      "description": "JWT 登录与令牌使用。"
+    },
+    "integration_mqtt": {
+      "title": "MQTT 主题",
+      "description": "MQTT 主题与消息格式。"
+    },
+    "integration_websocket": {
+      "title": "WebSocket",
+      "description": "实时 WebSocket 推送。"
+    },
+    "docs_project_overview": {
+      "title": "项目总览",
+      "description": "项目定位、核心功能与价值。"
+    },
+    "docs_architecture": {
+      "title": "系统架构",
+      "description": "分层架构、多租户和实时通信。"
+    },
+    "docs_data_model": {
+      "title": "数据模型总览",
+      "description": "核心表关系与业务模型。"
+    },
+    "docs_development": {
+      "title": "开发指南",
+      "description": "本地开发与扩展说明。"
+    },
+    "docs_deployment": {
+      "title": "部署与运维",
+      "description": "部署流程与生产建议。"
+    },
+    "docs_troubleshooting": {
+      "title": "故障排查",
+      "description": "常见问题与排障命令。"
+    },
+    "section": {
+      "config_ota": "配置与 OTA",
+      "files_media": "文件与媒体",
+      "audit_logs": "审计与日志",
+      "api_integration": "API 与集成",
+      "docs_center": "文档中心"
+    },
+    "controller_console": {
+      "title": "控制器控制台"
+    },
+    "mqtt_host_console": {
+      "title": "MQTT 主机控制台"
+    },
+    "manuals": {
+      "title": "技术文档"
+    },
+    "manuals_admin": {
+      "title": "技术文档管理"
+    },
+    "icon_library": {
+      "title": "图标库"
+    },
+    "product_catalog": {
+      "title": "产品手册"
+    },
+    "pod_models": {
+      "title": "静音舱型号"
+    },
+    "pods": {
+      "title": "静音舱"
+    },
+    "pod_detail": {
+      "title": "静音舱"
+    }
+  },
+  "sidebar": {
+    "default_brand": "德恩基",
+    "menu": {
+      "api_keys": "API Keys",
+      "blacklist": "黑名单",
+      "charts": "数据看板",
+      "clients": "客户端",
+      "companies": "公司",
+      "company_relationships": "公司合作关系",
+      "customers": "客户管理",
+      "config_center": "配置中心",
+      "brand_login": "品牌与登录页",
+      "custom_ui": "界面管理",
+      "credentials": "设备凭证",
+      "device_admin": "设备管理",
+      "dashboard_config": "数据看板配置",
+      "device_console": "控制台",
+      "device_logs": "设备日志",
+      "device_mgmt": "设备管理",
+      "display_mgmt": "展示道具管理",
+      "emcy_alerts": "EMCY 告警",
+      "alert_events": "遥测告警",
+      "files": "文件",
+      "files_logs": "文件/日志",
+      "firmwares": "固件管理",
+      "history": "历史数据",
+      "host_table": "主机",
+      "device_language": "设备语言",
+      "list": "静音舱",
+      "model_list": "静音舱型号",
+      "model_table": "主机/节点型号",
+      "mqtt": "MQTT",
+      "mqtt_stream": "MQTT 消息流",
+      "mqtt_host_console": "MQTT 主机控制台",
+      "node_table": "节点",
+      "od_diagnose": "OD",
+      "ota_console": "OTA 控制台",
+      "overview": "总览",
+      "review_publish": "审核与发布",
+      "pods_mgmt": "静音舱管理",
+      "sensor_data": "传感器数据",
+      "subscriptions": "订阅",
+      "system_debug": "系统调试",
+      "template_review": "配置审核",
+      "template_versions": "配置版本",
+      "topics": "主题",
+      "user_audit": "用户操作",
+      "users": "用户",
+      "resources": "资料库",
+      "manuals": "技术文档",
+      "manuals_admin": "技术文档管理",
+      "icon_library": "图标库",
+      "product_catalog": "产品手册"
+    },
+    "toggle_collapse": "收起侧边栏"
+  },
+  "system_monitor": {
+    "actions": {
+      "check_now": "立即检查",
+      "refresh": "刷新",
+      "refresh_all": "刷新所有"
+    },
+    "health": {
+      "card_title": "系统健康状态",
+      "label": {
+        "api": "API服务",
+        "db": "数据库",
+        "mqtt": "MQTT Broker",
+        "redis": "Redis缓存"
+      },
+      "loading": "加载中...",
+      "ready_desc": "所有核心服务已就绪，系统运行正常",
+      "ready_title": "系统就绪",
+      "status_text": {
+        "disabled": "已按配置停用",
+        "healthy": "正常",
+        "warning": "告警"
+      },
+      "summary_title": "系统就绪状态"
+    },
+    "metrics": {
+      "card_title": "系统指标",
+      "cpu": "CPU使用率",
+      "db_active_max": "活跃/最大: {active}/{max}",
+      "db_conn": "数据库连接",
+      "disk": "磁盘使用率",
+      "loading": "加载中...",
+      "memory": "内存使用率",
+      "section_resource": "系统资源使用率",
+      "section_services": "服务状态"
+    },
+    "metrics_interval": {
+      "15m": "15分钟",
+      "1d": "1天",
+      "1h": "1小时",
+      "5m": "5分钟"
+    },
+    "mqtt": {
+      "backend_consumer_connections": "本进程 MQTT 消费连接",
+      "buffer_capacity": "缓冲区容量",
+      "buffer_full": "缓冲区已满",
+      "buffer_messages": "缓冲消息数",
+      "buffer_title": "进程内缓冲区",
+      "buffer_topics": "缓冲主题数",
+      "debug_stream_subscribers": "调试流订阅者",
+      "newest_buffered_at": "最新缓冲时间",
+      "oldest_buffered_at": "最早缓冲时间",
+      "scope_notice": "本页只显示当前后端进程的 MQTT 消费连接和内存缓冲区，不是 EMQX Broker 全局统计。全局客户端、订阅和主题请以 MQTT 服务器总览为准。",
+      "card_title": "MQTT Broker 状态",
+      "clients_active": "活跃客户端",
+      "clients_total": "客户端总数",
+      "connect_rate": "连接速率",
+      "disconnect_rate": "断开速率",
+      "loading": "加载中...",
+      "message_latency": "消息延迟",
+      "message_loss_rate": "消息丢失率",
+      "messages_today": "今日消息",
+      "messages_total": "消息总数",
+      "publish_rate": "发布速率",
+      "rate_title": "实时速率",
+      "stats_title": "连接统计",
+      "subscribe_rate": "订阅速率",
+      "subscriptions": "订阅数",
+      "topics": "主题数",
+      "topics_title": "热门主题流量"
+    },
+    "service_table": {
+      "disabled": "已停用",
+      "failed": "运行失败",
+      "health": "健康度",
+      "running": "运行中",
+      "service": "服务名称",
+      "status": "状态",
+      "stopped": "停止",
+      "uptime": "运行时间",
+      "version": "版本"
+    },
+    "subtitle": "监控系统运行状态与性能指标。",
+    "tabs": {
+      "health": "健康检查",
+      "metrics": "监控指标",
+      "mqtt": "MQTT监控"
+    },
+    "title": "系统监控",
+    "toast": {
+      "health_failed": "健康检查失败",
+      "metrics_failed": "加载监控指标失败",
+      "mqtt_failed": "加载MQTT统计失败",
+      "refresh_all_success": "所有监控数据已刷新"
+    },
+    "topic_table": {
+      "observed_messages": "缓冲区观察消息",
+      "scope": "统计范围",
+      "last_active": "最后活动",
+      "publish_count": "发布数量",
+      "qos": "QoS",
+      "retain": "保留消息",
+      "subscribe_count": "订阅数量",
+      "topic": "主题"
+    }
+  },
+  "template_detail": {
+    "actions": {
+      "back": "返回",
+      "close": "关闭",
+      "delete": "删除",
+      "disable": "禁用",
+      "enable": "发布",
+      "edit": "编辑",
+      "new_version": "新建版本",
+      "rollback": "回滚",
+      "rollback_to_version": "回滚到此版本",
+      "restore_dashboard_default": "恢复默认看板",
+      "use_default": "使用默认版本",
+      "submit_review": "提交审核",
+      "view": "查看"
+    },
+    "confirm": {
+      "cancel": "取消",
+      "confirm": "确认",
+      "confirm_delete": "确认删除",
+      "delete_message": "确认删除该配置吗？此操作不可恢复",
+      "delete_title": "警告",
+      "disable_message": "确认停用该配置吗？",
+      "enable_message": "确认发布该配置吗？发布后将立即生效。",
+      "ok": "确定",
+      "rollback_message": "确认回滚到版本 v{version} 吗？",
+      "restore_dashboard_default_message": "确认恢复系统默认数据看板吗？当前自定义配置将停止生效，历史版本仍会保留。",
+      "restore_dashboard_default_title": "恢复默认看板",
+      "use_default_message": "确认使用系统默认登录页吗？当前自定义登录页将停止生效，历史版本仍会保留。",
+      "use_default_title": "使用默认登录页",
+      "submit_message": "确认提交审核吗？提交后将无法修改",
+      "submit_title": "提示"
+    },
+    "empty": {
+      "no_css": "无 CSS 内容",
+      "no_html": "无 HTML 内容",
+      "no_modules": "暂无启用的模块配置",
+      "no_versions": "暂无版本历史"
+    },
+    "fields": {
+      "created_at": "创建时间",
+      "creator": "创建人",
+      "review_comment": "审核意见",
+      "reviewed_at": "审核时间",
+      "status": "状态",
+      "submitted_at": "提交时间",
+      "template_type": "配置类型",
+      "version": "版本"
+    },
+    "module": {
+      "disabled": "未启用",
+      "enabled": "已启用"
+    },
+    "lifecycle": {
+      "aria_label": "配置发布流程",
+      "draft": "编辑草稿",
+      "message_draft": "当前为草稿，可继续编辑和预览；确认无误后提交审核。",
+      "message_pending": "配置正在等待平台管理员审核，审核完成前不可修改。",
+      "message_published": "该版本当前已发布并对用户生效。新改动请创建新版本。",
+      "message_ready_publish": "配置已通过审核，等待平台管理员发布。",
+      "message_rejected": "配置已被驳回，请根据审核意见修改后重新提交。",
+      "preview": "预览确认",
+      "publish": "发布生效",
+      "review": "平台审核",
+      "status_published": "已发布",
+      "status_ready_publish": "待发布",
+      "submit": "提交审核",
+      "version_summary": "配置版本 v{version}"
+    },
+    "module_catalog": {
+      "alert_stats": {
+        "name": "系统告警统计",
+        "description": "显示告警级别分布和数量统计"
+      },
+      "alert_trend": {
+        "name": "告警趋势",
+        "description": "按日期显示告警数量变化，帮助识别异常波动"
+      },
+      "detailed_stats": {
+        "name": "详细统计数据",
+        "description": "显示完整的统计数据表格，支持导出"
+      },
+      "device_online_rate": {
+        "name": "设备在线率趋势",
+        "description": "显示主机和节点的在线率趋势图表"
+      },
+      "device_status_distribution": {
+        "name": "设备状态分布",
+        "description": "显示在线、离线、维护中和已停用设备的数量分布"
+      },
+      "file_usage_stats": {
+        "name": "文件使用统计",
+        "description": "显示文件类型分布和存储空间使用统计"
+      },
+      "pod_usage_distribution": {
+        "name": "静音舱使用时长分布",
+        "description": "显示静音舱使用时段和使用时长分布统计"
+      },
+      "pod_usage_trend": {
+        "name": "静音舱使用趋势",
+        "description": "按日期显示静音舱使用次数和平均使用时长趋势"
+      },
+      "stats_preview": {
+        "name": "统计预览",
+        "description": "显示设备总数、用户数和静音舱使用率等关键指标"
+      }
+    },
+    "module_config": {
+      "auto_refresh": "自动刷新",
+      "page_size": "每页显示数量",
+      "refresh_interval": "刷新间隔",
+      "show_export": "显示导出按钮"
+    },
+    "module_value": {
+      "no": "否",
+      "seconds": "{value} 秒",
+      "yes": "是"
+    },
+    "section": {
+      "basic_info": "基本信息",
+      "security_check": "安全检测",
+      "template_content": "配置内容",
+      "version_detail": "版本详情",
+      "version_history": "版本历史"
+    },
+    "security": {
+      "dangerous_css": "⚠️ 危险 CSS",
+      "dangerous_js": "⚠️ 危险 JS",
+      "failed": "发现安全风险",
+      "passed": "安全检测通过",
+      "xss_risk": "⚠️ XSS 风险"
+    },
+    "status_label": {
+      "N": "草稿",
+      "P": "待审核",
+      "R": "已驳回",
+      "Y": "审核通过"
+    },
+    "tabs": {
+      "css": "CSS",
+      "html": "HTML",
+      "js": "JS"
+    },
+    "template_type": {
+      "custom_page": "自定义页面",
+      "dashboard_header": "页头",
+      "dashboard_sidebar": "侧边栏",
+      "email_signature": "邮件签名",
+      "footer": "页脚",
+      "login_page": "登录页",
+      "notification_bar": "通知栏"
+    },
+    "toast": {
+      "active_no_delete": "已发布的配置无法删除，请先停用",
+      "delete_failed": "删除失败",
+      "delete_success": "删除成功",
+      "load_failed": "获取配置详情失败",
+      "load_versions_failed": "获取版本历史失败",
+      "operation_failed": "操作失败",
+      "disable_success": "配置已停止生效",
+      "enable_success": "配置已发布并生效",
+      "rollback_failed": "回滚失败",
+      "rollback_success": "回滚成功",
+      "restore_dashboard_default_success": "已恢复系统默认数据看板",
+      "use_default_success": "已切换到系统默认登录页",
+      "submit_failed": "提交审核失败",
+      "submit_success": "已提交审核，等待平台管理员审核"
+    },
+    "version_dialog": {
+      "loading": "加载中...",
+      "title": "版本详情 - v{version}"
+    },
+    "version_table": {
+      "actions": "操作",
+      "created_at": "创建时间",
+      "creator": "创建人",
+      "status": "状态",
+      "version": "版本"
+    }
+  },
+  "template_editor": {
+    "actions": {
+      "back": "返回",
+      "save": "保存草稿",
+      "saving": "保存中..."
+    },
+    "confirm_default": {
+      "cancel": "取消",
+      "ok": "确定",
+      "title": "提示"
+    },
+    "form": {
+      "array_placeholder": "用逗号分隔多个值",
+      "collapse_module": "收起模块设置",
+      "dashboard_help": "选择要启用的模块，并配置每个模块的参数",
+      "drag_hint": "拖动调整模块顺序",
+      "expand_module": "展开模块设置",
+      "is_enabled_help_no": "只有审核通过的配置才能设置发布状态",
+      "is_enabled_help_yes": "切换后将立即生效",
+      "label_css": "CSS 内容（可选）",
+      "label_dashboard_modules": "数据看板模块配置",
+      "label_html": "HTML 内容",
+      "label_is_enabled": "发布状态",
+      "label_js": "JavaScript 内容（可选，需审核）",
+      "label_type": "配置类型",
+      "loading_modules": "加载模块中...",
+      "module_enabled": "启用",
+      "module_count": "已启用 {enabled}/{total} 个模块",
+      "layout_height": "高度（栅格行）",
+      "layout_height_help": "可设置 1–12 行，数值越大模块越高",
+      "layout_preview": "布局预览",
+      "layout_width": "占用宽度",
+      "layout_width_help": "采用 12 栏栅格，12/12 表示占满整行",
+      "move_down": "下移模块",
+      "move_up": "上移模块",
+      "no_js_warning": "{type} 配置不允许包含 JavaScript",
+      "no_modules": "暂无可用的数据看板模块。",
+      "placeholder_css": "请输入 CSS 样式内容",
+      "placeholder_html": "请输入 HTML 内容",
+      "placeholder_js": "请输入 JavaScript 脚本内容（某些配置类型禁止 JS）",
+      "page_subtitle_dashboard": "配置数据看板显示的模块、排列顺序、布局和刷新策略。",
+      "page_subtitle_default": "配置当前界面版本的展示内容和视觉样式。",
+      "refresh_modules": "同步模块列表",
+      "switch_is_enabled": "发布此配置",
+      "type_help": "保存后不可修改配置类型"
+    },
+    "preview": {
+      "no_css": "无 CSS 内容",
+      "tab_css": "CSS 源码",
+      "tab_html": "HTML 源码",
+      "tab_preview": "效果预览",
+      "title": "实时预览"
+    },
+    "preview_default": {
+      "account": "账号",
+      "account_placeholder": "邮箱/手机号",
+      "brand": "Office pods",
+      "contact_admin": "联系管理员",
+      "footer_copyright": "© 2026 公司平台 版权所有",
+      "forgot_password": "忘记密码？",
+      "login_button": "登录",
+      "password": "密码",
+      "password_placeholder": "请输入密码",
+      "subtitle": "欢迎回来，请登录继续使用控制台"
+    },
+    "visual": {
+      "background_url": "登录页背景图",
+      "background_color": "登录页背景色",
+      "background_upload_help": "支持 PNG、JPG、WebP，建议 1920×1080，最大 5 MB。",
+      "image_browse": "选择图片",
+      "image_placeholder": "请选择要上传的图片",
+      "image_uploading": "图片上传中...",
+      "inherit_brand_help": "当前继承基础品牌配置；基础品牌更新后，此版本会自动使用最新配置。",
+      "copyright": "版权信息",
+      "description": "说明文字",
+      "footer_settings": "页脚配置",
+      "kicker": "英文眉题",
+      "layout": "页面布局",
+      "layout_brand_statement": "品牌宣言分栏",
+      "layout_centered": "居中卡片",
+      "layout_split": "左右分栏",
+      "hero_description": "左侧说明文字",
+      "hero_subtitle": "左侧英文副标题",
+      "hero_title": "左侧主标题",
+      "legacy_notice": "这是旧版源码配置。保存后会转换为安全的声明式配置，原登录操作逻辑不会改变。",
+      "live_preview": "实时预览",
+      "login_settings": "登录页配置",
+      "logo_url": "登录页专用 Logo（可选）",
+      "logo_upload_help": "支持 PNG、JPG、WebP，建议使用透明背景，最大 2 MB。",
+      "preview_hint": "预览不提交登录信息",
+      "primary_color": "登录页专用主色（可选）",
+      "show_forgot": "显示忘记密码",
+      "show_remember": "显示记住登录状态",
+      "use_brand_logo": "使用基础品牌 Logo",
+      "use_brand_primary_color": "使用基础品牌主色",
+      "title": "登录标题",
+      "website_label": "网站链接文字",
+      "website_url": "网站地址"
+    },
+    "title_create": "新建配置版本",
+    "title_edit": "编辑配置版本",
+    "toast": {
+      "default_retry": "请稍后重试",
+      "edit_only_draft": "只能编辑草稿或已驳回的配置",
+      "fetch_failed": "获取配置详情失败",
+      "image_invalid_type": "仅支持 PNG、JPG、WebP 图片",
+      "image_too_large": "图片不能超过 {size} MB",
+      "image_upload_failed": "图片上传失败，请重试",
+      "image_upload_success": "图片上传成功",
+      "module_load_failed": "获取数据看板模块列表失败，请重试",
+      "no_js_error": "{type} 配置不允许包含 JavaScript",
+      "only_audited": "只有审核通过的配置才能发布",
+      "operation_failed_prefix": "操作失败：",
+      "save_at_least_one": "请至少启用一个数据看板模块",
+      "save_confirm_cancel": "取消",
+      "save_confirm_msg": "确认保存吗？",
+      "save_confirm_ok": "确认",
+      "save_confirm_title": "提示",
+      "save_failed": "保存失败",
+      "save_first": "新增配置请先保存",
+      "save_success": "保存成功",
+      "tpl_disabled": "配置已停用",
+      "tpl_enabled": "配置已发布"
+    },
+    "type_options": {
+      "custom_page": "自定义页面",
+      "dashboard_header": "页头",
+      "dashboard_modules": "数据看板",
+      "dashboard_sidebar": "侧边栏",
+      "email_signature": "邮件签名",
+      "footer": "页脚",
+      "login_page": "登录页",
+      "notification_bar": "通知栏"
+    }
+  },
+  "template_review": {
+    "actions": {
+      "approve": "通过",
+      "publish": "发布",
+      "reject": "驳回",
+      "search": "搜索",
+      "view": "查看"
+    },
+    "confirm": {
+      "publish_message": "确认发布该配置吗？发布后将立即替换同类型的当前生效版本。",
+      "publish_title": "发布配置"
+    },
+    "filter": {
+      "company_placeholder": "公司名称"
+    },
+    "review_dialog": {
+      "approve_confirm": "确认审核通过该配置吗？",
+      "cancel": "取消",
+      "comment_label": "驳回原因",
+      "comment_placeholder": "请输入驳回原因，方便公司管理员修改",
+      "ok": "确认",
+      "title_approve": "审核通过",
+      "title_reject": "审核驳回"
+    },
+    "stats": {
+      "active": "已启用",
+      "pending": "待审核",
+      "published": "已发布",
+      "ready_to_publish": "待发布",
+      "rejected": "已驳回",
+      "total": "配置总数"
+    },
+    "status_filter": {
+      "approved": "待发布",
+      "pending": "待审核",
+      "published": "已发布",
+      "rejected": "已驳回"
+    },
+    "status_label": {
+      "N": "草稿",
+      "P": "待审核",
+      "R": "已驳回",
+      "Y": "审核通过",
+      "published": "已发布",
+      "ready_to_publish": "待发布"
+    },
+    "table": {
+      "actions": "操作",
+      "company": "公司",
+      "empty": "暂无待审核配置",
+      "status": "状态",
+      "submitted_info": "提交信息",
+      "type": "类型",
+      "version": "版本"
+    },
+    "toast": {
+      "approved": "审核通过",
+      "comment_required": "驳回时必须填写原因",
+      "load_failed": "获取待审核列表失败",
+      "rejected": "已驳回",
+      "review_failed": "审核操作失败",
+      "publish_failed": "发布失败",
+      "published": "配置已发布"
+    },
+    "total_count": "共 {total} 条记录",
+    "type_label": {
+      "custom_page": "自定义页面",
+      "dashboard_header": "页头",
+      "dashboard_sidebar": "侧边栏",
+      "email_signature": "邮件签名",
+      "footer": "页脚",
+      "login_page": "登录页",
+      "notification_bar": "通知栏"
+    },
+    "type_options": {
+      "all": "全部类型",
+      "custom_page": "自定义页面",
+      "dashboard_header": "页头",
+      "dashboard_sidebar": "侧边栏",
+      "email_signature": "邮件签名",
+      "footer": "页脚",
+      "login_page": "登录页",
+      "notification_bar": "通知栏"
+    },
+    "view_dialog": {
+      "close": "关闭",
+      "field_company": "公司",
+      "field_submitted_at": "提交时间",
+      "field_template_type": "配置类型",
+      "field_version": "版本",
+      "section_basic": "基本信息",
+      "section_css": "CSS 内容",
+      "section_html": "HTML 内容",
+      "section_js": "JS 内容",
+      "title": "配置详情"
+    },
+    "workspace": {
+      "description": "集中处理各公司的待审核配置、待发布版本和发布记录。",
+      "flow_notice": "先审核内容与安全性；审核通过后进入“待发布”，由平台管理员确认发布。发布新版本会自动停用同类型旧版本。",
+      "title": "审核与发布"
+    }
+  },
+  "templates": {
+    "actions": {
+      "configure_dashboard": "配置数据看板",
+      "configure_footer": "配置页脚",
+      "configure_login": "配置登录页",
+      "delete": "删除",
+      "edit": "编辑",
+      "remove": "删除",
+      "save_config": "保存配置",
+      "save_settings": "保存设置",
+      "submit_review": "提交审核",
+      "view": "查看"
+    },
+    "branding": {
+      "company_slug": "公司标识 (companySlug)",
+      "company_slug_placeholder": "如：companyA",
+      "company_slug_set": "已设置",
+      "company_slug_status_label": "状态：",
+      "company_slug_tip": "用于访问自定义登录页：",
+      "company_slug_unset": "未设置",
+      "custom_domain": "自定义域名",
+      "custom_domain_tip": "请按 DNS 提示配置 CNAME/TXT 记录。",
+      "favicon_label": "Favicon",
+      "favicon_placeholder": "请输入 Favicon 链接",
+      "font_family": "字体系列",
+      "font_options": {
+        "helvetica": "Helvetica/Arial",
+        "system": "系统默认（推荐）",
+        "noto": "思源黑体 / Noto Sans SC",
+        "pingfang": "苹方 / 微软雅黑"
+      },
+      "logo_browse": "上传",
+      "logo_label": "公司 Logo",
+      "logo_placeholder": "选择文件",
+      "logo_preview_alt": "Logo 预览",
+      "logo_preview_text": "预览上传的公司 Logo",
+      "logo_selected": "已选择 Logo",
+      "logo_tip": "支持 PNG/JPG，建议 200x200px，最大 2MB",
+      "primary_color": "主色调",
+      "section_basic": "基本信息",
+      "section_color": "颜色配置",
+      "section_domain": "域名管理",
+      "subdomain": "子域名"
+    },
+    "dialog": {
+      "confirm_delete": "确认删除",
+      "delete_msg": "确认删除该配置吗？此操作不可恢复",
+      "submit_review_msg": "确认提交审核吗？提交后将无法修改",
+      "tip_title": "提示",
+      "warn_title": "警告"
+    },
+    "filter": {
+      "all_status": "全部状态",
+      "all_types": "全部类型",
+      "keyword": "关键词"
+    },
+    "pagination": {
+      "total": "共 {n} 条记录"
+    },
+    "status_options": {
+      "active": "审核通过",
+      "draft": "草稿",
+      "pending": "待审核",
+      "rejected": "已驳回"
+    },
+    "section_description": {
+      "branding": "管理公司标识、品牌色、访问域名以及登录页和页脚配置。",
+      "dashboard": "维护本公司数据看板布局，保存草稿后提交平台审核。",
+      "versions": "查看各类界面配置的版本、审核状态和生效状态。"
+    },
+    "table": {
+      "actions": "操作",
+      "index": "#",
+      "is_enabled": "启用",
+      "is_no": "否",
+      "is_yes": "是",
+      "status": "状态",
+      "type": "类型",
+      "updated_at": "更新时间",
+      "version": "版本"
+    },
+    "workflow": {
+      "branding_immediate": "品牌和域名设置保存后直接生效；登录页、页脚和数据看板配置需要提交审核，并由平台管理员发布。"
+    },
+    "workspace": {
+      "branding_description": "管理 Logo、品牌色、字体和访问域名，保存后立即生效。",
+      "branding_title": "基础品牌",
+      "continue_editing": "继续编辑",
+      "create_draft": "新建草稿",
+      "choose_help": "配置已按生效方式分组；查看当前状态后，直接执行下一步。",
+      "choose_title": "选择要配置的内容",
+      "current_configs": "当前配置",
+      "current_configs_help": "每类配置展示最新版本；已发布配置需要通过新版本继续修改。",
+      "dashboard_description": "控制数据看板模块、顺序、尺寸和刷新策略。",
+      "dashboard_title": "数据看板",
+      "description": "集中管理品牌、登录页、页脚和数据看板，并清楚查看每项配置的生效方式与当前状态。",
+      "footer_description": "配置全站页脚的版权信息和网站链接。",
+      "footer_title": "页脚",
+      "login_description": "配置租户登录页布局、文案、背景和品牌展示。",
+      "login_title": "登录页",
+      "immediate_group_help": "适用于基础品牌与访问域名，无需审核。",
+      "immediate_group_title": "保存后立即生效",
+      "manage_branding": "管理品牌",
+      "new_version": "新建版本",
+      "review_publish": "审核与发布",
+      "review_group_help": "适用于登录页、页脚和数据看板，按以下流程发布。",
+      "review_group_title": "审核发布后生效",
+      "status_immediate": "即时生效",
+      "status_immediate_help": "修改品牌或域名并保存，用户将立即看到更新。",
+      "status_draft_help": "草稿可继续修改，完成后预览并提交审核。",
+      "status_pending_help": "已提交，正在等待平台管理员审核。",
+      "status_published": "已发布",
+      "status_published_help": "此版本当前正在使用；修改请新建版本。",
+      "status_ready_publish": "待发布",
+      "status_ready_publish_help": "审核已通过，等待平台管理员发布。",
+      "status_rejected_help": "审核未通过，请继续编辑后重新提交。",
+      "status_unconfigured": "未配置",
+      "status_unconfigured_help": "尚未创建版本，请先新建草稿。",
+      "step_draft": "编辑草稿",
+      "step_draft_help": "保存可继续修改",
+      "step_preview": "预览确认",
+      "step_preview_help": "核对实际效果",
+      "step_publish": "发布生效",
+      "step_publish_help": "替换当前版本",
+      "step_review": "平台审核",
+      "step_review_help": "通过或驳回",
+      "step_submit": "提交审核",
+      "step_submit_help": "提交后锁定",
+      "tab_branding": "基础品牌",
+      "tab_overview": "配置概览",
+      "tab_versions": "版本记录",
+      "tabs_label": "界面配置导航",
+      "title": "界面配置中心",
+      "updated_at": "最近更新",
+      "version": "最新版本",
+      "view_details": "查看详情",
+      "view_review": "查看进度",
+      "workflow_notice": "登录页、页脚和数据看板采用版本化流程；基础品牌与域名目前保存后立即生效。"
+    },
+    "toast": {
+      "branding_save_failed": "保存失败：{msg}",
+      "branding_saved": "品牌配置已保存",
+      "default_retry": "请稍后重试",
+      "delete_disabled": "已发布的配置无法删除，请先停用",
+      "delete_failed": "删除失败",
+      "delete_success": "删除成功",
+      "fetch_failed": "获取配置列表失败：{msg}",
+      "logo_invalid_type": "仅支持 PNG/JPG 格式",
+      "logo_too_large": "文件大小不能超过 2MB",
+      "submit_review_failed": "提交审核失败",
+      "submit_review_success": "已提交审核，等待平台管理员审核"
+    },
+    "type_options": {
+      "custom_page": "自定义页面",
+      "dashboard_header": "页头",
+      "dashboard_modules": "数据看板",
+      "dashboard_sidebar": "侧边栏",
+      "email_signature": "邮件签名",
+      "footer": "页脚",
+      "login_page": "登录页",
+      "notification_bar": "通知栏"
+    }
+  },
+  "theme_toggle": {
+    "aria_brightness": "亮度",
+    "mode_dark": "深色",
+    "mode_light": "浅色",
+    "tip_auto": "当前：跟随系统（点击切换浅色）",
+    "tip_dark": "当前：深色（点击切换浅色）",
+    "tip_default": "切换主题",
+    "tip_light": "当前：浅色（点击切换深色）",
+    "title_adjust_brightness": "调节亮度",
+    "title_brightness": "亮度",
+    "title_theme": "主题"
+  },
+  "topbar": {
+    "company_types": {
+      "agent": "代理商",
+      "brand": "品牌",
+      "distributor": "分销商",
+      "enduser": "终端用户",
+      "manufacturer": "厂家",
+      "platform": "平台公司"
+    },
+    "default_user_name": "用户",
+    "groups": {
+      "data": "Data",
+      "device": "Device",
+      "management": "Management",
+      "platform": "Platform",
+      "system": "System"
+    },
+    "page_descriptions": {
+      "alerts": "设备遥测告警事件与处理状态",
+      "api_keys": "大模型 Provider 密钥与调用配置",
+      "audit": "平台账号的操作审计记录",
+      "company_dashboard_config": "公司品牌和数据看板配置",
+      "company_relationships": "供方与买方的合作申请和权限",
+      "credentials": "MQTT 认证密钥与证书有效期",
+      "dashboard": "平台运行概览",
+      "debug_devices": "主机与节点统一调试面板",
+      "device_control": "在线设备的指令下发与实时回执",
+      "emcy": "CANopen 紧急报文与处理状态",
+      "files": "设备回传文件与平台上传资源",
+      "firmwares": "上传 / 管理 ESP32 设备固件镜像",
+      "hn_models": "主机与节点型号规格、协议与投产状态",
+      "hosts": "已录入主机的在线状态、固件与归属公司",
+      "device_language": "选择固件内置的设备界面语言",
+      "mqtt_banned": "被封禁的客户端、用户名与 IP",
+      "mqtt_clients": "在线连接的会话与网络信息",
+      "mqtt_server": "EMQX 集群运行状态代理视图",
+      "mqtt_stream": "实时订阅平台与设备之间的报文",
+      "mqtt_subscriptions": "客户端订阅关系与 QoS",
+      "mqtt_topics": "主题分布与消息速率",
+      "nodes": "节点设备的绑定关系、固件与心跳",
+      "notifications": "系统告警、任务与账号相关的通知消息",
+      "od": "CANopen 对象字典读写与实时诊断",
+      "org_companies": "公司层级与其下属账号",
+      "org_users": "平台账号、角色与登录状态",
+      "ota_console": "固件升级任务的下发与进度跟踪",
+      "sensors": "温湿度、噪声与占用传感器历史曲线",
+      "serial": "设备串口与运行日志检索",
+      "user_profile": "账号资料、安全设置与登录记录",
+      "pod_models": "静音舱型号规格与适配主机",
+      "pods": "在网静音舱的归属、位置与使用状态"
+    },
+    "roles": {
+      "admin": "公司管理员",
+      "data_entry": "录入员",
+      "maintainer": "运维员",
+      "operator": "运营管理",
+      "viewer": "查看员"
+    },
+    "user_menu": {
+      "company": "所属公司",
+      "household": "家庭",
+      "school": "学校",
+      "company_type": "公司类型",
+      "switch_organization": "切换组织",
+      "switch_organization_failed": "切换组织失败",
+      "email": "邮箱",
+      "phone": "手机号",
+      "profile": "个人中心",
+      "role": "角色"
+    }
+  },
+  "user_detail": {
+    "company_options": {
+      "brand": "品牌方",
+      "dengtec": "德恩基",
+      "manufacturer": "静音舱厂家"
+    },
+    "fields": {
+      "company": "所属公司",
+      "created_at": "创建时间",
+      "created_by": "创建人",
+      "display_name": "显示名称",
+      "email": "邮箱",
+      "last_login": "最后登录",
+      "last_login_ip": "最后登录 IP",
+      "locale": "语言偏好",
+      "phone": "手机号",
+      "role": "角色",
+      "status": "状态",
+      "timezone": "时区偏好",
+      "updated_at": "更新时间",
+      "updated_by": "更新人",
+      "username": "用户名",
+      "uuid": "UUID"
+    },
+    "locale_label": {
+      "en_us": "English (US)",
+      "zh_cn": "中文 (简体)"
+    },
+    "role_label": {
+      "admin": "公司管理员",
+      "data_entry": "数据录入员",
+      "maintainer": "系统维护人员",
+      "operator": "运营管理",
+      "viewer": "数据查看员"
+    },
+    "rules": {
+      "company_required": "请选择所属公司",
+      "display_name_required": "请输入显示名称",
+      "email_invalid": "请输入正确的邮箱地址",
+      "email_invalid_format": "请输入正确的邮箱格式",
+      "email_required": "请输入邮箱",
+      "phone_invalid": "请输入正确的手机号码格式",
+      "role_required": "请选择角色",
+      "username_required": "请输入用户名"
+    },
+    "sections": {
+      "account": "账户信息",
+      "login": "登录信息",
+      "role": "角色与权限",
+      "system": "系统信息"
+    },
+    "status_label": {
+      "active": "启用",
+      "inactive": "停用",
+      "is_active": "启用中",
+      "is_inactive": "已停用"
+    },
+    "toast": {
+      "fetch_failed": "加载用户详情失败",
+      "field_update_failed": "更新失败",
+      "field_update_success": "更新成功",
+      "role_update_failed": "更新角色失败",
+      "role_update_success": "角色更新成功",
+      "user_update_failed": "更新用户信息失败",
+      "user_update_success": "用户信息更新成功"
+    }
+  },
+  "user_profile": {
+    "actions": {
+      "change_password": "修改密码"
+    },
+    "avatar": {
+      "click_upload": "点击上传头像",
+      "delete_confirm_cancel": "取消",
+      "delete_confirm_msg": "确定要删除头像吗？",
+      "delete_confirm_ok": "确定",
+      "delete_confirm_title": "删除确认",
+      "right_click_delete": "右键删除头像"
+    },
+    "company_card": {
+      "company_id": "公司 ID",
+      "company_type": "公司类型",
+      "join_at": "加入时间",
+      "title": "公司信息",
+      "user_role": "用户角色"
+    },
+    "company_type_label": {
+      "AG": "代理商",
+      "BR": "品牌商",
+      "CP": "渠道合作方",
+      "DS": "分销商",
+      "EU": "终端用户",
+      "MF": "制造商",
+      "PF": "平台公司",
+      "display": "展示道具类型",
+      "pod": "静音舱类型"
+    },
+    "default_user": "用户",
+    "fields": {
+      "account_status": "账号状态",
+      "company": "所属公司",
+      "created_at": "注册时间",
+      "email": "邮箱",
+      "phone": "手机号",
+      "username": "用户名"
+    },
+    "form_placeholder": {
+      "display_name": "请输入显示名称",
+      "email": "请输入邮箱",
+      "phone": "请输入手机号"
+    },
+    "login_log": {
+      "fields": {
+        "device": "设备",
+        "ip_address": "IP 地址",
+        "location": "登录地点",
+        "login_time": "登录时间",
+        "success": "状态"
+      },
+      "loading": "加载中...",
+      "success_no": "失败",
+      "success_yes": "成功",
+      "title": "登录日志"
+    },
+    "password_modal": {
+      "cancel": "取消",
+      "label_confirm": "确认密码",
+      "label_new": "新密码",
+      "label_old": "当前密码",
+      "ok": "确认修改",
+      "placeholder_confirm": "请再次输入",
+      "placeholder_new": "请输入新密码",
+      "placeholder_old": "请输入当前密码",
+      "title": "修改密码"
+    },
+    "role_label": {
+      "admin": "管理员",
+      "data_entry": "数据录入员",
+      "maintainer": "系统维护人员",
+      "operator": "运营管理",
+      "unknown": "未知角色",
+      "viewer": "查看员"
+    },
+    "status": {
+      "disabled": "禁用",
+      "normal": "正常",
+      "running": "正常运营"
+    },
+    "toast": {
+      "change_password_failed": "修改密码失败",
+      "change_password_success": "密码修改成功，请重新登录",
+      "delete_avatar_failed": "删除头像失败",
+      "delete_avatar_success": "头像删除成功",
+      "email_invalid": "请输入正确的邮箱地址",
+      "image_too_large": "图片大小不能超过 5MB",
+      "image_type_invalid": "请选择图片文件（支持 JPG、PNG、GIF、WebP 格式）",
+      "modify_failed": "修改失败",
+      "modify_success": "修改成功",
+      "new_password_too_short": "新密码长度不能少于 6 位",
+      "old_password_required": "请输入当前密码",
+      "password_mismatch": "两次输入的密码不一致",
+      "phone_invalid": "请输入正确的手机号",
+      "upload_failed": "上传头像失败",
+      "upload_success": "头像上传成功"
+    }
+  },
+  "invitation": {
+    "title": "接受组织邀请",
+    "help": "已有账号请直接接受；新账号请设置自己的密码后接受。",
+    "password_label": "新账号密码（已有账号留空）",
+    "password_help": "密码至少 8 位并同时包含字母和数字。管理员不会看到该密码。",
+    "password_placeholder": "新账号请输入密码",
+    "confirm_label": "确认密码",
+    "accept_action": "接受邀请",
+    "submitting": "正在接受…",
+    "accepted": "邀请已接受，现在可以登录或切换到该组织。",
+    "sign_in": "前往登录",
+    "missing_token": "邀请链接缺少 token，请从邀请邮件重新打开。",
+    "password_mismatch": "两次输入的密码不一致。",
+    "failed": "邀请无效、已过期或已被撤销。",
+    "account_detection_help": "继续后系统会识别账号类型：已有账号直接接受，新账号再设置密码。",
+    "continue_action": "继续接受邀请",
+    "create_account_action": "设置密码并接受",
+    "password_invalid": "密码至少 8 位，并同时包含字母和数字。",
+    "accepted_new_account": "账号已激活并加入组织，请登录。",
+    "accepted_existing_account": "已使用现有账号加入组织，可登录后切换组织。",
+    "existing_login_required": "该邮箱已有账号。请先登录对应账号，再明确接受邀请。",
+    "sign_in_to_accept": "登录并接受"
+  },
+  "company_status_change": {
+    "activate_title": "启用公司",
+    "deactivate_title": "停用公司",
+    "activate_action": "确认启用",
+    "deactivate_action": "确认停用",
+    "activate_impact": "启用“{company}”后，该公司的有效成员可恢复访问；已单独停用的成员不会自动恢复。",
+    "deactivate_impact": "停用“{company}”将阻止所有成员访问该公司业务，但不会停用其平台账号或其他公司的成员资格。"
+  },
+  "company_relationships": {
+    "title": "公司合作关系",
+    "subtitle": "管理当前公司的供方与买方合作关系。",
+    "scope_notice": "这里只显示当前公司参与的关系。待处理申请必须由买方授权成员接受后才会生效。",
+    "empty": "暂无公司合作关系",
+    "load_failed": "加载公司合作关系失败",
+    "request_action": "发起合作申请",
+    "request_title": "向买方发起合作申请",
+    "request_help": "请输入买方的准确公司编码。申请将保持待处理，直到买方授权成员接受。",
+    "buyer_code_label": "买方公司编码",
+    "buyer_code_placeholder": "例如 CO-ABC123",
+    "buyer_code_required": "请输入 4–32 个字符的公司编码",
+    "requested": "合作申请已提交",
+    "request_failed": "提交合作申请失败",
+    "direction": "本方角色",
+    "direction_supplier": "供方",
+    "direction_buyer": "买方",
+    "supplier": "供方公司",
+    "buyer": "买方公司",
+    "status_label": "状态",
+    "status": {
+      "pending": "待处理",
+      "active": "已生效",
+      "rejected": "已拒绝",
+      "ended": "已结束"
+    },
+    "response": "买方处理",
+    "responded_by": "处理人用户 #{id}",
+    "allow_token_resale": "Token 转售",
+    "capabilities": "设备访问授权",
+    "capability_request_help": "五项权限默认关闭。固定授权由供方控制；买方可调授权在接受关系后可自行开启或关闭。",
+    "capability_status_view": "查看实时状态",
+    "capability_history_view": "查看历史与导出",
+    "capability_remote_control": "远程控制",
+    "capability_remote_diagnostics": "远程诊断",
+    "capability_firmware_upgrade": "固件升级",
+    "capability_state": {
+      "fixed_allowed": "固定授权",
+      "buyer_allowed": "买方允许",
+      "buyer_denied": "买方拒绝"
+    },
+    "capability_updated": "合作权限已更新",
+    "capability_update_failed": "更新合作权限失败",
+    "accept_action": "接受",
+    "accept_title": "接受合作关系",
+    "accept_confirm": "接受来自“{company}”的合作申请吗？",
+    "accept_success": "合作关系已接受",
+    "accept_failed": "接受合作关系失败",
+    "reject_action": "拒绝",
+    "reject_title": "拒绝合作关系",
+    "reject_confirm": "拒绝来自“{company}”的合作申请吗？",
+    "reject_success": "合作关系已拒绝",
+    "reject_failed": "拒绝合作关系失败",
+    "end_action": "结束",
+    "end_title": "结束合作关系",
+    "end_confirm": "结束与“{company}”的合作关系吗？现有关系权限将停止生效。",
+    "end_success": "合作关系已结束",
+    "end_failed": "结束合作关系失败"
+  },
+  "organization_access": {
+    "title": "公司角色与成员资格",
+    "subtitle": "角色和成员操作只影响所选公司，不改变用户在其他公司的资格。",
+    "company_label": "目标公司",
+    "scope_notice": "当前所有操作限定在“{company}”；服务端仍会再次校验权限范围。",
+    "load_failed": "加载公司权限数据失败",
+    "roles": {
+      "title": "角色与权限",
+      "create_action": "新建角色",
+      "system_scope": "系统角色",
+      "company_scope": "公司角色",
+      "create_title": "新建公司角色",
+      "name_label": "角色名称",
+      "permissions_label": "权限范围",
+      "delegable_label": "允许将此角色授予其他成员",
+      "scope_label": "作用范围",
+      "delegable_column": "可授予",
+      "no_permissions": "无权限",
+      "created": "公司角色已创建",
+      "create_failed": "创建公司角色失败"
+    },
+    "members": {
+      "title": "成员资格",
+      "user_fallback": "用户 #{id}",
+      "status_active": "有效",
+      "status_invited": "待接受",
+      "status_inactive": "已停用",
+      "member_label": "成员",
+      "status_label": "状态",
+      "role_label": "角色",
+      "since_label": "加入/邀请时间",
+      "actions_label": "操作",
+      "change_role": "调整角色",
+      "deactivate": "停用成员资格",
+      "last_admin": "最后一名有效管理员不可停用或降级。",
+      "change_role_title": "调整公司成员角色",
+      "change_role_impact": "只修改“{member}”在“{company}”中的角色，不影响其他公司。",
+      "role_updated": "成员角色已更新",
+      "role_update_failed": "更新成员角色失败",
+      "deactivate_title": "停用公司成员资格",
+      "deactivate_impact": "此操作只会停用“{member}”在“{company}”中的成员资格，不会停用其平台账号或其他公司资格。",
+      "deactivated": "成员资格已停用",
+      "deactivate_failed": "停用成员资格失败"
+    }
+  },
+  "users": {
+    "invitation": {
+      "action": "邀请用户",
+      "create_title": "邀请用户",
+      "send_action": "发送邀请",
+      "help": "系统会向用户发送一次性邀请链接；管理员无需设置或传递密码。",
+      "display_name_required": "请输入显示名称",
+      "sent": "邀请邮件已发送",
+      "delivery_confirmed": "邀请已发送，接受前不会授予访问权限",
+      "new_account": "新账号",
+      "existing_account": "已有账号",
+      "expires_at": "有效期至 {value}",
+      "resend_action": "重新发送",
+      "revoke_action": "撤销邀请",
+      "resent": "已重新发送邀请，旧链接已失效",
+      "resend_failed": "重新发送邀请失败",
+      "revoked": "邀请已撤销",
+      "revoke_failed": "撤销邀请失败"
+    },
+    "actions": {
+      "change_role": "改角色",
+      "manage_access": "角色与成员资格",
+      "create": "新建",
+      "detail": "详情",
+      "disable": "停用",
+      "edit": "编辑",
+      "enable": "启用",
+      "reset_password": "重置密码"
+    },
+    "dialog": {
+      "assigned_scope_label": "额外数据权限范围",
+      "change_role_for": "修改 {name} 的角色",
+      "change_role_title": "修改用户角色",
+      "company_label": "所属公司",
+      "company_select": "请选择公司",
+      "confirm_disable_msg": "确认停用用户 \"{name}\"？",
+      "confirm_enable_msg": "确认启用用户 \"{name}\"？",
+      "create_title": "新建用户",
+      "display_name_label": "显示名称",
+      "display_name_placeholder": "请输入显示名称",
+      "edit_title": "编辑用户",
+      "email_label": "邮箱",
+      "email_placeholder": "user@example.com",
+      "password_label": "密码",
+      "password_placeholder": "至少 8 位",
+      "phone_label": "手机号",
+      "phone_placeholder": "请输入手机号",
+      "role_label": "角色",
+      "role_select": "请选择角色",
+      "username_label": "用户名",
+      "username_placeholder": "请输入用户名"
+    },
+    "filter": {
+      "active_all": "全部状态",
+      "company_all": "全部公司",
+      "active_only": "仅启用",
+      "inactive_only": "仅停用",
+      "keyword_placeholder": "搜索用户名 / 邮箱 / 显示名",
+      "role_all": "全部角色"
+    },
+    "form": {
+      "assigned_scope": "数据权限范围",
+      "company": "所属公司",
+      "display_name": "显示名称",
+      "email": "邮箱",
+      "password": "密码",
+      "phone": "手机号",
+      "role": "角色",
+      "username": "用户名"
+    },
+    "form_placeholder": {
+      "display_name": "请输入显示名称",
+      "email": "user@example.com",
+      "password": "至少 8 位",
+      "phone": "请输入手机号",
+      "username": "请输入用户名"
+    },
+    "password_reset": {
+      "title": "管理员重置密码",
+      "confirm_title": "确认重置密码",
+      "confirm_message": "向“{name}”发送一次性密码重置链接。管理员不会查看或设置密码。",
+      "confirm_action": "发送重置邮件",
+      "success": "已为“{name}”请求发送密码重置邮件。",
+      "temporary_password_label": "新密码",
+      "force_change_hint": "为保护隐私，即使邮件无法送达也返回相同结果；用户通过邮件链接完成重置。",
+      "copied": "临时密码已复制",
+      "copy_failed": "复制失败，请手动复制",
+      "failed": "重置密码失败"
+    },
+    "status": {
+      "active": "启用",
+      "inactive": "停用",
+      "invited": "待接受邀请"
+    },
+    "table": {
+      "column": {
+        "actions": "操作",
+        "company": "所属公司",
+        "created_at": "创建时间",
+        "display_name": "显示名称",
+        "email": "邮箱",
+        "is_active": "状态",
+        "last_login": "最后登录",
+        "phone": "手机号",
+        "role": "角色",
+        "username": "用户名"
+      }
+    },
+    "title": "用户管理",
+    "toast": {
+      "create_failed": "用户创建失败",
+      "create_success": "用户创建成功",
+      "disable_success": "已停用用户",
+      "enable_success": "已启用用户",
+      "load_failed": "加载用户列表失败",
+      "role_changed": "角色已修改",
+      "update_failed": "用户更新失败",
+      "update_success": "用户更新成功"
+    },
+    "validation": {
+      "email_invalid": "邮箱格式不正确",
+      "email_required": "请输入邮箱",
+      "password_required": "请输入密码",
+      "password_too_short": "密码至少 8 位",
+      "username_required": "请输入用户名"
+    }
+  },
+  "mqtt_host_console": {
+    "title": "MQTT 主机控制台",
+    "desc": "给 MQTT 主机（YDP395 屏主机 / host_s3）下发控制命令：照明、通风、模式、雷达、定时、重启。命令经后台 MQTT 下发，设备实时回 ACK。",
+    "online": "在线",
+    "offline": "离线",
+    "refresh": "刷新",
+    "send": "下发",
+    "select_hint": "请选择一台 MQTT 主机",
+    "select_placeholder": "选择主机…",
+    "no_commands": "暂无命令记录",
+    "cmd_op": "命令",
+    "cmd_attr": "属性",
+    "cmd_status": "状态",
+    "cmd_time": "时间",
+    "group": {
+      "light": "照明",
+      "fan": "通风",
+      "mode": "模式 / AI / 屏幕",
+      "timer": "定时器",
+      "radar": "雷达",
+      "system": "系统维护",
+      "commands": "命令历史",
+      "automation": "自动化",
+      "ws_led": "门头灯（RGB）"
+    },
+    "attr": {
+      "light_on": "灯开关",
+      "brightness": "灯亮度",
+      "cct": "色温",
+      "fan_on": "风扇开关",
+      "fan_speed": "风扇转速",
+      "active_mode": "工作模式",
+      "ai_mode": "AI 模式",
+      "scr_bright": "屏幕亮度",
+      "timer_min": "定时（分钟）",
+      "timer_start": "开始计时",
+      "timer_off": "取消定时",
+      "radar_sensitivity": "雷达灵敏度",
+      "radar_distance": "雷达最远距离",
+      "radar_unattended": "无人离开延时",
+      "reboot": "重启主机",
+      "radar_presence": "实时检测",
+      "vent_enable": "无人定时通风",
+      "vent_period": "通风周期",
+      "vent_duration": "通风时长",
+      "occ_led_enable": "占用灯色联动",
+      "ws_mode": "工作模式",
+      "ws_color": "颜色",
+      "ws_bright": "亮度",
+      "ws_anim": "动画灯效",
+      "ws_speed": "灯效速度"
+    },
+    "mode": {
+      "phone": "0 · 通话",
+      "work": "1 · 工作",
+      "relax": "2 · 放松",
+      "custom": "3 · 自定义"
+    },
+    "ai_mode": {
+      "off": "0 · 关闭",
+      "on": "1 · 开启"
+    },
+    "confirm": {
+      "reboot": "确定要重启该主机吗？设备将在 3 秒后重启。"
+    },
+    "toast": {
+      "sent": "已下发 {code}",
+      "send_failed": "下发失败：",
+      "reboot_sent": "重启命令已下发",
+      "load_failed": "加载主机列表失败",
+      "sending": "正在下发 {code}，等待设备确认…",
+      "ack_success": "{code} 下发成功（设备已确认）",
+      "ack_failed": "{code} 下发失败（设备拒绝/出错）",
+      "ack_timeout": "{code} 超时未确认（设备未回执）"
+    },
+    "presence": {
+      "unknown": "未知",
+      "occupied": "有人",
+      "vacant": "无人",
+      "detect_cnt": "累计检测 {n} 次"
+    },
+    "unit": {
+      "min": "分钟"
+    },
+    "desc_customer": "远程控制您的静音舱设备：照明、通风、模式、雷达、定时等。点“下发”后设备会实时确认执行结果。",
+    "ws_led_hint": "占用灯色联动开启时，手动设置会被雷达占用覆盖。如需手动控灯，请先关闭上方“占用灯色联动”。",
+    "ws_mode": {
+      "off": "灭",
+      "solid": "单色",
+      "anim": "动画"
+    },
+    "ws_anim": {
+      "marquee": "跑马灯",
+      "rainbow": "彩虹",
+      "breath": "呼吸",
+      "comet": "彗星",
+      "strobe": "频闪"
+    },
+    "occ_on_title": "有人时灯效",
+    "occ_off_title": "无人时灯效",
+    "occ_led_desc": "雷达检测到人/无人时自动套用下面对应灯效",
+    "ws_manual": "手动控制（联动关闭时）"
+  },
+  "controller_console": {
+    "title": "控制器控制台",
+    "online": "在线",
+    "offline": "离线",
+    "refresh": "刷新",
+    "apply": "应用",
+    "select_hint": "请选择一个控制器",
+    "select_placeholder": "选择控制器…",
+    "no_commands": "暂无命令记录",
+    "cmd_op": "命令",
+    "cmd_status": "状态",
+    "cmd_time": "时间",
+    "tabs": {
+      "radar": "雷达",
+      "commands": "命令历史",
+      "fan": "风扇",
+      "light": "冷暖灯光",
+      "indicator": "指示灯",
+      "system": "系统",
+      "current": "电流",
+      "register": "寄存器"
+    },
+    "radar": {
+      "monitor": "实时监视",
+      "config": "配置",
+      "present": "有目标",
+      "absent": "无目标",
+      "count": "进入次数",
+      "last_ms": "距上次进入",
+      "model": "型号",
+      "sens": "灵敏度",
+      "dist": "最远距离",
+      "hold": "进入去抖",
+      "unatt": "离开延时",
+      "report_enable": "存在上报",
+      "read": "读取配置"
+    },
+    "toast": {
+      "queued": "命令已下发",
+      "send_failed": "下发失败：",
+      "load_failed": "加载失败"
+    },
+    "cancel": "取消",
+    "fan": {
+      "monitor": "风扇监视",
+      "config": "风扇控制",
+      "rpm": "实测转速",
+      "tach": "累计脉冲",
+      "fault": "停转标志",
+      "fault_ok": "正常",
+      "fault_stall": "停转",
+      "power": "电源开关",
+      "duty": "占空比",
+      "duty_stop": "停止",
+      "duty_full": "全速",
+      "freq": "频率",
+      "note": "提示：PWM=0 不一定停转，需配合电源开关切断。"
+    },
+    "light": {
+      "config": "冷暖灯光控制",
+      "mode": "模式",
+      "mode_direct": "直驱",
+      "mode_link": "联动",
+      "mode_fade": "渐变",
+      "warm": "暖色",
+      "cool": "冷色",
+      "bright": "亮度",
+      "temp": "色温",
+      "temp_warm": "全暖",
+      "temp_cool": "全冷",
+      "fade": "渐变时长"
+    },
+    "indicator": {
+      "config": "指示灯配置 (WS2811)",
+      "mode": "模式",
+      "mode_off": "关闭",
+      "mode_solid": "单色",
+      "mode_anim": "动画",
+      "color": "颜色",
+      "bright": "全局亮度",
+      "pixels": "灯珠数量",
+      "anim": "动画模式",
+      "anim_marquee": "跑马灯",
+      "anim_rainbow": "彩虹",
+      "anim_breath": "呼吸",
+      "anim_comet": "彗星",
+      "anim_strobe": "频闪",
+      "speed": "速度",
+      "loop": "循环播放",
+      "loop_cnt": "循环次数",
+      "loop_cnt_hint": "0 表示无限循环;勾选「循环播放」时忽略此值"
+    },
+    "system": {
+      "monitor": "系统监视",
+      "control": "系统控制",
+      "vext": "主输入电压",
+      "ext_pwr": "外部电源",
+      "overcur": "过流",
+      "ready": "就绪",
+      "cfg_err": "配置校验",
+      "int_flags": "中断标志",
+      "chip": "芯片型号",
+      "fw": "固件版本",
+      "online": "在线",
+      "missing": "缺失",
+      "normal": "正常",
+      "overcurrent": "过流",
+      "error": "错误",
+      "yes": "是",
+      "no": "否",
+      "wdt": "看门狗超时",
+      "set_wdt": "设置看门狗",
+      "save": "保存 EEPROM",
+      "reset": "软复位",
+      "factory": "恢复出厂",
+      "factory_ok": "确认恢复出厂",
+      "factory_confirm": "此操作将清除所有配置并恢复出厂设置，且不可撤销，确定继续吗？"
+    },
+    "current": {
+      "monitor": "电流监视",
+      "online_status": "在线状态",
+      "online_all": "两颗在线",
+      "online_partial": "未全在线",
+      "empty": "暂无通道数据",
+      "col_name": "通道",
+      "col_addr": "地址",
+      "col_current": "电流",
+      "col_voltage": "母线电压",
+      "col_shunt": "分流",
+      "col_ok": "在线"
+    },
+    "register": {
+      "monitor": "寄存器监视",
+      "read": "读取寄存器",
+      "empty": "暂无寄存器数据",
+      "hex": "十六进制",
+      "dec": "十进制",
+      "col_addr": "地址",
+      "col_value": "值",
+      "seg_system": "系统",
+      "seg_fan": "风扇",
+      "seg_light": "冷暖灯",
+      "seg_radar": "雷达",
+      "seg_indicator": "指示灯"
+    }
+  },
+  "manuals": {
+    "list_title": "文档列表",
+    "empty": "暂无可查看的文档",
+    "select_hint": "请从左侧选择一份文档查看",
+    "load_failed": "文档加载失败",
+    "image_failed": "图片加载失败"
+  },
+  "manuals_admin": {
+    "title": "技术文档管理",
+    "subtitle": "上传技术文档，并指定哪些用户可以查看",
+    "new": "新建文档",
+    "edit_title": "编辑文档",
+    "public": "本公司公开",
+    "restricted": "指定用户",
+    "assign": "分配用户",
+    "assigned_count": "可见用户数",
+    "field_title": "标题",
+    "field_desc": "描述",
+    "field_public": "可见范围",
+    "public_hint": "本公司及当前管理范围内的用户可见",
+    "restricted_hint": "仅被分配的用户可见",
+    "field_import_md": "从 .md 文件导入正文（可选）",
+    "import_md_hint": "选择一个 Markdown 文件…",
+    "choose_file": "选择文件",
+    "field_content": "正文（Markdown）",
+    "field_upload_img": "上传图片（插入正文）",
+    "upload_img_hint": "选择图片上传…",
+    "choose_image": "选择图片",
+    "img_uploaded": "图片已上传并插入正文",
+    "title_content_required": "标题和正文不能为空",
+    "confirm_delete": "确定删除文档「{name}」吗？",
+    "assign_title": "分配文档「{name}」的可见用户",
+    "search_user": "搜索用户（用户名/姓名）…",
+    "no_user": "没有匹配的用户",
+    "assign_count": "已选 {n} 个用户",
+    "assign_saved": "分配已保存",
+    "no_match": "无匹配",
+    "search_manual": "搜索文档（标题/描述）…",
+    "preview": "预览",
+    "created_at": "创建时间"
+  },
+  "product_catalog": {
+    "empty": "暂无已开放展示的产品",
+    "load_failed": "产品手册目录加载失败",
+    "loading": "正在加载产品手册…",
+    "search_placeholder": "搜索产品名称、编码或品牌",
+    "subtitle": "仅展示管理员已开放的有效产品资料。",
+    "title": "产品手册"
+  },
+  "icon_library": {
+    "title": "带屏项目图标库",
+    "subtitle": "统一管理两个带屏固件共用的 SVG、项目页面位置和 LVGL 生成资源",
+    "generate": "生成 LVGL",
+    "add": "添加图标",
+    "shared_icons": "共享图标",
+    "connected_projects": "接入项目",
+    "commercial": "可商用授权",
+    "lvgl_output": "LVGL 生成物",
+    "not_generated": "待生成",
+    "search": "搜索名称、关键词、页面或位置",
+    "all_categories": "全部分类",
+    "all_projects": "全部项目",
+    "icon_view": "图标视图",
+    "project_view": "项目视图",
+    "result_count": "显示 {shown} / {total} 个图标",
+    "used_at": "使用页面与位置",
+    "unused": "当前筛选项目未使用",
+    "icons_across_pages": "分布在 {pages} 个页面",
+    "edit_title": "编辑 {name}",
+    "name": "图标名称",
+    "symbol": "C 标识符",
+    "label_zh": "中文名称",
+    "label_en": "英文名称",
+    "category": "分类",
+    "source": "来源",
+    "license": "许可证",
+    "size": "生成尺寸",
+    "keywords": "关键词（逗号分隔）",
+    "usages": "项目使用位置",
+    "usages_help": "每行格式：项目 ID | 页面 | 具体位置",
+    "svg": "SVG 源码",
+    "commercial_confirmed": "已确认允许商业使用",
+    "usage_format_error": "使用位置格式应为：项目 ID | 页面 | 具体位置",
+    "saved": "图标已保存",
+    "confirm_delete": "确定将图标 {name} 移入可恢复回收区吗？",
+    "deleted": "图标已移入回收区",
+    "generated": "LVGL 图标资源已生成"
+  },
+  "device_onboarding": {
+    "title": "新设备接入",
+    "tabs": {
+      "pending": "待确认设备",
+      "pending_help": "查看已上线设备并确认归属",
+      "registered": "已登记设备",
+      "registered_help": "管理允许接入平台的生产设备"
+    }
+  },
+  "device_enrollment": {
+    "title": "设备接入",
+    "detail_title": "接入设备详情",
+    "search": "搜索序列号、UUID 或硬件标识",
+    "all_states": "全部接入状态",
+    "all_online": "全部在线状态",
+    "online": "在线",
+    "online_limited": "在线（受限）",
+    "connection_unavailable": "连接状态不可用",
+    "host_record": "主机记录",
+    "host_registered": "已注册",
+    "host_unregistered": "未注册",
+    "mqtt_connected_at": "MQTT 连接时间",
+    "last_processed_report": "最后受理上报",
+    "connection_limited_help": "设备当前仍连接到 MQTT，但接入状态或主机记录不允许业务数据正常入库；请勿将“在线”理解为设备已可用。",
+    "all_report_status": "全部上报状态",
+    "report_status": "接入上报",
+    "report_recent": "最近有上报",
+    "report_stale": "暂无新上报",
+    "offline": "离线",
+    "online_status": "在线状态",
+    "first_seen": "首次发现",
+    "device": "设备",
+    "topology": "拓扑与匹配",
+    "state": "接入状态",
+    "node_count": "{count} 个节点",
+    "empty": "暂无接入设备",
+    "disabled": "设备自动接入功能尚未启用。完成数据库迁移、型号身份和装配槽位配置后再开启。",
+    "load_failed": "加载设备接入数据失败",
+    "load_options_failed": "加载认领选项失败",
+    "unknown_error": "未知错误",
+    "select": "请选择",
+    "identity": "设备身份",
+    "host_uuid": "主机 UUID",
+    "hardware_uid": "硬件唯一标识",
+    "mac": "MAC 地址",
+    "vendor_product": "厂商 ID / 产品代码",
+    "version": "硬件 / 软件版本",
+    "match": "自动匹配结果",
+    "host_model": "主机型号 ID",
+    "manufacturer": "制造商 ID",
+    "topology_hash": "拓扑摘要",
+    "last_seen": "最后上报",
+    "no_nodes": "尚未上报节点",
+    "node_position": "槽位",
+    "can_id": "CAN 节点 ID",
+    "serial": "序列号",
+    "risk_actions": "风险处置",
+    "risk_actions_help": "仅平台管理员使用。隔离可解除；撤销会永久作废当前 MQTT 凭证，但可通过身份验证签发新凭证恢复接入。",
+    "rematch": "重新匹配",
+    "rematch_success": "已重新匹配",
+    "quarantine": "隔离",
+    "quarantine_warning": "隔离后，设备即使仍连接 MQTT，其上报也不会被接收入库；凭证不会被吊销，可通过“解除隔离”恢复。",
+    "release": "解除隔离",
+    "release_warning": "解除隔离后，设备将恢复上报受理并重新进行拓扑匹配。",
+    "revoke": "撤销凭证",
+    "revoke_warning": "撤销后会立即停用当前 MQTT 凭证，旧凭证不能恢复。业务资产和历史记录不会删除；生产清单有效时，设备可重新完成私钥证明并取得新凭证。生产清单已撤销或设备私钥已更换时，需先走对应的恢复流程。",
+    "revoked_help": "当前凭证已撤销，旧凭证不能恢复，但设备资产和历史记录仍保留。请根据撤销原因重新完成身份验证或授权恢复。",
+    "revoked_factory_help": "生产清单身份和 MQTT 凭证均已撤销。请前往生产清单重新启用，然后让设备重新完成私钥证明。",
+    "revoked_manual_help": "当前 MQTT 凭证已被管理员撤销。生产清单仍有效时，设备可重新完成私钥证明以获取新凭证。",
+    "revoked_rekey_help": "返修换钥已确认，当前凭证保持撤销；请让设备使用新私钥完成身份验证，系统将签发新凭证。",
+    "open_factory_registry": "前往生产清单",
+    "confirm_replacement": "确认更换主机并迁移节点",
+    "confirm_replacement_warning": "该操作会把现有 Pod 和全部节点从已离线的旧主机原子迁移到当前主机，并保留资产与拓扑历史。请确认现场旧主机已断电。",
+    "confirm_replacement_success": "主机更换及节点迁移成功",
+    "reason": "操作原因",
+    "action_success": "操作成功",
+    "action_failed": "操作失败",
+    "error_detail": "详细信息",
+    "error_fallback": "设备接入异常",
+    "error_messages": {
+      "UNKNOWN_HOST_MODEL": "未找到匹配的主机型号",
+      "AMBIGUOUS_HOST_MODEL": "多个主机型号同时匹配",
+      "UNKNOWN_NODE_MODEL": "未找到匹配的节点型号",
+      "AMBIGUOUS_NODE_MODEL": "多个节点型号同时匹配",
+      "POD_MODEL_MISMATCH": "未找到组成一致的整机模板",
+      "AMBIGUOUS_POD_MODEL": "多个整机模板同时匹配",
+      "SLOT_TEMPLATE_MISSING": "整机模板未配置节点槽位",
+      "SLOT_CONFLICT": "节点与装配槽位冲突",
+      "TOPOLOGY_INCOMPLETE": "设备拓扑不完整",
+      "IDENTITY_CONFLICT": "设备身份冲突",
+      "TOPOLOGY_CHANGED": "已认领设备的拓扑发生变化",
+      "FACTORY_REGISTRY_REVOKED": "生产清单身份已撤销",
+      "REPAIR_REKEY_PENDING": "返修换钥已确认，等待设备验证新密钥",
+      "MANUAL_QUARANTINE": "设备已被管理员隔离",
+      "MANUAL_REVOKE": "设备接入凭证已被管理员撤销"
+    },
+    "manual_entry": {
+      "title": "手工录入仅用于异常处置",
+      "description": "正常新设备请在“设备接入”中完成自动发现和认领；这里只用于历史数据补录、返修或自动接入失败后的人工处理。",
+      "open_workbench": "打开设备接入",
+      "action": "异常补录"
+    },
+    "vendor_id": "厂商 ID",
+    "product_code": "产品代码",
+    "hw_version": "当前硬件版本",
+    "compatible_hw_versions": "兼容硬件版本",
+    "compatible_hw_versions_help": "多个版本用英文逗号分隔",
+    "auto_discovery": "允许自动匹配",
+    "auto_discovery_help": "只有真实协议产品代码和硬件版本已确认后才能开启",
+    "product_code_required": "开启自动匹配前必须填写产品代码",
+    "slots": {
+      "title": "装配槽位",
+      "help": "槽位把节点硬件身份、节点型号、物理位置和预期 CAN ID 固定下来，用于自动拓扑匹配。",
+      "add": "新增槽位",
+      "edit": "编辑槽位",
+      "empty": "尚未配置装配槽位",
+      "code": "槽位编码",
+      "node_model": "节点型号",
+      "expected_can_id": "预期 CAN ID",
+      "required": "是否必需",
+      "display_order": "显示顺序",
+      "load_failed": "加载装配槽位失败",
+      "required_fields": "请填写槽位编码并选择节点型号",
+      "delete_confirm": "确定删除槽位 {code} 吗？"
+    },
+    "summary": {
+      "waiting_inventory": "待拓扑稳定",
+      "ready": "可认领",
+      "attention": "需处理",
+      "claimed": "已认领"
+    },
+    "states": {
+      "factory_registered": "已登记生产清单",
+      "activated": "已激活",
+      "topology_pending": "拓扑待稳定",
+      "ready_to_claim": "可认领",
+      "claiming": "认领中",
+      "claimed": "已认领",
+      "conflict": "冲突",
+      "quarantined": "已隔离",
+      "revoked": "已撤销",
+      "retired": "已退役"
+    },
+    "claim": {
+      "title": "认领设备",
+      "action": "开始认领",
+      "submit": "确认认领",
+      "identity_step": "确认设备身份",
+      "topology_step": "确认型号与拓扑",
+      "ownership_step": "设置公司与位置",
+      "review_step": "预检查与提交",
+      "manufacturer": "制造商",
+      "brand": "品牌商",
+      "channel_partner": "渠道商",
+      "distributor": "经销商",
+      "agent": "代理商",
+      "enduser": "最终用户",
+      "company_path": "下游公司层级",
+      "none": "暂不设置",
+      "location": "安装位置",
+      "no_location": "暂不设置位置",
+      "slots": "节点槽位确认",
+      "slot": "槽位",
+      "node_uid": "节点硬件标识",
+      "can_id": "CAN ID",
+      "no_slots": "没有可认领槽位",
+      "remark": "备注",
+      "preflight": "重新预检查",
+      "preflight_ok": "认领预检查通过",
+      "preflight_failed": "认领预检查未通过",
+      "success": "设备认领成功",
+      "failed": "设备认领失败",
+      "pod_model": "静音舱型号",
+      "pod_name": "静音舱名称"
+    },
+    "pod_model": "静音舱型号 ID"
+  },
+  "factory_registry": {
+    "attestation_lookup": "设备证明状态查询",
+    "attestation_status_action": "查证明状态",
+    "attestation_serial": "输入设备序列号",
+    "attestation_check": "查询",
+    "attestation_lookup_failed": "查询设备证明状态失败",
+    "attestation_public_key_help": "当前不能签发运行凭据。请等待设备灌装并核对真实 RSA 公钥后再登记。",
+    "attestation_states": {
+      "unregistered": "未登记",
+      "awaiting_public_key": "待公钥",
+      "awaiting_activation": "待激活",
+      "active": "已激活",
+      "revoked": "已撤销",
+      "identity_conflict": "身份冲突"
+    },
+    "attestation_stage_labels": {
+      "registry": "登记",
+      "attestation": "设备证明",
+      "credential": "运行凭据",
+      "online": "正式在线",
+      "bootstrap": "Bootstrap",
+      "expected_version": "允许版本",
+      "retryable": "设备可重试"
+    },
+    "attestation_stage_values": {
+      "unregistered": "未登记",
+      "registered": "已登记",
+      "not_started": "未开始",
+      "blocked": "被服务端门禁阻断",
+      "challenge_issued": "已签发 Challenge",
+      "credential_issued": "证明通过，已签发凭据",
+      "not_issued": "未签发",
+      "issued": "已签发，待正式上线",
+      "active": "已激活",
+      "revoked": "已撤销",
+      "identity_conflict": "身份冲突",
+      "never_seen": "尚未正式上线",
+      "online": "在线",
+      "offline": "离线",
+      "unavailable": "不可用",
+      "disabled": "总开关关闭",
+      "allowed": "允许受控重试"
+    },
+    "title": "生产清单",
+    "security_title": "密钥安全边界：",
+    "security_help": "生产清单只登记设备公开身份和公钥；设备私钥必须留在芯片安全区域，平台不会生成、接收或回显私钥。",
+    "blockers": "当前阻断项",
+    "search": "搜索序列号、MAC、eFuse 或生产批次",
+    "batch": "生产批次",
+    "template": "下载模板",
+    "import": "导入 CSV",
+    "add": "登记设备",
+    "edit": "编辑生产清单",
+    "empty": "暂无生产清单记录",
+    "identity": "设备身份",
+    "production": "生产信息",
+    "ownership": "厂家与型号",
+    "readiness": "激活就绪度",
+    "state": "状态",
+    "active": "有效",
+    "revoked": "已撤销",
+    "all_states": "全部状态",
+    "ready": "就绪",
+    "attestation_ready": "验签锚点就绪",
+    "not_ready": "未就绪",
+    "activated": "已激活",
+    "reactivation_required": "再次激活前需补充",
+    "not_activated": "尚未激活",
+    "revoke": "撤销",
+    "reactivate": "重新启用",
+    "recover_unactivated": "恢复未激活登记",
+    "recover_unactivated_title": "原子恢复未激活生产登记",
+    "recover_unactivated_warning_title": "仅用于尚未产生运行资产的设备",
+    "recover_unactivated_warning": "此操作会在同一事务中校正型号、批次和设备公钥，并重新启用原登记。若已存在接入记录、MQTT 凭证或主机资产，服务端会拒绝操作。",
+    "expected_public_key_sha256": "预期公钥 SHA-256 指纹",
+    "expected_public_key_sha256_help": "填写通过独立可信渠道核对的 64 位十六进制指纹；服务端会按规范化公钥重新计算并严格比对。",
+    "recovery_reason": "恢复原因或工单号",
+    "bootstrap_material_confirmed": "我已通过受控流程核对实物身份，并确认设备侧引导材料已正确写入",
+    "confirm_recovery": "确认原子恢复并启用",
+    "recover_unactivated_success": "设备 {serial} 的生产登记已恢复，公钥指纹：{fingerprint}…",
+    "recover_unactivated_failed": "恢复未激活生产登记失败",
+    "repair_rekey": "返修换钥",
+    "repair_rekey_title": "确认返修换钥",
+    "repair_rekey_warning_title": "高风险设备身份操作",
+    "repair_rekey_warning": "仅用于同一台实物设备返修后更换了密钥对的情况。操作会吊销旧 MQTT 运行凭证，但会保留主机、静音舱、节点、绑定和历史记录。",
+    "new_device_pubkey": "返修后的新设备公钥",
+    "repair_rekey_public_key_help": "只粘贴设备导出的公钥。私钥必须始终留在设备安全区域，禁止上传平台。",
+    "repair_reason": "返修原因或工单号",
+    "repair_rekey_offline_confirm": "我已核对实物身份，并确认设备已经断电或离线",
+    "confirm_repair_rekey": "确认换钥并吊销旧凭证",
+    "repair_rekey_success": "设备 {serial} 已进入换钥验签等待状态，新公钥指纹：{fingerprint}…",
+    "repair_rekey_failed": "确认返修换钥失败",
+    "rotate_secret": "轮换引导密钥",
+    "rotate_secret_confirm": "即将为设备 {serial} 生成新的单机引导密钥。当前 MQTT 运行凭据不受影响，但旧引导密钥会立即失效。是否下载新密钥？",
+    "rotate_secret_saved_confirm": "已下载设备 {serial} 的新引导密钥文件。请确认文件已保存到受控系统，并将在下次清除运行凭据前安全写入设备。确认后服务端才会完成轮换。",
+    "rotate_secret_success": "设备 {serial} 的引导密钥已轮换",
+    "rotate_secret_failed": "轮换引导密钥失败",
+    "serial": "主机序列号",
+    "manufacturer": "生产厂家",
+    "host_model": "主机型号",
+    "host_model_option": "{code} · HW {hw} · OD {od} · SW {sw} · {name}",
+    "mac": "主机 MAC",
+    "assembly": "生产日期",
+    "supplier": "供应商",
+    "material_lot": "物料批次",
+    "remark": "备注",
+    "hardware_uid": "主控芯片唯一 ID",
+    "efuse_chip_id": "eFuse 芯片 ID",
+    "device_pubkey": "设备公钥",
+    "trust_mode": "设备信任方式",
+    "attestation_mode": "eFuse 私钥证明（推荐）",
+    "legacy_mode": "旧 Provision V2（过渡）",
+    "attestation_help": "登记设备导出的公钥；私钥必须留在芯片内，平台不会生成或接收私钥。此步骤只建立信任锚，MQTT 握手需等待固件协议落地。",
+    "legacy_help": "仅供已使用 HTTP Provision V2 的过渡设备；浏览器生成的单机引导密钥必须经受控渠道交付。",
+    "vendor_id": "厂商 ID",
+    "product_code": "产品代码",
+    "bootstrap_secret": "bootstrap 入口口令",
+    "bootstrap_help": "按页面标注的策略交付受控 bootstrap 口令；平台不会再次回显。",
+    "bootstrap_scheme_shared": "产品共享入口口令（product-shared-v1）",
+    "bootstrap_scheme_efuse": "逐机入口口令（efuse-v1）",
+    "bootstrap_help_shared": "P-0050 使用同型号共享的受控 bootstrap 口令。只在本次登记响应中显示；请通过受控渠道交付，不得当作正式 MQTT 凭据。批量导入时只显示一次，不写入逐机口令 CSV。",
+    "bootstrap_help_efuse": "口令由后端按本机 eFuse 派生，只在登记成功响应中显示一次。请写入设备 NVS 凭据区并按敏感信息管理；平台不会再次回显。",
+    "shared_device_count": "适用于本次导入的 {count} 台设备",
+    "secret_ack": "我已将单机引导密钥安全交付给烧录流程或保存到受控系统",
+    "regenerate": "重新生成",
+    "secret_copied": "引导密钥已复制",
+    "form_help": "序列号由后端全局发放；选择与主机硬件版本一致的生产批次和生产日期，再登记 MAC、eFuse 芯片 ID 与设备公钥。私钥必须留在设备内。",
+    "row": "第",
+    "import_confirm": "即将原子导入 {count} 条设备公钥生产清单；任一记录错误时整批不写入。是否继续？",
+    "import_success": "成功导入 {count} 条生产清单",
+    "import_failed": "导入生产清单失败",
+    "csv_header_error": "CSV 表头不完整，请重新下载模板",
+    "save_success": "生产清单已保存",
+    "save_failed": "保存生产清单失败",
+    "load_failed": "加载生产清单失败",
+    "options_failed": "加载厂家或主机型号失败",
+    "revoke_confirm": "确定撤销设备 {serial} 的生产清单身份吗？撤销后设备不能再次激活。",
+    "reactivate_confirm": "确定重新启用设备 {serial} 的生产清单身份吗？",
+    "enrollment_switch": "自动接入总开关",
+    "enrollment_switch_help": "设备首次激活和接入工作台",
+    "v1_batches": "V1 已配置批次",
+    "v1_ready_count": "{count} 台 V1 设备就绪",
+    "v2_status": "V2 服务与加密",
+    "v2_ready_count": "{count} 台 V2 设备就绪",
+    "active_records": "有效清单",
+    "auto_claim_help": "自动认领保持关闭，由管理员确认归属",
+    "blocker_enrollment": "自动接入总开关未开启",
+    "blocker_inventory": "设备拓扑上报接收开关未开启",
+    "blocker_attestation": "MQTT 设备私钥证明开关未开启",
+    "blocker_bootstrap_secret": "产品引导主密钥未在部署环境配置",
+    "blocker_batch": "尚未在部署环境配置任何 V1 批次密钥",
+    "blocker_auto_claim": "自动认领已开启；当前设计要求保持关闭并人工确认公司与静音舱归属",
+    "errors": {
+      "REGISTRY_REVOKED": "清单已撤销",
+      "MANUFACTURER_REQUIRED": "缺少厂家",
+      "HOST_MODEL_REQUIRED": "缺少主机型号",
+      "HOST_MODEL_NOT_ACTIVE": "型号不是批量状态",
+      "MODEL_MANUFACTURER_INVALID": "主机型号未关联有效生产厂家",
+      "MODEL_MANUFACTURER_CONFLICT": "型号与厂家不一致",
+      "MAC_REQUIRED": "缺少 MAC",
+      "EFUSE_CHIP_ID_REQUIRED": "缺少 eFuse 芯片 ID",
+      "DEVICE_PUBLIC_KEY_REQUIRED": "缺少设备公钥",
+      "HARDWARE_UID_REQUIRED": "缺少主控芯片唯一 ID",
+      "VENDOR_ID_REQUIRED": "缺少厂商 ID",
+      "PRODUCT_CODE_REQUIRED": "缺少产品代码",
+      "PROVISION_V2_DISABLED": "Provision V2 未启用",
+      "BOOTSTRAP_ENCRYPTION_REQUIRED": "引导密钥加密未配置"
+    }
+  },
+  "factory_stations": {
+    "title": "生产工位凭据",
+    "help": "为工位签发独立且可撤销的凭据，并严格限定厂家、产品、型号和批次范围。",
+    "add": "新增工位",
+    "empty": "暂无生产工位凭据",
+    "identity": "工位",
+    "station_code": "工位编码",
+    "display_name": "显示名称",
+    "scope": "允许的生产范围",
+    "scope_help": "工位只能在此精确范围内创建和核对记录；保存后 token 只显示一次。",
+    "validity": "有效性",
+    "expires_at": "到期时间（可选）",
+    "never_expires": "不设到期时间",
+    "last_used_at": "最近使用",
+    "token_title": "立即保存工位 token",
+    "token_help": "此 token 只显示一次。请存入产线夹具的受保护密钥存储，禁止写入源码或日志。",
+    "token_copied": "工位 token 已复制",
+    "create_success": "生产工位凭据已创建",
+    "revoke": "撤销",
+    "revoke_confirm": "确定撤销工位 {code} 吗？新的工位请求将立即被拒绝。",
+    "revoke_success": "生产工位凭据已撤销",
+    "load_failed": "加载生产工位失败",
+    "save_failed": "保存生产工位失败"
+  },
+  "factory_registry_current": {
+    "security_help": "单机引导密钥由浏览器安全生成，只在本次登记中显示；平台仅保存加密结果，不读取、不回显明文。生产清单用于登记完整设备身份、厂家和主机型号。",
+    "bootstrap_secret": "单机引导密钥",
+    "bootstrap_help": "该密钥只在浏览器本次登记中显示，必须在出厂烧录时写入设备；保存后平台不会再次回显。",
+    "form_help": "请登记产线导出的序列号、主机型号、MAC、eFuse 芯片 ID 和设备公钥；私钥必须留在设备内，厂家由主机型号自动确定。",
+    "provision_status": "接入服务与加密",
+    "provision_ready_count": "{count} 台设备已具备接入条件"
+  },
+  "host_files": {
+    "title": "主机文件",
+    "subtitle": "型号默认、主机覆盖与下发历史",
+    "refresh": "刷新",
+    "effective": "当前生效文件",
+    "deployments": "下发历史",
+    "file_name": "文件",
+    "file_type": "类型",
+    "purpose": "用途",
+    "slot": "槽位",
+    "slot_placeholder": "自定义图片槽位时必填",
+    "order": "顺序",
+    "source": "来源",
+    "status": "状态",
+    "requested_at": "请求时间",
+    "error": "错误",
+    "actions": "操作",
+    "scope_host": "主机覆盖",
+    "scope_hn_model": "型号默认",
+    "no_effective": "当前没有分配生效文件。",
+    "no_deployments": "尚无下发记录。",
+    "retry": "重试",
+    "rollback": "回滚",
+    "rollback_confirm": "确认创建一个恢复到上一已应用文件的下发任务吗？",
+    "retry_success": "已创建重试任务。",
+    "rollback_success": "已创建回滚任务。",
+    "load_failed": "加载主机文件失败。",
+    "action_failed": "操作失败。",
+    "status_pending": "待下发",
+    "status_downloading": "下载中",
+    "status_downloaded": "已下载",
+    "status_applied": "已应用",
+    "status_failed": "失败",
+    "status_superseded": "已取代",
+    "published": "已发布",
+    "draft": "草稿",
+    "publish": "发布",
+    "disable": "停用",
+    "publish_success": "关联已发布。",
+    "disable_success": "关联已停用，型号默认配置已回退生效。",
+    "purpose_required": "请选择用途。",
+    "purpose_firmware": "固件",
+    "purpose_background_music": "背景音乐",
+    "purpose_prompt": "提示音",
+    "purpose_background": "背景图",
+    "purpose_screensaver": "屏保",
+    "purpose_boot_logo": "启动图",
+    "purpose_custom_slot": "自定义槽位",
+    "unsupported_type": "仅支持 BIN、MP3、JPG、PNG、GIF、WEBP、BMP 和 SVG 文件。",
+    "firmware_forbidden": "固件管理需要德恩基平台授权。"
+  },
+  "web_ui_renderer": {
+    "preview_label": "设备 UI 安全预览",
+    "invalid_document": "UI 文档未通过安全校验。",
+    "no_screen": "没有可显示的 UI 页面。"
+  },
+  "software_version_web_ui": {
+    "title": "设备 UI",
+    "description": "UI 文档随具体软件版本保存，并由安全渲染器预览。",
+    "catalog_title": "软件版本与设备 UI",
+    "open_catalog": "设备 UI",
+    "status": "配置状态",
+    "configured": "已配置",
+    "unconfigured": "未配置",
+    "schema_version": "Schema 版本",
+    "source_project": "来源工程",
+    "source_revision": "来源修订",
+    "not_applicable": "Node 软件版本不适用设备 UI，不能上传文档。",
+    "select_replacement": "选择替换文件",
+    "select_upload": "选择 JSON 文件",
+    "replace": "替换 UI",
+    "upload": "上传 UI",
+    "clear": "清空 UI",
+    "validation_failed": "UI 文档校验失败",
+    "download_json": "下载 UI JSON",
+    "assets": "关联资源",
+    "preview": "安全预览",
+    "no_document": "此软件版本尚未配置设备 UI。",
+    "load_failed": "加载设备 UI 失败",
+    "file_too_large": "JSON 文件不能超过 1 MiB。",
+    "invalid_json": "文件不是有效的 UTF-8 JSON。",
+    "confirm_replace": "确定用所选文档替换当前设备 UI 吗？",
+    "save_success": "设备 UI 已保存",
+    "save_failed": "保存设备 UI 失败",
+    "confirm_clear": "确定清空当前软件版本的设备 UI 吗？此操作会解除资源关联。",
+    "clear_success": "设备 UI 已清空",
+    "clear_failed": "清空设备 UI 失败",
+    "conflict": "设备 UI 已被其他操作修改，请加载最新版本后重试。",
+    "reload_latest": "加载最新版本",
+    "download_failed": "下载 UI JSON 失败",
+    "asset_download_failed": "下载 UI 资源失败",
+    "asset_preview_failed": "部分 UI 资源未通过完整性校验，预览中已停用。",
+    "no_versions": "此硬件/OD 版本下没有可用的软件版本。",
+    "select_od": "请选择 OD 版本",
+    "select_software": "请选择软件版本",
+    "catalog_load_failed": "加载版本目录失败"
+  }
+}

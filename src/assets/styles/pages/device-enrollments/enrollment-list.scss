@@ -1,0 +1,15 @@
+.enrollment-search {
+  flex-basis: 280px !important;
+  max-width: 320px;
+}
+
+.enrollment-uuid {
+  max-width: 245px;
+}
+
+@media (width <= 575px) {
+  .filter-actions {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}

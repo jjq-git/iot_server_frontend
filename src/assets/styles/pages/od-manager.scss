@@ -1,0 +1,303 @@
+// 顶部筛选区：1:1 复制 Nodes.vue 的样式
+.od-manager__filters {
+  margin-bottom: 0;
+}
+
+$mono-font: ui-monospace, "SFMono-Regular", menlo, consolas, "Courier New", monospace;
+
+.od-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__summary {
+    margin-bottom: 12px;
+  }
+
+  &__summary-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    align-items: center;
+    font-size: var(--font-size-control);
+    margin-bottom: 8px;
+  }
+
+  &__diff-stats {
+    margin-top: 6px;
+  }
+
+  &__toggle-btn {
+    margin-left: 4px;
+    font-size: var(--font-size-caption);
+    padding: 2px 10px;
+  }
+
+  &__label {
+    color: var(--color-text-secondary);
+  }
+
+  &__value {
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__progress {
+    height: 4px;
+    background: var(--color-bg-thead);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__progress-bar {
+    height: 100%;
+    background: var(--color-accent);
+    transition: width 0.3s ease;
+
+    &--done {
+      background: var(--color-success);
+    }
+  }
+
+  &__empty {
+    padding: 24px 12px;
+    color: var(--color-text-secondary);
+  }
+
+  &__hint {
+    font-size: var(--font-size-caption);
+    margin-top: 8px;
+  }
+}
+
+// === 紧凑表格风 (类似 EMCY 日志) ===
+.od-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: var(--font-size-navigation);
+  line-height: 1.45;
+
+  &__head,
+  &__row {
+    display: grid;
+    grid-template-columns:
+      88px            /* 状态 badge*/
+      90px            /* index*/
+      minmax(160px, 1.4fr)  /* name*/
+      minmax(120px, 0.9fr)  /* 类型/字节*/
+      minmax(170px, 1.2fr)  /* 实机*/
+      minmax(120px, 1fr);   // YAML
+
+    gap: 12px;
+    padding: 6px 12px;
+    align-items: center;
+  }
+
+  &__head {
+    background: var(--color-bg-thead);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__row {
+    border-bottom: 1px solid var(--color-border-light, var(--color-border));
+    cursor: pointer;
+    background: var(--color-bg-card);
+    transition: background-color 0.12s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: var(--color-bg-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-brand);
+      outline-offset: -2px;
+    }
+
+    &--open {
+      background: var(--color-bg-hover);
+    }
+
+    // 状态左色条:用 box-shadow inset 模拟左 border,不影响 grid 列宽
+    &--match {
+      box-shadow: inset 3px 0 0 0 var(--color-success);
+    }
+
+    &--value_mismatch {
+      box-shadow: inset 3px 0 0 0 var(--color-warning);
+    }
+
+    &--runtime {
+      box-shadow: inset 3px 0 0 0 var(--color-info, var(--color-accent));
+    }
+
+    &--missing_in_spec {
+      box-shadow: inset 3px 0 0 0 var(--color-text-hint);
+    }
+  }
+
+  &__cell {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &--status {
+      display: flex;
+      align-items: center;
+    }
+
+    &--index code {
+      font-family: $mono-font;
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-label);
+      font-size: var(--font-size-navigation);
+      background: transparent;
+      padding: 0;
+    }
+
+    &--name {
+      font-weight: var(--font-weight-medium);
+      color: var(--color-text);
+    }
+
+    &--meta {
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-caption);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    &--value {
+      font-family: $mono-font;
+      color: var(--color-text);
+
+      code {
+        background: var(--color-bg-code);
+        color: var(--color-text-code);
+        padding: 1px 6px;
+        border-radius: 3px;
+        font-size: var(--font-size-meta);
+        font-family: $mono-font;
+      }
+    }
+  }
+
+  &__badge {
+    flex: 0 0 auto;
+  }
+
+  &__access {
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+    &[data-access="rw"] {
+      color: var(--color-accent);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    &[data-access="wo"] {
+      color: var(--color-warning-text, var(--color-warning));
+      font-weight: var(--font-weight-semibold);
+    }
+
+    &[data-access="ro"] {
+      color: var(--color-text-secondary);
+    }
+  }
+
+  &__sep {
+    color: var(--color-text-hint);
+    margin: 0 1px;
+  }
+
+  &__missing {
+    color: var(--color-text-hint);
+  }
+
+  &__detail {
+    grid-column: 1 / -1;
+    padding: 8px 12px 10px 18px;
+    background: var(--color-bg-subtle, var(--color-bg-hover));
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-meta);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__detail-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    align-items: center;
+
+    code {
+      background: var(--color-bg-code);
+      color: var(--color-text-code);
+      padding: 0 6px;
+      border-radius: 3px;
+      font-family: $mono-font;
+      font-size: var(--font-size-caption);
+    }
+  }
+
+  &__detail-label {
+    color: var(--color-text-hint);
+    font-size: var(--font-size-caption);
+  }
+
+  &__empty {
+    padding: 24px 12px;
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-control);
+  }
+
+  &__footer-hint {
+    padding: 8px 12px;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-thead);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-meta);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__footer-btn {
+    font-size: var(--font-size-caption);
+    padding: 1px 10px;
+  }
+}
+
+// 窄屏:横向滚动而不是压扁
+@media (width <= 900px) {
+  .od-table {
+    font-size: var(--font-size-meta);
+
+    &__head,
+    &__row {
+      gap: 8px;
+      padding: 6px 8px;
+    }
+  }
+}
+
+::v-deep .mono {
+  font-family: $mono-font;
+}

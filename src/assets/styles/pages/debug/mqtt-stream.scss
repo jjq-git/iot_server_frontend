@@ -1,0 +1,167 @@
+.debug-mqtt-stream .filter-card form {
+  overflow: visible;
+}
+
+.debug-mqtt-stream .filter-row {
+  min-width: 0;
+}
+
+.debug-mqtt-stream .filter-left {
+  flex-wrap: wrap;
+}
+
+.debug-filter-host {
+  flex-basis: 220px !important;
+  min-width: 200px !important;
+  max-width: 220px;
+}
+
+.mqtt-filter-kind {
+  flex-basis: 150px !important;
+  min-width: 140px !important;
+  max-width: 150px;
+}
+
+.mqtt-filter-topic {
+  flex-basis: 190px !important;
+  min-width: 170px !important;
+  max-width: 190px;
+}
+
+.debug-mqtt-stream .filter-actions {
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.mqtt-filter-action {
+  padding-inline: 10px;
+  font-size: var(--font-size-control);
+}
+
+.mqtt-toolbar-status {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+@media (width <= 1700px) {
+  .debug-mqtt-stream .filter-actions {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (width <= 768px) {
+  .debug-filter-host,
+  .mqtt-filter-kind,
+  .mqtt-filter-topic {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none;
+  }
+
+  .mqtt-toolbar-status {
+    flex-basis: 100%;
+  }
+}
+
+.mqtt-stream-table {
+  font-size: var(--font-size-meta);
+}
+
+.mqtt-stream-table ::v-deep .mqtt-stream-data-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.mqtt-stream-table ::v-deep .mqtt-stream-data-table > thead > tr > th,
+.mqtt-stream-table ::v-deep .mqtt-stream-data-table > tbody > tr > td {
+  padding: 9px 12px;
+  vertical-align: middle;
+}
+
+.mqtt-time {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-caption);
+  white-space: nowrap;
+}
+
+.mqtt-host {
+  color: var(--color-brand);
+  font-size: var(--font-size-caption);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mqtt-device-cell {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.mqtt-device-id {
+  flex: 0 0 auto;
+  color: var(--color-text-secondary);
+}
+
+.mqtt-kind {
+  min-width: 56px;
+  font-size: var(--font-size-badge);
+}
+
+/* 心跳 badge 用 CSS 变量,浅色/深色都能看清(避免 BootstrapVue light 在深色下接近背景) */
+.mqtt-kind-heartbeat {
+  background-color: var(--color-bg-hover) !important;
+  color: var(--color-text-secondary) !important;
+  border: 1px solid var(--color-border, transparent);
+}
+
+.mqtt-summary {
+  font-size: var(--font-size-caption);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+}
+
+.mqtt-payload-toggle {
+  padding: 0;
+  white-space: nowrap;
+}
+
+.mqtt-payload-details {
+  padding: 8px 12px 12px;
+  background: var(--color-bg-hover);
+}
+
+.mqtt-topic {
+  display: block;
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mqtt-payload {
+  font-size: var(--font-size-caption);
+  max-height: 260px;
+  overflow: auto;
+  margin: 0;
+  padding: 6px 8px;
+  background: var(--color-bg-code, var(--color-bg-hover));
+  color: var(--color-text-code, var(--color-text));
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

@@ -1,0 +1,176 @@
+{
+  "modules": [
+    {
+      "title": "舱内照明",
+      "control_category": "light",
+      "device_type": "node",
+      "device_model_uuid": "demo-control-light",
+      "quantity": 1,
+      "bound": true,
+      "instances": [
+        {
+          "device_uuid": "demo-pod-office-01-light",
+          "can_node_id": 2,
+          "node_pos": "顶部",
+          "online": true
+        }
+      ],
+      "fields": [
+        {
+          "attr_code": "light_on",
+          "attr_name": "照明开关",
+          "data_type": "BOOLEAN",
+          "access_type": "RW",
+          "web_editable": true,
+          "widget": "switch",
+          "co_index": "0x3001",
+          "co_sub_index": "0x01",
+          "default_value": true,
+          "display_order": 1,
+          "current_value": true,
+          "current_values": {
+            "demo-pod-office-01-light": true
+          },
+          "shadows": {}
+        },
+        {
+          "attr_code": "brightness",
+          "attr_name": "照明亮度",
+          "data_type": "UNSIGNED8",
+          "access_type": "RW",
+          "web_editable": true,
+          "widget": "slider",
+          "min_val": 0,
+          "max_val": 100,
+          "step": 5,
+          "unit": "%",
+          "co_index": "0x3001",
+          "co_sub_index": "0x02",
+          "default_value": 72,
+          "display_order": 2,
+          "current_value": 72,
+          "current_values": {
+            "demo-pod-office-01-light": 72
+          },
+          "shadows": {}
+        }
+      ]
+    },
+    {
+      "title": "新风系统",
+      "control_category": "fresh_air",
+      "device_type": "node",
+      "device_model_uuid": "demo-control-fresh-air",
+      "quantity": 1,
+      "bound": true,
+      "instances": [
+        {
+          "device_uuid": "demo-pod-office-01-fresh-air",
+          "can_node_id": 3,
+          "node_pos": "后舱",
+          "online": true
+        }
+      ],
+      "fields": [
+        {
+          "attr_code": "fan_on",
+          "attr_name": "新风开关",
+          "data_type": "BOOLEAN",
+          "access_type": "RW",
+          "web_editable": true,
+          "widget": "switch",
+          "co_index": "0x3010",
+          "co_sub_index": "0x01",
+          "default_value": true,
+          "display_order": 1,
+          "current_value": true,
+          "current_values": {
+            "demo-pod-office-01-fresh-air": true
+          },
+          "shadows": {}
+        },
+        {
+          "attr_code": "fan_speed",
+          "attr_name": "风速档位",
+          "data_type": "UNSIGNED8",
+          "access_type": "RW",
+          "web_editable": true,
+          "widget": "stepper",
+          "min_val": 0,
+          "max_val": 5,
+          "step": 1,
+          "co_index": "0x3010",
+          "co_sub_index": "0x02",
+          "default_value": 3,
+          "display_order": 2,
+          "current_value": 3,
+          "current_values": {
+            "demo-pod-office-01-fresh-air": 3
+          },
+          "shadows": {}
+        }
+      ]
+    },
+    {
+      "title": "环境调节",
+      "control_category": "ac",
+      "device_type": "node",
+      "device_model_uuid": "demo-control-climate",
+      "quantity": 1,
+      "bound": true,
+      "instances": [
+        {
+          "device_uuid": "demo-pod-office-01-climate",
+          "can_node_id": 4,
+          "node_pos": "控制箱",
+          "online": true
+        }
+      ],
+      "fields": [
+        {
+          "attr_code": "target_temperature",
+          "attr_name": "目标温度",
+          "data_type": "REAL32",
+          "access_type": "RW",
+          "web_editable": true,
+          "widget": "slider",
+          "min_val": 18,
+          "max_val": 30,
+          "step": 0.5,
+          "unit": "°C",
+          "co_index": "0x3020",
+          "co_sub_index": "0x01",
+          "default_value": 23.5,
+          "display_order": 1,
+          "current_value": 23.5,
+          "current_values": {
+            "demo-pod-office-01-climate": 23.5
+          },
+          "shadows": {}
+        },
+        {
+          "attr_code": "quiet_mode",
+          "attr_name": "静音模式",
+          "data_type": "BOOLEAN",
+          "access_type": "RW",
+          "web_editable": true,
+          "widget": "switch",
+          "co_index": "0x3020",
+          "co_sub_index": "0x02",
+          "default_value": true,
+          "display_order": 2,
+          "current_value": true,
+          "current_values": {
+            "demo-pod-office-01-climate": true
+          },
+          "shadows": {}
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "key": "restart"
+    }
+  ]
+}
